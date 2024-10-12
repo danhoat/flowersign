@@ -32,7 +32,7 @@
    $(function(){
 	   var cartVersion = $('input[name=cart_version]').val(); //18-05-03 카트 스킨 버전 gcns jhs add
 	   /* 스타일적용 */
-	   // apply_input_style();
+	   apply_input_style();
 
 	   // jstree 객체를 사용하는 페이지에서는 jQuery 구버전을 사용하므로 on 함수가 없어 예외 처리
 	   if(typeof $.jstree !== "object") {
