@@ -7698,25 +7698,7 @@ $(function() {
     });
 });
 
-/*######################## 17.12.19 gcs yjy : 앱 처리(fb 로그아웃) s */
-function logoutfb(){
-    FB.getLoginStatus(logoutfb_process);
-}
-function logoutfb_process(){
-    FB.api('/me', function(response) {
 
-        FB.logout(function(response) {
-
-        });
-
-        isLogin = false;
-        if (fbId != "")  initializeFbTokenValues();
-        if (fbUid != "") initializeFbUserValues();
-
-        return false;
-    });
-}
-/*######################## 17.12.19 gcs yjy : 앱 처리(fb 로그아웃) e */
 </script>
 
 
@@ -7740,26 +7722,8 @@ function logoutfb_process(){
 <div id="layout_side_background" class="layout_side_background"></div>
 
 <!-- ================= #HTML_FOOTER :: START. 파일위치 : _modules/common/html_footer.html ================= -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script>
-    var id = 'G-4LG8ZEKX03';
-</script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4LG8ZEKX03"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  try {
-        function gtag(){
-        dataLayer.push(arguments);
-        
-        // 추후 웹인지 앱인지 구분하는 부분 추가 필요
-    };
-    gtag('js', new Date());
-    gtag('config', id);
-  } catch(e) {
-    console.log('GA4 init 이벤트 발생 에러 :',e);
-  }
 
-</script><!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 @@ #HTML_FOOTER @@
 - 파일위치 : [스킨폴더]/_modules/common/html_footer.html
 ++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
