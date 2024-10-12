@@ -1,1 +1,3 @@
-ssh-add -K ~/.ssh/id_rsa
+ssh-add -K /c/Users/danho/.ssh/id_rsa
+
+"C:\Users\danho\.ssh\id_rsa"
