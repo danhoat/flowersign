@@ -47,7 +47,7 @@ window.Firstmall.Config = {"Environment":{"MobileMode":true,"SetMode":null,"Lang
 <link rel="stylesheet" type="text/css" href="https://f-mans.com/data/design/goods_info_style.css?v=2"><!-- 상품디스플레이 CSS -->
 <link rel="stylesheet" type="text/css" href="https://f-mans.com/data/design/goods_info_user.css"><!-- ++++++++++++ 상품디스플레이 사용자/제작자 CSS ++++++++++++ -->
 <link rel="stylesheet" type="text/css" href="https://f-mans.com/data/skin/responsive_ver1_default_gl/css/lib.css">
-<link rel="stylesheet" type="text/css" href="https://f-mans.com/data/skin/responsive_ver1_default_gl/css/common.css?date=20241013&amp;v=11">
+<link rel="stylesheet" type="text/css" href="css/common.css?date=20241013&amp;v=11">
 <link rel="stylesheet" type="text/css" href="https://f-mans.com/data/skin/responsive_ver1_default_gl/css/board.css?date=20241013&amp;v=12">
 <link rel="stylesheet" type="text/css" href="https://f-mans.com/data/skin/responsive_ver1_default_gl/css/buttons.css">
 <link rel="stylesheet" type="text/css" href="https://f-mans.com/data/skin/responsive_ver1_default_gl/css/mobile_pagination.css">
@@ -153,6 +153,12 @@ var kid_agree = "";
 }
 .goods_list:after{
     height: 0;
+}
+.display_slide_class .swiper-slide{
+    width: calc(100%/4);
+}
+.footer_cert li.slick-slide{
+    max-height: 90px;
 }
 
 /* 레이아웃설정 스크롤바색상 적용 */
