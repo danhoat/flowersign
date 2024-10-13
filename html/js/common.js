@@ -19,8 +19,9 @@
 		   if(Firstmall.Config.Security.PreventDrag) target_events.push('selectstart');
 			 if(Firstmall.Config.Security.PreventContextMenu)
 			 {
-				 target_events.push('contextmenu');
-				 $('body').css('-webkit-touch-callout','none');
+			 	console.log('enable right click');
+				 // target_events.push('contextmenu');
+				 // $('body').css('-webkit-touch-callout','none');
 			 }
 		   target.on(target_events.join(' '), callback);
 	   } catch(ex) {
