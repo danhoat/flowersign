@@ -57,7 +57,7 @@ window.Firstmall.Config = {"Environment":{"MobileMode":true,"SetMode":null,"Lang
 <link rel="stylesheet" type="text/css" href="https://f-mans.com/data/skin/responsive_ver1_default_gl/css/modal.css?date=20241013&amp;v=1">
 <link rel="stylesheet" type="text/css" href="https://f-mans.com/data/skin/responsive_ver1_default_gl/css/_layout.css?date=20241013&amp;v=1">
 
-<meta name="facebook-domain-verification" content="u6bcmbjruyosvvz3pd294th2lf8prh"><!--페이스북 도메인 인증용-->
+
 <!-- // 꽃청 수정 END -->
 
 <!-- css 추가 상세페이지 및 추가 디자인 부분 -->
@@ -152,13 +152,11 @@ var kid_agree = "";
 
 
 
-
-
 <script src="https://f-mans.com/app/javascript/js/dev-tools.js?v=afe0eba294279d50c840"></script>
 <script src="https://f-mans.com/app/javascript/js/goods-display_mobile.js?v=afe0eba294279d50c840"></script>
 <script src="https://f-mans.com/app/javascript/js/design.js?v=afe0eba294279d50c840"></script>
 
-<script src="js/common.js?ver=123"></script>
+<script src="<?php echo BOXTHEME_URL;?>/js/common.js?ver=123"></script>
 <script type="text/javascript" src="https://f-mans.com/data/js/language/L10n_KR.js?v=1"></script>
 
 <script type="text/javascript" src="https://f-mans.com/app/javascript/js/common-function.js?dummy=20240219111900">
@@ -776,7 +774,7 @@ background-color:#ffffff;}
             <!-- 햄버거 버튼 -->
             <div class="resp_top_hamburger">
                 <!-- 꽃청 추가 START 김태섭 2023-06-09 - 햄버거 메뉴 텍스트 추가 -->
-                <a href="#category"><b>aside menu</b><h2>전체상품</h2></a>
+                <a href="#category"><b>aside menu</b><h2>ALL Products</h2></a>
                 <!-- 꽃청 추가 END 김태섭 2023-06-09 - 햄버거 메뉴 텍스트 추가 -->
             </div>
 

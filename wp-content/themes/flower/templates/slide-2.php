@@ -28,15 +28,7 @@
           <div class="designDisplay_670aa31dbdc10 display_slide_class displaySwipeTabContentsContainer" tabidx="0">
               <div class="goods_display_slide_wrap">
                   <div class="swiper-wrapper">
-                    <!-- ------- 상품정보. 파일위치 : /data/design/ ------- -->
-<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++
-@@ goods_info_style_2 @@
-- 파일 위치 : /data/design/goods_info_style_2.html
-- CSS 경로 : /data/design/goods_info_style.css
-- 상품정보 관련 CSS 수정 및 추가는 다음의 CSS파일에서 작업하시기 바랍니다.
-/data/design/goods_info_user.css
-※ /data 폴더는 /skin 폴더 상위 폴더입니다.
-++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+                  
 
 <ul class="goods_list swiper-slide">    <li class="gl_item">
     <div class="gl_inner_item_wrap">
@@ -123,7 +115,9 @@
 
     </div>
   </li>
-</ul><ul class="goods_list swiper-slide">   <li class="gl_item">
+</ul>
+
+<ul class="goods_list swiper-slide">   <li class="gl_item">
     <div class="gl_inner_item_wrap">
 
         <!--상품이미지-->
