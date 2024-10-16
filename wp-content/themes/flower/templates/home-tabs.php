@@ -762,7 +762,6 @@
     <!-- 꽃청 추가 END 김태섭 2023-06-09 - 매거진 띠배너 -->
 
 
-
     <!-- 꽃청 삭제 START 김태섭 2023-06-09 - 스토리 Close -->
         <!-- firstmall STORY -->
         <!-- <div class="title_group1">
