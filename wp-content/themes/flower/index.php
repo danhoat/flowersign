@@ -22,12 +22,7 @@
     </a>
     <!-- 꽃청 삭제 END 김태섭 2023-06-09 - 작약 띠배너 삭제 후 수국 띠배너 교체 -->
 
-
-
-
-
     <?php get_template_part('templates/slide','3'); ?>
-
 
     <div class="bn_support">
     <!-- <a class="bn_support bn_starnight" href="https://f-mans.com/page/support"> -->
