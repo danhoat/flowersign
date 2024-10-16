@@ -946,22 +946,22 @@ background-color:#ffffff;}
 ++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 <!-- 꽃청 수정 START 윤상희 2023.04.07 - 네비게이션 수정 -->
     <li class="categoryDepth1">
-        <a class="categoryDepthLink" href="/page/event/timesale/timesale"><em style="color:#CB4700">꽃시장특가</em></a>
+        <a class="categoryDepthLink" href="/page/event/timesale/timesale"><em style="color:#CB4700">Home</em></a>
     </li>
     <li class="categoryDepth1">
-        <a class="categoryDepthLink" href="/goods/catalog_list?code=0001"><em>꽃선물</em></a>
+        <a class="categoryDepthLink" href="/goods/catalog_list?code=0001"><em>Hoa Tươi</em></a>
             </li>
     <li class="categoryDepth1">
-        <a class="categoryDepthLink" href="/goods/catalog_list?code=0002"><em>개업화분</em></a>
+        <a class="categoryDepthLink" href="/goods/catalog_list?code=0002"><em>Hộp Hoa</em></a>
             </li>
     <li class="categoryDepth1">
-        <a class="categoryDepthLink" href="/goods/catalog_list?code=0003"><em>승진취임</em></a>
+        <a class="categoryDepthLink" href="/goods/catalog_list?code=0003"><em>Hoa Sinh Nhật</em></a>
             </li>
     <li class="categoryDepth1">
-        <a class="categoryDepthLink" href="/goods/catalog_list?code=0004"><em>결혼장례</em></a>
+        <a class="categoryDepthLink" href="/goods/catalog_list?code=0004"><em>Hoa Tình Yêu</em></a>
             </li>
     <li class="categoryDepth1">
-        <a class="categoryDepthLink" href="/subscribe/intro"><em>정기구독</em></a>
+        <a class="categoryDepthLink" href="/subscribe/intro"><em>Hoa Trăm Năm</em></a>
             </li>
     <li class="categoryDepth1">
         <div class="nav_comment"><span>46% 할인</span></div>
