@@ -1,7 +1,7 @@
     <!-- line 983 !-->
 
     <div class="title_group1">
-        <h3 class="title1"><span designelement="text" textindex="11" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbWFpbi9pbmRleC5odG1s">고객만족 444</span></h3>
+        <h3 class="title1"><span designelement="text" textindex="11" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbWFpbi9pbmRleC5odG1s">고객만족 5555555</span></h3>
         <p class="text2" designelement="text" textindex="12" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbWFpbi9pbmRleC5odG1s">만족도가 높은 상품입니다.</p>
     </div>
     <div data-effect="scale opacity">
