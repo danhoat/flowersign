@@ -2,8 +2,6 @@
 
 
 
-<div class="resp_wrap is_single.php" style="position:relative;">
-
 
     <?php the_post(); ?>
     <h1><?php the_title();?>
@@ -12,7 +10,6 @@
 
 
 
+<!-- ================= 파트 페이지들 :: END. ================= -->
 </div>
-        <!-- ================= 파트 페이지들 :: END. ================= -->
-        </div>
 <?php get_footer(); ?>

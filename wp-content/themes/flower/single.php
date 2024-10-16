@@ -2,7 +2,7 @@
 
 
 
-<div class="resp_wrap" style="position:relative;">
+<div class="resp_wrap is_single.php" style="position:relative;">
 
 
     <?php the_post(); ?>

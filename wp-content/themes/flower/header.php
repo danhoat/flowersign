@@ -148,6 +148,13 @@ var kid_agree = "";
 }
 
 /* 레이아웃설정 스크롤바색상 적용 */
+
+#layout_body {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    overflow: hidden;
+}
 </style>
 
 
@@ -196,6 +203,7 @@ background-color:#ffffff;}
 #layer_pay {position:absolute;top:0px;width:100%;height:100%;background-color:#ffffff;text-align:center;z-index:999999;}
 #payprocessing {text-align:center;position:absolute;width:100%;top:150px;z-index:99999999px;}
 </style>
+<?php wp_head();?>
 <body>
 <div id="wrap">
     <!-- ================= 어사이드 :: START. 파일위치 : _modules/common/layout_side.html (비동기 로드) ================= -->
@@ -667,13 +675,15 @@ background-color:#ffffff;}
                 function decide_wing_position(){
                     //네비게이션바 위치 + 네비게이션바 높이 50 + (index면 메인화면 슬라이드) - 상단팝업 높이
                     wing_up = nav_category_area_height+main_slide_height-$('.bn_top').height();
-                    wing_down = layout_footer_height-155;
+                    wing_down = layout_footer_height-55;
                     scroll = $(window).scrollTop();
                     if( $(window).scrollTop() < wing_up ){
                         scroll = wing_up;
+
                     }else if( $(window).scrollTop() > wing_down ){
                         scroll = wing_down
                     }
+                    console.log('scroll:', scroll);
                 }
 
                 $(document).ready(function(){
@@ -768,7 +778,7 @@ background-color:#ffffff;}
         <div class="resp_wrap">
             <!-- logo -->
             <h1 class="logo_area">
-                <a href="/" target="_self"><img src="https://f-mans.com/data/skin/responsive_ver1_default_gl/images/design/resp_logo_sample.png" title="(주)청년들" alt="(주)청년들"></a>
+                <a href="<?php echo home_url();?>" target="_self"><img src="https://f-mans.com/data/skin/responsive_ver1_default_gl/images/design/resp_logo_sample.png" title="(주)청년들" alt="(주)청년들"></a>
             </h1>
 
             <!-- 햄버거 버튼 -->
@@ -944,10 +954,10 @@ background-color:#ffffff;}
 ++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 <!-- 꽃청 수정 START 윤상희 2023.04.07 - 네비게이션 수정 -->
     <li class="categoryDepth1">
-        <a class="categoryDepthLink" href="/page/event/timesale/timesale"><em style="color:#CB4700">Home</em></a>
+        <a class="categoryDepthLink" href="<?php echo home_url();?>"><em style="color:#CB4700">Home</em></a>
     </li>
     <li class="categoryDepth1">
-        <a class="categoryDepthLink" href="/goods/catalog_list?code=0001"><em>Hoa Tươi</em></a>
+        <a class="categoryDepthLink" href="<?php echo home_url();?>/shop"><em>Shop</em></a>
             </li>
     <li class="categoryDepth1">
         <a class="categoryDepthLink" href="/goods/catalog_list?code=0002"><em>Hộp Hoa</em></a>

@@ -5,7 +5,7 @@
         <div class="col col-md-3">
             <div class="theme_box_1220">
                 <a href="/goods/catalog_list?code=0001">
-                    <div class="theme_text">꽃선물</div>
+                    <div class="theme_text">꽃선물 home 1</div>
                     <div><img src="https://f-mans.com/data/images/theme/2024/flower-94.png" alt=""></div>
                 </a>
             </div>
@@ -13,7 +13,7 @@
         <div class="col col-md-3">
             <div class="theme_box_1220">
                 <a href="/goods/catalog_list?code=0002">
-                    <div class="theme_text">개업축하</div>
+                    <div class="theme_text">개업축하 home 2</div>
                     <div><img src="https://f-mans.com/data/images/theme/2024/04/plant.png" alt=""></div>
                 </a>
             </div>

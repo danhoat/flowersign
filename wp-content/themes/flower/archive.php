@@ -1,8 +1,6 @@
 <?php get_header(); ?>
 
-
-
-<div class="resp_wrap" style="position:relative;">
+<div class="resp_wrap archive.php" style="position:relative;">
 
 
     <?php the_post(); ?>
