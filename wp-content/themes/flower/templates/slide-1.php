@@ -23,36 +23,29 @@
 <div id="designDisplay_670aa31da48d7" class="designDisplay" designelement="display" templatepath="main/index.html" displayseq="10001" perpage="" category="" displaystyle="sizeswipe">
           <div class="designDisplay_670aa31da48d7 display_slide_class displaySwipeTabContentsContainer" tabidx="0">
               <div class="goods_display_slide_wrap">
-                  <div class="swiper-wrapper">
-                    <!-- ------- 상품정보. 파일위치 : /data/design/ ------- -->
-<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++
-@@ goods_info_style_4 @@
-- 파일 위치 : /data/design/goods_info_style_4.html
-- CSS 경로 : /data/design/goods_info_style.css
-- 상품정보 관련 CSS 수정 및 추가는 다음의 CSS파일에서 작업하시기 바랍니다.
-/data/design/goods_info_user.css
-※ /data 폴더는 /skin 폴더 상위 폴더입니다.
-++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+                    <div class="swiper-wrapper">
 
-<?php 
+                    <?php 
 
 
-$product = array(); slide_1_item($product);
+                    $args = array(
+                        'status' => 'publish',
+                    );
+                    $products = wc_get_products( $args );
+                    if($products){
+                        foreach($products as $product){ 
+                            slide_1_item($product);
+                        }
+                    } else{
+                        echo 'No products found.';
+                    }
 
-slide_1_item($product,0);
-slide_1_item($product,1);
-slide_1_item($product,2);
-slide_1_item($product,3);
-slide_1_item($product,0);
-slide_1_item($product,1);
-slide_1_item($product,2);
-slide_1_item($product,3);
 
-?>
+                    ?>
 
                     <!-- ------- //상품정보. ------- -->
-                  </div>
-                  <!-- scrollbar -->
+                    </div>
+                    <!-- scrollbar -->
                   <div class="display-scrollbar swiper-scrollbardesignDisplay_670aa31da48d7"></div>
               </div>
                <!-- left, right button -->

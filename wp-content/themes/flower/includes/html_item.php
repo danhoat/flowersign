@@ -1,13 +1,24 @@
 <?php
-function slide_1_item($product, $pos = 0){ ?>
+function slide_1_item($product, $pos = 0){
+
+    // $img = wp_get_attachment_image( $product_meta['_thumbnail_id'][0], 'full' );
+    $product_id = $product->get_id();
+    $img = get_the_post_thumbnail_url($product_id);
+    // echo '<pre>';
+    // var_dump($product);
+    // echo '</pre>';
+    // die();
+
+
+    ?>
 
     <ul class="goods_list swiper-slide">    <li class="gl_item">
     <div class="gl_inner_item_wrap">
 
         <!--상품이미지-->
         <div class="gli_image goodsDisplayImageWrap">
-            <a href="detail.html" class="respItemImageArea" >
-                <img src="<?php echo fget_random_img($pos);;?>" data-src="<?php echo fget_random_img($pos); ?>" class="goodsDisplayImage lazyload" onerror="this.src='/data/skin/responsive_ver1_default_gl/images/common/noimage.gif'" alt="계절마음">
+            <a href="<?php echo get_the_permalink($product_id);?>" class="respItemImageArea" >
+                <img src="<?php echo $img;?>" data-src="<?php echo $img; ?>" class="goodsDisplayImage lazyload" onerror="this.src='/data/skin/responsive_ver1_default_gl/images/common/noimage.gif'" alt="계절마음" style="max-height: 300px;">
             </a>
 
             <!-- 반응형 icon new -->
@@ -49,7 +60,7 @@ function slide_1_item($product, $pos = 0){ ?>
     <!-- +++++++++++++++++++++++++++++++++ NEW 상품 정보 ++++++++++++++++++++++++++++++++ -->
         <!-- 상품명-->
         <div class="goodS_info displaY_goods_name">
-            <span class="areA"><a href="detail.html">계절마음</a></span>
+            <span class="areA"><a href="<?php echo get_the_permalink($product_id);?>"><?php echo $product->get_title();?> </a></span>
         </div>
 
         <!-- 비회원 대체문구 -->
@@ -57,9 +68,10 @@ function slide_1_item($product, $pos = 0){ ?>
         <div class="infO_group">
             <!-- (할인혜택)판매가 -->
             <div class="goodS_info displaY_sales_price">
-                <span class="areA">                 
-                    <span class="nuM">58,500</span>원
+                <span class="areA">                                 
+                    <span class="nuM"><?php echo $product->get_sale_price();?></span>원
                 </span>
+
             </div>
 
             <!-- 정가 -->
