@@ -84,10 +84,9 @@ window.Firstmall.Config = {"Environment":{"MobileMode":true,"SetMode":null,"Lang
 <!-- 꽃청 추가 START 김태섭 2023-12-18 - splide -->
 <script type="text/javascript" src="https://f-mans.com/app/javascript/plugin/splide/splide.min.js"></script>
 <!-- 꽃청 추가 END 김태섭 2023-12-18 - splide -->
+<?php wp_head();?>
 
 
-
-<meta name="google-site-verification" content="RTeeKNXMVfWc2PTj5eqnmcEQoQksVVnZSMQavK-n5sE">
 <!-- 꽃청 추가 END -->
 <script src="https://f-mans.com/app/javascript/jquery/jquery.min.js"></script>
 <script src="https://f-mans.com/app/javascript/jquery/jquery-ui.min.js"></script>
@@ -155,12 +154,11 @@ var kid_agree = "";
 <script src="https://f-mans.com/app/javascript/js/goods-display_mobile.js?v=afe0eba294279d50c840"></script>
 <script src="https://f-mans.com/app/javascript/js/design.js?v=afe0eba294279d50c840"></script>
 
-<script src="js/common.js?ver=123"></script>
+<script src="<?php echo home_url();?>/js/common.js?ver=123"></script>
 <script type="text/javascript" src="https://f-mans.com/data/js/language/L10n_KR.js?v=1"></script>
 
-<script type="text/javascript" src="https://f-mans.com/app/javascript/js/common-function.js?dummy=20240219111900">
-    
-</script><script src="https://f-mans.com/app/javascript/js/common-mobile.js?v=afe0eba294279d50c840">
+<script type="text/javascript" src="https://f-mans.com/app/javascript/js/common-function.js?dummy=20240219111900"></script>
+<script src="https://f-mans.com/app/javascript/js/common-mobile.js?v=afe0eba294279d50c840">
     
 </script><script src="https://f-mans.com/app/javascript/js/front-layout.js?v=afe0eba294279d50c840"></script>
 
@@ -169,9 +167,8 @@ var kid_agree = "";
 <script src="https://f-mans.com/data/js/language/L10n_KR.js?v=afe0eba294279d50c840"></script>
 <script src="https://f-mans.com/data/skin/responsive_ver1_default_gl/common/jquery.event.drag-1.5.min.js?v=afe0eba294279d50c840"></script>
 <script src="https://f-mans.com/data/skin/responsive_ver1_default_gl/common/jquery.touchSlider.js?v=afe0eba294279d50c840"></script>
-<script src="https://f-mans.com/data/skin/responsive_ver1_default_gl/common/responsive.js?v=afe0eba294279d50c840"></script
-
-><script src="https://f-mans.com/data/skin/responsive_ver1_default_gl/common/script.js?ver=2?v=afe0eba294279d50c840"></script>
+<script src="https://f-mans.com/data/skin/responsive_ver1_default_gl/common/responsive.js?v=afe0eba294279d50c840"></script>
+<script src="https://f-mans.com/data/skin/responsive_ver1_default_gl/common/script.js?ver=2?v=afe0eba294279d50c840"></script>
 
 <script src="https://f-mans.com/data/skin/responsive_ver1_default_gl/common/search_ver2.js?ver=1?v=afe0eba294279d50c840"></script>
 
@@ -179,7 +176,7 @@ var kid_agree = "";
 
 <script src="https://f-mans.com/app/javascript/plugin/jquery.bxslider.js?v=afe0eba294279d50c840"></script>
 
-
+<?php wp_head();?>
 
 
 
@@ -195,7 +192,7 @@ background-color:#ffffff;}
 #layer_pay {position:absolute;top:0px;width:100%;height:100%;background-color:#ffffff;text-align:center;z-index:999999;}
 #payprocessing {text-align:center;position:absolute;width:100%;top:150px;z-index:99999999px;}
 </style>
-<?php wp_head();?>
+
 </head>
 <body style="overflow: visible;">
 <div id="wrap">

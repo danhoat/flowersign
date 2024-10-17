@@ -250,15 +250,6 @@ function gtag_report_conversion(url) {
 
 
 
-<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++
-@@ index @@
-- 파일위치 : [스킨폴더]/main/index.html
-++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-
-
-
-
-
 
 
 <script>
@@ -287,9 +278,6 @@ if( window.SwingJavascriptInterface != undefined )
 .layout_footer {margin-top: 0px;}
 /* 하단 정보 끝*/
 </style>
-
-
-    
 
 
 
