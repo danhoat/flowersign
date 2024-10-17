@@ -404,4 +404,10 @@ $(function() {
 </div>
 
 
-<script>$('#topSearchForm').submit(function() { var search_string = $('#searchVer2InputBox').val(); fbq('track', 'Search', {     search_string: search_string });});</script></body></html>
+<script>$('#topSearchForm').submit(function() { var search_string = $('#searchVer2InputBox').val(); fbq('track', 'Search', {     search_string: search_string });});</script>
+
+<?php wp_footer();?>
+</body>
+
+
+</html>

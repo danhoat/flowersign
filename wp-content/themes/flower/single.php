@@ -296,41 +296,9 @@ if( window.SwingJavascriptInterface != undefined )
 
 <div class="resp_wrap" style="position:relative;">
 
-    <?php get_template_part('templates/slide','1'); ?>
-
-    <?php get_template_part('templates/home','banner'); ?>
-
-    <!--  해당 날짜에 노출 및 미노출 설정 -->
-    <!-- 해당 날짜 노출 끝 -->
-
-    <!-- start slide 2 !-->
-
-     <?php get_template_part('templates/slide','2'); ?>
-
-    <!-- end slide 2 !-->
 
 
-    <!-- start  slide 3 !-->
-
-    <?php get_template_part('templates/slide','3'); ?>
-
-<!-- end slide 3 !-->
-
-
-<!-- start block tabs 4 !-->
-
-    <?php get_template_part('templates/home','tabs'); ?>
-
-
-
-
-<!-- ENd tab 4 !-->
-    <?php get_template_part('templates/slide','4'); ?>
-
-
-
-        <!-- ================= #LAYOUT_FOOTER :: START. 파일위치 : layout_footer/standard.html (default) ================= -->
-
+<?php the_post(); the_content(); ?>
     
 
 <?php get_footer(); ?>

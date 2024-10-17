@@ -1,4 +1,5 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko" xmlns:fb="http://ogp.me/ns/fb#" xmlns:og="http://ogp.me/ns#">
+ <head>
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -194,6 +195,8 @@ background-color:#ffffff;}
 #layer_pay {position:absolute;top:0px;width:100%;height:100%;background-color:#ffffff;text-align:center;z-index:999999;}
 #payprocessing {text-align:center;position:absolute;width:100%;top:150px;z-index:99999999px;}
 </style>
+<?php wp_head();?>
+</head>
 <body style="overflow: visible;">
 <div id="wrap">
     <!-- ================= 어사이드 :: START. 파일위치 : _modules/common/layout_side.html (비동기 로드) ================= -->
@@ -274,30 +277,60 @@ background-color:#ffffff;}
                     }
                 }
 
-                $(document).ready(function(){
-                    nav_category_area_height = $('.nav_category_area').offset().top+50;
-                    layout_footer_height = $('.layout_footer').offset().top-40;
-                    //최초 로드시 위치 지정
-                                            main_slide_height = $('.custom_slider').height()+453;
-                                        decide_wing_position();
-                    $('.wing_area').css('top',wing_up+'px').css('visibility','visible');
 
-                    //스크롤시 위치 지정
-                    $(window).scroll(function() {
+                $(document).ready(function(){
+                    <?php if( is_home() || is_front_page() ){ ?>
                         nav_category_area_height = $('.nav_category_area').offset().top+50;
                         layout_footer_height = $('.layout_footer').offset().top-40;
-                        decide_wing_position();
-                        var timer = setTimeout(function(){
-                            // 꽃청 추가 START 윤상희 2023.04.21 - 윙배너 위치 수정
-                            if($('.catalog_title.flying').length > 0){
-                                scroll = scroll + 10;
-                            }
-                            // 꽃청 추가 END
-                            $('.wing_area').animate({'top':scroll+'px'});
-                            $('.wing_area').clearQueue();
-                            clearTimeout(timer);
-                        }, 100);
-                    })
+                        //최초 로드시 위치 지정
+                                                main_slide_height = $('.custom_slider').height()+453;
+                                            decide_wing_position();
+                        $('.wing_area').css('top',wing_up+'px').css('visibility','visible');
+
+                        //스크롤시 위치 지정
+                        
+                        $(window).scroll(function() {
+                            nav_category_area_height = $('.nav_category_area').offset().top+50;
+                            layout_footer_height = $('.layout_footer').offset().top-40;
+                            decide_wing_position();
+                            var timer = setTimeout(function(){
+                                // 꽃청 추가 START 윤상희 2023.04.21 - 윙배너 위치 수정
+                                if($('.catalog_title.flying').length > 0){
+                                    scroll = scroll + 10;
+                                }
+                                // 꽃청 추가 END
+                                $('.wing_area').animate({'top':scroll+'px'});
+                                $('.wing_area').clearQueue();
+                                clearTimeout(timer);
+                            }, 100);
+                        })
+                    <?php } else{ ?>
+                        //스크롤시 위치 지정
+                        nav_category_area_height = $('.nav_category_area').offset().top+50;
+                        layout_footer_height = $('.layout_footer').offset().top-40;
+                        //최초 로드시 위치 지정
+                                            decide_wing_position();
+                        $('.wing_area').css('top',wing_up+'px').css('visibility','visible');
+
+                        //스크롤시 위치 지정
+                        $(window).scroll(function() {
+                            nav_category_area_height = $('.nav_category_area').offset().top+50;
+                            layout_footer_height = $('.layout_footer').offset().top-40;
+                            decide_wing_position();
+                            var timer = setTimeout(function(){
+                                // 꽃청 추가 START 윤상희 2023.04.21 - 윙배너 위치 수정
+                                if($('.catalog_title.flying').length > 0){
+                                    scroll = scroll + 10;
+                                }
+                                // 꽃청 추가 END
+                                $('.wing_area').animate({'top':scroll+'px'});
+                                $('.wing_area').clearQueue();
+                                clearTimeout(timer);
+                            }, 100);
+                        })
+
+
+                    <?php }?>
 
                     //화면 리사이즈 위치 지정
                     $( window ).resize(function() {
