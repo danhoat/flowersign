@@ -1,4 +1,33 @@
 <?php get_header();?>
+    <!-- 카테고리 전체 네비게이션 팝업 START -->
+    <div id="categoryAll_wrap" class="categoryAll_wrap" style="display:none;">
+        <div class="categoryAllContainer"><!-- 로딩 파일위치 : [스킨폴더]/_modules/category/all_navigation.html --></div>
+    </div>
+    <!-- 카테고리 전체 네비게이션 팝업 END -->
+
+    <!-- 브랜드 전체 네비게이션 팝업 START -->
+    <div id="brandAll_wrap" class="brandAll_wrap" style="display:none;">
+        <div class="brandAllContainer"><!-- 로딩 파일위치 : [스킨폴더]/_modules/brand/all_navigation.html --></div>
+    </div>
+    <!-- 브랜드 전체 네비게이션 팝업 END -->
+
+    <!-- 지역 전체 네비게이션 팝업 START -->
+    <div id="locationAll_wrap" class="locationAll_wrap" style="display:none;">
+        <div class="locationAllContainer"><!-- 로딩 파일위치 : [스킨폴더]/_modules/location/all_navigation.html --></div>
+    </div>
+    <!-- 지역 전체 네비게이션 팝업 END -->
+
+</div>
+<!-- 상단영역 : 끝 -->
+
+
+<!-- 모바일 카카오톡 아이콘 (플로팅) -->
+<div class="quick_kakao">
+    <a href="https://pf.kakao.com/_Kyfxhl" target="_blank">
+        <img src="https://f-mans.com/data/images/icon/footer/icon_kakao.png" alt="카카오 문의하기">
+    </a>
+</div>
+<!-- 모바일 카카오톡 아이콘 (플로팅) 끝 -->
 
 
 
@@ -199,34 +228,11 @@ $(function(){
     });
 });
 
-// 꽃청 추가 START 홍우기 2022.08.17 - GoogleAds
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-954660897/9KZmCOyCndYDEKHwm8cD',
-      'event_callback': callback
-  });
-  return false;
-}
-// 꽃청 추가 END
 </script>
         <!-- ================= #LAYOUT_HEADER :: END. 파일위치 : layout_header/standard.html (default) ================= -->
 
         <div id="layout_body" class="layout_body">
         <!-- ================= 파트 페이지들 :: START. ================= -->
-
-
-
-<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++
-@@ index @@
-- 파일위치 : [스킨폴더]/main/index.html
-++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-
-
 
 
 
@@ -251,68 +257,22 @@ if( window.SwingJavascriptInterface != undefined )
 }
 </script>
 <style type="text/css">
+#layout_body { max-width:100%; padding-left:0; padding-right:0; overflow: hidden; }
 
 
+/* 하단 정보 (메인에서 하단 배너를 붙이기 위해 수정 된 코드) */
+.layout_footer {margin-top: 0px;}
 /* 하단 정보 끝*/
 </style>
-
-<!-- slide_itro + list categories !-->
-    <?php include('home-intro.php') ?>
-<!-- end !-->
-
-<!-- 해당 아이피에서만 노출 -->
- <!-- 해당 아이피에서만 노출 닫음 -->
-
-<!-- 어버이날 배송불가지역 -->
-<!-- 어버이날 - 배송불가 지역 탭메뉴 형식 -->
- <!-- 해당 날짜와 시간에 오픈 -->
-<!-- 어버이날 - 배송불가 지역 탭메뉴 형식 끝 -->
-    
-<!-- 해당 아이피에서만 노출 -->
- <!-- 해당 아이피에서만 노출 닫음 -->
-    
-    
 
 
 
 
 <div class="resp_wrap" style="position:relative;">
 
-    <?php get_template_part('templates/slide','1'); ?>
-
-    <?php get_template_part('templates/home','banner'); ?>
-
-    <!--  해당 날짜에 노출 및 미노출 설정 -->
-    <!-- 해당 날짜 노출 끝 -->
-
-    <!-- start slide 2 !-->
-
-     <?php get_template_part('templates/slide','2'); ?>
-
-    <!-- end slide 2 !-->
 
 
-    <!-- start  slide 3 !-->
-
-    <?php get_template_part('templates/slide','3'); ?>
-
-<!-- end slide 3 !-->
-
-
-<!-- start block tabs 4 !-->
-
-    <?php get_template_part('templates/home','tabs'); ?>
-
-
-
-
-<!-- ENd tab 4 !-->
-    <?php get_template_part('templates/slide','4'); ?>
-
-
-
-        <!-- ================= #LAYOUT_FOOTER :: START. 파일위치 : layout_footer/standard.html (default) ================= -->
-
+<?php the_post(); the_content(); ?>
     
 
 <?php get_footer(); ?>

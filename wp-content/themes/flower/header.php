@@ -402,7 +402,7 @@ background-color:#ffffff;}
             <!-- 햄버거 버튼 -->
             <div class="resp_top_hamburger">
                 <!-- 꽃청 추가 START 김태섭 2023-06-09 - 햄버거 메뉴 텍스트 추가 -->
-                <a href="#category"><b>aside menu</b><h2>전체상품</h2></a>
+                <a href="#category"><b>aside menu</b><h2>MENU</h2></a>
                 <!-- 꽃청 추가 END 김태섭 2023-06-09 - 햄버거 메뉴 텍스트 추가 -->
             </div>
 
@@ -623,3 +623,32 @@ background-color:#ffffff;}
     </div>
     <!-- +++++++++++ //카테고리 메뉴 +++++++++++ -->
     <!-- end header Line_599 !-->
+    <!-- 카테고리 전체 네비게이션 팝업 START -->
+    <div id="categoryAll_wrap" class="categoryAll_wrap" style="display:none;">
+        <div class="categoryAllContainer"><!-- 로딩 파일위치 : [스킨폴더]/_modules/category/all_navigation.html --></div>
+    </div>
+    <!-- 카테고리 전체 네비게이션 팝업 END -->
+
+    <!-- 브랜드 전체 네비게이션 팝업 START -->
+    <div id="brandAll_wrap" class="brandAll_wrap" style="display:none;">
+        <div class="brandAllContainer"><!-- 로딩 파일위치 : [스킨폴더]/_modules/brand/all_navigation.html --></div>
+    </div>
+    <!-- 브랜드 전체 네비게이션 팝업 END -->
+
+    <!-- 지역 전체 네비게이션 팝업 START -->
+    <div id="locationAll_wrap" class="locationAll_wrap" style="display:none;">
+        <div class="locationAllContainer"><!-- 로딩 파일위치 : [스킨폴더]/_modules/location/all_navigation.html --></div>
+    </div>
+    <!-- 지역 전체 네비게이션 팝업 END -->
+
+</div>
+<!-- 상단영역 : 끝 -->
+
+
+<!-- 모바일 카카오톡 아이콘 (플로팅) -->
+<div class="quick_kakao">
+    <a href="https://pf.kakao.com/_Kyfxhl" target="_blank">
+        <img src="https://f-mans.com/data/images/icon/footer/icon_kakao.png" alt="카카오 문의하기">
+    </a>
+</div>
+<!-- 모바일 카카오톡 아이콘 (플로팅) 끝 -->
