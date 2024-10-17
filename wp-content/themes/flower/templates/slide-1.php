@@ -2,7 +2,7 @@
 
     <!-- BEST PRODUCTS -->
     <div class="title_group1" style="display:block;">
-        <h3 class="title1"><span designelement="text" textindex="1" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbWFpbi9pbmRleC5odG1s">추천상품 111</span></h3>
+        <h3 class="title1"><span designelement="text" textindex="1" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbWFpbi9pbmRleC5odG1s">추천상품 SLIDE N0.1</span></h3>
         <p class="text2" designelement="text" textindex="2" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbWFpbi9pbmRleC5odG1s">꽃집청년들이 선택했어요:D</p>
     </div>
     <div data-effect="scale opacity" data-iconposition="left" data-icontype="best" style="display:block;">

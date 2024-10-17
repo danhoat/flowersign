@@ -1,7 +1,7 @@
 
 
     <div class="title_group1">
-        <h3 class="title1"><span designelement="text" textindex="5" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbWFpbi9pbmRleC5odG1s">관엽식물 333</span></h3>
+        <h3 class="title1"><span designelement="text" textindex="5" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbWFpbi9pbmRleC5odG1s">관엽식물 SLIDE N0.3</span></h3>
         <p class="text2" designelement="text" textindex="6" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbWFpbi9pbmRleC5odG1s">삭막한 공간을 생기 넘치게!</p>
     </div>
     <div data-effect="scale opacity">

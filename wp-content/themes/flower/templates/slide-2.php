@@ -2,7 +2,7 @@
 <!-- start sline 2 !-->
 
     <div class="title_group1">
-        <h3 class="title1"><span designelement="text" textindex="3" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbWFpbi9pbmRleC5odG1s">꽃선물 222</span></h3>
+        <h3 class="title1"><span designelement="text" textindex="3" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbWFpbi9pbmRleC5odG1s">꽃선물 SLIDE N0.2</span></h3>
         <p class="text2" designelement="text" textindex="4" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbWFpbi9pbmRleC5odG1s">한아름 피어나는 싱그러운 미소를 상상해요.</p>
     </div>
     <div data-effect="scale opacity">

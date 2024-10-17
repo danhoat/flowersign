@@ -167,17 +167,26 @@
 <!-- start list categories !-->
 
 <!-- 꽃청 수정 START 김태섭 2023-07-04 - 테마메뉴 UI -->
+
+<?php 
+$categories = get_terms( 'product_cat', array(
+    'orderby'    => 'count',
+    'hide_empty' => 0,
+) );
+?>
 <div class="theme_content">
     <div class="row g-3 g-md-2">
+        <?php  foreach($categories as $cat ){ ?> 
         <div class="col col-md-3">
             <div class="theme_box_1220">
-                <a href="/goods/catalog_list?code=0001">
-                    <div class="theme_text">꽃선물</div>
+                <a href="<?php echo esc_url( get_term_link( $cat ) ); ?>">
+                    <div class="theme_text"><?php echo $cat->name;?></div>
                     <div><img src="https://f-mans.com/data/images/theme/2024/flower-94.png" alt=""></div>
                 </a>
             </div>
         </div>
-        <div class="col col-md-3">
+        <?php  } ?>
+<!--         <div class="col col-md-3">
             <div class="theme_box_1220">
                 <a href="/goods/catalog_list?code=0002">
                     <div class="theme_text">개업축하</div>
@@ -203,7 +212,7 @@
         </div>
         <div class="col col-md-3">
             <div class="theme_box_1220">
-                <!--  날짜설정 -->
+          
                                                 <a href="/goods/brand?code=00160006">
                     <div class="theme_text">출산/육아</div>
                     <div><img src="https://f-mans.com/data/images/theme/2024/oeun.png" alt=""></div>
@@ -233,7 +242,7 @@
                     <div><img src="https://f-mans.com/data/images/theme/2024/04/subscribe.png" alt=""></div>
                 </a>
             </div>
-        </div>
+        </div> !-->
     </div>
 </div>
 <!-- 꽃청 수정 END 김태섭 2023-07-04 - 테마메뉴 UI -->
