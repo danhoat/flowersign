@@ -542,10 +542,10 @@ background-color:#ffffff;}
 ++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 <!-- 꽃청 수정 START 윤상희 2023.04.07 - 네비게이션 수정 -->
     <li class="categoryDepth1">
-        <a class="categoryDepthLink" href="/page/event/timesale/timesale"><em style="color:#CB4700">꽃시장특가</em></a>
+        <a class="categoryDepthLink" href="<?php echo home_url();?>"><em style="color:#CB4700">Home</em></a>
     </li>
     <li class="categoryDepth1">
-        <a class="categoryDepthLink" href="/goods/catalog_list?code=0001"><em>꽃선물</em></a>
+        <a class="categoryDepthLink" href="<?php echo home_url();?>/shop/"><em>Shop</em></a>
             </li>
     <li class="categoryDepth1">
         <a class="categoryDepthLink" href="/goods/catalog_list?code=0002"><em>개업화분</em></a>
