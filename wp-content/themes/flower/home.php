@@ -1,5 +1,12 @@
 <?php get_header(); ?>
-
+<style type="text/css">
+    #layout_body {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    overflow: hidden;
+}
+</style>
 <?php get_template_part('templates/home','slider'); ?>
 
 <div class="resp_wrap is_home.php" style="position:relative;" >

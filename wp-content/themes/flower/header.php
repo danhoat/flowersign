@@ -149,12 +149,7 @@ var kid_agree = "";
 
 /* 레이아웃설정 스크롤바색상 적용 */
 
-#layout_body {
-    max-width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-    overflow: hidden;
-}
+
 </style>
 
 
