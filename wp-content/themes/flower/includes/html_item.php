@@ -8,7 +8,11 @@ function slide_1_item($product, $pos = 0){
     // var_dump($product);
     // echo '</pre>';
     // die();
-
+    // $t = $product->get_sale_price();
+    // var_dump($t);
+    // $t = $product->get_regular_price();
+    // var_dump($t);
+    $price_html = wc_price($product->get_regular_price());
 
     ?>
 
@@ -69,7 +73,7 @@ function slide_1_item($product, $pos = 0){
             <!-- (할인혜택)판매가 -->
             <div class="goodS_info displaY_sales_price">
                 <span class="areA">                                 
-                    <span class="nuM"><?php echo $product->get_sale_price();?></span>원
+                    <span class="nuM"><?php echo $price_html;?></span>
                 </span>
 
             </div>

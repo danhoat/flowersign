@@ -176,7 +176,7 @@ var kid_agree = "";
 
 <script src="https://f-mans.com/app/javascript/plugin/jquery.bxslider.js?v=afe0eba294279d50c840"></script>
 
-<?php wp_head();?>
+
 
 
 
@@ -396,7 +396,7 @@ background-color:#ffffff;}
         <div class="resp_wrap">
             <!-- logo -->
             <h1 class="logo_area">
-                <a href="/" target="_self"><img src="https://f-mans.com/data/skin/responsive_ver1_default_gl/images/design/resp_logo_sample.png" title="(주)청년들" alt="(주)청년들"></a>
+                <a href="<?php echo home_url();?>" target="_self"><img src="https://f-mans.com/data/skin/responsive_ver1_default_gl/images/design/resp_logo_sample.png" title="(주)청년들" alt="(주)청년들"></a>
             </h1>
 
             <!-- 햄버거 버튼 -->
