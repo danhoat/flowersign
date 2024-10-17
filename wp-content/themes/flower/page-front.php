@@ -1,95 +1,318 @@
-<?php get_header(); ?>
+<?php get_header();?>
 
-<?php get_template_part('templates/home','slider'); ?>
 
-<div class="resp_wrap is_home.php" style="position:relative;" >
+
+<script type="text/javascript" src="https://f-mans.com/data/skin/responsive_ver1_default_gl/common/search_ver2_ready.js?v=1"></script><!-- 반응형 관련 프론트 js : 검색, 자동검색어 최근본상품 -->
+<script type="text/javascript">
+var resp_loc_top;
+function flyingTitleBar() {
+    //var resp_loc_top = $("#layout_header .logo_wrap").offset().top;
+    var additional_add = $("#layout_header .parentsday_2021_top_banner").innerHeight();
+    var obj = $("#layout_header .logo_wrap");
+    var obj_H = $("#layout_header .logo_wrap").outerHeight();
+    $(document).scroll(function(){
+        //alert( resp_loc_top );
+        if ( ( $('.designPopupBand').is(':hidden') || $('.designPopupBand').length < 1 )  && window.innerWidth < 480 ) {
+            if ( $("#layout_header .util_wrap").is(':hidden') ) {
+                resp_loc_top = 0;
+            } else {
+                resp_loc_top = $("#layout_header .util_wrap").outerHeight(); // 띠배너 클로즈시 보정
+            }
+        }
+        if(resp_loc_top + additional_add < $(document).scrollTop() && window.innerWidth < 480 ){
+            /*홍우기*/
+                            obj.addClass("flying");
+                if ( !$('#gonBox').length ) {
+                    $('#layout_header .logo_wrap').before('<div id="gonBox"></div>');
+                    $('#gonBox').css( 'height', obj_H + 'px' );
+                }
+                    } else {
+            obj.removeClass('flying');
+            if ( $('#gonBox').length ) {
+                $('#gonBox').remove();
+            }
+        }
+    });
+}
+
+$(function(){
+    // 텍스트 수정기능을 통해 소스에 박혀있는 카테고리 삭제시 --> 항목 삭제
+    $('#cateSwiper .custom_nav_link').each(function(e) {
+        if ( $(this).find('a').text() == '' ) {
+            $(this).remove();
+        }
+    });
+
+    /* 카테고리 활성화 */
+    var url2, cateIndex;
+    $('#layout_header .designCategoryNavigation .respCategoryList>li').each(function() {
+        url2 = $(this).find('a').attr('href');
+        if ( REQURL == url2 ) {
+            // 꽃청 수정 START 윤상희 2023.04.07 - 네비게이션 수정
+            if($(this).is(":hidden")){
+                cateIndex = -1;
+            }else{
+                if($('#layout_header .designCategoryNavigation .respCategoryList>li.on').length == 0){
+                    cateIndex = $(this).index();
+                }else{
+                    cateIndex = -1;
+                }
+            }
+            // 꽃청 수정 END
+        } else if ( REQURL != url2 && ( REQURL.substr( 0, REQURL.length-4 ) == url2 || REQURL.substr( 0, REQURL.length-8 ) == url2) ) {
+            // 1depth 카테고리 일치하는 요소가 없는 경우 2뎁스에서 검색
+            cateIndex = $(this).index();
+        }
+    });
+    $('#layout_header .designCategoryNavigation .respCategoryList>li').eq(cateIndex).addClass('on');
+    /* //카테고리 활성화 */
+
+    /* 카테고리 swiper 동작( 1024 미만인 경우 동작, 1024 이상인 경우 : 마우스 오버시 서브메뉴 노출 ) */
+    var slideshowSwiper = undefined;
+    if ( window.innerWidth < 1280 && $('#cateSwiper .designCategoryNavigation').length > 0 ) {
+        $('#cateSwiper .designCategoryNavigation ul.respCategoryList>li').addClass('swiper-slide');
+        slideshowSwiper = new Swiper('#cateSwiper .designCategoryNavigation', {
+            wrapperClass: 'respCategoryList',
+            slidesPerView: 'auto'
+        });
+        slideshowSwiper.slideTo( (cateIndex-1), 800, false );
+    } else {
+        $('#cateSwiper .designCategoryNavigation ul.respCategoryList>li').removeClass('swiper-slide');
+        $('#layout_header .respCategoryList .categoryDepth1').hover(
+            function() { $(this).find('.categorySub').show(); },
+            function() { $(this).find('.categorySub').hide(); }
+        );
+    }
+
+    // 꽃청 수정 START 윤상희 2023.04.07 - 네비게이션 수정
+    if($('#searchModule').length!=0){
+        if( window.innerWidth < 1024 && $('.logo_wrap .resp_wrap #searchModule').length == 0){
+            $('#searchModule').insertAfter($('.logo_wrap .resp_wrap .resp_top_hamburger'));
+        }else if( window.innerWidth >= 1024 && $('.top_menu_search #searchModule').length == 0){
+            $('#searchModule').insertAfter($('.top_menu_search'));
+        }
+    }
+    // 꽃청 수정 END
+
+    $( window ).resize(function() {
+        if ( window.innerWidth != WINDOWWIDTH ) {
+            if ( window.innerWidth < 1280 && $('#cateSwiper .designCategoryNavigation').length > 0 && slideshowSwiper == undefined ) {
+                $('#cateSwiper .designCategoryNavigation ul.respCategoryList>li').addClass('swiper-slide');
+                $('#layout_header .respCategoryList .categoryDepth1').off('hover');
+                slideshowSwiper = new Swiper('#cateSwiper .designCategoryNavigation', {
+                    wrapperClass: 'respCategoryList',
+                    slidesPerView: 'auto'
+                });
+                slideshowSwiper.slideTo( (cateIndex-1), 800, false );
+            } else if ( window.innerWidth > 1279 && slideshowSwiper != undefined ) {
+                slideshowSwiper.slideTo( 0, 800, false );
+                $('#cateSwiper .designCategoryNavigation ul.respCategoryList>li').removeClass('swiper-slide');
+                slideshowSwiper.destroy();
+                slideshowSwiper = undefined;
+                $('#layout_header .respCategoryList .categoryDepth1').hover(
+                    function() { $(this).find('.categorySub').show(); },
+                    function() { $(this).find('.categorySub').hide(); }
+                );
+            }
+
+            // 꽃청 수정 START 윤상희 2023.04.07 - 네비게이션 수정
+            if($('#searchModule').length!=0){
+                if( window.innerWidth < 1024 && $('.logo_wrap .resp_wrap #searchModule').length == 0){
+                    $('#searchModule').insertAfter($('.logo_wrap .resp_wrap .resp_top_hamburger'));
+                }else if( window.innerWidth >= 1024 && $('.top_menu_search #searchModule').length == 0){
+                    $('#searchModule').insertAfter($('.top_menu_search'));
+                }
+            }
+            // 꽃청 수정 END
+        }
+    });
+    /* //카테고리 swiper 동작( 1024 미만인 경우 동작, 1024 이상인 경우 : 마우스 오버시 서브메뉴 노출 ) */
+
+    //================= 카테고리 전체 네비게이션 START ====================
+    $('.categoryAllBtn').click(function() {
+        $('#categoryAll_wrap .categoryAllContainer').load('/common/category_all_navigation', function() {
+            $('#categoryAll_wrap').show();
+            $('body').css( 'overflow', 'hidden' );
+        });
+    });
+    $('#categoryAll_wrap').on('click', '.categoryAllClose', function() {
+        $('#categoryAll_wrap').hide();
+        $('body').css( 'overflow', 'auto' );
+    });
+    //================= 카테고리 전체 네비게이션 END  ====================
+
+    //================= 브랜드 전체 네비게이션 START ====================
+    $('.brandAllBtn').click(function() {
+        $('#brandAll_wrap .brandAllContainer').load('/common/brand_all_navigation', function() {
+            $('#brandAll_wrap').show();
+            $('body').css( 'overflow', 'hidden' );
+        });
+    });
+    $('#brandAll_wrap').on('click', '.brandAllClose', function() {
+        $('#brandAll_wrap').hide();
+        $('body').css( 'overflow', 'auto' );
+    });
+    //================= 브랜드 전체 네비게이션 END  ====================
+
+    //================= 지역 전체 네비게이션 START ====================
+    $('.locationAllBtn').click(function() {
+        $('#locationAll_wrap .locationAllContainer').load('/common/location_all_navigation', function() {
+            $('#locationAll_wrap').show();
+            $('body').css( 'overflow', 'hidden' );
+        });
+    });
+    $('#locationAll_wrap').on('click', '.locationAllClose', function() {
+        $('#locationAll_wrap').hide();
+        $('body').css( 'overflow', 'auto' );
+    });
+    //================= 지역 전체 네비게이션 END  ====================
+
+    // GNB 검색 관련
+    $('#respTopSearch .search_open_btn').click(function() {
+        $('#respTopSearch .search_form').addClass('animating');
+        $('#respTopSearch .search_text').focus();
+    });
+    $('#respTopSearch .search_close_btn').click(function() {
+        $('#respTopSearch .search_form').removeClass('animating');
+    });
+
+    // 타이틀바 띄우기
+    flyingTitleBar();
+    $( window ).on('resize', function() {
+        if ( window.innerWidth != WINDOWWIDTH ) {
+            flyingTitleBar();
+        }
+    });
+
+    /* 카테고리 네비게이션 서브레이어 포지션 변화 */
+    var category1DepthNum = $('.respCategoryList .categoryDepth1').length;
+    var rightCategoryStandard = Math.floor( category1DepthNum / 2 );
+    $('.respCategoryList .categoryDepth1').each(function(e) {
+        if ( e > rightCategoryStandard ) {
+            $('.respCategoryList .categoryDepth1').eq(e).addClass('right_area');
+        }
+    });
+    /* 카테고리 네비게이션 서브레이어 포지션 변화 */
+
+    $('.designPopupBand .designPopupClose').on('click', function() {
+        // 띠배너 닫기 클릭시
+    });
+});
+
+// 꽃청 추가 START 홍우기 2022.08.17 - GoogleAds
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-954660897/9KZmCOyCndYDEKHwm8cD',
+      'event_callback': callback
+  });
+  return false;
+}
+// 꽃청 추가 END
+</script>
+        <!-- ================= #LAYOUT_HEADER :: END. 파일위치 : layout_header/standard.html (default) ================= -->
+
+        <div id="layout_body" class="layout_body">
+        <!-- ================= 파트 페이지들 :: START. ================= -->
+
+
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++
+@@ index @@
+- 파일위치 : [스킨폴더]/main/index.html
+++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+
+
+
+
+
+
+<script>
+if( window.SwingJavascriptInterface != undefined )
+{
+    //localStorage.clear();
+    if( !localStorage.getItem("first_access") ){
+        localStorage.setItem("first_access", "1");
+        var x = document.createElement("div");
+        x.className = "designPopup ui-draggable";
+        x.innerHTML +=  '<div class="designPopupBody"><a href="/page/event/appdownload" target="_self"><img src="https://f-mans.com/data/popup/app_popup.jpg"></a></div>';
+        x.innerHTML +=  '<div class="designPopupBar" style="cursor: move;"><div class="designPopupTodaymsg"><label onclick="pop_close()"><input type="checkbox"> 오늘 하루 이 창을 열지 않음</label></div><div class="designPopupClose"><a href="javascript:void(0)" onclick="pop_close()">닫기</a></div></div>';
+        $("#layout_body").prepend(x)
+    }
+    function pop_close(){
+        $('.designPopup').remove();
+        $('#designPopupModalBack').remove();
+    }
+}
+</script>
+<style type="text/css">
+
+
+/* 하단 정보 끝*/
+</style>
+
+<!-- slide_itro + list categories !-->
+    <?php include('home-intro.php') ?>
+<!-- end !-->
+
+<!-- 해당 아이피에서만 노출 -->
+ <!-- 해당 아이피에서만 노출 닫음 -->
+
+<!-- 어버이날 배송불가지역 -->
+<!-- 어버이날 - 배송불가 지역 탭메뉴 형식 -->
+ <!-- 해당 날짜와 시간에 오픈 -->
+<!-- 어버이날 - 배송불가 지역 탭메뉴 형식 끝 -->
+    
+<!-- 해당 아이피에서만 노출 -->
+ <!-- 해당 아이피에서만 노출 닫음 -->
+    
+    
+
+
+
+
+<div class="resp_wrap" style="position:relative;">
+
     <?php get_template_part('templates/slide','1'); ?>
 
-    <?php get_template_part('templates/home','banner');?>
+    <?php get_template_part('templates/home','banner'); ?>
 
-    <?php get_template_part('templates/slide','2');?>
+    <!--  해당 날짜에 노출 및 미노출 설정 -->
+    <!-- 해당 날짜 노출 끝 -->
 
-    <!-- 꽃청 삭제 START 김태섭 2023-06-09 - 작약 띠배너 삭제 후 수국 띠배너 교체 -->
-    <!-- 작약 띠배너  -->
-    <!-- <a class="bn_peony" href="/goods/brand?code=00020003">
-        <h5>신부의 수줍은 고백, 작약!</h5>
-        <span>자세히 보기</span>
-    </a> -->
-    <!-- 수국 띠배너  -->
-    <a class="bn_hydrangea" href="/goods/brand?code=00020002">
-        <h5>수국으로 진심을 선물해보세요:)</h5>
-        <span>자세히 보기</span>
-    </a>
-    <!-- 꽃청 삭제 END 김태섭 2023-06-09 - 작약 띠배너 삭제 후 수국 띠배너 교체 -->
+    <!-- start slide 2 !-->
+
+     <?php get_template_part('templates/slide','2'); ?>
+
+    <!-- end slide 2 !-->
+
+
+    <!-- start  slide 3 !-->
 
     <?php get_template_part('templates/slide','3'); ?>
 
-    <div class="bn_support">
-    <!-- <a class="bn_support bn_starnight" href="https://f-mans.com/page/support"> -->
-        <h5><em>Support</em> 방송&amp;공연 협찬</h5>
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-        <!-- <span>더 알아보기</span> -->
-    <!-- </a> -->
-    </div>
+<!-- end slide 3 !-->
 
 
-
-
-
-    <!-- NEW PRODUCTS -->
-    <div class="title_group1" style="display:none;">
-        <h3 class="title1"><span designelement="text" textindex="7" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbWFpbi9pbmRleC5odG1s">NEW 4444 text</span></h3>
-        <p class="text2" designelement="text" textindex="8" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbWFpbi9pbmRleC5odG1s">꽃집청년들만의 상품을 만나보세요.</p>
-    </div>
-
-
-
-
-
-    <!-- 슬라이드 배너 영역 (light_style_2_4) :: START -->
-    <div class="main_slider_b2 sliderB slider_before_loading" style="display:none;">
-        <!-- 슬라이드 배너 데이터 영역 :: START -->    <div class="light_style_2_4 designBanner" designelement="banner" templatepath="main/index.html" bannerseq="4"><div class="sslide">  <img class="simg" src="https://f-mans.com/data/skin/responsive_ver1_default_gl/images/banner/4/images_1.jpg"> <div class="slide_contents">        <div class="wrap1">         <div class="wrap2">             <ul class="text_wrap">                  <li class="text1">TV CF</li>
-<li class="text2">마음을 전하는 꽃집청년들</li>
-<li class="sbtns1"><a class="sbtn sbtn1" target="_blank" href="https://www.youtube.com/channel/UCorkJMb3TgAt3SHFKp9dYoA?view_as=subscriber">보러가기</a></li>               </ul>           </div>      </div>  </div></div><div class="sslide">    <img class="simg" src="https://f-mans.com/data/skin/responsive_ver1_default_gl/images/banner/4/images_2.jpg"> <div class="slide_contents">        <div class="wrap1">         <div class="wrap2">             <ul class="text_wrap">                  <li class="text1">명화의 탄생</li>
-<li class="text2">꽃, 명화(名花)를 표현하다.</li>
-<li class="sbtns1"><a class="sbtn sbtn1" href="/goods/brand?code=00020001">바로가기</a></li>                </ul>           </div>      </div>  </div></div><div class="sslide">    <img class="simg" src="https://f-mans.com/data/skin/responsive_ver1_default_gl/images/banner/4/images_3.jpg"> <div class="slide_contents">        <div class="wrap1">         <div class="wrap2">             <ul class="text_wrap">                  <li class="text1">SUPPORT</li>
-<li class="text2">꽃집청년들 협찬 방송&amp;공연</li>
-<li class="sbtns1"><a class="sbtn sbtn1" href="/page/support">바로가기</a></li>             </ul>           </div>      </div>  </div></div>    </div><!-- 슬라이드 배너 데이터 영역 :: END -->
-    </div>
-    <script type="text/javascript">
-    $(function() {
-        $('.light_style_2_4').slick({
-            dots: true, // 도트 페이징 사용( true 혹은 false )
-            autoplay: true, // 슬라이드 자동( true 혹은 false )
-            speed: 1000, // 슬라이딩 모션 속도 ms( 밀리세컨드, ex. 600 == 0.6초 )
-            fade: true, // 페이드 모션 사용
-            autoplaySpeed: 5000 // autoplay 사용시 슬라이드간 시간 ms( 밀리세컨드, ex. 5000 == 5초 )
-        });
-        // 이 외 slick 슬라이더의 자세한 옵션사항은 http://kenwheeler.github.io/slick/ 참고
-    });
-    </script>
-    <!-- 슬라이드 배너 영역 (light_style_2_4) :: END -->
+<!-- start block tabs 4 !-->
 
     <?php get_template_part('templates/home','tabs'); ?>
 
 
 
 
-    <!-- line 983 !-->
-    <?php get_template_part('templates/slide','4');?>
-
-
-    <?php get_template_part('templates/home','footer');?>
+<!-- ENd tab 4 !-->
+    <?php get_template_part('templates/slide','4'); ?>
 
 
 
-</div>
-        <!-- ================= 파트 페이지들 :: END. ================= -->
-        </div>
+        <!-- ================= #LAYOUT_FOOTER :: START. 파일위치 : layout_footer/standard.html (default) ================= -->
+
+    
+
 <?php get_footer(); ?>

@@ -1,34 +1,4 @@
 <?php get_header();?>
-    <!-- 카테고리 전체 네비게이션 팝업 START -->
-    <div id="categoryAll_wrap" class="categoryAll_wrap" style="display:none;">
-        <div class="categoryAllContainer"><!-- 로딩 파일위치 : [스킨폴더]/_modules/category/all_navigation.html --></div>
-    </div>
-    <!-- 카테고리 전체 네비게이션 팝업 END -->
-
-    <!-- 브랜드 전체 네비게이션 팝업 START -->
-    <div id="brandAll_wrap" class="brandAll_wrap" style="display:none;">
-        <div class="brandAllContainer"><!-- 로딩 파일위치 : [스킨폴더]/_modules/brand/all_navigation.html --></div>
-    </div>
-    <!-- 브랜드 전체 네비게이션 팝업 END -->
-
-    <!-- 지역 전체 네비게이션 팝업 START -->
-    <div id="locationAll_wrap" class="locationAll_wrap" style="display:none;">
-        <div class="locationAllContainer"><!-- 로딩 파일위치 : [스킨폴더]/_modules/location/all_navigation.html --></div>
-    </div>
-    <!-- 지역 전체 네비게이션 팝업 END -->
-
-</div>
-<!-- 상단영역 : 끝 -->
-
-
-<!-- 모바일 카카오톡 아이콘 (플로팅) -->
-<div class="quick_kakao">
-    <a href="https://pf.kakao.com/_Kyfxhl" target="_blank">
-        <img src="https://f-mans.com/data/images/icon/footer/icon_kakao.png" alt="카카오 문의하기">
-    </a>
-</div>
-<!-- 모바일 카카오톡 아이콘 (플로팅) 끝 -->
-
 
 
 <script type="text/javascript" src="https://f-mans.com/data/skin/responsive_ver1_default_gl/common/search_ver2_ready.js?v=1"></script><!-- 반응형 관련 프론트 js : 검색, 자동검색어 최근본상품 -->
@@ -228,65 +198,17 @@ $(function(){
     });
 });
 
-// 꽃청 추가 START 홍우기 2022.08.17 - GoogleAds
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-954660897/9KZmCOyCndYDEKHwm8cD',
-      'event_callback': callback
-  });
-  return false;
-}
-// 꽃청 추가 END
 </script>
         <!-- ================= #LAYOUT_HEADER :: END. 파일위치 : layout_header/standard.html (default) ================= -->
 
         <div id="layout_body" class="layout_body">
-        <!-- ================= 파트 페이지들 :: START. ================= -->
+
+
+            <div class="resp_wrap 99999" style="position:relative;">
 
 
 
+            <?php the_post(); the_content(); ?>
+                
 
-
-<script>
-if( window.SwingJavascriptInterface != undefined )
-{
-    //localStorage.clear();
-    if( !localStorage.getItem("first_access") ){
-        localStorage.setItem("first_access", "1");
-        var x = document.createElement("div");
-        x.className = "designPopup ui-draggable";
-        x.innerHTML +=  '<div class="designPopupBody"><a href="/page/event/appdownload" target="_self"><img src="https://f-mans.com/data/popup/app_popup.jpg"></a></div>';
-        x.innerHTML +=  '<div class="designPopupBar" style="cursor: move;"><div class="designPopupTodaymsg"><label onclick="pop_close()"><input type="checkbox"> 오늘 하루 이 창을 열지 않음</label></div><div class="designPopupClose"><a href="javascript:void(0)" onclick="pop_close()">닫기</a></div></div>';
-        $("#layout_body").prepend(x)
-    }
-    function pop_close(){
-        $('.designPopup').remove();
-        $('#designPopupModalBack').remove();
-    }
-}
-</script>
-<style type="text/css">
-#layout_body { max-width:100%; padding-left:0; padding-right:0; overflow: hidden; }
-
-
-/* 하단 정보 (메인에서 하단 배너를 붙이기 위해 수정 된 코드) */
-.layout_footer {margin-top: 0px;}
-/* 하단 정보 끝*/
-</style>
-
-
-
-
-<div class="resp_wrap" style="position:relative;">
-
-
-
-<?php the_post(); the_content(); ?>
-    
-
-<?php get_footer(); ?>
+            <?php get_footer(); ?>
