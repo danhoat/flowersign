@@ -245,11 +245,11 @@ background-color:#ffffff;}
                         <!-- 꽃청 수정 END -->
             <div class="wing_area left_wing_area" style=""><!-- 순간배송(윙배너) 배너 -->
                 <a href="/page/sub/delivery">
-                    <!-- <img src="https://f-mans.com/data/images/banner/wing_banner_delivery.png?v=1" alt="전국 2~3시간 순간배송"> -->
-                    <img src="images/banner/out_today.png" alt="전국어디든 오늘주문 오늘배송">
+                    
+                    <img src="<?php echo BOXTHEME_URL;?>/images/banner/out_today.png" alt="전국어디든 오늘주문 오늘배송">
                 </a>
                 <a href="/page/paypal" style="display:block;margin:10px 0 0 0;">
-                    <img src="images/banner/wing_banner_paypal.png" alt="페이팔 결제 가이드">
+                    <img src="<?php echo BOXTHEME_URL;?>/images/banner/wing_banner_paypal.png" alt="페이팔 결제 가이드">
                 </a>
             </div>
             
