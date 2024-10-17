@@ -1,0 +1,11 @@
+ssh-add -K /c/Users/danho/.ssh/id_rsa
+
+"C:\Users\danho\.ssh\id_rsa"
+
+
+ssh-keygen -C  "danhoat@gmail.com" -t rsa
+2:
+C:\Users\danho/.ssh/id_rsa
+
+
+git add wp-includes/.gitignore
