@@ -208,7 +208,11 @@ $(function(){
 
 
 
-            <?php the_post(); the_content(); ?>
+            <?php 
+            wp_reset_query();
+            while( have_posts() ){
+                the_post(); the_content(); 
+            } ?>
                 
 
             <?php get_footer(); ?>

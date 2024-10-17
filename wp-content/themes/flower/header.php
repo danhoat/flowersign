@@ -114,16 +114,7 @@ var kid_agree = "";
 
 <style type="text/css">
 
-/* 레이아웃설정 폰트 적용 */
-#layout_body body,
-#layout_body table,
-#layout_body div,
-#layout_body input,
-#layout_body textarea,
-#layout_body select,
-#layout_body span
-{
-}
+
 .slide-intro .splide__slide,
 .slide-intro ul.splide__list{
     max-height: 390px;
@@ -194,7 +185,7 @@ background-color:#ffffff;}
 </style>
 
 </head>
-<body style="overflow: visible;">
+<body <?php body_class();?>>
 <div id="wrap">
     <!-- ================= 어사이드 :: START. 파일위치 : _modules/common/layout_side.html (비동기 로드) ================= -->
    
