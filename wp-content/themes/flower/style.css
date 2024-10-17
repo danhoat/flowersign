@@ -13,3 +13,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: twentytwentyfour
 Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready, wide-blocks, block-styles, style-variations, accessibility-ready, blog, portfolio, news
 */
+.goods_spec_sections .deatil_price_area .sale_price, .searched_item_display .item_info_area .goods_price_area .sale_price, .goods_price_area .total_goods_price, .displaY_sales_price, .order_price_total>ul.total>li.td, .cart_list .cgd_contents .block2 .total_p, .total_sum_price .settle_price, .total_sum_price .settle_price .num, .recent_wrap .recent_list .recent_price .nomal_price>b, .wish_wrap .wish_list .wish_price .nomal_price>b, .quick_sale_price {
+    color: #71a200 !important;
+}

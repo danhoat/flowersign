@@ -150,10 +150,6 @@ var kid_agree = "";
 /* 레이아웃설정 스크롤바색상 적용 */
 </style>
 
-
-
-
-
 <script src="https://f-mans.com/app/javascript/js/dev-tools.js?v=afe0eba294279d50c840"></script>
 <script src="https://f-mans.com/app/javascript/js/goods-display_mobile.js?v=afe0eba294279d50c840"></script>
 <script src="https://f-mans.com/app/javascript/js/design.js?v=afe0eba294279d50c840"></script>
@@ -198,7 +194,7 @@ background-color:#ffffff;}
 #layer_pay {position:absolute;top:0px;width:100%;height:100%;background-color:#ffffff;text-align:center;z-index:999999;}
 #payprocessing {text-align:center;position:absolute;width:100%;top:150px;z-index:99999999px;}
 </style>
-
+<body style="overflow: visible;">
 <div id="wrap">
     <!-- ================= 어사이드 :: START. 파일위치 : _modules/common/layout_side.html (비동기 로드) ================= -->
    

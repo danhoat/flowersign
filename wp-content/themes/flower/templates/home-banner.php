@@ -1,10 +1,4 @@
-    <!-- 명화 띠배너  -->
-    <a class="bn_famous bn_starnight" href="/page/sub/famous">
-        <h5>꽃, 명화(名花)를 표현하다.</h5>
-        <span>자세히 보기</span>
-    </a>
-
-
+<!-- start main_bnr_c1 !-->
 
     <!-- 배너 모음 및 화환 -->
     <ul class="main_bnr_c1">
@@ -58,7 +52,4 @@
             <!-- 슬라이드 배너 영역 (light_style_1_3) :: END -->
         </li>
     </ul>
-    <!-- 배너 모음 및 화환 끝 -->
-
-    <!--  해당 날짜에 노출 및 미노출 설정 -->
-    <!-- 해당 날짜 노출 끝 -->
+    <!-- main_bnr_c1 배너 모음 및 화환 끝 -->

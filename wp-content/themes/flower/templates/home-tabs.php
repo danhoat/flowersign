@@ -1,9 +1,7 @@
-    <!-- line 84 !-->
-
 
     <div class="title_group1">
-        <h3 class="title1"><span designelement="text" textindex="9" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbWFpbi9pbmRleC5odG1s">동서양난</span></h3>
-        <p class="text2" designelement="text" textindex="10" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbWFpbi9pbmRleC5odG1s">꼿꼿한 기품, 절개의 상징 4444</p>
+        <h3 class="title1"><span designelement="text" textindex="9" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbWFpbi9pbmRleC5odG1s">동서양난 tab1 </span></h3>
+        <p class="text2" designelement="text" textindex="10" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbWFpbi9pbmRleC5odG1s">꼿꼿한 기품, 절개의 상징</p>
     </div>
     <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++
 @@ [반응형] 디스플레이 템플릿 - 격자 반응형 @@
@@ -380,7 +378,7 @@
     </div>
   </li>
 
-        <!-- ------- //상품정보. ------- line 2016 -->
+        <!-- ------- //상품정보. ------- -->
     </ul></div>
     <div class="designDisplay_670aa31ddbc96 display_responsible_class displayTabContentsContainer displayTabContentsContainerBox">
         <!-- ------- 상품정보. 파일위치 : /data/design/ ------- -->
@@ -742,13 +740,13 @@
     </div>
   </li>
 
-        <!-- ------- //상품정보. line 2378 ------- -->
+        <!-- ------- //상품정보. ------- -->
     </ul></div>
 
 
 </div>
 
-<!-- end slider here line 833 ok !-->
+
 
 
     <!-- 꽃청 추가 START 김태섭 2023-06-09 - 매거진 띠배너 -->
@@ -760,47 +758,3 @@
         <span>자세히 보기</span>
     </a>
     <!-- 꽃청 추가 END 김태섭 2023-06-09 - 매거진 띠배너 -->
-
-
-    <!-- 꽃청 삭제 START 김태섭 2023-06-09 - 스토리 Close -->
-        <!-- firstmall STORY -->
-        <!-- <div class="title_group1">
-            <p class="text1" designElement="text">"마음을 전합니다."</p>
-            <h3 class="title1"><span designElement="text">꽃집청년들 Story</span></h3>
-            <p class="text2" designElement="text">마음을 전하는 다양한 방법을 만나보세요:)</p>
-        </div> -->
-        <!-- 슬라이드 배너 영역 (light_style_1_5) :: START -->
-        <div class="main_slider_a1 sliderA slider_before_loading" data-effect="opacity" style="display: none;">
-            <!-- <!-- 슬라이드 배너 데이터 영역 :: START -->   <div class="light_style_1_5 designBanner" designelement="banner" templatepath="main/index.html" bannerseq="5"><div class="sslide"><a class="slink" href="/board/view?id=custom_bbs2&amp;seq=3119" target="_self"><img class="simg" src="https://f-mans.com/data/skin/responsive_ver1_default_gl/images/banner/5/images_1.jpg"></a></div><div class="sslide"><a class="slink" href="/board/view?id=custom_bbs2&amp;seq=2984" target="_self"><img class="simg" src="https://f-mans.com/data/skin/responsive_ver1_default_gl/images/banner/5/images_2.jpg"></a></div><div class="sslide"><a class="slink" href="/board/view?id=custom_bbs2&amp;seq=2883" target="_self"><img class="simg" src="https://f-mans.com/data/skin/responsive_ver1_default_gl/images/banner/5/images_3.jpg"></a></div><div class="sslide"><a class="slink" href="/board/view?id=custom_bbs2&amp;seq=2817" target="_self"><img class="simg" src="https://f-mans.com/data/skin/responsive_ver1_default_gl/images/banner/5/images_4.jpg"></a></div><div class="sslide"><a class="slink" href="https://f-mans.com/board/view?id=custom_bbs2&amp;seq=2728" target="_self"><img class="simg" src="https://f-mans.com/data/skin/responsive_ver1_default_gl/images/banner/5/images_5.jpg"></a></div><div class="sslide"><a class="slink" href="/board/view?id=custom_bbs2&amp;seq=55" target="_self"><img class="simg" src="https://f-mans.com/data/skin/responsive_ver1_default_gl/images/banner/5/images_6.jpg"></a></div><div class="sslide"><a class="slink" href="/board/view?id=custom_bbs2&amp;seq=56" target="_self"><img class="simg" src="https://f-mans.com/data/skin/responsive_ver1_default_gl/images/banner/5/images_7.jpg"></a></div><div class="sslide"><a class="slink" href="/board/view?id=custom_bbs2&amp;seq=57" target="_self"><img class="simg" src="https://f-mans.com/data/skin/responsive_ver1_default_gl/images/banner/5/images_8.jpg"></a></div>  </div><!-- 슬라이드 배너 데이터 영역 :: END --> --&gt;
-        </div>
-        <script type="text/javascript">
-        $(function() {
-            $('.light_style_1_5').slick({
-                slidesToShow: 3, // 한 화면에 몇개의 슬라이드를 보여줄 것인가? - 3개
-                slidesToScroll: 2, // 슬라이드 할때, 몇개씩 슬라이드할 것인가? - 2개
-                speed: 800, // 슬라이딩 모션 속도 ms( 밀리세컨드, ex. 800 == 0.8초 )
-                responsive: [
-                {
-                    breakpoint: 768, // 스크린 가로 사이즈가 768px 이하일 때,
-                    settings: {
-                        arrows: false, // 좌우 버튼 페이징 사용 안함( 사용함: true, 사용안함: false )
-                        centerMode: true, // 센터모드 사용( true 혹은 false )
-                        centerPadding: '40px', // 센터모드 사용시 좌우 여백
-                        slidesToShow: 2 // 한 화면에 몇개의 슬라이드를 보여줄 것인가? - 2개
-                    }
-                },
-                {
-                    breakpoint: 480, // 스크린 가로 사이즈가 400px 이하일 때,
-                    settings: {
-                        arrows: false, // 좌우 버튼 페이징 사용 안함( 사용함: true, 사용안함: false )
-                        centerMode: true, // 센터모드 사용( true 혹은 false )
-                        centerPadding: '60px', // 센터모드 사용시 좌우 여백
-                        slidesToShow: 1 // 한 화면에 몇개의 슬라이드를 보여줄 것인가? - 1개
-                    }
-                }]
-            });
-            // 이 외 slick 슬라이더의 자세한 옵션사항은 http://kenwheeler.github.io/slick/ 참고
-        });
-        </script>
-        <!-- 슬라이드 배너 영역 (light_style_1_5) :: END -->
-    <!-- 꽃청 삭제 END 김태섭 2023-06-09 - 스토리 Close -->

@@ -1,12 +1,11 @@
 
 <!-- start sline 2 !-->
 
-
     <div class="title_group1">
-        <h3 class="title1"><span designelement="text" textindex="3" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbWFpbi9pbmRleC5odG1s">꽃선물 2222</span></h3>
+        <h3 class="title1"><span designelement="text" textindex="3" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbWFpbi9pbmRleC5odG1s">꽃선물 222</span></h3>
         <p class="text2" designelement="text" textindex="4" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbWFpbi9pbmRleC5odG1s">한아름 피어나는 싱그러운 미소를 상상해요.</p>
     </div>
-    <div data-effect="scale opacity line1708">
+    <div data-effect="scale opacity">
     <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++
 @@ [반응형] 디스플레이 템플릿 - 스와이프형 @@
 - 파일위치 : [스킨폴더]/_modules/display/goods_display_sizeswipe.html
@@ -22,26 +21,25 @@
 <!-- 추천상품 타이틀 부분 20200717 수정 : 서민혁  끝 -->
 
 
-
-
 <div id="designDisplay_670aa31dbdc10" class="designDisplay" designelement="display" templatepath="main/index.html" displayseq="10150" perpage="" category="" displaystyle="sizeswipe">
           <div class="designDisplay_670aa31dbdc10 display_slide_class displaySwipeTabContentsContainer" tabidx="0">
               <div class="goods_display_slide_wrap">
                   <div class="swiper-wrapper">
-                  
-                <?php 
+                    <!-- ------- 상품정보. 파일위치 : /data/design/ ------- -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++
+@@ goods_info_style_2 @@
+- 파일 위치 : /data/design/goods_info_style_2.html
+- CSS 경로 : /data/design/goods_info_style.css
+- 상품정보 관련 CSS 수정 및 추가는 다음의 CSS파일에서 작업하시기 바랍니다.
+/data/design/goods_info_user.css
+※ /data 폴더는 /skin 폴더 상위 폴더입니다.
+++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 
-                $product = array(); 
-                slide_2_item($product);
-
-                slide_2_item($product);
-
-                slide_2_item($product);
-                slide_2_item($product);
-                slide_2_item($product);
-                ?>
-
-
+                    <?php slide_2_item() ;?>
+                     <?php slide_2_item() ;?>
+                      <?php slide_2_item() ;?>
+                       <?php slide_2_item() ;?>
+                        <?php slide_2_item() ;?>
                     <!-- ------- //상품정보. ------- -->
                   </div>
                   <!-- scrollbar -->
@@ -100,3 +98,16 @@
     </div>
 
 <!-- END Slide2 !-->
+ <!-- 꽃청 삭제 START 김태섭 2023-06-09 - 작약 띠배너 삭제 후 수국 띠배너 교체 -->
+    <!-- 작약 띠배너  -->
+    <!-- <a class="bn_peony" href="/goods/brand?code=00020003">
+        <h5>신부의 수줍은 고백, 작약!</h5>
+        <span>자세히 보기</span>
+    </a> -->
+    <!-- 수국 띠배너  -->
+    <a class="bn_hydrangea" href="/goods/brand?code=00020002">
+        <h5>수국으로 진심을 선물해보세요:)</h5>
+        <span>자세히 보기</span>
+    </a>
+    <!-- 꽃청 삭제 END 김태섭 2023-06-09 - 작약 띠배너 삭제 후 수국 띠배너 교체 -->
+  <!-- end slide 2 !-->

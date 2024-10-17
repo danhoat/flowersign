@@ -94,3 +94,9 @@
 
 
     <!-- end slide 1 !-->
+
+        <!-- 명화 띠배너  -->
+    <a class="bn_famous bn_starnight" href="/page/sub/famous">
+        <h5>꽃, 명화(名花)를 표현하다.</h5>
+        <span>자세히 보기</span>
+    </a>
