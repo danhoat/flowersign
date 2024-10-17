@@ -1,10 +1,11 @@
+<!-- start slide 1 !-->
 
     <!-- BEST PRODUCTS -->
-    <div class="title_group1 111" style="display:block;">
-        <h3 class="title1"><span designelement="text" textindex="1" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbWFpbi9pbmRleC5odG1s">추천상품 Slide 1111</span></h3>
+    <div class="title_group1" style="display:block;">
+        <h3 class="title1"><span designelement="text" textindex="1" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbWFpbi9pbmRleC5odG1s">추천상품 111</span></h3>
         <p class="text2" designelement="text" textindex="2" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbWFpbi9pbmRleC5odG1s">꽃집청년들이 선택했어요:D</p>
     </div>
-    <div data-effect="scale opacity line103" data-iconposition="left" data-icontype="best" style="display:block;">
+    <div data-effect="scale opacity" data-iconposition="left" data-icontype="best" style="display:block;">
         <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++
 @@ [반응형] 디스플레이 템플릿 - 스와이프형 @@
 - 파일위치 : [스킨폴더]/_modules/display/goods_display_sizeswipe.html
@@ -23,9 +24,8 @@
 <div id="designDisplay_670aa31da48d7" class="designDisplay" designelement="display" templatepath="main/index.html" displayseq="10001" perpage="" category="" displaystyle="sizeswipe">
           <div class="designDisplay_670aa31da48d7 display_slide_class displaySwipeTabContentsContainer" tabidx="0">
               <div class="goods_display_slide_wrap">
-                    <div class="swiper-wrapper">
-
-                    <?php 
+                  <div class="swiper-wrapper">
+                         <?php 
 
 
                     $args = array(
@@ -39,13 +39,12 @@
                     } else{
                         echo 'No products found.';
                     }
-
-
                     ?>
 
+
                     <!-- ------- //상품정보. ------- -->
-                    </div>
-                    <!-- scrollbar -->
+                  </div>
+                  <!-- scrollbar -->
                   <div class="display-scrollbar swiper-scrollbardesignDisplay_670aa31da48d7"></div>
               </div>
                <!-- left, right button -->
@@ -87,18 +86,11 @@
                 });
             }
         });
-        /*
-         $(window).resize(function(){
-            setTimeout(function(){
-                if($('.swiper-scrollbar-drag').width() == 0) display_swiper[uniquekey_dsp].update(true);
-            },1000);
-         });
-         set_goods_display_decoration(".goodsDisplayImageWrap");
-        */
+       
     });
 </script>
 </div>
     </div>
 
 
-<!-- end class 1634 line !-->
+    <!-- end slide 1 !-->
