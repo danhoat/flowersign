@@ -1,41 +1,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko" xmlns:fb="http://ogp.me/ns/fb#" xmlns:og="http://ogp.me/ns#">
- <head>
+<head>
 
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-<meta charset="utf-8">
 <script nonce="ZfNcz9LOJRepymLBSZhf0ovlGhkSb2wNh2wbhH0qado=">window.Firstmall = window.Firstmall || {};
 window.Firstmall.Config = {"Environment":{"MobileMode":true,"SetMode":null,"Language":"KR","isAdmin":false,"isSellerAdmin":false,"isUser":false,"Currency":{"Basic":{"Id":"KRW","Symbol":"원","Position":"after"},"Skin":{"Id":"KRW","Symbol":"원","Position":"after"}},"serviceLimit":{"H_FR":false,"H_AD":false,"H_NFR":true},"OperationType":"light","Protocol":"https","CacheBreaker":"afe0eba294279d50c8408292d8af4a8f517cd1d6"},"Security":{"PreventDrag":true,"PreventContextMenu":true,"MemberLogoutLimit":"30"},"Search":{"AutoComplete":true,"Suggest":false}};
 (function(){ var aliases = {"gl_operation_type":window.Firstmall.Config.Environment.OperationType,"gl_mobile_mode":window.Firstmall.Config.Environment.MobileMode,"gl_set_mode":window.Firstmall.Config.Environment.SetMode,"gl_language":window.Firstmall.Config.Environment.Language,"gl_basic_currency":window.Firstmall.Config.Environment.Currency.Basic.Id,"gl_skin_currency":window.Firstmall.Config.Environment.Currency.Skin.Id,"gl_basic_currency_symbol":window.Firstmall.Config.Environment.Currency.Basic.Symbol,"gl_basic_currency_symbol_position":window.Firstmall.Config.Environment.Currency.Basic.Position,"gl_protocol":window.Firstmall.Config.Environment.Protocol+"://","gl_broadcast":window.Firstmall.Config.Environment.Broadcast}; for(var attr in aliases) { window[attr] = aliases[attr]; }})();</script>
-<!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />  -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-<meta http-equiv="Content-Script-Type" content="text/javascript">
-<meta http-equiv="Content-Style-Type" content="text/css">
-<!-- ios 전화번호 색상 변경 방지 -->
-<meta name="format-detection" content="telephone=no">
 
-<title>꽃집청년들-꽃배달서비스 1위</title>
-
-<!-- SEO 설정이 있을경우 -->
-<meta name="Robots" content="index,follow">
-<meta name="title" content="꽃집청년들-꽃배달서비스 1위">
-<meta name="author" content="꽃집청년들">
-<meta name="description" content="전국 꽃배달 서비스, 당일 2시간배송, 개업식화분, 꽃바구니, 꽃다발, 결혼식화환, 장례식화환, 7년 연속 고객만족브랜드 대상.">
-<meta name="keywords" content="꽃집청년들 전국 꽃배달 서비스, 당일 2시간배송, 개업식화분, 꽃바구니, 꽃다발, 결혼식화환, 장례식화환, 8년 연속 고객만족브랜드 대상.">
-
-<meta property="og:url" content="https://f-mans.com/">
-<meta property="og:site_name" content="꽃집청년들">
-<meta property="og:title" content="꽃집청년들-꽃배달서비스 1위">
-    <meta property="og:description" content="전국 꽃배달 서비스, 당일 2시간배송, 개업식화분, 꽃바구니, 꽃다발, 결혼식화환, 장례식화환, 7년 연속 고객만족브랜드 대상.">
-
-<meta property="og:type" content="website">
-
-<meta property="og:image" content="https://f-mans.com/data/icon/favicon/snslogo.jpg?1728750365">
-<link rel="image_src" href="https://f-mans.com/data/icon/favicon/snslogo.jpg?1728750365">
-
-
-<link rel="canonical" href="https://f-mans.com/">
-<!-- 꽃청 추가 : 네이버 웹마스터 도구 추가 END 김효영 20200803 -->
 
 <!-- 구글 웹폰트 -->
 <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700&amp;subset=korean" rel="stylesheet">
@@ -58,15 +27,10 @@ window.Firstmall.Config = {"Environment":{"MobileMode":true,"SetMode":null,"Lang
 <link rel="stylesheet" type="text/css" href="https://f-mans.com/data/skin/responsive_ver1_default_gl/css/modal.css?date=20241013&amp;v=1">
 <link rel="stylesheet" type="text/css" href="https://f-mans.com/data/skin/responsive_ver1_default_gl/css/_layout.css?date=20241013&amp;v=1">
 
-<meta name="facebook-domain-verification" content="u6bcmbjruyosvvz3pd294th2lf8prh"><!--페이스북 도메인 인증용-->
-<!-- // 꽃청 수정 END -->
 
 <!-- css 추가 상세페이지 및 추가 디자인 부분 -->
 <link rel="stylesheet" type="text/css" href="https://f-mans.com/data/css/detail.css?date=20241013&amp;ver=22"><!-- ++++++++++++ 상세페이지 및 공통 부분 CSS ++++++++++++ -->
-<!-- <link rel="stylesheet" type="text/css" href="https://f-mans.com/data/skin/responsive_ver1_default_gl/css/detail-goods.css?date=20241013&ver=2" /> -->
-<!--<link rel="stylesheet" type="text/css" href="https://f-mans.com/data/css/style.css?ver=1" />-->
-<!-- ++++++++++++ 디자인부분 부분 CSS ++++++++++++ -->
-<!-- css 추가 상세페이지 및 추가 디자인 부분 끝 -->
+
 
 <!-- 꽃청 추가 START 김태섭 2023-12-18 - splide -->
 <link rel="stylesheet" type="text/css" href="https://f-mans.com/data/skin/responsive_ver1_default_gl/css/splide/splide.min.css">
@@ -78,7 +42,7 @@ window.Firstmall.Config = {"Environment":{"MobileMode":true,"SetMode":null,"Lang
 <link rel="stylesheet" type="text/css" href="https://f-mans.com/app/javascript/plugin/jquery_swipe/jquery_swipe.css">
 
 <!-- 파비콘 -->
-    <link rel="shortcut icon" href="https://f-mans.com//data/icon/favicon/favicon1595806375.ico">
+<link rel="shortcut icon" href="https://f-mans.com//data/icon/favicon/favicon1595806375.ico">
 
 <!-- 자바스크립트 -->
 <!-- 꽃청 추가 START 김태섭 2023-12-18 - splide -->
@@ -111,47 +75,15 @@ var WINDOWWIDTH = window.innerWidth;
 var kid_agree = "";
 </script>
 
-
-<style type="text/css">
-
-
-.slide-intro .splide__slide,
-.slide-intro ul.splide__list{
-    max-height: 390px;
-}
-.goods_list.swiper-slide,
-.display_slide_class .swiper-wrapper{
-    max-height: 418px;
-}
-
-.goods_list.swiper-slide .gl_item{
-    max-height: 391px;
-    overflow: hidden;
-}
-.goods_list:after{
-    height: 0;
-}
-.display_slide_class .swiper-slide{
-    width: calc(100%/4);
-}
-.footer_cert li.slick-slide{
-    max-height: 90px;
-}
-
-/* 레이아웃설정 스크롤바색상 적용 */
-</style>
-
 <script src="https://f-mans.com/app/javascript/js/dev-tools.js?v=afe0eba294279d50c840"></script>
 <script src="https://f-mans.com/app/javascript/js/goods-display_mobile.js?v=afe0eba294279d50c840"></script>
 <script src="https://f-mans.com/app/javascript/js/design.js?v=afe0eba294279d50c840"></script>
 
 <script src="<?php echo home_url();?>/js/common.js?ver=123"></script>
 <script type="text/javascript" src="https://f-mans.com/data/js/language/L10n_KR.js?v=1"></script>
-
 <script type="text/javascript" src="https://f-mans.com/app/javascript/js/common-function.js?dummy=20240219111900"></script>
-<script src="https://f-mans.com/app/javascript/js/common-mobile.js?v=afe0eba294279d50c840">
-    
-</script><script src="https://f-mans.com/app/javascript/js/front-layout.js?v=afe0eba294279d50c840"></script>
+<script src="https://f-mans.com/app/javascript/js/common-mobile.js?v=afe0eba294279d50c840"></script>
+<script src="https://f-mans.com/app/javascript/js/front-layout.js?v=afe0eba294279d50c840"></script>
 
 <script src="https://f-mans.com/app/javascript/js/base64.js?v=afe0eba294279d50c840"></script>
 <script src="https://f-mans.com/app/javascript/js/skin-responsive.js?v=afe0eba294279d50c840"></script>
@@ -168,21 +100,6 @@ var kid_agree = "";
 <script src="https://f-mans.com/app/javascript/plugin/jquery.bxslider.js?v=afe0eba294279d50c840"></script>
 
 
-
-
-
-<!-- ================= #HTML_HEADER :: END. 파일위치 : _modules/common/html_header.html ================= -->
-
-<!--[ 디자인모드 호출 스크립트]-->
-
-<!--[ 모바일쇼핑몰 디자인모드시 화면 구성 ]-->
-
-<style>
-#layout_body {
-background-color:#ffffff;}
-#layer_pay {position:absolute;top:0px;width:100%;height:100%;background-color:#ffffff;text-align:center;z-index:999999;}
-#payprocessing {text-align:center;position:absolute;width:100%;top:150px;z-index:99999999px;}
-</style>
 
 </head>
 <body <?php body_class();?>>
