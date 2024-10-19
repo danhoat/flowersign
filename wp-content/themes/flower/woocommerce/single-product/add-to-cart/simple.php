@@ -28,14 +28,15 @@ echo wc_get_stock_html( $product ); // WPCS: XSS ok.
 if ( $product->is_in_stock() ) : ?>
 
 	<?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
-	<h1> bat dau form </h1>
+
 	<form class="cart" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data'>
 		<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 
 		
 
 		<div class="full">
-			<div class="text-xs"><h6 class="">Giao đến:</h6><div class="border-2 rounded-md p-2 my-2 flex text-black bg-brand border-brand" id="location-selector">
+			<div class="text-xs"><span class="label">Giao đến:</span>
+			<div class="border-2 rounded-md p-2 my-2 flex text-black bg-brand border-brand" id="location-selector">
 
 				<select name="tinh_tp" class="form-control">
 					<option value="2">Hồ Chí Minh</option>
@@ -107,7 +108,6 @@ if ( $product->is_in_stock() ) : ?>
 
 
 	</form>
-	<h1> END form </h1>
 
 	<?php do_action( 'woocommerce_after_add_to_cart_form' ); ?>
 
