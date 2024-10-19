@@ -21,8 +21,6 @@
     }
     $("form.cart").submit(function(event){
         var form = $( this );
-        event.preventDefault();
-
         var values = $(this).serialize();
         var data = $(this).serializeArray();
         var elementExists = $(".notice").length;
@@ -34,9 +32,10 @@
         if(! delivery_date){
              $("html, body").animate({ scrollTop: 0 }, "slow");
             form_validate_fail('Lỗi chưa chọn ngày giao hàng.', 3000);
+            console.log('false');
             return false;
         }
 
-        return true;
+        //return true;
     });
 }(jQuery))

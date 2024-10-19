@@ -50,3 +50,6 @@ body.single-product form.cart input.hidden_choice{
 body.single-product form.cart input.hidden_choice:checked+.choice{
     border-color: red;
 }
+body.single-product form.cart .full{
+    margin-bottom: 15px;
+}

@@ -66,7 +66,9 @@ if ( $product->is_in_stock() ) : ?>
 			<div class="text-xs mb-2"><p>Đơn hàng sẽ được giao bởi một trong những đối tác của chúng tôi.</p></div>
 		</div>
 		<div class="full">
-			<div class="text-xs" id="delivery-date" product_price="719000" style=""><h6 class="">Chọn ngày giao hàng:</h6><input type="hidden" name="delivery_date" value="">
+			<div class="text-xs" id="delivery-date" product_price="719000" style="">
+				<span class="label">Chọn ngày giao hàng:</span>
+				<input type="hidden" name="delivery_date" value="">
 
 				<div class="grid select-date gap-5 grid-cols-4">
 					<div class="date-item"><!---->
@@ -82,7 +84,9 @@ if ( $product->is_in_stock() ) : ?>
 						<div class="card-form choice uppercase grid content-center id-2024-10-21-lg"><p class="hidden sm:block xl:block">21 tháng 10</p><p class="block sm:hidden xl:hidden">21 Thg 10</p><span class="font-bold text-black text-xxs xs:text-xs sm:text-sm lg:text-xs xl:text-sm relative">thứ hai</span></div>
 					</div>
 					<div class="date-item">
-						<div id="calendar"><input type="radio" class="hidden_choice right-0 rounded-none" name="delivery_date" value="Calendar"><div class="card-form choice pb-3 sm:py-3 lg:py-2 xl:py-3 xl:px-7 grid content-center"><i class="fa fa-calendar-days text-xl xxs:text-md"></i><span class="font-bold text-black mb-2 lg:mb-1 xl:mb-2 hidden sm:block">LỊCH</span></div><div class="vc-popover-content-wrapper" placement="bottom-start"><!----></div>
+						<div id="calendar"><input type="radio" class="hidden_choice right-0 rounded-none" name="delivery_date" value="Calendar"><div class="card-form choice pb-3 sm:py-3 lg:py-2 xl:py-3 xl:px-7 grid content-center"><i class="fa fa-calendar-days text-xl xxs:text-md"></i>
+							<span class="font-bold sm:block">LỊCH</span></div>
+							<div class="vc-popover-content-wrapper" placement="bottom-start"><!----></div>
 					</div>
 					</div>
 				</div>
@@ -90,7 +94,7 @@ if ( $product->is_in_stock() ) : ?>
 		</div>
 		<div class="full">
 			<p>
-				<h6 class="flex my-1 text-lg">Tổng: <span class="text-brand font-bold self-center ml-2 whitespace-nowrap">719,000 ₫</span></h6>
+				<h3 class="flex my-1 text-lg">Tổng: <span class="text-brand font-bold self-center ml-2 whitespace-nowrap">719,000 ₫</span></h3>
 			</p>
 		</div>
 		<div class="grid full grid-cols-2 form-btn">
