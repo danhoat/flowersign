@@ -3,6 +3,7 @@ body.single-product form.cart select{
 }
 body.single-product form.cart .select-date{
     display: flex;
+    margin-top: 10px;
 }
 body.single-product form.cart .select-date .date-item{
     width: 25%;
@@ -28,11 +29,12 @@ body.single-product form.cart .form-btn{
     border-radius: .25rem;
     border-width: 2px;
     color: rgba(0, 0, 0, var(--tw-text-opacity));
-    padding-bottom: .5rem;
-    padding-top: .5rem;
+
     border: 2px solid #d8d2d2;
     cursor: pointer;
     text-align: center;
+    padding: 1rem 0 ;
+    max-height: 45px;
 }
 .hidden_choice {
     height: 100%;
@@ -52,4 +54,26 @@ body.single-product form.cart input.hidden_choice:checked+.choice{
 }
 body.single-product form.cart .full{
     margin-bottom: 15px;
+}
+.fa-calendar-days{
+    width:30px;
+    height: 35px;
+    background-image: url(../images/calendar.jpg);
+    display: inline-block;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+    position: relative;
+    top:-5px;
+
+}
+.date-week-day{
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 00px 5px;
+}
+.date-month{
+    padding: 0px 0;
+    min-height: 24px;
 }

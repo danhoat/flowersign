@@ -74,19 +74,30 @@ if ( $product->is_in_stock() ) : ?>
 				<div class="grid select-date gap-5 grid-cols-4">
 					<div class="date-item"><!---->
 						<input type="radio" class="hidden_choice right-0 rounded-none" name="delivery_date" value="2024-10-19">
-						<div class="card-form choice uppercase grid content-center id-2024-10-19-lg"><p class="hidden sm:block xl:block">19 tháng 10</p><p class="block sm:hidden xl:hidden">19 Thg 10</p><span class="font-bold text-black text-xxs xs:text-xs sm:text-sm lg:text-xs xl:text-sm relative">Hôm nay</span></div>
+						<div class="card-form choice uppercase grid content-center id-2024-10-19-lg">
+							<p class="block sm:hidden xl:hidden date-month">19 Thg 10</p>
+							<span class="font-bold text-black text-xxs xs:text-xs sm:text-sm lg:text-xs xl:text-sm relative date-week-day">Hôm nay</span></div>
 					</div>
 
 					<div class="date-item">
-						<!----><input type="radio" class="hidden_choice right-0 rounded-none" name="delivery_date" value="2024-10-20"><div class="card-form choice uppercase grid content-center id-2024-10-20-lg"><p class="hidden sm:block xl:block">20 tháng 10</p><p class="block sm:hidden xl:hidden">20 Thg 10</p><span class="font-bold text-black text-xxs xs:text-xs sm:text-sm lg:text-xs xl:text-sm relative">Ngày mai</span></div>
+						<!---->
+						<input type="radio" class="hidden_choice right-0 rounded-none" name="delivery_date" value="2024-10-20">
+						<div class="card-form choice uppercase grid content-center id-2024-10-20-lg">
+							<p class="block sm:hidden xl:hidden date-month">20 Thg 10</p>
+							<span class="font-bold text-black text-xxs xs:text-xs sm:text-sm lg:text-xs xl:text-sm relative date-week-day">Ngày mai</span>
+						</div>
 					</div>
 					<div class="date-item">
 						<!----><input type="radio" class="hidden_choice right-0 rounded-none" name="delivery_date" value="2024-10-21">
-						<div class="card-form choice uppercase grid content-center id-2024-10-21-lg"><p class="hidden sm:block xl:block">21 tháng 10</p><p class="block sm:hidden xl:hidden">21 Thg 10</p><span class="font-bold text-black text-xxs xs:text-xs sm:text-sm lg:text-xs xl:text-sm relative">thứ hai</span></div>
+						<div class="card-form choice uppercase grid content-center id-2024-10-21-lg">
+							<p class="block sm:hidden xl:hidden date-month">21 Thg 10</p>
+							<span class="font-bold text-black text-xxs xs:text-xs sm:text-sm lg:text-xs xl:text-sm relative date-week-day">thứ hai</span></div>
 					</div>
 					<div class="date-item">
-						<div id="calendar"><input type="radio" class="hidden_choice right-0 rounded-none" name="delivery_date" value="Calendar"><div class="card-form choice pb-3 sm:py-3 lg:py-2 xl:py-3 xl:px-7 grid content-center"><i class="fa fa-calendar-days text-xl xxs:text-md"></i>
-							<span class="font-bold sm:block">LỊCH</span></div>
+						<div id="calendar">
+							<input type="radio" class="hidden_choice right-0 rounded-none" name="delivery_date" value="Calendar"><div class="card-form choice pb-3 sm:py-3 lg:py-2 xl:py-3 xl:px-7 grid content-center">
+								<i class="fa fa-calendar-days text-xl xxs:text-md"></i>
+							<span class="font-bold sm:block date-week-day">LỊCH</span></div>
 							<div class="vc-popover-content-wrapper" placement="bottom-start"><!----></div>
 					</div>
 					</div>

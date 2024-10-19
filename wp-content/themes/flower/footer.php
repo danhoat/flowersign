@@ -3,10 +3,10 @@
 <script type="text/javascript">
 var hpt_info = {'_account':'UHPT-20592','_server':'a24'};
 </script>
-<script language="javascript" src="//cdn.smlog.co.kr/core/smart.js" charset="utf-8"></script>
-<noscript><img src="//a24.smlog.co.kr/smart_bda.php?_account=20592" style="display:none;width:0;height:0;" border="0"></noscript>
-<!-- 꽃청 추가 END -->
 
+
+<!-- 꽃청 추가 END -->
+<?php wp_footer(); ?>
 <div id="layout_footer" class="layout_footer">
 
 
@@ -315,6 +315,7 @@ var hpt_info = {'_account':'UHPT-20592','_server':'a24'};
 
 
 <script type="text/javascript">
+    
 $(function() {
     /* 반응형 슬라이드 배너 관련( 절대 삭제 금지 ) */
         $('.slider_before_loading').removeClass('slider_before_loading');
@@ -406,7 +407,7 @@ $(function() {
 
 <script>$('#topSearchForm').submit(function() { var search_string = $('#searchVer2InputBox').val(); fbq('track', 'Search', {     search_string: search_string });});</script>
 
-<?php wp_footer(); ?>
+
 </body>
 
 
