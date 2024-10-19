@@ -1654,6 +1654,7 @@ if ( ! function_exists( 'woocommerce_template_single_title' ) ) {
 	 * Output the product title.
 	 */
 	function woocommerce_template_single_title() {
+		echo '111';
 		wc_get_template( 'single-product/title.php' );
 	}
 }

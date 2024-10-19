@@ -65,6 +65,10 @@ add_action('after_setup_theme','theme_setup');
 function wpdocs_theme_name_scripts() {
     wp_enqueue_style( 'main-style', get_stylesheet_uri(), array(), rand() );
    // wp_enqueue_script( 'script-name', get_template_directory_uri() . '/js/example.js', array(), '1.0.0', true );
+    if( is_singular('product') ){
+        wp_enqueue_style( 'single-product', BOXTHEME_URL.'/css/single-product.css', array(), rand() );
+        wp_enqueue_script( 'single-product', BOXTHEME_URL. '/js/single-product.js', array(), rand(), true );
+    }
 }
 add_action( 'wp_enqueue_scripts', 'wpdocs_theme_name_scripts' );
 

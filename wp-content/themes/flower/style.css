@@ -55,3 +55,31 @@ background-color:#ffffff;}
 .footer_cert li.slick-slide{
     max-height: 90px;
 }
+.wpgs-nav .slick-slide {
+    border-color: transparent;
+    max-height: 120px;
+}
+.full{
+    width: 100%;
+    clear: both;
+}
+div.notice{
+    display: flex;
+    position: fixed;
+    width: 35%;
+    right: 20px;
+    height: 28px;
+    width: 250px;
+    background-color: red;
+    z-index: 999999;
+    transition: all 0.3s ease-in;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    border-radius: 5px;
+    border: 1px solid #f12222;
+    background-color: rgba(241, 34, 34, 0.68);
+    line-height: 26px;
+    padding: 10px 20px;
+    color:#fff;
+    /* _vue-flash-msg-body _vue-flash-msg-body_error _vue-flash-msg_right-top */
+}
