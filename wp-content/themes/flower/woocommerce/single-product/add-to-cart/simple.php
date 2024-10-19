@@ -76,7 +76,7 @@ if ( $product->is_in_stock() ) : ?>
 
 					<div class="date-item">
 						<!----><input type="radio" class="hidden_choice right-0 rounded-none" name="delivery_date" value="2024-10-20"><div class="card-form choice uppercase grid content-center id-2024-10-20-lg"><p class="hidden sm:block xl:block">20 tháng 10</p><p class="block sm:hidden xl:hidden">20 Thg 10</p><span class="font-bold text-black text-xxs xs:text-xs sm:text-sm lg:text-xs xl:text-sm relative">Ngày mai</span></div>
-				</div>
+					</div>
 					<div class="date-item">
 						<!----><input type="radio" class="hidden_choice right-0 rounded-none" name="delivery_date" value="2024-10-21">
 						<div class="card-form choice uppercase grid content-center id-2024-10-21-lg"><p class="hidden sm:block xl:block">21 tháng 10</p><p class="block sm:hidden xl:hidden">21 Thg 10</p><span class="font-bold text-black text-xxs xs:text-xs sm:text-sm lg:text-xs xl:text-sm relative">thứ hai</span></div>

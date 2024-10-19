@@ -30,12 +30,13 @@
             top = 0;
         }
         var delivery_date = form.find("input[name='delivery_date']:checked").val();
-        
+
         if(! delivery_date){
              $("html, body").animate({ scrollTop: 0 }, "slow");
             form_validate_fail('Lỗi chưa chọn ngày giao hàng.', 3000);
+            return false;
         }
 
-        return false;
+        return true;
     });
 }(jQuery))
