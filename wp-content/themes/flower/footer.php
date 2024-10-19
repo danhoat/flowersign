@@ -407,6 +407,45 @@ $(function() {
 
 <script>$('#topSearchForm').submit(function() { var search_string = $('#searchVer2InputBox').val(); fbq('track', 'Search', {     search_string: search_string });});</script>
 
+<div id="tinhtp" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Chọn tỉnh thành phố</p>
+    <div class="full">
+        <span class="full"> <input type="text" class="full" name="" id="search_ttp" > </span>
+        <div class="item">
+            <input type="hidden" value="011">
+            <ul>
+                <li><span> Tỉnh thanh hóa</span></li>
+                <li class="sub">
+                    <ul>
+                        <li>Thành phố Thanh Hóa</li>
+                        <li> Huyện abc</li>
+                        <li> Huyện 123 </li>
+                </li>
+            </ul>
+        </div>
+        <div class="item">
+            <input type="hidden" value="011">
+            <ul>
+                <li><span> Tỉnh Đồng Nai </span></li>
+                <li class="sub">
+                    <ul>
+                        <li>Thành phố Thanh Hóa</li>
+                        <li> Huyện abc</li>
+                        <li> Huyện 123 </li>
+                </li>
+            </ul>
+        </div>
+
+
+    </div>
+  </div>
+
+</div>
+
 
 </body>
 

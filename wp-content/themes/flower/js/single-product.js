@@ -38,4 +38,13 @@
 
         //return true;
     });
+    $("#tinh_tp").change(function(event){
+        console.log('change');
+
+        var ttp_id = $(this).val();
+        console.log(ttp_id);
+        // $("#tinhtp").show();
+    });
+
+    $(".chosen-select").chosen();
 }(jQuery))

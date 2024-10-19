@@ -38,10 +38,13 @@ if ( $product->is_in_stock() ) : ?>
 			<div class="text-xs"><span class="label">Giao đến:</span>
 			<div class="border-2 rounded-md p-2 my-2 flex text-black bg-brand border-brand" id="location-selector">
 
-				<select name="tinh_tp" class="form-control">
+				<select name="tinh_tp" class="form-control chosen-select" id="tinh_tp">
 					<option value="2">Hồ Chí Minh</option>
 					<option value="3">Hà Nội</option>
-					<option value="61">Các tỉnh khác tại Việt Nam</option>
+					<option value="3">Đà Nẵng</option>
+					<option value="3">Cần Thơ</option>
+					<option value="3">Huê</option>
+					<option value="3">Hải Phòng</option>
 				</select><!---->
 				<!----></div>
 			</div>

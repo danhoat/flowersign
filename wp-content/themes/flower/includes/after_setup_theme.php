@@ -75,14 +75,14 @@ function wpdocs_theme_name_scripts() {
         foreach($jss as $key=>$url){
             wp_enqueue_script('abc-'.$key, trim($url) );
         }
-    }
+    } 
 }
 add_action( 'wp_enqueue_scripts', 'wpdocs_theme_name_scripts' );
 
 function box_js_enqueue(){
     $js = array(
-       // 'jquery' => 'https://f-mans.com/app/javascript/jquery/jquery.min.js',
-        'jquery' => 'http://localhost/flower/wp-includes/js/jquery/jquery.min.js',
+        'jquery' => 'https://f-mans.com/app/javascript/jquery/jquery.min.js',
+        //'jquery' => 'http://localhost/flower/wp-includes/js/jquery/jquery.min.js',
 
         'jquery.ui' => 'https://f-mans.com/app/javascript/jquery/jquery-ui.min.js',
         
@@ -128,12 +128,21 @@ function box_js_enqueue(){
     return $js;
 
 }
-function box_js_static(){ ?>
+function box_js_static(){ 
+
+    $jss = box_js_enqueue();
+        foreach($jss as $key=>$url){
+          ?>
+           <script src="<?php echo $url;?>"></script>
+          <?php
+        }
+
+        ?>
+        
+        <script src="https://harvesthq.github.io/chosen/chosen.jquery.js" type="text/javascript"></script>
     <!-- 자바스크립트 -->
     <!-- 꽃청 추가 START 김태섭 2023-12-18 - splide -->
-    <script type="text/javascript" src="https://f-mans.com/app/javascript/plugin/splide/splide.min.js"></script>
-
-
+  <!--   <script type="text/javascript" src="https://f-mans.com/app/javascript/plugin/splide/splide.min.js"></script>
 
     <script src="https://f-mans.com/app/javascript/jquery/jquery.min.js"></script>
     <script src="https://f-mans.com/app/javascript/jquery/jquery-ui.min.js"></script>
@@ -177,6 +186,7 @@ function box_js_static(){ ?>
     <script src="https://f-mans.com/data/skin/responsive_ver1_default_gl/common/user.js?ver=5?v=afe0eba294279fffd50c840"></script>
 
     <script src="https://f-mans.com/app/javascript/plugin/jquery.bxslider.js?v=afe0eba294279d50c840"></script> 
+    !-->
  <?php 
 
 }

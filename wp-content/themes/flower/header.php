@@ -44,7 +44,7 @@ window.Firstmall.Config = {"Environment":{"MobileMode":true,"SetMode":null,"Lang
 <!-- 파비콘 -->
 <link rel="shortcut icon" href="https://f-mans.com//data/icon/favicon/favicon1595806375.ico">
 
-
+<link rel="stylesheet" type="text/css" href="https://harvesthq.github.io/chosen/chosen.css">
 <!-- 꽃청 추가 END 김태섭 2023-12-18 - splide -->
 <?php wp_head();?>
 
