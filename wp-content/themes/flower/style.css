@@ -84,3 +84,9 @@ div.notice{
     color:#fff;
     /* _vue-flash-msg-body _vue-flash-msg-body_error _vue-flash-msg_right-top */
 }
+.gap-5 {
+    gap: 1.25rem;
+}
+.grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}

@@ -20,3 +20,24 @@ body.single-product form.cart  .btn-add-to-cart{
 body.single-product form.cart .form-btn{
     gap: 1.5rem;
 }
+.card-form {
+    --tw-border-opacity: 1;
+    --tw-text-opacity: 1;
+    border-color: rgba(220, 226, 230, var(--tw-border-opacity));
+    border-radius: .25rem;
+    border-width: 2px;
+    color: rgba(0, 0, 0, var(--tw-text-opacity));
+    padding-bottom: .5rem;
+    padding-top: .5rem;
+    border: 2px solid #d8d2d2;
+    cursor: pointer;
+}
+.hidden_choice {
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+}.hidden_choice, .hidden_choice_checkbox {
+    cursor: pointer;
+    z-index: 20;
+}
