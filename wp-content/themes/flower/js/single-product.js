@@ -26,7 +26,7 @@
         var values = $(this).serialize();
         var data = $(this).serializeArray();
         var elementExists = $(".notice").length;
-        if( ! elementExists ){
+        if( ! elementExists || top > 600 ){
             top = 0;
         }
         var delivery_date = form.find("input[name='delivery_date']:checked").val();
