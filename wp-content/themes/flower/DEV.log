@@ -1,1 +1,17 @@
 woocommerce_cart
+
+calculate_fees => woocommerce_cart_calculate_fees
+
+woocommerce_cart_product_subtotal
+
+get_cart_shipping_total
+
+get_shipping_total
+
+calculate_shipping
+
+
+woocommerce_package_rates
+
+add_action( 'woocommerce_before_calculate_totals', 'add_custom_price', 1000, 1);
+

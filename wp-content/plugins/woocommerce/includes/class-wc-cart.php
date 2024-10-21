@@ -250,6 +250,7 @@ class WC_Cart extends WC_Legacy_Cart {
 	 * @return float
 	 */
 	public function get_shipping_total() {
+
 		return apply_filters( 'woocommerce_cart_' . __FUNCTION__, $this->get_totals_var( 'shipping_total' ) );
 	}
 

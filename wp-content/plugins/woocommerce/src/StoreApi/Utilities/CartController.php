@@ -1153,7 +1153,6 @@ class CartController {
 	 * @return array Updated request array.
 	 */
 	protected function filter_request_data( $request ) {
-		die('111');
 		$product_id   = $request['id'];
 		$variation_id = 0;
 		$product      = wc_get_product( $product_id );

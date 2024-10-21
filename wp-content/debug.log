@@ -1,2 +1,9 @@
 [21-Oct-2024 06:28:56 UTC] PHP Parse error:  syntax error, unexpected token "/", expecting end of file in D:\laragon\www\flower\wp-content\plugins\woo-custom-cart-fields\woo-custom-cart-fields.php on line 14
 [21-Oct-2024 06:29:01 UTC] PHP Parse error:  syntax error, unexpected token "/", expecting end of file in D:\laragon\www\flower\wp-content\plugins\woo-custom-cart-fields\woo-custom-cart-fields.php on line 14
+[21-Oct-2024 10:05:31 UTC] Automatic updates starting...
+[21-Oct-2024 10:05:32 UTC]   Automatic plugin updates starting...
+[21-Oct-2024 10:05:32 UTC]   Automatic plugin updates complete.
+[21-Oct-2024 10:05:33 UTC]   Automatic theme updates starting...
+[21-Oct-2024 10:05:33 UTC]   Automatic theme updates complete.
+[21-Oct-2024 10:05:33 UTC] Automatic updates complete.
+[21-Oct-2024 10:56:49 UTC] PHP Warning:  Undefined variable $shipping in D:\laragon\www\flower\wp-content\plugins\woo-custom-cart-fields\woo-custom-cart-fields.php on line 132
