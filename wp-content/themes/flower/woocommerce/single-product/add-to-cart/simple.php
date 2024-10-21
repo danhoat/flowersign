@@ -23,12 +23,31 @@ if ( ! $product->is_purchasable() ) {
 	return;
 }
 
+// $product->get_regular_price();
+// $product->get_sale_price();
+// $product->get_price();
+
 echo wc_get_stock_html( $product ); // WPCS: XSS ok.
 
 if ( $product->is_in_stock() ) : ?>
 
 	<?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
+
+	<div class="full">
+		<p class="woo-price text-right">
+			<span id="woo_price"><?php echo $product->get_price();?></span>
+			<span><?php echo get_woocommerce_currency_symbol();?></span>
+			<input type="hidden" id="static_price"  value="<?php echo $product->get_price();?>">
+		</p>
+		<p class="woo-price text-right">
+			<del>
+				<span id="woo_regular_price"><?php echo $product->get_regular_price();?></span>
+				<span><?php echo get_woocommerce_currency_symbol();?> </span>
+			</del>
+		</p>
+
+	</div>
 	<form class="cart" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data'>
 		<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 
@@ -39,12 +58,12 @@ if ( $product->is_in_stock() ) : ?>
 			<div class="border-2 rounded-md p-2 my-2 flex text-black bg-brand border-brand" id="location-selector">
 
 				<select name="tinh_tp" class="form-control chosen-select" id="tinh_tp">
-					<option value="2">Hồ Chí Minh</option>
-					<option value="3">Hà Nội</option>
-					<option value="3">Đà Nẵng</option>
-					<option value="3">Cần Thơ</option>
-					<option value="3">Huê</option>
-					<option value="3">Hải Phòng</option>
+					<option value="hcm">Hồ Chí Minh</option>
+					<option value="hanoi">Hà Nội</option>
+					<option value="danang">Đà Nẵng</option>
+					<option value="cantho">Cần Thơ</option>
+					<option value="hue">Huê</option>
+					<option value="haiphong">Hải Phòng</option>
 				</select><!---->
 				<!----></div>
 			</div>

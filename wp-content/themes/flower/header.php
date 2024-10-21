@@ -48,6 +48,17 @@ window.Firstmall.Config = {"Environment":{"MobileMode":true,"SetMode":null,"Lang
 <!-- 꽃청 추가 END 김태섭 2023-12-18 - splide -->
 <?php wp_head();?>
 
+<script type="text/javascript">
+    var feeShip = {
+        hcm: 0,
+        hanoi: 50000,
+        danang: 50000,
+        hue: 50000,
+        haiphong: 50000,
+        cantho: 20000
+       
+    }
+</script>
 
 
 

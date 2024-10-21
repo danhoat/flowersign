@@ -133,3 +133,10 @@ div.notice{
 .modal-content{
     min-height: 450px;
 }
+.text-right{
+    text-align: right;
+}
+.woo-price{
+    font-size: 18px;
+    font-weight: 500;
+}
