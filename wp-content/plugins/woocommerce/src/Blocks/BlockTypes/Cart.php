@@ -183,7 +183,7 @@ class Cart extends AbstractBlock {
 			$inner_blocks_html = '$0
 			<div data-block-name="woocommerce/filled-cart-block" class="wp-block-woocommerce-filled-cart-block">
 				<div data-block-name="woocommerce/cart-items-block" class="wp-block-woocommerce-cart-items-block">
-					<div data-block-name="woocommerce/cart-line-items-block" class="wp-block-woocommerce-cart-line-items-block"></div>
+					<div data-block-name="woocommerce/cart-line-items-block 1866666" class="wp-block-woocommerce-cart-line-items-block 1866666"></div>
 				</div>
 				<div data-block-name="woocommerce/cart-totals-block" class="wp-block-woocommerce-cart-totals-block">
 					<div data-block-name="woocommerce/cart-order-summary-block" class="wp-block-woocommerce-cart-order-summary-block"></div>

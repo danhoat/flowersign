@@ -10,5 +10,5 @@ class CartLineItemsBlock extends AbstractInnerBlock {
 	 *
 	 * @var string
 	 */
-	protected $block_name = 'cart-line-items-block';
+	protected $block_name = 'cart-line-items-block99999';
 }

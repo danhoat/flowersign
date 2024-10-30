@@ -2705,7 +2705,7 @@ EOT;
 <div class="wp-block-woocommerce-cart alignwide is-loading"><!-- wp:woocommerce/filled-cart-block -->
 <div class="wp-block-woocommerce-filled-cart-block"><!-- wp:woocommerce/cart-items-block -->
 <div class="wp-block-woocommerce-cart-items-block"><!-- wp:woocommerce/cart-line-items-block -->
-<div class="wp-block-woocommerce-cart-line-items-block"></div>
+<div class="wp-block-woocommerce-cart-line-items-block 111"></div>
 <!-- /wp:woocommerce/cart-line-items-block -->
 
 <!-- wp:woocommerce/cart-cross-sells-block -->

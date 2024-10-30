@@ -12,7 +12,7 @@ class CartItems extends AbstractCartRoute {
 	 *
 	 * @var string
 	 */
-	const IDENTIFIER = 'cart-items';
+	const IDENTIFIER = 'cart-items line13';
 
 	/**
 	 * The routes schema.

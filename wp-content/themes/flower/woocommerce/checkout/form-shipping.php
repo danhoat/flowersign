@@ -17,6 +17,8 @@
  */
 
 defined( 'ABSPATH' ) || exit;
+
+die('333333333');
 ?>
 <div class="woocommerce-shipping-fields">
 	<?php if ( true === WC()->cart->needs_shipping_address() ) : ?>
