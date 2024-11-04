@@ -140,3 +140,7 @@ div.notice{
     font-size: 18px;
     font-weight: 500;
 }
+.full{
+    width: 100%;
+    display: block;
+}

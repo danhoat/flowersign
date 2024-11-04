@@ -267,7 +267,7 @@ var kid_agree = "";
                 </li>
                 <li><a href="/mypage" designelement="text" textindex="9" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2hlYWRlci9zdGFuZGFyZC5odG1s">MY SHOPPING</a></li>
                 <li><a href="/mypage/order_catalog" designelement="text" textindex="10" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2hlYWRlci9zdGFuZGFyZC5odG1s">ORDER</a></li>
-                <li class="respCartArea"><a href="/order/cart"><span designelement="text" textindex="11" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2hlYWRlci9zdGFuZGFyZC5odG1s">CART</span><span class="cart_cnt1">0</span></a></li>
+                <li class="respCartArea"><a href="<?php echo wc_get_cart_url();?>><span designelement="text" textindex="11">CART</span><span class="cart_cnt1">0</span></a></li>
                 <li><a href="/service/cs" designelement="text" textindex="12" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2hlYWRlci9zdGFuZGFyZC5odG1s">CS CENTER</a></li>
             </ul>
         </div>
@@ -482,19 +482,19 @@ var kid_agree = "";
 <!-- 꽃청 수정 END -->
                         <!-- //카테고리 네비게이션 -->
                         <li class="custom_nav_link">
-                            <a class="categoryDepthLink" designelement="text" textindex="28" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2hlYWRlci9zdGFuZGFyZC5odG1s" href="/promotion/event"><em>EVENT</em></a>
+                            <a class="categoryDepthLink" designelement="text" textindex="28"  href="/promotion/event"><em>EVENT</em></a>
                         </li>
                         <li class="custom_nav_link">
-                            <a class="categoryDepthLink" designelement="text" textindex="29" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2hlYWRlci9zdGFuZGFyZC5odG1s" href="/board/?id=mz-main"><em>MAGAZINE</em></a>
+                            <a class="categoryDepthLink" designelement="text" textindex="29" href="/board/?id=mz-main"><em>MAGAZINE</em></a>
                         </li><!-- 기본 카테고리 (원본) --><!-- 기본 카테고리 (원본) -->
                         <li class="categoryDepth1">
-                            <a class="top_menu_myinfo" designelement="text" textindex="30" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2hlYWRlci9zdGFuZGFyZC5odG1s" href="/mypage/index"></a>
+                            <a class="top_menu_myinfo" designelement="text" textindex="30"  href="/mypage/index"></a>
                         </li>
                         <li class="categoryDepth1">
-                            <a class="top_menu_cart" designelement="text" textindex="31" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2hlYWRlci9zdGFuZGFyZC5odG1s" href="/order/cart"><span class="cart_cnt2">0</span></a>
+                            <a class="top_menu_cart" designelement="text" textindex="31"  href="<?php echo wc_get_cart_url();?>"><span class="cart_cnt2">0</span></a>
                         </li>
                         <li class="categoryDepth1">
-                            <a class="top_menu_search" designelement="text" textindex="32" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2hlYWRlci9zdGFuZGFyZC5odG1s" href="javascript:void(0);"></a>
+                            <a class="top_menu_search" designelement="text" textindex="32" href="javascript:void(0);"></a>
                         </li>
                         <!-- 꽃청 수정 END -->
                     </ul>

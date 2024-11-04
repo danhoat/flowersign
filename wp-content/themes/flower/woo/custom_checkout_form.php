@@ -126,5 +126,13 @@ function bbloomer_override_postcode_validation( $address_fields ) {
   return $address_fields;
 }
 
+// Hook in
+add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields1' , 999);
+
+// Our hooked in function - $fields is passed via the filter!
+function custom_override_checkout_fields1( $fields ) {
+    $fields['order']['order_comments']['placeholder'] = 'My new placeholder';
+    return $fields;
+}
 
 ?>

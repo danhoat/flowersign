@@ -206,8 +206,6 @@ $(function(){
 
             <div class="resp_wrap 99999" style="position:relative;">
 
-
-
             <?php 
             wp_reset_query();
             while( have_posts() ){
