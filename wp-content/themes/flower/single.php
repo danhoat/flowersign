@@ -204,11 +204,15 @@ $(function(){
         <div id="layout_body" class="layout_body">
 
 
-            <div class="resp_wrap 99999" style="position:relative;">
+            <div class="resp_wrap 99999 post-detail" style="position:relative;">
 
 
 
-            <?php the_post(); the_content(); ?>
+            <?php the_post(); ?>
+
+            <div class="post-content">
+                <?php  the_content(); ?>
+            </div>
                 
 
             <?php get_footer(); ?>

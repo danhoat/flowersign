@@ -460,7 +460,7 @@ var kid_agree = "";
         <a class="categoryDepthLink" href="<?php echo home_url();?>/shop/"><em>Shop</em></a>
     </li>
     <li class="categoryDepth1">
-        <a class="categoryDepthLink" href="<?php echo home_url();?>/shop/"><em>Shop</em></a>
+        <a class="categoryDepthLink" href="<?php echo home_url();?>/blog/"><em>Blog</em></a>
             </li>
     <li class="categoryDepth1">
         <a class="categoryDepthLink" href="/goods/catalog_list?code=0003"><em>승진취임</em></a>
