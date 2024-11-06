@@ -97,6 +97,13 @@ nav.breadcrumb a,
 .sidebar .item{
     display: flex;
 }
+.sidebar a{
+    z-index: 999;
+}
+.sidebar a:hover + div img,
+.sidebar a:hover + div {
+    opacity: 1;
+}
 .sidebar h2{
     padding: 30px ;
 }
@@ -132,4 +139,8 @@ nav.breadcrumb {
 }
 nav.breadcrumb i{
     padding: 0 8px;
+}
+.sidebar.sticky{
+    position: sticky;
+    top:0;
 }

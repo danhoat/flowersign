@@ -42,10 +42,19 @@ window.Firstmall.Config = {"Environment":{"MobileMode":true,"SetMode":null,"Lang
 <!-- /CSS -->
 <link rel="stylesheet" type="text/css" href="https://f-mans.com/app/javascript/plugin/jquery_swipe/jquery_swipe.css">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/fontawesome.min.css" integrity="sha512-TPigxKHbPcJHJ7ZGgdi2mjdW9XHsQsnptwE+nOUWkoviYBn0rAAt0A5y3B1WGqIHrKFItdhZRteONANT07IipA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/brands.min.css" integrity="sha512-sKhd1NGM4i4pJj+3P+NVHisu2z5rKAwNG1IpWMdKsFWYlUHFSrsAO3geQ5QNKttkMPZNTo76tfg8jVx2ICP7qw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/fontawesome.min.css" integrity="sha512-TPigxKHbPcJHJ7ZGgdi2mjdW9XHsQsnptwE+nOUWkoviYBn0rAAt0A5y3B1WGqIHrKFItdhZRteONANT07IipA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/regular.min.css" integrity="sha512-rxPM3RF3aiHhAtBSArcLR4reox2y22lhd/3eR5Wnk5HeeZuEslUaFmCwg6b5NKm1xeHZiAew3RVa8TI8ySLxPg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
 <link rel="stylesheet" type="text/css" href="https://harvesthq.github.io/chosen/chosen.css">
 <!-- 꽃청 추가 END 김태섭 2023-12-18 - splide -->
@@ -161,6 +170,19 @@ var kid_agree = "";
 
 
                 $(document).ready(function(){
+                    $(window).scroll(function() {
+                        
+                        var check = $(".sidebar").scrollTop();
+
+                        var y = window.scrollY;
+                        console.log('y:', y);
+                        if( y > 500){
+                            $(".sidebar").addClass('sticky');
+                        } else{
+                            $(".sidebar").removeClass('sticky');
+                        }
+                    });
+
                     <?php if( is_home() || is_front_page() ){ ?>
                         nav_category_area_height = $('.nav_category_area').offset().top+50;
                         layout_footer_height = $('.layout_footer').offset().top-40;

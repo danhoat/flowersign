@@ -231,7 +231,12 @@ $(function(){
             
             <div class="flex flex-row items-center gap-5 mt-3 md:mt-0">
                 <p class="font-base text-gray-600 font-medium italic col-span-1">Share this</p>
-                <div class="flex flex-row gap-2"><a class="social-icon facebook" target="_blank" data-toggle="tooltip" data-original-title="Facebook" href="https://www.facebook.com/sharer.php?u=https://potico.vn/blog/giang-sinh-sap-den-nen-mua-qua-gi"><i class="fa-brands fa-facebook-f"></i></a><a href="https://twitter.com/share?url=https://potico.vn/blog/giang-sinh-sap-den-nen-mua-qua-gi&amp;text=Hi%20everyone,%20check%20out%20this%20new%20post%20from%20Flowerstore.ph%20" class="social-icon twitter" target="_blank" data-toggle="tooltip" data-original-title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <div class="flex flex-row gap-2">
+                    <a class="social-icon facebook" target="_blank" data-toggle="tooltip" data-original-title="Facebook" href="https://www.facebook.com/sharer.php?u=<?php echo home_url();?>">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        
+                    </a>
+                    <a href="https://twitter.com/share?url=h<?php echo home_url();?>&amp;text=Hi%20everyone,%20check%20out%20this%20new%20post%20from%20Flowerstore.ph%20" class="social-icon twitter" target="_blank" data-toggle="tooltip" data-original-title="Twitter"><i class="fa-brands fa-twitter"></i></a>
                 </div>
         </div>
         </div>
