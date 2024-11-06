@@ -50,8 +50,8 @@ function the_first_post($fp){
         <div class="post-right">
             <div data-v-ce1f2810="" class="px-4 py-3 lg:py-4  flex-col justify-between flex-1">
                 <span data-v-ce1f2810="" class="text-gray-500 text-xxs"><?php echo cs_the_date($post);?></span>
-                <h4 data-v-ce1f2810="" class="post-title text-[#2F2C6F] font-extrabold text-base lg:text-lg xl:text-2xl title-color">
-                    <a href="<?php the_permalink();?>"><?php the_title();?> </a></h4>
+                <h2 data-v-ce1f2810="" class="post-title text-[#2F2C6F] font-extrabold text-base lg:text-lg xl:text-2xl title-color">
+                    <a href="<?php the_permalink();?>"><?php the_title();?> </a></h2>
 
                 <p data-v-ce1f2810="" class="cmt-3 text-gray-500 font-normal text-xs"><?php the_excerpt();?></p>
                 <div data-v-ce1f2810="" class="mt-auto">
