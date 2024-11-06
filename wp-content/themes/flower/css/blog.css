@@ -1,9 +1,15 @@
 .title-color,
 .title-color a,
 .post-content h3,
-.post-detail nav,
-.post-detail nav a{
+nav.breadcrumb,
+nav.breadcrumb a,
+.blog-title{
     color: rgb(47 44 111);
+}
+.blog-title{
+    font-size: 3.75rem;
+    line-height: 1;
+    margin-top: 30px;
 }
 .blog-post{
     display: grid;
@@ -23,11 +29,11 @@
 .grid-item-1 {grid-column-start: 1; grid-column-end: 4;}
 .post-item-first {
     clear: both;
-   column-gap: 25px;
-   margin-bottom: 30px;
-   display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding-top: 50px;
+    column-gap: 25px;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 25px;
 }
 .post-item-first  img{
     border-radius: 15px;
@@ -121,9 +127,9 @@
     font-weight: 600;
     padding: 10px 0 10px 0;
 }
-.post-detail nav{
+nav.breadcrumb {
     padding: 20px 0;
 }
-.post-detail nav i{
+nav.breadcrumb i{
     padding: 0 8px;
 }

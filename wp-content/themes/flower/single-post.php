@@ -210,12 +210,12 @@ $(function(){
 
             <?php the_post(); ?>
 
-            <nav data-v-11b456fa="" class="dark:text-gray-500 mt-4 text-brand text-base">
+            <nav data-v-11b456fa="" class="breadcrumb dark:text-gray-500 mt-4 text-brand text-base">
                 <ul data-v-11b456fa="" class="text-xs mb-3">
                     <li data-v-11b456fa="" class="inline" value="Trang chủ"><a data-v-11b456fa="" href="https://potico.vn">Trang chủ</a> 
                        <i class="fa fa-chevron-right"></i>
                     </li>
-                    <li data-v-11b456fa="" class="inline" value="Blog"><a data-v-11b456fa="" href="https://potico.vn/blogs">Blog</a><i class="fa fa-chevron-right"></i></li>
+                    <li data-v-11b456fa="" class="inline" value="Blog"><a data-v-11b456fa="" href="<?php echo home_url('/blog');?>">Blog</a><i class="fa fa-chevron-right"></i></li>
                     <li data-v-11b456fa="" class="inline" value="Giáng Sinh Sắp Đến, Nên Mua Quà Gì?"><span data-v-11b456fa="">Giáng Sinh Sắp Đến, Nên Mua Quà Gì?</span></li>
                 </ul>
             </nav>
