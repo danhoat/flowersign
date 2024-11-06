@@ -1,0 +1,36 @@
+
+@media only screen and (min-width: 750px) {
+    .blog-post{
+        grid-template-columns: auto auto auto auto;
+    }
+}
+
+@media only screen and (max-width: 750px){
+    .blog-post{
+        grid-template-columns: auto auto ;
+    }
+    .post-item-first{
+        grid-template-columns: 1fr;
+    }
+    .post-item-first img{
+        height: auto;
+    }
+    .post-item img {
+        height: auto;
+    }
+    .post-item-first .post-title {
+        font-size: 1.5rem;
+        text-align: justify;
+    }
+    .resp_wrap {
+        max-width: 100%;
+        padding: 15px;
+    }
+    .post-content,
+    .sidebar{
+        width: initial;
+        float: none;
+        display: block;
+        max-width: 100%;
+    }
+}

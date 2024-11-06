@@ -1,0 +1,11 @@
+
+
+@media only screen and (max-width: 750px) {
+    
+    .blog-post{
+        grid-template-columns: auto auto ;
+    }
+    .post-item img {
+        max-height: 265px;
+    }
+}

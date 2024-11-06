@@ -74,9 +74,9 @@ function wpdocs_theme_name_scripts() {
         wp_enqueue_script( 'single-product', BOXTHEME_URL. '/js/single-product.js', array('jquery'), rand(), true );
     }
     if( is_singular('post') || is_page_template('page-blog.php')){
-        
         wp_enqueue_style( 'blog-post', BOXTHEME_URL.'/css/blog.css', rand() );
     }
+    wp_enqueue_style('responsive-css', BOXTHEME_URL.'/responsive.css', rand() );
     if(! LOAD_STATIC_JS){
         $jss = box_js_enqueue();
         foreach($jss as $key=>$url){

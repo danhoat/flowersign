@@ -1,5 +1,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko" xmlns:fb="http://ogp.me/ns/fb#" xmlns:og="http://ogp.me/ns#">
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <script nonce="ZfNcz9LOJRepymLBSZhf0ovlGhkSb2wNh2wbhH0qado=">window.Firstmall = window.Firstmall || {};
 window.Firstmall.Config = {"Environment":{"MobileMode":true,"SetMode":null,"Language":"KR","isAdmin":false,"isSellerAdmin":false,"isUser":false,"Currency":{"Basic":{"Id":"KRW","Symbol":"원","Position":"after"},"Skin":{"Id":"KRW","Symbol":"원","Position":"after"}},"serviceLimit":{"H_FR":false,"H_AD":false,"H_NFR":true},"OperationType":"light","Protocol":"https","CacheBreaker":"afe0eba294279d50c8408292d8af4a8f517cd1d6"},"Security":{"PreventDrag":true,"PreventContextMenu":true,"MemberLogoutLimit":"30"},"Search":{"AutoComplete":true,"Suggest":false}};
@@ -41,8 +42,10 @@ window.Firstmall.Config = {"Environment":{"MobileMode":true,"SetMode":null,"Lang
 <!-- /CSS -->
 <link rel="stylesheet" type="text/css" href="https://f-mans.com/app/javascript/plugin/jquery_swipe/jquery_swipe.css">
 
-<!-- 파비콘 -->
-<link rel="shortcut icon" href="https://f-mans.com//data/icon/favicon/favicon1595806375.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/fontawesome.min.css" integrity="sha512-TPigxKHbPcJHJ7ZGgdi2mjdW9XHsQsnptwE+nOUWkoviYBn0rAAt0A5y3B1WGqIHrKFItdhZRteONANT07IipA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/regular.min.css" integrity="sha512-rxPM3RF3aiHhAtBSArcLR4reox2y22lhd/3eR5Wnk5HeeZuEslUaFmCwg6b5NKm1xeHZiAew3RVa8TI8ySLxPg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <link rel="stylesheet" type="text/css" href="https://harvesthq.github.io/chosen/chosen.css">
 <!-- 꽃청 추가 END 김태섭 2023-12-18 - splide -->
