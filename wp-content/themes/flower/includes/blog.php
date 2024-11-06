@@ -11,7 +11,7 @@ function the_item_post_loop($post){
         }
         echo '</a>';
         ?>
-        <div data-v-ce1f2810="" class="px-4 py-3 lg:py-4 flex flex-col justify-between flex-1">
+        <div data-v-ce1f2810="" class="px-4 py-3 lg:py-4  flex-col justify-between flex-1">
             <span data-v-ce1f2810="" class="text-gray-500 text-xxs">tháng 11 07, 2023</span>
             <h3 data-v-ce1f2810="" class="post-title text-[#2F2C6F] font-extrabold text-base lg:text-lg xl:text-2xl title-color"> <a href="<?php the_permalink();?>"><?php the_title();?></a> </h3>
 
@@ -47,7 +47,7 @@ function the_first_post($fp){
         </a>
         </div>
         <div class="post-right">
-            <div data-v-ce1f2810="" class="px-4 py-3 lg:py-4 flex flex-col justify-between flex-1">
+            <div data-v-ce1f2810="" class="px-4 py-3 lg:py-4  flex-col justify-between flex-1">
                 <span data-v-ce1f2810="" class="text-gray-500 text-xxs">tháng 11 07, 2023</span>
                 <h4 data-v-ce1f2810="" class="post-title text-[#2F2C6F] font-extrabold text-base lg:text-lg xl:text-2xl title-color">
                     <a href="<?php the_permalink();?>"><?php the_title();?> </a></h4>

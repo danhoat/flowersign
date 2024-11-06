@@ -212,35 +212,38 @@ $(function(){
 
             <div class="resp_wrap 99999" style="position:relative;">
 
+                 <div data-v-ce1f2810="" class="mt-1">
+                    <h1 data-v-ce1f2810="" class="text-[#2F2C6F] font-extrabold lg:text-6xl">Blog</h1>
+                    <nav data-v-11b456fa="" data-v-ce1f2810="" class="dark:text-gray-500 text-brand lg:ml-1 lg:mt-2"><ul data-v-11b456fa="" class="text-xs mb-3"><li data-v-11b456fa="" class="inline" value="Trang chủ"><a data-v-11b456fa="" href="https://potico.vn">Trang chủ</a></li><li data-v-11b456fa="" class="inline" value="Blog"><span data-v-11b456fa="">Blog</span></li></ul></nav>
+                </div>
 
+                <?php 
+                wp_reset_query();
+                $args = array(
+                    'post_type' => 'post',
+                    'post_status' => 'publish',
+                    'posts_per_page' => 9
+                );
+                $query = new WP_Query($args);
+                // echo '<pre>';
+                // var_dump($query->posts[0]);
+                // echo '</pre>';
+                the_first_post($query->posts[0]);
 
-            <?php 
-            wp_reset_query();
-            $args = array(
-                'post_type' => 'post',
-                'post_status' => 'publish',
-                'posts_per_page' => 9
-            );
-            $query = new WP_Query($args);
-            // echo '<pre>';
-            // var_dump($query->posts[0]);
-            // echo '</pre>';
-            the_first_post($query->posts[0]);
+                echo '<div class="blog-post">';
 
-            echo '<div class="blog-post">';
-
-            $i = 0;
-            while( $query->have_posts() ){
-                $query->the_post(); 
-                global $post;
-                if($i > 0){
-                    the_item_post_loop($post);
-                }
-                $i++;
-                
-                
-            } ?>
-            </div> <!-- end blog-post !-->
+                $i = 0;
+                while( $query->have_posts() ){
+                    $query->the_post(); 
+                    global $post;
+                    if($i > 0){
+                        the_item_post_loop($post);
+                    }
+                    $i++;
+                    
+                    
+                } ?>
+                </div> <!-- end blog-post !-->
                 
 
             <?php get_footer(); ?>

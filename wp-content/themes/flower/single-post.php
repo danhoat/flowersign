@@ -205,7 +205,7 @@ $(function(){
 
 
             <div class="resp_wrap 99999 post-detail" style="position:relative;">
-
+               
 
 
             <?php the_post(); ?>
@@ -220,11 +220,28 @@ $(function(){
                 </div>
                 <div class="sidebar">
                     <h2 data-v-dd797744="" class="font-bold text-lg">Recent Posts</h2>
+                    <?php
+                    $recent_posts = wp_get_recent_posts();
+                    foreach( $recent_posts as $recent ) { ?>
+                        <div data-v-dd797744="" class="item p-3 relative flex-row md:flex gap-4 hover:bg-white">
 
-                    <div data-v-dd797744="" class="item p-3 relative flex-row md:flex gap-4 hover:bg-white"><a data-v-dd797744="" href="https://potico.vn/blog/ngay-cua-me-5-goi-y-qua-tang-gui-den-me" class="absolute w-full h-full"></a><div data-v-dd797744="" class="flex-1"><!----><img data-v-dd797744="" src="https://assets.flowerstore.ph/public/tenantVN/app/assets/images/blog/1000_9KBNthzx9oFtOnGISECChQsFm.png" class="object-cover object-center h-28 w-full" alt="relate_image"></div><div data-v-dd797744="" class="mt-3 flex-1 md:mt-0"><h4 data-v-dd797744="" class="text-sm col-span-2">NGÀY CỦA MẸ 2021: 5 GỢI Ý QUÀ TẶNG GỬI ĐẾN MẸ</h4><i data-v-dd797744="" class="text-gray-500 text-xs row-span-2 md:tex-sm">tháng 4 27, 2021</i></div></div>
+                        <a data-v-dd797744="" href="<?php echo get_permalink($recent);?>" class="absolute w-full h-full"></a>
 
-                    <div data-v-dd797744="" class="item p-3 relative flex-row md:flex gap-4 hover:bg-white"><a data-v-dd797744="" href="https://potico.vn/blog/ngay-cua-me-5-goi-y-qua-tang-gui-den-me" class="absolute w-full h-full"></a><div data-v-dd797744="" class="flex-1"><!----><img data-v-dd797744="" src="https://assets.flowerstore.ph/public/tenantVN/app/assets/images/blog/1000_9KBNthzx9oFtOnGISECChQsFm.png" class="object-cover object-center h-28 w-full" alt="relate_image"></div><div data-v-dd797744="" class="mt-3 flex-1 md:mt-0"><h4 data-v-dd797744="" class="text-sm col-span-2">NGÀY CỦA MẸ 2021: 5 GỢI Ý QUÀ TẶNG GỬI ĐẾN MẸ</h4><i data-v-dd797744="" class="text-gray-500 text-xs row-span-2 md:tex-sm">tháng 4 27, 2021</i></div></div>
-                    <div data-v-dd797744="" class=" item p-3 relative flex-row md:flex gap-4 hover:bg-white"><a data-v-dd797744="" href="https://potico.vn/blog/ngay-cua-me-5-goi-y-qua-tang-gui-den-me" class="absolute w-full h-full"></a><div data-v-dd797744="" class="flex-1"><!----><img data-v-dd797744="" src="https://assets.flowerstore.ph/public/tenantVN/app/assets/images/blog/1000_9KBNthzx9oFtOnGISECChQsFm.png" class="object-cover object-center h-28 w-full" alt="relate_image"></div><div data-v-dd797744="" class="mt-3 flex-1 md:mt-0"><h4 data-v-dd797744="" class="text-sm col-span-2">NGÀY CỦA MẸ 2021: 5 GỢI Ý QUÀ TẶNG GỬI ĐẾN MẸ</h4><i data-v-dd797744="" class="text-gray-500 text-xs row-span-2 md:tex-sm">tháng 4 27, 2021</i></div></div>
+                        <div data-v-dd797744="" class="flex-1">
+                            <img src="<?php echo get_the_post_thumbnail_url($recent);?>" />
+                        </div>
+                        <div data-v-dd797744="" class="mt-3 flex-1 md:mt-0">
+                            <h4 data-v-dd797744="" class="text-sm col-span-2 title-color"><?php echo get_the_title($recent);?></h4>
+                            <i data-v-dd797744="" class="text-gray-500 text-xs row-span-2 md:tex-sm"><?php echo cs_the_date($recent);?></i>
+                        </div>
+                    </div>
+                        
+                    <?php } ?>
+
+
+                    
+
+
                 </div>
             </div>
                 

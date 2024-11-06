@@ -11,4 +11,6 @@ function fget_random_img($pos = 1){
     return $img[rand(0, count($images) - 1)];
 }
 
-
+function cs_the_date($post){
+echo get_the_date(get_option( 'date_format' ), $post);
+}

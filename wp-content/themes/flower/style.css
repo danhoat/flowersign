@@ -171,9 +171,13 @@ div.notice{
 .mt-3 {
     margin-top: .75rem;
 }
+.post-title{
+    font-weight: 500;
+}
 h1.post-title{
     font-size: 3rem;
-        line-height: 1;
+    line-height: 1;
+    font-weight: 500;
 }
 .flex {
     display: flex;
@@ -190,4 +194,13 @@ h1.post-title{
 .cmt-5 ,
 .mt-5 {
     margin-top: 1.25rem;
+}
+.w-full {
+    width: 100%;
+}
+.h-full {
+    height: 100%;
+}
+.absolute {
+    position: absolute;
 }

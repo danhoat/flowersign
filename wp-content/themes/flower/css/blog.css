@@ -1,5 +1,6 @@
 .title-color,
-.title-color a{
+.title-color a,
+.post-content h3{
     color: rgb(47 44 111);
 }
 .blog-post{
@@ -61,12 +62,14 @@
     padding: 45px 0;
 }
 .post-content{
-    width: 860px;
+    width: 800px;
     float: left;
     padding-right: 10px;
+    text-align: justify;
+    line-height: 33px;
 }
 .sidebar{
-    width: 350px;
+    width: 400px;
     overflow: hidden;
     float: right;
     padding: 15px;
@@ -82,4 +85,31 @@
 }
 .sidebar h2{
     padding: 30px ;
+}
+.text-sm {
+    font-size: .875rem;
+    line-height: 1.25rem;
+}
+.text-gray-500 {
+    --tw-text-opacity: 1;
+    color: rgba(107, 114, 128, var(--tw-text-opacity));
+}
+.text-xs {
+    font-size: .75rem;
+    line-height: 1rem;
+}
+.sidebar h4{
+    font-weight: 600;
+
+    display: block !important;
+    font-weight: 700 !important;
+    margin-block-end: 1.33em !important;
+    margin-block-start: 1.33em !important;
+    margin-inline-end: 0 !important;
+    margin-inline-start: 0 !important;
+}
+.post-content h3{
+    font-size: 23px;
+    font-weight: 600;
+    padding: 10px 0 10px 0;
 }
