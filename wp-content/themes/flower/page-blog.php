@@ -214,7 +214,8 @@ $(function(){
 
                  <div data-v-ce1f2810="" class="mt-1">
                     <h1 data-v-ce1f2810="" class="text-[#2F2C6F] font-extrabold lg:text-6xl blog-title">Blog</h1>
-                    <nav data-v-11b456fa="" data-v-ce1f2810="" class="breadcrumb  dark:text-gray-500 text-brand lg:ml-1 lg:mt-2"><ul data-v-11b456fa="" class="text-xs mb-3"><li data-v-11b456fa="" class="inline" value="Trang chủ"><a data-v-11b456fa="" href="https://potico.vn">Trang chủ</a> <i class="fa fa-chevron-right"></i> </li>
+                    <nav data-v-11b456fa="" data-v-ce1f2810="" class="breadcrumb  dark:text-gray-500 text-brand lg:ml-1 lg:mt-2"><ul data-v-11b456fa="" class="text-xs mb-3">
+                        <li data-v-11b456fa="" class="inline" value="Trang chủ"><a data-v-11b456fa="" href="<?php echo home_url();?>">Trang chủ</a> <i class="fa fa-chevron-right"></i> </li>
                         <li data-v-11b456fa="" class="inline" value="Blog"><span data-v-11b456fa="">Blog</span></li>
                     </ul>
                     </nav>
