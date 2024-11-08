@@ -3192,8 +3192,12 @@ div.coupon_detail { padding:10px 0; }
 
 
 /* -------------------------------------- Layout --------------------------------------------- */
+
 #layout_body,
-.resp_wrap { max-width:1260px; margin:0 auto; padding-left:40px; padding-right:40px; }
+.resp_wrap { max-width:1260px; margin:0 auto; padding-left:10px; padding-right:10px; padding-top:0px }
+#layout_body{
+	padding-top: 25px;
+}
 .resp_wrap:after {display:block; content:""; clear:both;}
 .wrap_aside { padding:0 10px; }
 .wrap_aside.v2 { padding-top:30px; }
@@ -3365,7 +3369,7 @@ iframe#actionFrame { width:0; height:0; position:absolute; left:0; bottom:0; vis
 .layout_header .cart_cnt2 { display:inline-block; vertical-align:top; margin-top:-3px; text-align:center; height:20px; padding:0 5px; min-width:10px; border-radius:10px; font-size:11px; line-height:21px; font-weight:300; background:#333; color:#fff; }
 
 /* 햄버거 */
-.resp_top_hamburger { position:absolute; left:51px; top:50%; margin-top:-15px; }
+.resp_top_hamburger { position:absolute; left:25px; top:50%; margin-top:-15px; }
 .resp_top_hamburger>a { display:block; position:relative; width:30px; height:22px; }
 .resp_top_hamburger>a>b,
 .resp_top_hamburger>a:before,

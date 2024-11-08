@@ -204,3 +204,9 @@ h1.post-title{
 .absolute {
     position: absolute;
 }
+.wp-element-button{
+    background: #ededed;
+    border-radius: 4px;
+    color: #000;
+    border: 1px solid #ccc;
+}

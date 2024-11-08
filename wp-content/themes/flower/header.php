@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko" xmlns:fb="http://ogp.me/ns/fb#" xmlns:og="http://ogp.me/ns#">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+<?php wp_head();?>
 <script nonce="ZfNcz9LOJRepymLBSZhf0ovlGhkSb2wNh2wbhH0qado=">window.Firstmall = window.Firstmall || {};
 window.Firstmall.Config = {"Environment":{"MobileMode":true,"SetMode":null,"Language":"KR","isAdmin":false,"isSellerAdmin":false,"isUser":false,"Currency":{"Basic":{"Id":"KRW","Symbol":"원","Position":"after"},"Skin":{"Id":"KRW","Symbol":"원","Position":"after"}},"serviceLimit":{"H_FR":false,"H_AD":false,"H_NFR":true},"OperationType":"light","Protocol":"https","CacheBreaker":"afe0eba294279d50c8408292d8af4a8f517cd1d6"},"Security":{"PreventDrag":true,"PreventContextMenu":true,"MemberLogoutLimit":"30"},"Search":{"AutoComplete":true,"Suggest":false}};
 (function(){ var aliases = {"gl_operation_type":window.Firstmall.Config.Environment.OperationType,"gl_mobile_mode":window.Firstmall.Config.Environment.MobileMode,"gl_set_mode":window.Firstmall.Config.Environment.SetMode,"gl_language":window.Firstmall.Config.Environment.Language,"gl_basic_currency":window.Firstmall.Config.Environment.Currency.Basic.Id,"gl_skin_currency":window.Firstmall.Config.Environment.Currency.Skin.Id,"gl_basic_currency_symbol":window.Firstmall.Config.Environment.Currency.Basic.Symbol,"gl_basic_currency_symbol_position":window.Firstmall.Config.Environment.Currency.Basic.Position,"gl_protocol":window.Firstmall.Config.Environment.Protocol+"://","gl_broadcast":window.Firstmall.Config.Environment.Broadcast}; for(var attr in aliases) { window[attr] = aliases[attr]; }})();</script>
@@ -58,7 +58,7 @@ window.Firstmall.Config = {"Environment":{"MobileMode":true,"SetMode":null,"Lang
 
 <link rel="stylesheet" type="text/css" href="https://harvesthq.github.io/chosen/chosen.css">
 <!-- 꽃청 추가 END 김태섭 2023-12-18 - splide -->
-<?php wp_head();?>
+
 
 <script type="text/javascript">
     var feeShip = {

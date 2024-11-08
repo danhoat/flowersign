@@ -33,4 +33,11 @@
         display: block;
         max-width: 100%;
     }
+    h1.post-title{
+        text-align: justify;
+        font-size: 2.5rem;
+    }
+    .post-content{
+        padding-right: 0;
+    }
 }

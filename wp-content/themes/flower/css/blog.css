@@ -9,7 +9,7 @@ nav.breadcrumb a,
 .blog-title{
     font-size: 3.75rem;
     line-height: 1;
-    margin-top: 30px;
+    margin-top: 0px;
 }
 .blog-post{
     display: grid;
@@ -71,7 +71,7 @@ nav.breadcrumb a,
     padding: 45px 0;
 }
 .post-content{
-    width: 800px;
+    width: 730px;
     max-width: 100%;
     float: left;
     padding-right: 10px;
@@ -135,7 +135,7 @@ nav.breadcrumb a,
     padding: 10px 0 10px 0;
 }
 nav.breadcrumb {
-    padding: 20px 0;
+    padding: 20px 0 25px 0
 }
 nav.breadcrumb i{
     padding: 0 8px;
