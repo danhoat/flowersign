@@ -201,7 +201,7 @@ $(function(){
 </script>
         <!-- ================= #LAYOUT_HEADER :: END. 파일위치 : layout_header/standard.html (default) ================= -->
 
-        <div id="layout_body" class="layout_body">
+        <div id="layout_body" class="layout_body page.php">
 
 
             <div class="resp_wrap 99999" style="position:relative;">

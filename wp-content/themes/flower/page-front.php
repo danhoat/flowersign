@@ -1,4 +1,11 @@
-<?php get_header();?>
+<?php /**
+ * Template Name: Front page
+ *
+ */
+
+
+get_header();
+?>
 
 
 
@@ -216,7 +223,7 @@ function gtag_report_conversion(url) {
 </script>
         <!-- ================= #LAYOUT_HEADER :: END. 파일위치 : layout_header/standard.html (default) ================= -->
 
-        <div id="layout_body" class="layout_body">
+       
         <!-- ================= 파트 페이지들 :: START. ================= -->
 
 
@@ -255,9 +262,16 @@ if( window.SwingJavascriptInterface != undefined )
 
 /* 하단 정보 끝*/
 </style>
+<?php if( wp_is_mobile() ){?>
+    <div id="layout_body" class="layout_body page-front.php">
+    <?php } else { ?>
+    <div style="width: 100%;">
+<?php } ?>
 
 <!-- slide_itro + list categories !-->
-    <?php include('home-intro.php') ?>
+    <?php include('home-intro.php'); // slide-intro.php ?>
+</div>
+    <div id="layout_body" class="layout_body page-front.php">
 <!-- end !-->
 
 <!-- 해당 아이피에서만 노출 -->

@@ -216,7 +216,7 @@ function gtag_report_conversion(url) {
 </script>
         <!-- ================= #LAYOUT_HEADER :: END. 파일위치 : layout_header/standard.html (default) ================= -->
 
-        <div id="layout_body" class="layout_body">
+        <div id="layout_body" class="layout_body index.php">
         <!-- ================= 파트 페이지들 :: START. ================= -->
 
 
