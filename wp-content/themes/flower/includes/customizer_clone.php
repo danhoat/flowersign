@@ -11,14 +11,14 @@ defined( 'ABSPATH' ) || exit;
 /**
  * WC_Shop_Customizer_Clone class.
  */
-define('PANEL_NAME','woocommerce123');
+define('PANEL_NAME','123woocommerce123');
 class WC_Shop_Customizer_Clone {
 
     /**
      * Constructor.
      */
     public function __construct() {
-        add_action( 'customize_register', array( $this, 'add_sections' ) );
+        add_action( 'customize_register', array( $this, 'add_sections_home' ) );
         add_action( 'customize_controls_print_styles', array( $this, 'add_styles' ) );
         add_action( 'customize_controls_print_scripts', array( $this, 'add_scripts' ), 30 );
         add_action( 'customize_controls_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
@@ -30,30 +30,29 @@ class WC_Shop_Customizer_Clone {
      *
      * @param WP_Customize_Manager $wp_customize Theme Customizer object.
      */
-    public function add_sections( $wp_customize ) {
+    public function add_sections_home( $wp_customize ) {
         $wp_customize->add_panel(
             PANEL_NAME,
             array(
-                'priority'       => 150,
+                'priority'       => 100,
                 'capability'     => 'edit_theme_options',
-                'theme_supports' => '',
                 'title'          => __( 'Setup Trang chủ', 'woocommerce' ),
             )
         );
 
-        $this->add_store_notice_section( $wp_customize );
+        $this->add_slider_section( $wp_customize );
         $this->add_product_catalog_section( $wp_customize );
         $this->add_product_images_section( $wp_customize );
-        $this->add_checkout_section( $wp_customize );
+        // $this->add_checkout_section( $wp_customize );
     }
 
     /**
      * Frontend CSS styles.
      */
     public function add_frontend_scripts() {
-        // if ( ! is_customize_preview() || ! is_store_notice_showing() ) {
-        //     return;
-        // }
+        if ( ! is_customize_preview() || ! is_store_notice_showing() ) {
+            return;
+        }
 
         $css = '.woocommerce-store-notice, p.demo_store { display: block !important; }';
         wp_add_inline_style( 'customize-preview', $css );
@@ -67,11 +66,11 @@ class WC_Shop_Customizer_Clone {
         if ( $this->has_block_checkout() ) {
             ?>
             <style type="text/css">
-                li#accordion-section-woocommerce_checkout {
+                li#accordion-section-home_checkout {
                     pointer-events: none;
                 }
 
-                li#accordion-section-woocommerce_checkout .accordion-section-title {
+                li#accordion-section-home_checkout .accordion-section-title {
                     background: #f1f1f1;
                 }
 
@@ -147,9 +146,9 @@ class WC_Shop_Customizer_Clone {
                     $( '.woocommerce-cropping-control' ).find( 'input:checked' ).trigger( 'change' );
                 } );
 
-                wp.customize( 'woocommerce_demo_store', function( setting ) {
+                wp.customize( 'home_demo_store', function( setting ) {
                     setting.bind( function( value ) {
-                        var notice = wp.customize( 'woocommerce_demo_store_notice' );
+                        var notice = wp.customize( 'home_demo_store_notice' );
 
                         if ( value && ! notice.callbacks.has( notice.preview ) ) {
                             notice.bind( notice.preview );
@@ -159,9 +158,9 @@ class WC_Shop_Customizer_Clone {
                     } );
                 } );
 
-                wp.customize( 'woocommerce_demo_store_notice', function( setting ) {
+                wp.customize( 'home_demo_store_notice', function( setting ) {
                     setting.bind( function( value ) {
-                        var checkbox = wp.customize( 'woocommerce_demo_store' );
+                        var checkbox = wp.customize( 'home_demo_store' );
 
                         if ( checkbox.get() ) {
                             $( '.woocommerce-store-notice' ).text( value );
@@ -169,11 +168,11 @@ class WC_Shop_Customizer_Clone {
                     } );
                 } );
 
-                wp.customize.section( 'woocommerce_store_notice', function( section ) {
+                wp.customize.section( 'home_slider_section', function( section ) {
                     section.expanded.bind( function( isExpanded ) {
                         if ( isExpanded ) {
-                            var notice   = wp.customize( 'woocommerce_demo_store_notice' ),
-                                checkbox = wp.customize( 'woocommerce_demo_store' );
+                            var notice   = wp.customize( 'home_demo_store_notice' ),
+                                checkbox = wp.customize( 'home_demo_store' );
 
                             if ( checkbox.get() && ! notice.callbacks.has( notice.preview ) ) {
                                 notice.bind( notice.preview );
@@ -184,7 +183,7 @@ class WC_Shop_Customizer_Clone {
                     } );
                 } );
 
-                wp.customize.section( 'woocommerce_product_catalog', function( section ) {
+                wp.customize.section( 'home_product_catalog', function( section ) {
                     section.expanded.bind( function( isExpanded ) {
                         if ( isExpanded ) {
                             wp.customize.previewer.previewUrl.set( '<?php echo esc_js( wc_get_page_permalink( 'shop' ) ); ?>' );
@@ -192,7 +191,7 @@ class WC_Shop_Customizer_Clone {
                     } );
                 } );
 
-                wp.customize.section( 'woocommerce_product_images', function( section ) {
+                wp.customize.section( 'home_product_images', function( section ) {
                     section.expanded.bind( function( isExpanded ) {
                         if ( isExpanded ) {
                             wp.customize.previewer.previewUrl.set( '<?php echo esc_js( wc_get_page_permalink( 'shop' ) ); ?>' );
@@ -200,7 +199,7 @@ class WC_Shop_Customizer_Clone {
                     } );
                 } );
 
-                wp.customize.section( 'woocommerce_checkout', function( section ) {
+                wp.customize.section( 'home_checkout', function( section ) {
                     section.expanded.bind( function( isExpanded ) {
                         if ( isExpanded ) {
                             wp.customize.previewer.previewUrl.set( '<?php echo esc_js( wc_get_page_permalink( 'checkout' ) ); ?>' );
@@ -208,7 +207,7 @@ class WC_Shop_Customizer_Clone {
                     } );
                 } );
 
-                wp.customize( 'woocommerce_catalog_columns', function( setting ) {
+                wp.customize( 'home_catalog_columns', function( setting ) {
                     setting.bind( function( value ) {
                         var min = parseInt( '<?php echo esc_js( $min_columns ); ?>', 10 );
                         var max = parseInt( '<?php echo esc_js( $max_columns ); ?>', 10 );
@@ -241,7 +240,7 @@ class WC_Shop_Customizer_Clone {
                     } );
                 } );
 
-                wp.customize( 'woocommerce_catalog_rows', function( setting ) {
+                wp.customize( 'home_catalog_rows', function( setting ) {
                     setting.bind( function( value ) {
                         var min = parseInt( '<?php echo esc_js( $min_rows ); ?>', 10 );
                         var max = parseInt( '<?php echo esc_js( $max_rows ); ?>', 10 );
@@ -281,7 +280,7 @@ class WC_Shop_Customizer_Clone {
             $message = sprintf(
                 /* translators: %s: Link to the editor page with the Checkout block. */
                 __( 'Checkout can be customized <a href="%s">in the Editor</a> with your active theme.', 'woocommerce' ),
-                admin_url( 'post.php?post=' . get_option( 'woocommerce_checkout_page_id' ) . '&action=edit' )
+                admin_url( 'post.php?post=' . get_option( 'home_checkout_page_id' ) . '&action=edit' )
             );
             ?>
             <script type="text/javascript">
@@ -325,7 +324,7 @@ class WC_Shop_Customizer_Clone {
     public function sanitize_default_catalog_orderby( $value ) {
         /* phpcs:disable WooCommerce.Commenting.CommentHooks.MissingHookComment */
         $options = apply_filters(
-            'woocommerce_default_catalog_orderby_options',
+            'home_default_catalog_orderby_options',
             array(
                 'menu_order' => __( 'Default sorting (custom ordering + name)', 'woocommerce' ),
                 'popularity' => __( 'Popularity (sales)', 'woocommerce' ),
@@ -344,9 +343,9 @@ class WC_Shop_Customizer_Clone {
      *
      * @param WP_Customize_Manager $wp_customize Theme Customizer object.
      */
-    private function add_store_notice_section( $wp_customize ) {
+    private function add_slider_section( $wp_customize ) {
         $wp_customize->add_section(
-            'woocommerce_store_notice',
+            'home_slider_section',
             array(
                 'title'    => __( 'Slider Intro', 'woocommerce' ),
                 'priority' => 10,
@@ -355,7 +354,7 @@ class WC_Shop_Customizer_Clone {
         );
 
         $wp_customize->add_setting(
-            'woocommerce_demo_store',
+            'home_demo_store',
             array(
                 'default'              => 'no',
                 'type'                 => 'option',
@@ -366,7 +365,7 @@ class WC_Shop_Customizer_Clone {
         );
 
         $wp_customize->add_setting(
-            'woocommerce_demo_store_notice',
+            'home_demo_store_notice',
             array(
                 'default'           => __( 'This is a demo store for testing purposes &mdash; no orders shall be fulfilled.', 'woocommerce' ),
                 'type'              => 'option',
@@ -377,33 +376,33 @@ class WC_Shop_Customizer_Clone {
         );
 
         $wp_customize->add_control(
-            'woocommerce_demo_store_notice',
+            'home_demo_store_notice',
             array(
                 'label'       => __( 'Store notice', 'woocommerce' ),
                 'description' => __( 'If enabled, this text will be shown site-wide. You can use it to show events or promotions to visitors!', 'woocommerce' ),
-                'section'     => 'woocommerce_store_notice',
-                'settings'    => 'woocommerce_demo_store_notice',
+                'section'     => 'home_slider_section',
+                'settings'    => 'home_demo_store_notice',
                 'type'        => 'textarea',
             )
         );
 
         $wp_customize->add_control(
-            'woocommerce_demo_store',
+            'home_demo_store',
             array(
                 'label'    => __( 'Show slider', 'woocommerce' ),
-                'section'  => 'woocommerce_store_notice',
-                'settings' => 'woocommerce_demo_store',
+                'section'  => 'home_slider_section',
+                'settings' => 'home_demo_store',
                 'type'     => 'checkbox',
             )
         );
 
         if ( isset( $wp_customize->selective_refresh ) ) {
             $wp_customize->selective_refresh->add_partial(
-                'woocommerce_demo_store_notice',
+                'home_demo_store_notice',
                 array(
                     'selector'            => '.woocommerce-store-notice',
                     'container_inclusive' => true,
-                    'render_callback'     => 'woocommerce_demo_store',
+                    'render_callback'     => 'home_demo_store',
                 )
             );
         }
@@ -416,7 +415,7 @@ class WC_Shop_Customizer_Clone {
      */
     public function add_product_catalog_section( $wp_customize ) {
         $wp_customize->add_section(
-            'woocommerce_product_catalog',
+            'home_product_catalog',
             array(
                 'title'    => __( 'Product Catalog', 'woocommerce' ),
                 'priority' => 10,
@@ -425,7 +424,7 @@ class WC_Shop_Customizer_Clone {
         );
 
         $wp_customize->add_setting(
-            'woocommerce_shop_page_display',
+            'home_shop_page_display',
             array(
                 'default'           => '',
                 'type'              => 'option',
@@ -435,12 +434,12 @@ class WC_Shop_Customizer_Clone {
         );
 
         $wp_customize->add_control(
-            'woocommerce_shop_page_display',
+            'home_shop_page_display',
             array(
                 'label'       => __( 'Shop page display', 'woocommerce' ),
                 'description' => __( 'Choose what to display on the main shop page.', 'woocommerce' ),
-                'section'     => 'woocommerce_product_catalog',
-                'settings'    => 'woocommerce_shop_page_display',
+                'section'     => 'home_product_catalog',
+                'settings'    => 'home_shop_page_display',
                 'type'        => 'select',
                 'choices'     => array(
                     ''              => __( 'Show products', 'woocommerce' ),
@@ -451,7 +450,7 @@ class WC_Shop_Customizer_Clone {
         );
 
         $wp_customize->add_setting(
-            'woocommerce_category_archive_display',
+            'home_category_archive_display',
             array(
                 'default'           => '',
                 'type'              => 'option',
@@ -461,12 +460,12 @@ class WC_Shop_Customizer_Clone {
         );
 
         $wp_customize->add_control(
-            'woocommerce_category_archive_display',
+            'home_category_archive_display',
             array(
                 'label'       => __( 'Category display', 'woocommerce' ),
                 'description' => __( 'Choose what to display on product category pages.', 'woocommerce' ),
-                'section'     => 'woocommerce_product_catalog',
-                'settings'    => 'woocommerce_category_archive_display',
+                'section'     => 'home_product_catalog',
+                'settings'    => 'home_category_archive_display',
                 'type'        => 'select',
                 'choices'     => array(
                     ''              => __( 'Show products', 'woocommerce' ),
@@ -477,7 +476,7 @@ class WC_Shop_Customizer_Clone {
         );
 
         $wp_customize->add_setting(
-            'woocommerce_default_catalog_orderby',
+            'home_default_catalog_orderby',
             array(
                 'default'           => 'menu_order',
                 'type'              => 'option',
@@ -488,15 +487,15 @@ class WC_Shop_Customizer_Clone {
 
         /* phpcs:disable WooCommerce.Commenting.CommentHooks.MissingHookComment */
         $wp_customize->add_control(
-            'woocommerce_default_catalog_orderby',
+            'home_default_catalog_orderby',
             array(
                 'label'       => __( 'Default product sorting', 'woocommerce' ),
                 'description' => __( 'How should products be sorted in the catalog by default?', 'woocommerce' ),
-                'section'     => 'woocommerce_product_catalog',
-                'settings'    => 'woocommerce_default_catalog_orderby',
+                'section'     => 'home_product_catalog',
+                'settings'    => 'home_default_catalog_orderby',
                 'type'        => 'select',
                 'choices'     => apply_filters(
-                    'woocommerce_default_catalog_orderby_options',
+                    'home_default_catalog_orderby_options',
                     array(
                         'menu_order' => __( 'Default sorting (custom ordering + name)', 'woocommerce' ),
                         'popularity' => __( 'Popularity (sales)', 'woocommerce' ),
@@ -515,7 +514,7 @@ class WC_Shop_Customizer_Clone {
         }
 
         $wp_customize->add_setting(
-            'woocommerce_catalog_columns',
+            'home_catalog_columns',
             array(
                 'default'              => 4,
                 'type'                 => 'option',
@@ -526,12 +525,12 @@ class WC_Shop_Customizer_Clone {
         );
 
         $wp_customize->add_control(
-            'woocommerce_catalog_columns',
+            'home_catalog_columns',
             array(
                 'label'       => __( 'Products per row', 'woocommerce' ),
                 'description' => __( 'How many products should be shown per row?', 'woocommerce' ),
-                'section'     => 'woocommerce_product_catalog',
-                'settings'    => 'woocommerce_catalog_columns',
+                'section'     => 'home_product_catalog',
+                'settings'    => 'home_catalog_columns',
                 'type'        => 'number',
                 'input_attrs' => array(
                     'min'  => wc_get_theme_support( 'product_grid::min_columns', 1 ),
@@ -544,7 +543,7 @@ class WC_Shop_Customizer_Clone {
         // Only add this setting if something else isn't managing the number of products per page.
         if ( ! has_filter( 'loop_shop_per_page' ) ) {
             $wp_customize->add_setting(
-                'woocommerce_catalog_rows',
+                'home_catalog_rows',
                 array(
                     'default'              => 4,
                     'type'                 => 'option',
@@ -556,12 +555,12 @@ class WC_Shop_Customizer_Clone {
         }
 
         $wp_customize->add_control(
-            'woocommerce_catalog_rows',
+            'home_catalog_rows',
             array(
                 'label'       => __( 'Rows per page', 'woocommerce' ),
                 'description' => __( 'How many rows of products should be shown per page?', 'woocommerce' ),
-                'section'     => 'woocommerce_product_catalog',
-                'settings'    => 'woocommerce_catalog_rows',
+                'section'     => 'home_product_catalog',
+                'settings'    => 'home_catalog_rows',
                 'type'        => 'number',
                 'input_attrs' => array(
                     'min'  => wc_get_theme_support( 'product_grid::min_rows', 1 ),
@@ -581,10 +580,10 @@ class WC_Shop_Customizer_Clone {
         if ( class_exists( 'Jetpack' ) && Jetpack::is_module_active( 'photon' ) ) {
             $regen_description = ''; // Nothing to report; Jetpack will handle magically.
         /* phpcs:disable WooCommerce.Commenting.CommentHooks.MissingHookComment */
-        } elseif ( apply_filters( 'woocommerce_background_image_regeneration', true ) && ! is_multisite() ) {
+        } elseif ( apply_filters( 'home_background_image_regeneration', true ) && ! is_multisite() ) {
             $regen_description = __( 'After publishing your changes, new image sizes will be generated automatically.', 'woocommerce' );
         /* phpcs:disable WooCommerce.Commenting.CommentHooks.MissingHookComment */
-        } elseif ( apply_filters( 'woocommerce_background_image_regeneration', true ) && is_multisite() ) {
+        } elseif ( apply_filters( 'home_background_image_regeneration', true ) && is_multisite() ) {
             /* translators: 1: tools URL 2: regen thumbs url */
             $regen_description = sprintf( __( 'After publishing your changes, new image sizes may not be shown until you regenerate thumbnails. You can do this from the <a href="%1$s" target="_blank">tools section in WooCommerce</a> or by using a plugin such as <a href="%2$s" target="_blank">Regenerate Thumbnails</a>.', 'woocommerce' ), admin_url( 'admin.php?page=wc-status&tab=tools' ), 'https://en-gb.wordpress.org/plugins/regenerate-thumbnails/' );
         } else {
@@ -593,7 +592,7 @@ class WC_Shop_Customizer_Clone {
         }
 
         $wp_customize->add_section(
-            'woocommerce_product_images',
+            'home_product_images',
             array(
                 'title'       => __( 'Product Images', 'woocommerce' ),
                 'description' => $regen_description,
@@ -604,7 +603,7 @@ class WC_Shop_Customizer_Clone {
 
         if ( ! wc_get_theme_support( 'single_image_width' ) ) {
             $wp_customize->add_setting(
-                'woocommerce_single_image_width',
+                'home_single_image_width',
                 array(
                     'default'              => 600,
                     'type'                 => 'option',
@@ -615,12 +614,12 @@ class WC_Shop_Customizer_Clone {
             );
 
             $wp_customize->add_control(
-                'woocommerce_single_image_width',
+                'home_single_image_width',
                 array(
                     'label'       => __( 'Main image width', 'woocommerce' ),
                     'description' => __( 'Image size used for the main image on single product pages. These images will remain uncropped.', 'woocommerce' ),
-                    'section'     => 'woocommerce_product_images',
-                    'settings'    => 'woocommerce_single_image_width',
+                    'section'     => 'home_product_images',
+                    'settings'    => 'home_single_image_width',
                     'type'        => 'number',
                     'input_attrs' => array(
                         'min'  => 0,
@@ -632,7 +631,7 @@ class WC_Shop_Customizer_Clone {
 
         if ( ! wc_get_theme_support( 'thumbnail_image_width' ) ) {
             $wp_customize->add_setting(
-                'woocommerce_thumbnail_image_width',
+                'home_thumbnail_image_width',
                 array(
                     'default'              => 300,
                     'type'                 => 'option',
@@ -643,12 +642,12 @@ class WC_Shop_Customizer_Clone {
             );
 
             $wp_customize->add_control(
-                'woocommerce_thumbnail_image_width',
+                'home_thumbnail_image_width',
                 array(
                     'label'       => __( 'Thumbnail width', 'woocommerce' ),
                     'description' => __( 'Image size used for products in the catalog.', 'woocommerce' ),
-                    'section'     => 'woocommerce_product_images',
-                    'settings'    => 'woocommerce_thumbnail_image_width',
+                    'section'     => 'home_product_images',
+                    'settings'    => 'home_thumbnail_image_width',
                     'type'        => 'number',
                     'input_attrs' => array(
                         'min'  => 0,
@@ -661,7 +660,7 @@ class WC_Shop_Customizer_Clone {
         include_once WC_ABSPATH . 'includes/customizer/class-wc-customizer-control-cropping.php';
 
         $wp_customize->add_setting(
-            'woocommerce_thumbnail_cropping',
+            'home_thumbnail_cropping',
             array(
                 'default'           => '1:1',
                 'type'              => 'option',
@@ -671,7 +670,7 @@ class WC_Shop_Customizer_Clone {
         );
 
         $wp_customize->add_setting(
-            'woocommerce_thumbnail_cropping_custom_width',
+            'home_thumbnail_cropping_custom_width',
             array(
                 'default'              => '4',
                 'type'                 => 'option',
@@ -682,7 +681,7 @@ class WC_Shop_Customizer_Clone {
         );
 
         $wp_customize->add_setting(
-            'woocommerce_thumbnail_cropping_custom_height',
+            'home_thumbnail_cropping_custom_height',
             array(
                 'default'              => '3',
                 'type'                 => 'option',
@@ -695,13 +694,13 @@ class WC_Shop_Customizer_Clone {
         $wp_customize->add_control(
             new WC_Customizer_Control_Cropping(
                 $wp_customize,
-                'woocommerce_thumbnail_cropping',
+                'home_thumbnail_cropping',
                 array(
-                    'section'  => 'woocommerce_product_images',
+                    'section'  => 'home_product_images',
                     'settings' => array(
-                        'cropping'      => 'woocommerce_thumbnail_cropping',
-                        'custom_width'  => 'woocommerce_thumbnail_cropping_custom_width',
-                        'custom_height' => 'woocommerce_thumbnail_cropping_custom_height',
+                        'cropping'      => 'home_thumbnail_cropping',
+                        'custom_width'  => 'home_thumbnail_cropping_custom_width',
+                        'custom_height' => 'home_thumbnail_cropping_custom_height',
                     ),
                     'label'    => __( 'Thumbnail cropping', 'woocommerce' ),
                     'choices'  => array(
@@ -730,7 +729,7 @@ class WC_Shop_Customizer_Clone {
      */
     public function add_checkout_section( $wp_customize ) {
         $wp_customize->add_section(
-            'woocommerce_checkout',
+            'home_checkout',
             array(
                 'title'       => __( 'Checkout', 'woocommerce' ),
                 'priority'    => 20,
@@ -747,7 +746,7 @@ class WC_Shop_Customizer_Clone {
         );
         foreach ( $fields as $field => $label ) {
             $wp_customize->add_setting(
-                'woocommerce_checkout_' . $field . '_field',
+                'home_checkout_' . $field . '_field',
                 array(
                     'default'           => 'phone' === $field ? 'required' : 'optional',
                     'type'              => 'option',
@@ -756,12 +755,12 @@ class WC_Shop_Customizer_Clone {
                 )
             );
             $wp_customize->add_control(
-                'woocommerce_checkout_' . $field . '_field',
+                'home_checkout_' . $field . '_field',
                 array(
                     /* Translators: %s field name. */
                     'label'    => sprintf( __( '%s field', 'woocommerce' ), $label ),
-                    'section'  => 'woocommerce_checkout',
-                    'settings' => 'woocommerce_checkout_' . $field . '_field',
+                    'section'  => 'home_checkout',
+                    'settings' => 'home_checkout_' . $field . '_field',
                     'type'     => 'select',
                     'choices'  => array(
                         'hidden'   => __( 'Hidden', 'woocommerce' ),
@@ -774,7 +773,7 @@ class WC_Shop_Customizer_Clone {
 
         // Register settings.
         $wp_customize->add_setting(
-            'woocommerce_checkout_highlight_required_fields',
+            'home_checkout_highlight_required_fields',
             array(
                 'default'              => 'yes',
                 'type'                 => 'option',
@@ -785,7 +784,7 @@ class WC_Shop_Customizer_Clone {
         );
 
         $wp_customize->add_setting(
-            'woocommerce_checkout_terms_and_conditions_checkbox_text',
+            'home_checkout_terms_and_conditions_checkbox_text',
             array(
                 /* translators: %s terms and conditions page name and link */
                 'default'           => sprintf( __( 'I have read and agree to the website %s', 'woocommerce' ), '[terms]' ),
@@ -797,7 +796,7 @@ class WC_Shop_Customizer_Clone {
         );
 
         $wp_customize->add_setting(
-            'woocommerce_checkout_privacy_policy_text',
+            'home_checkout_privacy_policy_text',
             array(
                 /* translators: %s privacy policy page name and link */
                 'default'           => sprintf( __( 'Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our %s.', 'woocommerce' ), '[privacy_policy]' ),
@@ -810,11 +809,11 @@ class WC_Shop_Customizer_Clone {
 
         // Register controls.
         $wp_customize->add_control(
-            'woocommerce_checkout_highlight_required_fields',
+            'home_checkout_highlight_required_fields',
             array(
                 'label'    => __( 'Highlight required fields with an asterisk', 'woocommerce' ),
-                'section'  => 'woocommerce_checkout',
-                'settings' => 'woocommerce_checkout_highlight_required_fields',
+                'section'  => 'home_checkout',
+                'settings' => 'home_checkout_highlight_required_fields',
                 'type'     => 'checkbox',
             )
         );
@@ -822,11 +821,11 @@ class WC_Shop_Customizer_Clone {
         if ( current_user_can( 'manage_privacy_options' ) ) {
             $choose_pages = array(
                 'wp_page_for_privacy_policy' => __( 'Privacy policy', 'woocommerce' ),
-                'woocommerce_terms_page_id'  => __( 'Terms and conditions', 'woocommerce' ),
+                'home_terms_page_id'  => __( 'Terms and conditions', 'woocommerce' ),
             );
         } else {
             $choose_pages = array(
-                'woocommerce_terms_page_id' => __( 'Terms and conditions', 'woocommerce' ),
+                'home_terms_page_id' => __( 'Terms and conditions', 'woocommerce' ),
             );
         }
         $pages        = get_pages(
@@ -860,7 +859,7 @@ class WC_Shop_Customizer_Clone {
                 array(
                     /* Translators: %s: page name. */
                     'label'    => sprintf( __( '%s page', 'woocommerce' ), $name ),
-                    'section'  => 'woocommerce_checkout',
+                    'section'  => 'home_checkout',
                     'settings' => $id,
                     'type'     => 'select',
                     'choices'  => $page_choices,
@@ -869,24 +868,24 @@ class WC_Shop_Customizer_Clone {
         }
 
         $wp_customize->add_control(
-            'woocommerce_checkout_privacy_policy_text',
+            'home_checkout_privacy_policy_text',
             array(
                 'label'           => __( 'Privacy policy', 'woocommerce' ),
                 'description'     => __( 'Optionally add some text about your store privacy policy to show during checkout.', 'woocommerce' ),
-                'section'         => 'woocommerce_checkout',
-                'settings'        => 'woocommerce_checkout_privacy_policy_text',
+                'section'         => 'home_checkout',
+                'settings'        => 'home_checkout_privacy_policy_text',
                 'active_callback' => array( $this, 'has_privacy_policy_page_id' ),
                 'type'            => 'textarea',
             )
         );
 
         $wp_customize->add_control(
-            'woocommerce_checkout_terms_and_conditions_checkbox_text',
+            'home_checkout_terms_and_conditions_checkbox_text',
             array(
                 'label'           => __( 'Terms and conditions', 'woocommerce' ),
                 'description'     => __( 'Optionally add some text for the terms checkbox that customers must accept.', 'woocommerce' ),
-                'section'         => 'woocommerce_checkout',
-                'settings'        => 'woocommerce_checkout_terms_and_conditions_checkbox_text',
+                'section'         => 'home_checkout',
+                'settings'        => 'home_checkout_terms_and_conditions_checkbox_text',
                 'active_callback' => array( $this, 'has_terms_and_conditions_page_id' ),
                 'type'            => 'text',
             )
@@ -894,7 +893,7 @@ class WC_Shop_Customizer_Clone {
 
         if ( isset( $wp_customize->selective_refresh ) ) {
             $wp_customize->selective_refresh->add_partial(
-                'woocommerce_checkout_privacy_policy_text',
+                'home_checkout_privacy_policy_text',
                 array(
                     'selector'            => '.woocommerce-privacy-policy-text',
                     'container_inclusive' => true,
@@ -902,7 +901,7 @@ class WC_Shop_Customizer_Clone {
                 )
             );
             $wp_customize->selective_refresh->add_partial(
-                'woocommerce_checkout_terms_and_conditions_checkbox_text',
+                'home_checkout_terms_and_conditions_checkbox_text',
                 array(
                     'selector'            => '.woocommerce-terms-and-conditions-checkbox-text',
                     'container_inclusive' => false,
@@ -947,7 +946,7 @@ class WC_Shop_Customizer_Clone {
      * @return bool
      */
     private function has_block_checkout() {
-        $post = get_post( get_option( 'woocommerce_checkout_page_id' ) );
+        $post = get_post( get_option( 'home_checkout_page_id' ) );
         return strpos( $post->post_content, '<!-- wp:woocommerce/checkout' ) !== false;
     }
 }
