@@ -56,7 +56,7 @@ window.Firstmall.Config = {"Environment":{"MobileMode":true,"SetMode":null,"Lang
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/regular.min.css" integrity="sha512-rxPM3RF3aiHhAtBSArcLR4reox2y22lhd/3eR5Wnk5HeeZuEslUaFmCwg6b5NKm1xeHZiAew3RVa8TI8ySLxPg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-
+<link rel="stylesheet" type="text/css" href="https://harvesthq.github.io/chosen/chosen.css">
 <!-- 꽃청 추가 END 김태섭 2023-12-18 - splide -->
 
 

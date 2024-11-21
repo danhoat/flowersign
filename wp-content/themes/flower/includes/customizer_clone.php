@@ -344,6 +344,8 @@ class WC_Shop_Customizer_Clone {
      * @param WP_Customize_Manager $wp_customize Theme Customizer object.
      */
     private function add_slider_section( $wp_customize ) {
+
+        //  $display_type = get_option( 'home_shop_page_display', '' );
         $wp_customize->add_section(
             'home_slider_section',
             array(
@@ -356,11 +358,20 @@ class WC_Shop_Customizer_Clone {
         $wp_customize->add_setting(
             'home_demo_store',
             array(
-                'default'              => 'no',
+                'default'              => 'yes',
                 'type'                 => 'option',
                 'capability'           => 'manage_woocommerce',
                 'sanitize_callback'    => 'wc_bool_to_string',
                 'sanitize_js_callback' => 'wc_string_to_bool',
+            )
+        );
+        $wp_customize->add_control(
+            'home_demo_store',
+            array(
+                'label'    => __( 'Show slider', 'woocommerce' ),
+                'section'  => 'home_slider_section',
+                'settings' => 'home_demo_store',
+                'type'     => 'checkbox',
             )
         );
 
@@ -386,15 +397,7 @@ class WC_Shop_Customizer_Clone {
             )
         );
 
-        $wp_customize->add_control(
-            'home_demo_store',
-            array(
-                'label'    => __( 'Show slider', 'woocommerce' ),
-                'section'  => 'home_slider_section',
-                'settings' => 'home_demo_store',
-                'type'     => 'checkbox',
-            )
-        );
+        
 
         if ( isset( $wp_customize->selective_refresh ) ) {
             $wp_customize->selective_refresh->add_partial(
@@ -414,6 +417,8 @@ class WC_Shop_Customizer_Clone {
      * @param WP_Customize_Manager $wp_customize Theme Customizer object.
      */
     public function add_product_catalog_section( $wp_customize ) {
+
+
         $wp_customize->add_section(
             'home_product_catalog',
             array(
@@ -422,6 +427,29 @@ class WC_Shop_Customizer_Clone {
                 'panel'    => PANEL_NAME,
             )
         );
+
+         $wp_customize->add_setting(
+            'home_categories_display',
+            array(
+                'default'              => 'yes',
+                'type'                 => 'option',
+                'capability'           => 'manage_woocommerce',
+                'sanitize_callback'    => 'wc_bool_to_string',
+                'sanitize_js_callback' => 'wc_string_to_bool',
+            )
+        );
+         $wp_customize->add_control(
+            'home_categories_display',
+            array(
+                'label'    => __( 'Show categories', 'woocommerce' ),
+                'section'  => 'home_product_catalog',
+                'settings' => 'home_categories_display',
+                'type'     => 'checkbox',
+            )
+        );
+
+
+        // $display_type = get_option( 'home_shop_page_display', '' );
 
         $wp_customize->add_setting(
             'home_shop_page_display',
@@ -527,7 +555,7 @@ class WC_Shop_Customizer_Clone {
         $wp_customize->add_control(
             'home_catalog_columns',
             array(
-                'label'       => __( 'Products per row', 'woocommerce' ),
+                'label'       => __( 'Number Categories ', 'woocommerce' ),
                 'description' => __( 'How many products should be shown per row?', 'woocommerce' ),
                 'section'     => 'home_product_catalog',
                 'settings'    => 'home_catalog_columns',
@@ -540,35 +568,7 @@ class WC_Shop_Customizer_Clone {
             )
         );
 
-        // Only add this setting if something else isn't managing the number of products per page.
-        if ( ! has_filter( 'loop_shop_per_page' ) ) {
-            $wp_customize->add_setting(
-                'home_catalog_rows',
-                array(
-                    'default'              => 4,
-                    'type'                 => 'option',
-                    'capability'           => 'manage_woocommerce',
-                    'sanitize_callback'    => 'absint',
-                    'sanitize_js_callback' => 'absint',
-                )
-            );
-        }
-
-        $wp_customize->add_control(
-            'home_catalog_rows',
-            array(
-                'label'       => __( 'Rows per page', 'woocommerce' ),
-                'description' => __( 'How many rows of products should be shown per page?', 'woocommerce' ),
-                'section'     => 'home_product_catalog',
-                'settings'    => 'home_catalog_rows',
-                'type'        => 'number',
-                'input_attrs' => array(
-                    'min'  => wc_get_theme_support( 'product_grid::min_rows', 1 ),
-                    'max'  => wc_get_theme_support( 'product_grid::max_rows', '' ),
-                    'step' => 1,
-                ),
-            )
-        );
+        
     }
 
     /**
@@ -959,3 +959,10 @@ if (
 ) {
     new WC_Shop_Customizer_Clone();
 }
+function home_debug_options(){
+    echo '<pre>';
+    $opts = get_option('home_demo_store', true);
+    var_dump($opts);
+    echo '</pre>';
+}
+// add_action('init','home_debug_options');
