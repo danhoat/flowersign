@@ -36,7 +36,7 @@ class WC_Shop_Customizer_Clone {
             array(
                 'priority'       => 100,
                 'capability'     => 'edit_theme_options',
-                'title'          => __( 'Setup Trang chủ', 'woocommerce' ),
+                'title'          => __( '[[BOX]] Setup Trang chủ', 'woocommerce' ),
             )
         );
 
@@ -347,7 +347,7 @@ class WC_Shop_Customizer_Clone {
 
         //  $display_type = get_option( 'home_shop_page_display', '' );
         $wp_customize->add_section(
-            'home_slider_section',
+            'general[slider]', // general[catalog] home_slider_section
             array(
                 'title'    => __( 'Slider Intro', 'woocommerce' ),
                 'priority' => 10,
@@ -355,8 +355,8 @@ class WC_Shop_Customizer_Clone {
             )
         );
 
-        $wp_customize->add_setting(
-            'home_demo_store',
+        $wp_customize->add_setting( 
+            'general[slider_show]', //home_demo_store
             array(
                 'default'              => 'yes',
                 'type'                 => 'option',
@@ -366,11 +366,11 @@ class WC_Shop_Customizer_Clone {
             )
         );
         $wp_customize->add_control(
-            'home_demo_store',
+            'general[slider_show]',
             array(
                 'label'    => __( 'Show slider', 'woocommerce' ),
-                'section'  => 'home_slider_section',
-                'settings' => 'home_demo_store',
+                'section'  => 'general[slider]',
+                'settings' => 'general[slider_show]',
                 'type'     => 'checkbox',
             )
         );
@@ -420,7 +420,7 @@ class WC_Shop_Customizer_Clone {
 
 
         $wp_customize->add_section(
-            'home_product_catalog',
+            'general[catalog]', //general[catalog] home_product_catalog
             array(
                 'title'    => __( 'Product Catalog', 'woocommerce' ),
                 'priority' => 10,
@@ -429,7 +429,7 @@ class WC_Shop_Customizer_Clone {
         );
 
          $wp_customize->add_setting(
-            'home_categories_display',
+            'general[catalog][display]', //home_categories_display
             array(
                 'default'              => 'yes',
                 'type'                 => 'option',
@@ -439,11 +439,11 @@ class WC_Shop_Customizer_Clone {
             )
         );
          $wp_customize->add_control(
-            'home_categories_display',
+            'general[catalog][display]',
             array(
                 'label'    => __( 'Show categories', 'woocommerce' ),
-                'section'  => 'home_product_catalog',
-                'settings' => 'home_categories_display',
+                'section'  => 'general[catalog]',
+                'settings' => 'general[catalog][display]',
                 'type'     => 'checkbox',
             )
         );
@@ -452,7 +452,7 @@ class WC_Shop_Customizer_Clone {
         // $display_type = get_option( 'home_shop_page_display', '' );
 
         $wp_customize->add_setting(
-            'home_shop_page_display',
+            'general[catalog][page]', //general[catalog][display] home_shop_page_display
             array(
                 'default'           => '',
                 'type'              => 'option',
@@ -462,12 +462,12 @@ class WC_Shop_Customizer_Clone {
         );
 
         $wp_customize->add_control(
-            'home_shop_page_display',
+            'general[catalog][page]',
             array(
                 'label'       => __( 'Shop page display', 'woocommerce' ),
                 'description' => __( 'Choose what to display on the main shop page.', 'woocommerce' ),
-                'section'     => 'home_product_catalog',
-                'settings'    => 'home_shop_page_display',
+                'section'     => 'general[catalog]',
+                'settings'    => 'general[catalog][page]',
                 'type'        => 'select',
                 'choices'     => array(
                     ''              => __( 'Show products', 'woocommerce' ),
@@ -492,7 +492,7 @@ class WC_Shop_Customizer_Clone {
             array(
                 'label'       => __( 'Category display', 'woocommerce' ),
                 'description' => __( 'Choose what to display on product category pages.', 'woocommerce' ),
-                'section'     => 'home_product_catalog',
+                'section'     => 'general[catalog]',
                 'settings'    => 'home_category_archive_display',
                 'type'        => 'select',
                 'choices'     => array(
@@ -504,7 +504,7 @@ class WC_Shop_Customizer_Clone {
         );
 
         $wp_customize->add_setting(
-            'home_default_catalog_orderby',
+            'general[catalog]', //  home_default_catalog_orderby
             array(
                 'default'           => 'menu_order',
                 'type'              => 'option',
@@ -515,12 +515,12 @@ class WC_Shop_Customizer_Clone {
 
         /* phpcs:disable WooCommerce.Commenting.CommentHooks.MissingHookComment */
         $wp_customize->add_control(
-            'home_default_catalog_orderby',
+            'general[catalog][sort]',
             array(
                 'label'       => __( 'Default product sorting', 'woocommerce' ),
                 'description' => __( 'How should products be sorted in the catalog by default?', 'woocommerce' ),
-                'section'     => 'home_product_catalog',
-                'settings'    => 'home_default_catalog_orderby',
+                'section'     => 'general[catalog]',
+                'settings'    => 'general[catalog][sort]',
                 'type'        => 'select',
                 'choices'     => apply_filters(
                     'home_default_catalog_orderby_options',
@@ -542,7 +542,7 @@ class WC_Shop_Customizer_Clone {
         }
 
         $wp_customize->add_setting(
-            'home_catalog_columns',
+            'general[catalog][number]',
             array(
                 'default'              => 4,
                 'type'                 => 'option',
@@ -553,12 +553,12 @@ class WC_Shop_Customizer_Clone {
         );
 
         $wp_customize->add_control(
-            'home_catalog_columns',
+            'general[catalog][number]',
             array(
                 'label'       => __( 'Number Categories ', 'woocommerce' ),
                 'description' => __( 'How many products should be shown per row?', 'woocommerce' ),
-                'section'     => 'home_product_catalog',
-                'settings'    => 'home_catalog_columns',
+                'section'     => 'general[catalog]',
+                'settings'    => 'general[catalog][number]',
                 'type'        => 'number',
                 'input_attrs' => array(
                     'min'  => wc_get_theme_support( 'product_grid::min_columns', 1 ),
@@ -961,8 +961,8 @@ if (
 }
 function home_debug_options(){
     echo '<pre>';
-    $opts = get_option('home_demo_store', true);
-    var_dump($opts);
+    $general_opt = get_option('general', true);
+    var_dump($general_opt);
     echo '</pre>';
 }
-// add_action('init','home_debug_options');
+add_action('init','home_debug_options');

@@ -81,8 +81,8 @@ $table_prefix = 'wp_';
  */
 define( 'WP_DEBUG', false );
 if( WP_DEBUG ){
-	define( 'WP_DEBUG_DISPLAY', 0 );
-	define( 'WP_DEBUG_LOG', 0 );
+	define( 'WP_DEBUG_DISPLAY', 1 );
+	define( 'WP_DEBUG_LOG', 1 );
 }
 
 /* Add any custom values between this line and the "stop editing" line. */
