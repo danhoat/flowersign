@@ -239,7 +239,7 @@ function _wp_image_meta_replace_original( $saved_data, $original_file, $image_me
  * @return array The image attachment meta data.
  */
 function wp_create_image_subsizes( $file, $attachment_id ) {
-	box_log('wp_create_image_subsizes line 242');
+	box_log('process: wp_create_image_subsizes line 242');
 	$imagesize = wp_getimagesize( $file );
 
 	if ( empty( $imagesize ) ) {
