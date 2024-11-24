@@ -356,7 +356,7 @@ class WC_Shop_Customizer_Clone {
         );
 
         $wp_customize->add_setting( 
-            'general[slider_show]', //home_demo_store
+            'general[show_slider]', //home_demo_store
             array(
                 'default'              => 'yes',
                 'type'                 => 'option',
@@ -366,11 +366,11 @@ class WC_Shop_Customizer_Clone {
             )
         );
         $wp_customize->add_control(
-            'general[slider_show]',
+            'general[show_slider]',
             array(
                 'label'    => __( 'Show slider', 'woocommerce' ),
                 'section'  => 'general[slider]',
-                'settings' => 'general[slider_show]',
+                'settings' => 'general[show_slider]',
                 'type'     => 'checkbox',
             )
         );
@@ -429,7 +429,7 @@ class WC_Shop_Customizer_Clone {
         );
 
          $wp_customize->add_setting(
-            'general[catalog][display]', //home_categories_display
+            'general[show_category]', //home_categories_display
             array(
                 'default'              => 'yes',
                 'type'                 => 'option',
@@ -443,7 +443,7 @@ class WC_Shop_Customizer_Clone {
             array(
                 'label'    => __( 'Show categories', 'woocommerce' ),
                 'section'  => 'general[catalog]',
-                'settings' => 'general[catalog][display]',
+                'settings' => 'general[show_category]',
                 'type'     => 'checkbox',
             )
         );
@@ -536,10 +536,6 @@ class WC_Shop_Customizer_Clone {
             )
         );
 
-        // The following settings should be hidden if the theme is declaring the values.
-        if ( has_filter( 'loop_shop_columns' ) ) {
-            return;
-        }
 
         $wp_customize->add_setting(
             'general[catalog][number]',
@@ -960,9 +956,15 @@ if (
     new WC_Shop_Customizer_Clone();
 }
 function home_debug_options(){
-    echo '<pre>';
-    $general_opt = get_option('general', true);
-    var_dump($general_opt);
-    echo '</pre>';
+    global $boxOpt;
+    $boxOpt = (object) get_option('general', true);
+    if( !wp_doing_ajax() ){
+        // echo '<pre>';
+      
+        // echo '1';
+        // var_dump($boxOpt);
+        // echo '2';
+        // echo '</pre>';
+    }
 }
 add_action('init','home_debug_options');

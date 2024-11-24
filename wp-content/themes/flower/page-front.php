@@ -3,6 +3,11 @@
  *
  */
 
+$customizer = get_customizer_values();
+// echo '<pre>';
+// echo 'front:';
+// var_dump($customizer->show_slider);
+// echo '</pre>';
 
 get_header();
 ?>
@@ -269,7 +274,14 @@ if( window.SwingJavascriptInterface != undefined )
 <?php } ?>
 
 <!-- slide_itro + list categories !-->
-    <?php include('home-intro.php'); // slide-intro.php ?>
+    <?php 
+
+     if($customizer->show_slider == 'yes') { 
+
+        include('home-intro.php'); // slide-intro.php 
+    }
+
+        ?>
 </div>
     <div id="layout_body" class="layout_body page-front.php">
 <!-- end !-->
@@ -292,7 +304,11 @@ if( window.SwingJavascriptInterface != undefined )
 
 <div class="resp_wrap" style="position:relative;">
 
-    <?php get_template_part('templates/slide','1'); ?>
+    <?php
+   
+        get_template_part('templates/slide','1');
+    
+    ?>
 
     <?php get_template_part('templates/home','banner'); ?>
 

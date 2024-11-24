@@ -14,3 +14,10 @@ function fget_random_img($pos = 1){
 function cs_the_date($post){
 echo get_the_date(get_option( 'date_format' ), $post);
 }
+function get_customizer_values(){
+
+    global $boxOpt;
+    var_dump($boxOpt);
+    return $boxOpt;
+
+}
