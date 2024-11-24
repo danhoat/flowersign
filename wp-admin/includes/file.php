@@ -800,6 +800,8 @@ function validate_file_to_edit( $file, $allowed_files = array() ) {
  * }
  */
 function _wp_handle_upload( &$file, $overrides, $time, $action ) {
+
+	box_log('_wp_handle_upload line 804'); // danng;
 	// The default error handler.
 	if ( ! function_exists( 'wp_handle_upload_error' ) ) {
 		function wp_handle_upload_error( &$file, $message ) {
@@ -1008,7 +1010,7 @@ function _wp_handle_upload( &$file, $overrides, $time, $action ) {
 	 * @param string   $type          Mime type of the newly-uploaded file.
 	 */
 	$move_new_file = apply_filters( 'pre_move_uploaded_file', null, $file, $new_file, $type );
-
+	box_log('move_new_file ok line 1013');
 	if ( null === $move_new_file ) {
 		if ( 'wp_handle_upload' === $action ) {
 			$move_new_file = @move_uploaded_file( $file['tmp_name'], $new_file );
@@ -1063,6 +1065,7 @@ function _wp_handle_upload( &$file, $overrides, $time, $action ) {
 	 * }
 	 * @param string $context The type of upload action. Values include 'upload' or 'sideload'.
 	 */
+	box_log('_wp_handle_upload end function');
 	return apply_filters(
 		'wp_handle_upload',
 		array(

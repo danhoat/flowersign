@@ -157,6 +157,7 @@ function wp_get_missing_image_subsizes( $attachment_id ) {
  *                        if both the image meta and the attached file are missing.
  */
 function wp_update_image_subsizes( $attachment_id ) {
+	box_log('wp_update_image_subsizes line 160.'); // danng
 	$image_meta = wp_get_attachment_metadata( $attachment_id );
 	$image_file = wp_get_original_image_path( $attachment_id );
 
@@ -238,6 +239,7 @@ function _wp_image_meta_replace_original( $saved_data, $original_file, $image_me
  * @return array The image attachment meta data.
  */
 function wp_create_image_subsizes( $file, $attachment_id ) {
+	box_log('wp_create_image_subsizes line 242');
 	$imagesize = wp_getimagesize( $file );
 
 	if ( empty( $imagesize ) ) {
@@ -549,6 +551,8 @@ function wp_copy_parent_attachment_properties( $cropped, $parent_attachment_id, 
  * @return array Metadata for attachment.
  */
 function wp_generate_attachment_metadata( $attachment_id, $file ) {
+	box_log('okok wp_generate_attachment_metadata=> create_image_subsizes line 554');
+
 	$attachment = get_post( $attachment_id );
 
 	$metadata  = array();
@@ -557,6 +561,7 @@ function wp_generate_attachment_metadata( $attachment_id, $file ) {
 
 	if ( preg_match( '!^image/!', $mime_type ) && file_is_displayable_image( $file ) ) {
 		// Make thumbnails and other intermediate sizes.
+		box_log('call: wp_create_image_subsizes() ');
 		$metadata = wp_create_image_subsizes( $file, $attachment_id );
 	} elseif ( wp_attachment_is( 'video', $attachment ) ) {
 		$metadata = wp_read_video_metadata( $file );

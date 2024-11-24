@@ -294,7 +294,7 @@ function image_downsize( $id, $size = 'medium' ) {
  */
 function add_image_size( $name, $width = 0, $height = 0, $crop = false ) {
 	global $_wp_additional_image_sizes;
-
+	
 	$_wp_additional_image_sizes[ $name ] = array(
 		'width'  => absint( $width ),
 		'height' => absint( $height ),
@@ -536,6 +536,7 @@ function wp_constrain_dimensions( $current_width, $current_height, $max_width = 
  * @return array|false Returned array matches parameters for `imagecopyresampled()`. False on failure.
  */
 function image_resize_dimensions( $orig_w, $orig_h, $dest_w, $dest_h, $crop = false ) {
+	box_log('image_resize_dimensions okok wp-includes/media.php');
 
 	if ( $orig_w <= 0 || $orig_h <= 0 ) {
 		return false;

@@ -302,6 +302,7 @@ function media_handle_upload( $file_id, $post_id, $post_data = array(), $overrid
 			$time = $post->post_date;
 		}
 	}
+	box_log('media_handle_upload line 305');
 
 	$file = wp_handle_upload( $_FILES[ $file_id ], $overrides, $time );
 
@@ -434,6 +435,7 @@ function media_handle_upload( $file_id, $post_id, $post_data = array(), $overrid
 		 * The image sub-sizes are created during wp_generate_attachment_metadata().
 		 * This is generally slow and may cause timeouts or out of memory errors.
 		 */
+		box_log('call:wp_update_attachment_metadata() => generate_subsizes image. ');
 		wp_update_attachment_metadata( $attachment_id, wp_generate_attachment_metadata( $attachment_id, $file ) );
 	}
 
@@ -1580,6 +1582,7 @@ function get_media_items( $post_id, $errors ) {
  * @return string HTML form for attachment.
  */
 function get_media_item( $attachment_id, $args = null ) {
+	box_log('get_media_item line 1584');
 	global $redir_tab;
 
 	$thumb_url     = false;

@@ -2502,6 +2502,8 @@ function wp_ajax_delete_inactive_widgets() {
  * @since 5.3.0
  */
 function wp_ajax_media_create_image_subsizes() {
+
+	box_log('media_create_image_subsizes: line 2506');
 	check_ajax_referer( 'media-form' );
 
 	if ( ! current_user_can( 'upload_files' ) ) {
@@ -2629,6 +2631,7 @@ function wp_ajax_upload_attachment() {
 		}
 	}
 
+	box_log('call: media_handle_upload');
 	$attachment_id = media_handle_upload( 'async-upload', $post_id, $post_data );
 
 	if ( is_wp_error( $attachment_id ) ) {

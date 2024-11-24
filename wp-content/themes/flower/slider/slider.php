@@ -17,6 +17,9 @@ function box_show_slider(){
 }
 
 function box_item_html($slider){?>
+    <?php
+
+    ?>
     <li class="splide__slide">
         <a href="/page/event/timesale/timesale">
             <div class="splide__slide_pc"><img src="https://f-mans.com/data/images/visual/timesale_pc.jpg" alt=""></div>
