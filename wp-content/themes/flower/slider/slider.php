@@ -18,12 +18,14 @@ function box_show_slider(){
 
 function box_item_html($slider){?>
     <?php
+    $pc_img     = get_field('pc_img', $slider->ID);
+    $mobile_img = get_field('mobile_img',  $slider->ID);
 
     ?>
     <li class="splide__slide">
         <a href="/page/event/timesale/timesale">
-            <div class="splide__slide_pc"><img src="https://f-mans.com/data/images/visual/timesale_pc.jpg" alt=""></div>
-            <div class="splide__slide_mobile"><img src="https://f-mans.com/data/images/visual/timesale_m.jpg" alt=""></div>
+            <div class="splide__slide_pc"><img src="<?php echo $pc_img;?>" alt=""></div>
+            <div class="splide__slide_mobile"><img src="<?php echo $mobile_img;?>" alt=""></div>
             <div class="fm_text_box">
                 <h2 style="color:#FFD703;">10월 어썸 특가!</h2>
                 <h3 style="color:#FFD703;">선선한 가을바람 타고온<br>가을꽃 감성템 강추(秋) SALE</h3>
