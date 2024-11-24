@@ -17,7 +17,6 @@ echo get_the_date(get_option( 'date_format' ), $post);
 function get_customizer_values(){
 
     global $boxOpt;
-    var_dump($boxOpt);
     return $boxOpt;
 
 }
