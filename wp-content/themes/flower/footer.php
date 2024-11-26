@@ -5,8 +5,10 @@ var hpt_info = {'_account':'UHPT-20592','_server':'a24'};
 </script>
 
 
+</div>
 <!-- 꽃청 추가 END -->
 <?php wp_footer(); ?>
+
 <div id="layout_footer" class="layout_footer">
 
 
@@ -312,6 +314,9 @@ var hpt_info = {'_account':'UHPT-20592','_server':'a24'};
     </div>
 </div>
 <!-- //플로팅 - BACK/TOP(대쉬보드) -->
+
+
+<!-- end body !-->
 
 
 <script type="text/javascript">
