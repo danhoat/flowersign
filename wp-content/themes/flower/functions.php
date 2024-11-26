@@ -6,6 +6,7 @@ define('PRODUCT_PATH', __DIR__.'/products');
 define('LOAD_STATIC_JS', true);
 require_once __DIR__ .'/includes/required.php';
 require_once __DIR__ .'/woo/inc.php';
+require_once __DIR__ .'/elementor/required.php';
 
 
 

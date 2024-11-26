@@ -95,9 +95,6 @@ var kid_agree = "";
     <?php include('nav.php');?>
 
 
-
-
-
     <!-- ================= 어사이드 :: END. 파일위치 : _modules/common/layout_side.html (비동기 로드) ================= -->
     <a href="javascript:;" id="side_close" class="side_close">어사이드 닫기</a>
 
@@ -110,15 +107,15 @@ var kid_agree = "";
 <div id="layout_header" class="layout_header">
 
         <div class="bn_top bn_top_div">
-        <a href="javascript:void(0);" designelement="text" textindex="1" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2hlYWRlci9zdGFuZGFyZC5odG1s">
-            <p onclick="location.href='/page/join_event'">
-                <!-- 지금 회원가입하면 할인/적립/페이백 혜택! -->
-                회원가입시 2,000원 바로지급!
-                <span></span>
-                <button onclick="event.stopPropagation(); $('.bn_top_div').slideUp(); $.cookie('bn_top_cookie','1',{expire: '1',path: '/'});">닫기</button>
-            </p>
-        </a>
-    </div>
+            <a href="javascript:void(0);" designelement="text" textindex="1">
+                <p onclick="location.href='/page/join_event'">
+                    <!-- 지금 회원가입하면 할인/적립/페이백 혜택! -->
+                    회원가입시 2,000원 바로지급!
+                    <span></span>
+                    <button onclick="event.stopPropagation(); $('.bn_top_div').slideUp(); $.cookie('bn_top_cookie','1',{expire: '1',path: '/'});">닫기</button>
+                </p>
+            </a>
+        </div>
     
     <div class="util_wrap">
         <div class="resp_wrap" style="position:relative;">

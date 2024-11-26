@@ -5,8 +5,7 @@ var hpt_info = {'_account':'UHPT-20592','_server':'a24'};
 </script>
 
 
-</div>
-<!-- 꽃청 추가 END -->
+
 <?php wp_footer(); ?>
 
 <div id="layout_footer" class="layout_footer">
@@ -39,7 +38,7 @@ var hpt_info = {'_account':'UHPT-20592','_server':'a24'};
         <div class="resp_wrap">
             <ul class="menu1">
                 <li class="foot_menu_d1 cs">
-                    <h4 class="title"><a href="/service/cs" designelement="text" textindex="1" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2Zvb3Rlci9zdGFuZGFyZC5odG1s">고객센터  <span class="title_sub">(연중무휴)</span></a></h4>
+                    <h4 class="title"><a href="/service/cs" designelement="text" textindex="1">고객센터  <span class="title_sub">(연중무휴)</span></a></h4>
                     <ul class="list v4">
                         <li class="compay_phone">
                             <a href="tel:1800-7879">

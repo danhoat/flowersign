@@ -250,7 +250,6 @@ class WC_Cart extends WC_Legacy_Cart {
 	 * @return float
 	 */
 	public function get_shipping_total() {
-
 		return apply_filters( 'woocommerce_cart_' . __FUNCTION__, $this->get_totals_var( 'shipping_total' ) );
 	}
 
@@ -1442,8 +1441,7 @@ class WC_Cart extends WC_Legacy_Cart {
 			}
 		}
 
-		//$this->set_shipping_total( array_sum( wp_list_pluck( $this->shipping_methods, 'cost' ) ) );
-		$this->set_shipping_total( 999 );
+		$this->set_shipping_total( array_sum( wp_list_pluck( $this->shipping_methods, 'cost' ) ) );
 		$this->set_shipping_tax( array_sum( $merged_taxes ) );
 		$this->set_shipping_taxes( $merged_taxes );
 

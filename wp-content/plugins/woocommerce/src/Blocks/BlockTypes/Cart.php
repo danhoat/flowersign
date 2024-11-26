@@ -183,7 +183,7 @@ class Cart extends AbstractBlock {
 			$inner_blocks_html = '$0
 			<div data-block-name="woocommerce/filled-cart-block" class="wp-block-woocommerce-filled-cart-block">
 				<div data-block-name="woocommerce/cart-items-block" class="wp-block-woocommerce-cart-items-block">
-					<div data-block-name="woocommerce/cart-line-items-block 1866666" class="wp-block-woocommerce-cart-line-items-block 1866666"></div>
+					<div data-block-name="woocommerce/cart-line-items-block" class="wp-block-woocommerce-cart-line-items-block"></div>
 				</div>
 				<div data-block-name="woocommerce/cart-totals-block" class="wp-block-woocommerce-cart-totals-block">
 					<div data-block-name="woocommerce/cart-order-summary-block" class="wp-block-woocommerce-cart-order-summary-block"></div>
@@ -245,8 +245,12 @@ class Cart extends AbstractBlock {
 		$this->asset_data_registry->add( 'hasDarkEditorStyleSupport', current_theme_supports( 'dark-editor-style' ) );
 		$this->asset_data_registry->register_page_id( isset( $attributes['checkoutPageId'] ) ? $attributes['checkoutPageId'] : 0 );
 		$this->asset_data_registry->add( 'isBlockTheme', wc_current_theme_is_fse_theme() );
+
 		$pickup_location_settings = LocalPickupUtils::get_local_pickup_settings();
+		$local_pickup_method_ids  = LocalPickupUtils::get_local_pickup_method_ids();
+
 		$this->asset_data_registry->add( 'localPickupEnabled', $pickup_location_settings['enabled'] );
+		$this->asset_data_registry->add( 'collectableMethodIds', $local_pickup_method_ids );
 
 		// Hydrate the following data depending on admin or frontend context.
 		if ( ! is_admin() && ! WC()->is_rest_api_request() ) {

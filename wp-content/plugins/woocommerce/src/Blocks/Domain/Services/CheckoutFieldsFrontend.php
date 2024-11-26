@@ -31,20 +31,20 @@ class CheckoutFieldsFrontend {
 	 */
 	public function init() {
 		// Show custom checkout fields on the order details page.
-		// add_action( 'woocommerce_order_details_after_customer_address', array( $this, 'render_order_address_fields' ), 10, 2 );
-		// add_action( 'woocommerce_order_details_after_customer_details', array( $this, 'render_order_other_fields' ), 10 );
+		add_action( 'woocommerce_order_details_after_customer_address', array( $this, 'render_order_address_fields' ), 10, 2 );
+		add_action( 'woocommerce_order_details_after_customer_details', array( $this, 'render_order_other_fields' ), 10 );
 
-		// // Show custom checkout fields on the My Account page.
-		// add_action( 'woocommerce_my_account_after_my_address', array( $this, 'render_address_fields' ), 10, 1 );
+		// Show custom checkout fields on the My Account page.
+		add_action( 'woocommerce_my_account_after_my_address', array( $this, 'render_address_fields' ), 10, 1 );
 
-		// // Edit account form under my account (for contact details).
-		// add_filter( 'woocommerce_save_account_details_required_fields', array( $this, 'edit_account_form_required_fields' ), 10, 1 );
-		// add_filter( 'woocommerce_edit_account_form_fields', array( $this, 'edit_account_form_fields' ), 10, 1 );
-		// add_action( 'woocommerce_save_account_details', array( $this, 'save_account_form_fields' ), 10, 1 );
+		// Edit account form under my account (for contact details).
+		add_filter( 'woocommerce_save_account_details_required_fields', array( $this, 'edit_account_form_required_fields' ), 10, 1 );
+		add_filter( 'woocommerce_edit_account_form_fields', array( $this, 'edit_account_form_fields' ), 10, 1 );
+		add_action( 'woocommerce_save_account_details', array( $this, 'save_account_form_fields' ), 10, 1 );
 
-		// // Edit address form under my account.
-		// add_filter( 'woocommerce_address_to_edit', array( $this, 'edit_address_fields' ), 10, 2 );
-		// add_action( 'woocommerce_after_save_address_validation', array( $this, 'save_address_fields' ), 10, 4 );
+		// Edit address form under my account.
+		add_filter( 'woocommerce_address_to_edit', array( $this, 'edit_address_fields' ), 10, 2 );
+		add_action( 'woocommerce_after_save_address_validation', array( $this, 'save_address_fields' ), 10, 4 );
 	}
 
 	/**
@@ -97,7 +97,7 @@ class CheckoutFieldsFrontend {
 			return;
 		}
 
-		echo '<section class="wc-block-order-confirmation-additional-fields-wrapper 1000000">';
+		echo '<section class="wc-block-order-confirmation-additional-fields-wrapper">';
 		echo '<h2>' . esc_html__( 'Additional information', 'woocommerce' ) . '</h2>';
 		echo $this->render_additional_fields( $fields ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		echo '</section>';
