@@ -551,3 +551,11 @@ var kid_agree = "";
 </div>
 <!-- 상단영역 : 끝 -->
 
+
+<!-- 모바일 카카오톡 아이콘 (플로팅) -->
+<div class="quick_kakao">
+    <a href="https://pf.kakao.com/_Kyfxhl" target="_blank">
+        <img src="https://f-mans.com/data/images/icon/footer/icon_kakao.png" alt="카카오 문의하기">
+    </a>
+</div>
+<!-- 모바일 카카오톡 아이콘 (플로팅) 끝 -->

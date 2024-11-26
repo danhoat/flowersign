@@ -1,7 +1,7 @@
 <?php 
 
 /**
- * Template Name: Default page
+ * Template Name: Static page
  *
  */
 

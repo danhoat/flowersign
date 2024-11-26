@@ -66,6 +66,9 @@ add_action('after_setup_theme','theme_setup');
  * Proper way to enqueue scripts and styles
  */
 function wpdocs_theme_name_scripts() {
+
+    if( is_page_template('page-static.php') ) return 1;
+
     wp_enqueue_style( 'main-style', get_stylesheet_uri(), array(), rand() );
 
     //wp_enqueue_script( 'box-js', BOXTHEME_URL. '/js/box.js', array('jquery'), rand(), true );
