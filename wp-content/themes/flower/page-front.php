@@ -270,7 +270,7 @@ if( window.SwingJavascriptInterface != undefined )
 <?php if( wp_is_mobile() ){?>
     <div id="layout_body" class="layout_body page-front.php">
     <?php } else { ?>
-    <div style="width: 100%;">
+    <div style="width: 100%; max-width: 100%; overflow: hidden;">
 <?php } ?>
 
 <!-- slide_itro + list categories !-->
@@ -285,20 +285,6 @@ if( window.SwingJavascriptInterface != undefined )
 </div>
     <div id="layout_body" class="layout_body page-front.php">
 <!-- end !-->
-
-<!-- 해당 아이피에서만 노출 -->
- <!-- 해당 아이피에서만 노출 닫음 -->
-
-<!-- 어버이날 배송불가지역 -->
-<!-- 어버이날 - 배송불가 지역 탭메뉴 형식 -->
- <!-- 해당 날짜와 시간에 오픈 -->
-<!-- 어버이날 - 배송불가 지역 탭메뉴 형식 끝 -->
-    
-<!-- 해당 아이피에서만 노출 -->
- <!-- 해당 아이피에서만 노출 닫음 -->
-    
-    
-
 
 
 
@@ -339,10 +325,5 @@ if( window.SwingJavascriptInterface != undefined )
 <!-- ENd tab 4 !-->
     <?php get_template_part('templates/slide','4'); ?>
 
-
-
-        <!-- ================= #LAYOUT_FOOTER :: START. 파일위치 : layout_footer/standard.html (default) ================= -->
-
-    
 
 <?php get_footer(); ?>
