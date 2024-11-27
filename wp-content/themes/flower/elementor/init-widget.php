@@ -19,5 +19,17 @@ function register_list_widget( $widgets_manager ) {
 
     $widgets_manager->register( new \Elementor_BestSelling_Widget() );
 
+    require_once( __DIR__ . '/widgets/categories.php' );
+    $widgets_manager->register( new \Elementor_Categories_Widget() );
+
+    require_once( __DIR__ . '/widgets/products-v2.php' );
+
+   // $widgets_manager->register( new Box_Products() );
+
+
+
+
 }
-add_action( 'elementor/widgets/register', 'register_list_widget' );
+add_action( 'elementor/widgets/register', 'register_list_widget' ,999);
+
+

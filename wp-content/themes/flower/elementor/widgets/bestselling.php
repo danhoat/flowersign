@@ -1,15 +1,20 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) {
-    exit; // Exit if accessed directly.
-}
-
-
+// namespace ElementorPro\Modules\Woocommerce\Widgets;
 
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Base;
 use ElementorPro\Core\Utils;
 use ElementorPro\Modules\QueryControl\Module as Query_Module;
 
+
+
+use Elementor\Core\Kits\Documents\Tabs\Global_Colors;
+use Elementor\Core\Kits\Documents\Tabs\Global_Typography;
+use Elementor\Group_Control_Typography;
+
+if ( ! defined( 'ABSPATH' ) ) {
+    exit; // Exit if accessed directly.
+}
 /**
  * Elementor List Widget.
  *
@@ -128,6 +133,51 @@ class Elementor_BestSelling_Widget extends \Elementor\Widget_Base {
      */
     protected function register_controls() {
 
+
+        $this->start_controls_section(
+            'section_content',
+            [
+                'label' => esc_html__( 'Query', 'textdomain' ),
+                'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+            ]
+        );
+
+        $this->add_control(
+            'title',
+            [
+                'label' => esc_html__( 'Title', 'textdomain' ),
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'placeholder' => esc_html__( 'Enter your title', 'textdomain' ),
+            ]
+        );
+         $this->add_control(
+            'query',
+            [
+                'label' => esc_html__( 'Query', 'textdomain' ),
+                'type' => \Elementor\Controls_Manager::NUMBER,
+                'default' =>4,
+                'placeholder' => esc_html__( '1', 'textdomain' ),
+            ]
+        );
+
+         $this->add_control(
+            'rows',
+            [
+                'label' => esc_html__( 'Rows', 'elementor-pro' ),
+                'type' => Controls_Manager::NUMBER,
+                'default' => 4,
+                'render_type' => 'template',
+                'range' => [
+                    'px' => [
+                        'max' => 20,
+                    ],
+                ],
+            ]
+        );
+
+        $this->end_controls_section();
+
+
         $this->start_controls_section(
             'content_section',
             [
@@ -165,6 +215,29 @@ class Elementor_BestSelling_Widget extends \Elementor\Widget_Base {
             ]
         );
 
+        // danng
+
+        // $this->start_controls_section(
+        //     'section_content',
+        //     [
+        //         'label' => esc_html__( 'Content', 'textdomain' ),
+        //         'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+        //     ]
+        // );
+
+        // $this->add_control(
+        //     'title',
+        //     [
+        //         'label' => esc_html__( 'Title', 'textdomain' ),
+        //         'type' => \Elementor\Controls_Manager::TEXT,
+        //         'placeholder' => esc_html__( 'Enter your title', 'textdomain' ),
+        //     ]
+        // );
+
+        // $this->end_controls_section();
+
+        // danng
+
         /* End repeater */
 
         $this->add_control(
@@ -172,7 +245,7 @@ class Elementor_BestSelling_Widget extends \Elementor\Widget_Base {
             [
                 'label' => esc_html__( 'List Items', 'elementor-list-widget' ),
                 'type' => \Elementor\Controls_Manager::REPEATER,
-                'fields' => $this->get_fields(),           /* Use our repeater */
+                'fields' => $repeater->get_controls(),           /* Use our repeater */
                 'default' => [
                     [
                         'text' => esc_html__( 'List Item #1', 'elementor-list-widget' ),
@@ -334,22 +407,7 @@ class Elementor_BestSelling_Widget extends \Elementor\Widget_Base {
         $this->end_controls_section();
 
     }
-    function get_fields(){
-        $fields = array();
-        $fields['query_include'] = [
-            'type' => Controls_Manager::TAB,
-            'label' => esc_html__( 'Include', 'elementor-pro' ),
-            'tabs_wrapper' => $tabs_wrapper,
-            'condition' => [
-                'post_type!' => [
-                    'current_query',
-                    'by_id',
-                ],
-            ],
-        ];
-        return $fields;
-
-    }
+  
 
     /**
      * Render list widget output on the frontend.
@@ -360,39 +418,95 @@ class Elementor_BestSelling_Widget extends \Elementor\Widget_Base {
      * @access protected
      */
     protected function render() {
+        
+
         $settings = $this->get_settings_for_display();
         $html_tag = [
             'ordered' => 'ol',
             'unordered' => 'ul',
             'other' => 'ul',
         ];
-        $this->add_render_attribute( 'list', 'class', 'elementor-list-widget' );
-        ?>
-        <<?php echo $html_tag[ $settings['marker_type'] ]; ?> <?php $this->print_render_attribute_string( 'list' ); ?>>
-            <?php
-            foreach ( $settings['list_items'] as $index => $item ) {
-                $repeater_setting_key = $this->get_repeater_setting_key( 'text', 'list_items', $index );
-                $this->add_render_attribute( $repeater_setting_key, 'class', 'elementor-list-widget-text' );
-                $this->add_inline_editing_attributes( $repeater_setting_key );
-                ?>
-                <li <?php $this->print_render_attribute_string( $repeater_setting_key ); ?>>
-                    <?php
-                    $title = $settings['list_items'][$index]['text'];
+        $columns    = isset($settings['columns']) ? $settings['columns'] : 4;
+        $rows       = isset($settings['rows']) ? $settings['rows'] : 4;
+        echo'<pre>';
 
-                    if ( ! empty( $item['link']['url'] ) ) {
-                        $this->add_link_attributes( "link_{$index}", $item['link'] );
-                        $linked_title = sprintf( '<a %1$s>%2$s</a>', $this->get_render_attribute_string( "link_{$index}" ), $title );
-                        echo $linked_title;
-                    } else {
-                        echo $title;
-                    }
-                    ?>
-                </li>
-                <?php
+        $posts_per_page = $settings['posts_per_page'] ?? intval( $columns * $rows );
+        //var_dump($settings);
+        echo'</pre>';
+
+
+      
+
+        $settings = $this->get_settings_for_display();
+
+       
+
+        $args = [
+            'posts_per_page' => 4,
+            'columns' => 4,
+            'columns' => 4,
+            // 'orderby' => $settings['orderby'],
+            // 'order' => $settings['order'],
+        ];
+
+        if ( ! empty( $settings['posts_per_page'] ) ) {
+            $args['posts_per_page'] = $settings['posts_per_page'];
+        }
+
+        if ( ! empty( $settings['columns'] ) ) {
+            $args['columns'] = $settings['columns'];
+        }
+
+        $args = array_map( 'sanitize_text_field', $args );
+
+
+
+
+        ob_start();
+
+        echo '<h2 class="home-label"> Bán chạy </h2>';
+
+
+        echo '<div class="woocommerce">'; // needed for default styles 
+        $top_selling_products = wc_get_products( array(
+            'meta_key' => 'total_sales', // our custom query meta_key
+            'return'   => 'ids', // needed to pass to $post_object
+            'orderby'  => array( 'meta_value_num' => 'DESC', 'title' => 'ASC' ), // order from highest to lowest of top sellers
+        ) );
+        if ( $top_selling_products ) {
+            do_action( 'woocommerce_before_shop_loop' );
+            woocommerce_product_loop_start();
+            foreach ( $top_selling_products as $top_selling_product ) {
+                $post_object = get_post( $top_selling_product );
+                setup_postdata( $GLOBALS['post'] =& $post_object );
+                do_action( 'woocommerce_shop_loop' );
+            
+                wc_get_template_part( 'content', 'product' );
+
             }
-            ?>
-        </<?php echo $html_tag[ $settings['marker_type'] ]; ?>>
-        <?php
+            wp_reset_postdata();
+            woocommerce_product_loop_end();
+            do_action( 'woocommerce_after_shop_loop' );
+        } else {
+            do_action( 'woocommerce_no_products_found' );
+        }
+        echo '</div><!-- .woocommerce -->';
+
+
+
+
+        $related_products_html = ob_get_clean();
+
+        if ( $related_products_html ) {
+            $related_products_html = str_replace( '<ul class="products', '<ul class="products elementor-grid', $related_products_html );
+
+            // PHPCS - Doesn't need to be escaped since it's a WooCommerce template, and 3rd party plugins might hook into it.
+            echo $related_products_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+        }
+
+
+       //  $this->add_render_attribute( 'list', 'class', 'elementor-list-widget' );
+
     }
 
     /**
