@@ -210,3 +210,25 @@ h1.post-title{
     color: #000;
     border: 1px solid #ccc;
 }
+
+.woocommerce.bestselling ul.products::before {
+    content: "";
+    display: none;
+    width: 0;
+}
+.bestselling  ul.products {
+    grid-column-gap: 25px;
+    grid-row-gap: 50px;
+    display: grid;
+    margin: 0;
+    padding: 0;
+    list-style: none outside;
+    clear: both;
+    grid-template-columns: repeat(4, 1fr);
+}
+.bestselling  ul.products.elementor-grid  li.product{
+    float: none;margin: 0;
+    padding: 0;
+    width: auto;
+    position: relative;
+}

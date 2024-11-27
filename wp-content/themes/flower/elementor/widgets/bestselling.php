@@ -467,7 +467,7 @@ class Elementor_BestSelling_Widget extends \Elementor\Widget_Base {
         echo '<h2 class="home-label"> Bán chạy </h2>';
 
 
-        echo '<div class="woocommerce">'; // needed for default styles 
+        
         $top_selling_products = wc_get_products( array(
             'meta_key' => 'total_sales', // our custom query meta_key
             'return'   => 'ids', // needed to pass to $post_object
@@ -475,6 +475,7 @@ class Elementor_BestSelling_Widget extends \Elementor\Widget_Base {
         ) );
         if ( $top_selling_products ) {
             do_action( 'woocommerce_before_shop_loop' );
+            echo '<div class="woocommerce columns-4 bestselling">'; // needed for default styles 
             woocommerce_product_loop_start();
             foreach ( $top_selling_products as $top_selling_product ) {
                 $post_object = get_post( $top_selling_product );
@@ -486,12 +487,15 @@ class Elementor_BestSelling_Widget extends \Elementor\Widget_Base {
             }
             wp_reset_postdata();
             woocommerce_product_loop_end();
+             echo '</div><!-- .woocommerce -->';
             do_action( 'woocommerce_after_shop_loop' );
+            echo 'END BESTSELLING';
         } else {
             do_action( 'woocommerce_no_products_found' );
         }
-        echo '</div><!-- .woocommerce -->';
-
+       
+        //div woocommerce columns-4 
+        // ul products elementor-grid columns-4
 
 
 
