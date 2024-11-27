@@ -53,3 +53,79 @@ _wp_handle_upload end function
 call:wp_update_attachment_metadata() => generate_subsizes image. 
 okok wp_generate_attachment_metadata=> create_image_subsizes line 554
 start function wp_update_attachment_metadata
+okok wp_generate_attachment_metadata=> create_image_subsizes line 554
+call: wp_create_image_subsizes() 
+process: wp_create_image_subsizes line 242
+start function wp_update_attachment_metadata
+image_resize_dimensions okok wp-includes/media.php
+start function wp_update_attachment_metadata
+image_resize_dimensions okok wp-includes/media.php
+start function wp_update_attachment_metadata
+image_resize_dimensions okok wp-includes/media.php
+start function wp_update_attachment_metadata
+image_resize_dimensions okok wp-includes/media.php
+start function wp_update_attachment_metadata
+image_resize_dimensions okok wp-includes/media.php
+start function wp_update_attachment_metadata
+image_resize_dimensions okok wp-includes/media.php
+image_resize_dimensions okok wp-includes/media.php
+start function wp_update_attachment_metadata
+image_resize_dimensions okok wp-includes/media.php
+start function wp_update_attachment_metadata
+image_resize_dimensions okok wp-includes/media.php
+start function wp_update_attachment_metadata
+image_resize_dimensions okok wp-includes/media.php
+start function wp_update_attachment_metadata
+start function wp_update_attachment_metadata
+okok wp_generate_attachment_metadata=> create_image_subsizes line 554
+call: wp_create_image_subsizes() 
+process: wp_create_image_subsizes line 242
+start function wp_update_attachment_metadata
+image_resize_dimensions okok wp-includes/media.php
+start function wp_update_attachment_metadata
+image_resize_dimensions okok wp-includes/media.php
+start function wp_update_attachment_metadata
+image_resize_dimensions okok wp-includes/media.php
+start function wp_update_attachment_metadata
+image_resize_dimensions okok wp-includes/media.php
+start function wp_update_attachment_metadata
+image_resize_dimensions okok wp-includes/media.php
+image_resize_dimensions okok wp-includes/media.php
+image_resize_dimensions okok wp-includes/media.php
+start function wp_update_attachment_metadata
+image_resize_dimensions okok wp-includes/media.php
+start function wp_update_attachment_metadata
+image_resize_dimensions okok wp-includes/media.php
+start function wp_update_attachment_metadata
+image_resize_dimensions okok wp-includes/media.php
+start function wp_update_attachment_metadata
+start function wp_update_attachment_metadata
+call: media_handle_upload
+media_handle_upload line 305
+_wp_handle_upload line 804
+move_new_file ok line 1013
+_wp_handle_upload end function
+call:wp_update_attachment_metadata() => generate_subsizes image. 
+okok wp_generate_attachment_metadata=> create_image_subsizes line 554
+call: wp_create_image_subsizes() 
+process: wp_create_image_subsizes line 242
+start function wp_update_attachment_metadata
+image_resize_dimensions okok wp-includes/media.php
+start function wp_update_attachment_metadata
+image_resize_dimensions okok wp-includes/media.php
+start function wp_update_attachment_metadata
+image_resize_dimensions okok wp-includes/media.php
+start function wp_update_attachment_metadata
+image_resize_dimensions okok wp-includes/media.php
+start function wp_update_attachment_metadata
+image_resize_dimensions okok wp-includes/media.php
+image_resize_dimensions okok wp-includes/media.php
+image_resize_dimensions okok wp-includes/media.php
+start function wp_update_attachment_metadata
+image_resize_dimensions okok wp-includes/media.php
+start function wp_update_attachment_metadata
+image_resize_dimensions okok wp-includes/media.php
+start function wp_update_attachment_metadata
+image_resize_dimensions okok wp-includes/media.php
+start function wp_update_attachment_metadata
+start function wp_update_attachment_metadata
