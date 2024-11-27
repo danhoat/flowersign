@@ -224,7 +224,7 @@ h1.post-title{
     padding: 0;
     list-style: none outside;
     clear: both;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
 }
 .bestselling  ul.products.elementor-grid  li.product{
     float: none;margin: 0;

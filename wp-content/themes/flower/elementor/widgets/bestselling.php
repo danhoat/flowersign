@@ -475,20 +475,22 @@ class Elementor_BestSelling_Widget extends \Elementor\Widget_Base {
         ) );
         if ( $top_selling_products ) {
             do_action( 'woocommerce_before_shop_loop' );
-            echo '<div class="woocommerce columns-4 bestselling">'; // needed for default styles 
-            woocommerce_product_loop_start();
+            echo '<div class="woocommerce columns-5 bestselling">'; // needed for default styles 
+            //woocommerce_product_loop_start();
+            echo '<ul class="products columns-5">';
             foreach ( $top_selling_products as $top_selling_product ) {
                 $post_object = get_post( $top_selling_product );
                 setup_postdata( $GLOBALS['post'] =& $post_object );
-                do_action( 'woocommerce_shop_loop' );
+                //do_action( 'woocommerce_shop_loop' );
             
                 wc_get_template_part( 'content', 'product' );
 
             }
             wp_reset_postdata();
-            woocommerce_product_loop_end();
+            //woocommerce_product_loop_end();
+            echo '</ul>';
              echo '</div><!-- .woocommerce -->';
-            do_action( 'woocommerce_after_shop_loop' );
+            // do_action( 'woocommerce_after_shop_loop' );
             echo 'END BESTSELLING';
         } else {
             do_action( 'woocommerce_no_products_found' );
