@@ -4,8 +4,6 @@
 var hpt_info = {'_account':'UHPT-20592','_server':'a24'};
 </script>
 
-
-
 <?php wp_footer(); ?>
 
 <div id="layout_footer" class="layout_footer">

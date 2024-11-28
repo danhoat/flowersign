@@ -47,7 +47,7 @@ class Elementor_BestSelling_Widget extends \Elementor\Widget_Base {
      * @return string Widget title.
      */
     public function get_title() {
-        return esc_html__( 'Best Selling', 'elementor-list-widget' );
+        return esc_html__( 'Best Selling 111', 'elementor-list-widget' );
     }
 
     /**
@@ -431,6 +431,7 @@ class Elementor_BestSelling_Widget extends \Elementor\Widget_Base {
         echo'<pre>';
 
         $posts_per_page = $settings['posts_per_page'] ?? intval( $columns * $rows );
+        $title = $settings['title'] ??  "Bán chạy nhất";
         //var_dump($settings);
         echo'</pre>';
 
@@ -460,11 +461,9 @@ class Elementor_BestSelling_Widget extends \Elementor\Widget_Base {
         $args = array_map( 'sanitize_text_field', $args );
 
 
-
-
         ob_start();
 
-        echo '<h2 class="home-label"> Bán chạy </h2>';
+        echo "<h2 class='home-label'> {$title} </h2>";
 
 
         
@@ -489,9 +488,8 @@ class Elementor_BestSelling_Widget extends \Elementor\Widget_Base {
             wp_reset_postdata();
             //woocommerce_product_loop_end();
             echo '</ul>';
-             echo '</div><!-- .woocommerce -->';
+            echo '</div><!-- .woocommerce -->';
             // do_action( 'woocommerce_after_shop_loop' );
-            echo 'END BESTSELLING';
         } else {
             do_action( 'woocommerce_no_products_found' );
         }
