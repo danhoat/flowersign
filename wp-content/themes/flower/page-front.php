@@ -8,7 +8,7 @@ $customizer = get_customizer_values();
 // echo 'front:';
 // var_dump($customizer->show_slider);
 // echo '</pre>';
-
+ // if($customizer->show_slider == 'yes') { 
 get_header();
 ?>
 
@@ -22,22 +22,16 @@ get_header();
     <div style="width: 100%; max-width: 100%; overflow: hidden;">
 <?php } ?>
 
-<?php 
-// if($customizer->show_slider == 'yes') { 
-
-    include('home-intro.php'); // slide-intro.php 
-// }
-
-?>
+<?php  include('home-intro.php'); // slide-intro.php  ?>
 </div>
     <div id="layout_body" class="layout_body page-front.php">
-         <div class="resp_wrap 99999 home" style="position:relative;">
+        <div class="resp_wrap 99999 home" style="position:relative;">
 
-          <?php the_post(); ?>
+        <?php the_post(); ?>
 
         <div class="post-content">
             <?php  the_content(); ?>
         </div>
             
 
-        <?php get_footer(); ?>
+<?php get_footer(); ?>
