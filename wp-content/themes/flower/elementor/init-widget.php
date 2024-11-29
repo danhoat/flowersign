@@ -28,6 +28,11 @@ function register_list_widget( $widgets_manager ) {
 
 
 
+    require_once( __DIR__ . '/widgets/title.php' );
+
+    $widgets_manager->register( new \Elementor_Title_Widget() );
+
+
 
 }
 add_action( 'elementor/widgets/register', 'register_list_widget' ,999);

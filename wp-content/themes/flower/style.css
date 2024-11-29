@@ -235,3 +235,11 @@ h1.post-title{
 .float-banner{
     
 }
+.h-heading{
+    font-size: 3rem;
+    font-family1: Roboto, "Noto Sans KR", "Malgun Gothic", sans-serif;
+    font-family: "Dancing Script";
+    font-weight: 700;
+    1text-transform: uppercase;
+    line-height: 5rem;
+}

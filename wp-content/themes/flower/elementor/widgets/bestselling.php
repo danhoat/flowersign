@@ -435,13 +435,6 @@ class Elementor_BestSelling_Widget extends \Elementor\Widget_Base {
         //var_dump($settings);
         echo'</pre>';
 
-
-      
-
-        $settings = $this->get_settings_for_display();
-
-       
-
         $args = [
             'posts_per_page' => 4,
             'columns' => 4,
@@ -463,7 +456,7 @@ class Elementor_BestSelling_Widget extends \Elementor\Widget_Base {
 
         ob_start();
 
-        echo "<h2 class='home-label'> {$title} </h2>";
+        echo "<h2 class='home-label h-heading'> {$title} </h2>";
 
 
         
@@ -473,7 +466,7 @@ class Elementor_BestSelling_Widget extends \Elementor\Widget_Base {
             'orderby'  => array( 'meta_value_num' => 'DESC', 'title' => 'ASC' ), // order from highest to lowest of top sellers
         ) );
         if ( $top_selling_products ) {
-            do_action( 'woocommerce_before_shop_loop' );
+           // do_action( 'woocommerce_before_shop_loop' );
             echo '<div class="woocommerce columns-5 bestselling">'; // needed for default styles 
             //woocommerce_product_loop_start();
             echo '<ul class="products columns-5">';
@@ -490,8 +483,6 @@ class Elementor_BestSelling_Widget extends \Elementor\Widget_Base {
             echo '</ul>';
             echo '</div><!-- .woocommerce -->';
             // do_action( 'woocommerce_after_shop_loop' );
-        } else {
-            do_action( 'woocommerce_no_products_found' );
         }
        
         //div woocommerce columns-4 
@@ -522,6 +513,8 @@ class Elementor_BestSelling_Widget extends \Elementor\Widget_Base {
      * @access protected
      */
     protected function content_template() {
+    }
+    protected function content_template1() {
         ?>
         <#
         html_tag = {
