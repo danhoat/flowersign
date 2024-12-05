@@ -217,67 +217,6 @@ var hpt_info = {'_account':'UHPT-20592','_server':'a24'};
                 <p class="copyright" designelement="text" textindex="24" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2Zvb3Rlci9zdGFuZGFyZC5odG1s">© 꽃집청년들 All rights reserved.</p>
             </ul>
 
-            <!-- <div class="escrow"><script type="text/javascript" src="https://pgweb.uplus.co.kr/WEB_SERVER/js/escrowValid.js"></script><a style="cursor:pointer;" onclick="goValidEscrow('gb_mans')"><img src="https://f-mans.com/data/icon/escrow_mark/lg.gif"  style="max-width:125px;" /></a></div> -->
-
-            <ul class="footer_cert">
-                <li>
-                    <a href="/page/ISO">
-                        <div>
-                            <img src="https://f-mans.com/data/images/footer/footer_logo_iso.png" alt="">
-                        </div>
-                        <p>
-                            품질/환경 경영시스템 ISO 인증
-                            <span>
-                                꽃배달 서비스, 화훼중개 플랫폼<br>
-                                개발 및 서비스 부문
-                            </span>
-                        </p>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://f-mans.com/data/images/footer/cert_mainbiz.jpg" target="_blank">
-                        <div>
-                            <img src="https://f-mans.com/data/images/footer/footer_logo_main_biz.png" alt="경영혁신형 중소기업 확인서 메인비즈(main-biz) 인증">
-                        </div>
-                        <p>
-                            경영혁신형 중소기업 확인서
-                            <span>
-                                마케팅과 조직혁신을 위한 노력으로<br>
-                                메인비즈(main-biz)인증을 받았습니다.
-                            </span>
-                        </p>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://f-mans.com/data/images/footer/cert_service.jpg" target="_blank">
-                        <div>
-                            <img src="https://f-mans.com/data/images/footer/footer_logo_patent.png" alt="">
-                        </div>
-                        <p>
-                            서비스표 특허청 등록
-                            <span>
-                                [꽃집청년들]은 상표법에 따라<br>
-                                서비스표등록원부에 등록되었습니다.
-                            </span>
-                        </p>
-                    </a>
-                </li>
-                <li>
-                    <a onclick="window.open(&quot;https://pgweb.tosspayments.com/ms/escrow/s_escrowYn.do?mertid=gb_mans&quot;, &quot;escrow&quot;, &quot;top=0,left=0,width=460,height=580,scrollbars,menubar=no,resizable,status,location=yes,toolbar=yes&quot;);">
-                        <div>
-                            <img src="https://f-mans.com/data/images/footer/footer_logo_escrow_toss.png" alt="">
-                        </div>
-                        <p style="">
-                            toss payments 매매보호(에스크로)서비스
-                            <span>
-                                TossPayments전자결제의 매매보호(에스크로)<br>
-                                서비스를 이용하실 수 있습니다.
-                            </span>
-                          <em>가입사실확인</em>
-                        </p>
-                    </a>
-                </li>
-            </ul>
 
         </div>
     </div>
