@@ -161,7 +161,7 @@ class Elementor_Banner_Widget extends \Elementor\Widget_Base {
      * @return array Widget keywords.
      */
     public function get_keywords() {
-        return ['title', 'image', 'link' ];
+        return ['title', 'image', 'link','btn_label','btn_link' ];
     }
 
     /**
@@ -233,17 +233,13 @@ class Elementor_Banner_Widget extends \Elementor\Widget_Base {
             ]
         );
 
-        $this->add_control(
-            'description_text',
+         $this->add_control(
+            'btn_title',
             [
-                'label' => esc_html__( 'Description', 'elementor' ),
-                'type' => Controls_Manager::TEXTAREA,
-                'dynamic' => [
-                    'active' => true,
-                ],
-                'default' => esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.', 'elementor' ),
-                'placeholder' => esc_html__( 'Enter your description', 'elementor' ),
-                'rows' => 10,
+                'label' => esc_html__( 'Heading Title', 'elementor-oembed-widget' ),
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'input_type' => 'textarea',
+                'placeholder' => 'title'
             ]
         );
 
@@ -281,10 +277,47 @@ class Elementor_Banner_Widget extends \Elementor\Widget_Base {
 
         $this->end_controls_section();
 
+        /* button section */
+
+        $this->start_controls_section(
+            'section_button',
+            [
+                'label' => esc_html__( 'Button', 'elementor' ),
+            ]
+        );
+         $this->add_control(
+            'btn_label',
+            [
+                'label' => esc_html__( 'Button label', 'elementor' ),
+                'type' => Controls_Manager::TEXT,
+                'dynamic' => [
+                    'active' => true,
+                ],
+                'default' => esc_html__( 'View Detail', 'elementor' ),
+                'placeholder' => esc_html__( 'View Detail', 'elementor' ),
+                'label_block' => true,
+            ]
+        );
+          $this->add_control(
+            'btn_link',
+            [
+                'label' => esc_html__( 'Link', 'elementor' ),
+                'type' => Controls_Manager::URL,
+                'dynamic' => [
+                    'active' => true,
+                ],
+                'separator' => 'before',
+            ]
+        );
+
+        $this->end_controls_section();
+        /* end Button */
+
+
         $this->start_controls_section(
             'section_style_box',
             [
-                'label' => esc_html__( 'Box', 'elementor' ),
+                'label' => esc_html__( 'Style 123', 'elementor' ),
                 'tab'   => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -837,14 +870,18 @@ class Elementor_Banner_Widget extends \Elementor\Widget_Base {
     protected function render() {
         $settings = $this->get_settings_for_display();
 
-        $has_image = ! empty( $settings['image']['url'] );
-        $has_content = ! Utils::is_empty( $settings['title_text'] ) || ! Utils::is_empty( $settings['description_text'] );
+        // echo '<pre>';
+        // var_dump($settings['btn_link']);
+        // echo '</pre>';
 
-        if ( ! $has_image && ! $has_content ) {
+        $has_image = ! empty( $settings['image']['url'] );
+        $has_title = ! Utils::is_empty( $settings['title_text'] ) ;
+
+        if ( ! $has_image) {
             return;
         }
 
-        $html = '<div class="elementor-image-box-wrapper">';
+        $html = '<div class="elementor-image-box-wrapper cs-box-banner">';
 
         if ( ! empty( $settings['link']['url'] ) ) {
             $this->add_link_attributes( 'link', $settings['link'] );
@@ -858,34 +895,30 @@ class Elementor_Banner_Widget extends \Elementor\Widget_Base {
                 $image_html = '<a ' . $this->get_render_attribute_string( 'link' ) . ' tabindex="-1">' . $image_html . '</a>';
             }
 
-            $html .= '<figure class="elementor-image-box-img">' . $image_html . '</figure>';
+            $html .= '<figure class="ebox-image-box-img">' . $image_html . '</figure>';
         }
 
-        if ( $has_content ) {
-            $html .= '<div class="elementor-image-box-content">';
+        if ( $has_title ) {
+            $html .= '<div class="elementor-image-box-content ">';
 
             if ( ! Utils::is_empty( $settings['title_text'] ) ) {
-                $this->add_render_attribute( 'title_text', 'class', 'elementor-image-box-title' );
+                $this->add_render_attribute( 'title_text', 'class', 'zelementor-image-box-title   cs-heading' );
 
                 $this->add_inline_editing_attributes( 'title_text', 'none' );
 
                 $title_html = $settings['title_text'];
 
-                if ( ! empty( $settings['link']['url'] ) ) {
-                    $title_html = '<a ' . $this->get_render_attribute_string( 'link' ) . '>' . $title_html . '</a>';
-                }
+                // if ( ! empty( $settings['link']['url'] ) ) {
+                //     $title_html = '<a ' . $this->get_render_attribute_string( 'link' ) . '>' . $title_html . '</a>';
+                // }
 
                 $html .= sprintf( '<%1$s %2$s>%3$s</%1$s>', Utils::validate_html_tag( $settings['title_size'] ), $this->get_render_attribute_string( 'title_text' ), $title_html );
             }
 
-            if ( ! Utils::is_empty( $settings['description_text'] ) ) {
-                $this->add_render_attribute( 'description_text', 'class', 'elementor-image-box-description' );
-
-                $this->add_inline_editing_attributes( 'description_text' );
-
-                $html .= sprintf( '<p %1$s>%2$s</p>', $this->get_render_attribute_string( 'description_text' ), $settings['description_text'] );
+          
+            if ( ! Utils::is_empty( $settings['btn_label'] ) &&  isset($settings['btn_link'])   ){
+                $html .='<a href ="'.$settings['btn_link']['url'].'" class="ebox-btn">'.$settings['btn_label'].'</a>';
             }
-
             $html .= '</div>';
         }
 
