@@ -1,0 +1,11 @@
+[09-Dec-2024 04:22:19 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function box_log() in D:\laragon\www\flower\wp-admin\includes\ajax-actions.php:2634
+Stack trace:
+#0 D:\laragon\www\flower\wp-admin\async-upload.php(33): wp_ajax_upload_attachment()
+#1 {main}
+  thrown in D:\laragon\www\flower\wp-admin\includes\ajax-actions.php on line 2634
+[09-Dec-2024 04:22:54 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function box_log() in D:\laragon\www\flower\wp-admin\includes\media.php:305
+Stack trace:
+#0 D:\laragon\www\flower\wp-admin\includes\ajax-actions.php(2635): media_handle_upload('async-upload', '13', Array)
+#1 D:\laragon\www\flower\wp-admin\async-upload.php(33): wp_ajax_upload_attachment()
+#2 {main}
+  thrown in D:\laragon\www\flower\wp-admin\includes\media.php on line 305
