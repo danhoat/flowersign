@@ -9,3 +9,11 @@ C:\Users\danho/.ssh/id_rsa
 
 
 git add wp-includes/.gitignore
+
+
+
+git rm --cached vnpay_bk/flo55149_wp_r4uo2.sql
+
+
+echo "vnpay_bk/flo55149_wp_r4uo2.sql" >> .gitignore
+git add .gitignore
