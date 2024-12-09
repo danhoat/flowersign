@@ -23,3 +23,11 @@ git rm --cached vnpay_bk/flo55149_wp_r4uo2.sql
 
 git filter-branch -f --index-filter 'git rm --cached --ignore-unmatch vnpay_bk/flo55149_wp_r4uo2.sql'
 
+
+
+2
+
+git filter-repo --path vnpay_bk/flo55149_wp_r4uo2.sql --invert-paths --force
+$ git log -- path/to/file/to/be/excluded
+$ git push --tags --force
+$ git push --all --force
