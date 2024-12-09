@@ -17,3 +17,5 @@ git rm --cached vnpay_bk/flo55149_wp_r4uo2.sql
 
 echo "vnpay_bk/flo55149_wp_r4uo2.sql" >> .gitignore
 git add .gitignore
+
+git rm --cached
