@@ -269,8 +269,9 @@ h1.post-title{
     top:0;
     width: 100%;
      display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
+    text-indent: 1em;
 }
 .cs-box-banner .ebox-btn{
     position: absolute;
