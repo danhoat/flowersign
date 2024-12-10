@@ -23,7 +23,8 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
 div.single-product{
     margin-top: 30px;
 }
-#primary{
+#primary,
+.main{
     max-width: 1260px;
     margin: 0 auto;
 }
