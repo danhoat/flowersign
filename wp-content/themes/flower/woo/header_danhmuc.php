@@ -25,7 +25,7 @@ function woocommerce_product_archive_description() {
 
             $term_id  = $term->term_id;
 
-            $thumbnail_id = get_term_meta( $term_id, 'thumbnail_id', true );
+            $thumbnail_id = get_term_meta( $term_id, CAT_BANNER_IMG_ID, true );
         
             if($thumbnail_id){
                 $image = wp_get_attachment_image_src( $thumbnail_id, 'full' );
@@ -55,7 +55,7 @@ function woocommerce_product_archive_description() {
 
 //add_action('woocommerce_archive_description','box_show_cat_image');
 function box_move_title_to_theme($check){
-    if( is_product_taxonomy() ) return false;
+    if( is_product_taxonomy() || is_singular('product') ) return false;
     return true;
 
 }

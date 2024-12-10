@@ -91,7 +91,18 @@ $categories = get_terms( 'product_cat', array(
             <div class="theme_box_1220">
                 <a href="<?php echo esc_url( get_term_link( $cat ) ); ?>">
                     <div class="theme_text"><?php echo $cat->name;?></div>
-                    <div><img src="https://f-mans.com/data/images/theme/2024/flower-94.png" alt=""></div>
+                    <?php
+
+                        $term_id  = $cat->term_id;
+
+                        $thumbnail_id = get_term_meta( $term_id, 'thumbnail_id', true );
+                    
+                        if($thumbnail_id){
+                            $image = wp_get_attachment_image_src( $thumbnail_id, 'full' );
+                            echo '<div><img src="' . $image[0] . '" > </div>'; 
+                        } else{ ?>
+                            <div> <img src="<?php echo BOXTHEME_URL;?>/images/cat-rose.png"  /> </div>
+                        <?php } ?>
                 </a>
             </div>
         </div>
