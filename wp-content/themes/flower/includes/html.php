@@ -8,28 +8,28 @@ function box_left_swing(){ ?>
     
     ?>
 
- <!--윙배너-->
+
         <style type="text/css">
-    .wing_area {position:absolute;}
-    .left_wing_area {left:-90px; width:90px; height:155px; visibility:hidden;}
-    .left_wing_area img {width:90px; height:155px;}
-    .right_wing_area {right:-125px; width:125px; height:125px; visibility:hidden;}
-    .right_wing_area img {width:125px; height:125px;}
-    @media only screen and (max-width:1555px) { /*1340 + 윙배너 2개 크기*/
-    .wing_area {display:none;}
-    }
+        .wing_area {position:absolute;}
+        .left_wing_area {left:-90px; width:90px; height:155px; visibility:hidden;}
+        .left_wing_area img {width:90px; height:155px;}
+        .right_wing_area {right:-125px; width:125px; height:125px; visibility:hidden;}
+        .right_wing_area img {width:125px; height:125px;}
+        @media only screen and (max-width:1555px) { /*1340 + 윙배너 2개 크기*/
+        .wing_area {display:none;}
+        }
     </style>
 
     <!-- 꽃청 수정 START 윤상희 2023.04.07 - 정기구독 인트로 예외처리 -->
         <!-- 꽃청 수정 END -->
     <div class="wing_area left_wing_area" style=""><!-- 순간배송(윙배너) 배너 -->
-    <a href="/page/sub/delivery">
+        <a href="/page/sub/delivery">
 
-    <img src="<?php echo BOXTHEME_URL;?>/images/banner/out_today.png" alt="전국어디든 오늘주문 오늘배송">
-    </a>
-    <a href="/page/paypal" style="display:block;margin:10px 0 0 0;">
-    <img src="<?php echo BOXTHEME_URL;?>/images/banner/wing_banner_paypal.png" alt="페이팔 결제 가이드">
-    </a>
+        <img src="<?php echo BOXTHEME_URL;?>/images/banner/out_today.png" alt="전국어디든 오늘주문 오늘배송">
+        </a>
+        <a href="/page/paypal" style="display:block;margin:10px 0 0 0;">
+        <img src="<?php echo BOXTHEME_URL;?>/images/banner/wing_banner_paypal.png" alt="페이팔 결제 가이드">
+        </a>
     </div>
 
     <div class="wing_area right_wing_area" style="display:none;">
