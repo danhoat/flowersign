@@ -220,7 +220,6 @@ class WP_Image_Editor_GD extends WP_Image_Editor {
 	 * @return resource|GdImage|WP_Error
 	 */
 	protected function _resize( $max_w, $max_h, $crop = false ) {
-		// box_log('_resize: WP_Image_Editor_GD  ');
 		$dims = image_resize_dimensions( $this->size['width'], $this->size['height'], $max_w, $max_h, $crop );
 
 		if ( ! $dims ) {

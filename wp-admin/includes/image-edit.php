@@ -893,8 +893,6 @@ function wp_restore_image( $post_id ) {
  * @return stdClass
  */
 function wp_save_image( $post_id ) {
-
-	box_log('image-edit.php wp_save_image line 242');
 	$_wp_additional_image_sizes = wp_get_additional_image_sizes();
 
 	$return  = new stdClass();

@@ -10,7 +10,7 @@ function czc_disable_crop( $enable, $orig_w, $orig_h, $dest_w, $dest_h, $crop )
     // Instantly disable this filter after the first run
     // remove_filter( current_filter(), __FUNCTION__ );
     // return image_resize_dimensions( $orig_w, $orig_h, $dest_w, $dest_h, false );
-    var_dump($_REQUEST);
+  
     $t  = wp_doing_ajax();
 
     $action == $_REQUEST['action']; 
@@ -42,4 +42,4 @@ function box_disable_crop_subsizes( $result, $path ){
     return $result;
 
 }
-add_filter('file_is_displayable_image','box_disable_crop_subsizes', 10,2);
+// add_filter('file_is_displayable_image','box_disable_crop_subsizes', 10,2);

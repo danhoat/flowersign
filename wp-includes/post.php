@@ -6623,7 +6623,6 @@ function wp_get_attachment_metadata( $attachment_id = 0, $unfiltered = false ) {
  * @return int|false False if $post is invalid.
  */
 function wp_update_attachment_metadata( $attachment_id, $data ) {
-	box_log('start function wp_update_attachment_metadata');
 	$attachment_id = (int) $attachment_id;
 
 	$post = get_post( $attachment_id );

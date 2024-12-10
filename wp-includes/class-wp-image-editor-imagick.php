@@ -346,8 +346,6 @@ class WP_Image_Editor_Imagick extends WP_Image_Editor {
 			return true;
 		}
 
-		box_log('_resize: WP_Image_Editor_Imagick  ');
-
 		$dims = image_resize_dimensions( $this->size['width'], $this->size['height'], $max_w, $max_h, $crop );
 		if ( ! $dims ) {
 			return new WP_Error( 'error_getting_dimensions', __( 'Could not calculate resized image dimensions' ) );
