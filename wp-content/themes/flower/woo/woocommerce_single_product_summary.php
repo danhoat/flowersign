@@ -2,10 +2,10 @@
 
 function woocommerce_template_single_title(){ ?>
    
-   <!-- <h1 class="product_title entry-title">
+    <h1 class="product_title entry-title">
        <?php the_title();?>
    </h1>
-   !-->
+  
     <?php
 }
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
