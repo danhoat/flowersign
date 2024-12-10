@@ -3068,3 +3068,16 @@ Stack trace:
 [10-Dec-2024 08:49:06 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
 [10-Dec-2024 08:49:06 UTC] PHP Warning:  Undefined array key "HOCHIMINH" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
 [10-Dec-2024 08:49:06 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[10-Dec-2024 08:54:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_front() in D:\laragon\www\flower\wp-content\themes\flower\includes\html.php:6
+Stack trace:
+#0 D:\laragon\www\flower\wp-content\themes\flower\header.php(123): box_left_swing()
+#1 D:\laragon\www\flower\wp-includes\template.php(810): require_once('D:\\laragon\\www\\...')
+#2 D:\laragon\www\flower\wp-includes\template.php(745): load_template('D:\\laragon\\www\\...', true, Array)
+#3 D:\laragon\www\flower\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#4 D:\laragon\www\flower\wp-content\themes\flower\page-front.php(12): get_header()
+#5 D:\laragon\www\flower\wp-includes\template-loader.php(106): include('D:\\laragon\\www\\...')
+#6 D:\laragon\www\flower\wp-blog-header.php(19): require_once('D:\\laragon\\www\\...')
+#7 D:\laragon\www\flower\index.php(17): require('D:\\laragon\\www\\...')
+#8 {main}
+  thrown in D:\laragon\www\flower\wp-content\themes\flower\includes\html.php on line 6
+[10-Dec-2024 08:55:27 UTC] PHP Deprecated:  File Giao diện không có sidebar.php<strong>không dùng nữa</strong> từ phiên bản 3.0.0! Không có giải pháp nào thay thế. Hãy định nghĩa mẫu sidebar.php trong giao diện của bạn. in D:\laragon\www\flower\wp-includes\functions.php on line 6085
