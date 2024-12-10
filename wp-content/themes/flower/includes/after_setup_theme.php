@@ -21,6 +21,7 @@ function theme_setup(){
 
     /** refresh widgest **/
     add_theme_support( 'customize-selective-refresh-widgets' );
+    add_theme_support('woocommerce');
 
     /** custom background **/
     $bg_defaults = array(

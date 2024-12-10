@@ -263,7 +263,7 @@ class ClassicTemplate extends AbstractDynamicBlock {
 			 */
 			if ( apply_filters( 'woocommerce_show_page_title', true ) ) {
 				?>
-				<h1 class="woocommerce-products-header__title page-title">
+				<h1 class="woocommerce-products-header__title page-title line266">
 					<?php
 						woocommerce_page_title();
 					?>
@@ -278,6 +278,7 @@ class ClassicTemplate extends AbstractDynamicBlock {
 			 *
 			 * @since 6.3.0
 			 */
+		
 			do_action( 'woocommerce_archive_description' );
 			?>
 		</header>

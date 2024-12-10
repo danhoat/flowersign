@@ -23,6 +23,10 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
 div.single-product{
     margin-top: 30px;
 }
+#primary{
+    max-width: 1260px;
+    margin: 0 auto;
+}
 #layout_body { max-width:100%; padding-left:0; padding-right:0; overflow: hidden; }
 
 /* 하단 정보 (메인에서 하단 배너를 붙이기 위해 수정 된 코드) */
@@ -299,4 +303,19 @@ h1.post-title{
 .cs-box-banner:hover .ebox-image-box-img img{
     opacity: 1;
     transform: scale(1.1);
+}
+.woocommerce-products-header__title{
+    text-align: center;
+    line-height: 3em;
+    text-align: center;
+    font-weight: 700;
+    font-size: 35px;
+    color: #000000;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.term-description {
+    text-align: center;
+    margin: 0 auto;
+    padding: 30px 0;
+    max-width: 600px;
 }
