@@ -23,7 +23,7 @@ function box_item_html($slider){?>
 
     ?>
     <li class="splide__slide">
-        <a href="/page/event/timesale/timesale">
+        <a href="#">
             <div class="splide__slide_pc"><img src="<?php echo $pc_img;?>" alt=""></div>
             <div class="splide__slide_mobile"><img src="<?php echo $mobile_img;?>" alt=""></div>
             <div class="fm_text_box">
