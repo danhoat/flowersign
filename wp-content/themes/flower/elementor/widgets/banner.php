@@ -871,7 +871,7 @@ class Elementor_Banner_Widget extends \Elementor\Widget_Base {
         $settings = $this->get_settings_for_display();
 
         // echo '<pre>';
-        // var_dump($settings['btn_link']);
+        // var_dump($settings['image']);
         // echo '</pre>';
 
         $has_image = ! empty( $settings['image']['url'] );
@@ -887,16 +887,18 @@ class Elementor_Banner_Widget extends \Elementor\Widget_Base {
             $this->add_link_attributes( 'link', $settings['link'] );
         }
 
-        if ( $has_image ) {
+   
 
-            $image_html = wp_kses_post( ov_get_attachment_image_html( $settings, 'thumbnail', 'image' ) );
+        $image_html = wp_kses_post( ov_get_attachment_image_html( $settings, 'thumbnail', 'image' ) );
 
-            if ( ! empty( $settings['link']['url'] ) ) {
-                $image_html = '<a ' . $this->get_render_attribute_string( 'link' ) . ' tabindex="-1">' . $image_html . '</a>';
-            }
-
-            $html .= '<figure class="ebox-image-box-img">' . $image_html . '</figure>';
+        if ( ! empty( $settings['link']['url'] ) ) {
+            $image_html = '<a ' . $this->get_render_attribute_string( 'link' ) . ' tabindex="-1">' . $image_html . '</a>';
         }
+        $img_url = $settings['image']['url'];
+        $bg = "style = 'background-image: url({$img_url});  background-size: cover; background-position: center 80%; background-repeat: no-repeat; ' ";
+
+        $html .= "<figure class='ebox-image-box-img' {$bg} > ";
+        
 
         if ( $has_title ) {
             $html .= '<div class="elementor-image-box-content ">';
@@ -922,6 +924,9 @@ class Elementor_Banner_Widget extends \Elementor\Widget_Base {
             $html .= '</div>';
         }
 
+
+        $html.="</figure>";
+        
         $html .= '</div>';
 
         Utils::print_unescaped_internal_string( $html );

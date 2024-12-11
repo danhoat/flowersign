@@ -6,10 +6,7 @@
     <div id="image-carousel" class="splide" aria-label="">
         <div class="splide__track">
             <ul class="splide__list">
-           <?php
-
-           box_show_slider();
-           ?>
+           <?php box_show_slider(); ?>
            
             </ul>
         </div>
@@ -82,6 +79,7 @@
 $categories = get_terms( 'product_cat', array(
     'orderby'    => 'count',
     'hide_empty' => 0,
+    'order' => 'DESC',
 ) );
 ?>
 <div class="theme_content">

@@ -64,3 +64,8 @@
 .woocommerce ul.products li.product .price del{
     margin-right: 10px;
 }
+.woocommerce-products-header{
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+}

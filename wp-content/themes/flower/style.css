@@ -254,6 +254,9 @@ h1.post-title{
     width: 100%;
     position: relative;
 }
+.cs-box-banner .ebox-image-box-img{
+    min-height: 120px;
+}
 .cs-box-banner .cs-heading{
     font-size: 2.7em;
     line-height: 5px;
