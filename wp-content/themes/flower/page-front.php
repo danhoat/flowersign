@@ -22,13 +22,53 @@ get_header();
     <div style="width: 100%; max-width: 100%; overflow: hidden;">
 <?php } ?>
 
-<?php   include('home-intro.php'); // slide-intro.php  ?>
+<?php   include('home-slider.php'); // slide-intro.php  ?>
 </div>
 
 
 <div id="layout_body" class="layout_body page-front.php">
     <div class="resp_wrap 99999 home" style="position:relative;">
 
+
+        <!-- start list categories !-->
+
+        <!-- 꽃청 수정 START 김태섭 2023-07-04 - 테마메뉴 UI -->
+
+        <?php 
+        $categories = get_terms( 'product_cat', array(
+            'orderby'    => 'count',
+            'hide_empty' => 0,
+            'order' => 'DESC',
+        ) );
+        ?>
+        <div class="theme_content">
+            <div class="row g-3 g-md-2">
+                <?php  foreach($categories as $cat ){ ?> 
+                <div class="col col-md-3">
+                    <div class="theme_box_1220">
+                        <a href="<?php echo esc_url( get_term_link( $cat ) ); ?>">
+                            <div class="theme_text"><?php echo $cat->name;?></div>
+                            <?php
+
+                                $term_id  = $cat->term_id;
+
+                                $thumbnail_id = get_term_meta( $term_id, 'thumbnail_id', true );
+                            
+                                if($thumbnail_id){
+                                    $image = wp_get_attachment_image_src( $thumbnail_id, 'full' );
+                                    echo '<div><img src="' . $image[0] . '" > </div>'; 
+                                } else{ ?>
+                                    <div> <img src="<?php echo BOXTHEME_URL;?>/images/cat-rose.png"  /> </div>
+                                <?php } ?>
+                        </a>
+                    </div>
+                </div>
+                <?php  } ?>
+
+            </div>
+        </div>
+
+    <!-- END list categories !-->
     <?php the_post(); ?>
 
     <div class="post-content">
