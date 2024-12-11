@@ -86,7 +86,8 @@ function wpdocs_theme_name_scripts() {
         foreach($jss as $key=>$url){
             wp_enqueue_script('abc-'.$key, trim($url) );
         }
-    } 
+    }
+    wp_enqueue_style('woo-css', BOXTHEME_URL.'/css/override_woo.css', rand() );
 }
 add_action( 'wp_enqueue_scripts', 'wpdocs_theme_name_scripts' );
 

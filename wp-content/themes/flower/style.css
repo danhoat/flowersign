@@ -324,3 +324,7 @@ h1.post-title{
     margin-top: 25px;
     margin-bottom: 20px;
 }
+.woocommerce-result-count,
+.woocommerce .woocommerce-ordering{
+    display: none;
+}

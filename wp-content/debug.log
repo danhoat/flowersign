@@ -3727,3 +3727,9 @@ Stack trace:
 [10-Dec-2024 10:08:59 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
 [10-Dec-2024 10:08:59 UTC] PHP Warning:  Undefined array key "HOCHIMINH" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
 [10-Dec-2024 10:08:59 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[11-Dec-2024 01:31:06 UTC] Automatic updates starting...
+[11-Dec-2024 01:31:07 UTC]   Automatic plugin updates starting...
+[11-Dec-2024 01:31:07 UTC]   Automatic plugin updates complete.
+[11-Dec-2024 01:31:08 UTC]   Automatic theme updates starting...
+[11-Dec-2024 01:31:08 UTC]   Automatic theme updates complete.
+[11-Dec-2024 01:31:08 UTC] Automatic updates complete.
