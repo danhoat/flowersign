@@ -1,0 +1,975 @@
+@charset "utf-8";
+
+/*******************************************
+Author : 퍼스트몰(firstmall)
+Author URL : http://www.firstmall.kr
+Creation Date : 2016-06-01
+Modify Date : 2017-07-31
+*******************************************/
+
+/* list*/
+table.bbslist_table_style {border-top:2px solid #545454; border-bottom:1px solid #000; font-size:11px; color:#444;}
+table.bbslist_table_style thead th {height:26px; background:#fafafa; border-left:1px solid #e0e0e0; border-bottom:1px solid #bbbbbb; font-weight:normal;}
+table.bbslist_table_style thead th:first-child {border-left:0px; border-top:1px solid #e0e0e0;}
+table.bbslist_table_style tbody td.cell {height:24px; padding-top:4px; padding-bottom:4px; border-top:1px solid #e0e0e0;}
+table.bbslist_table_style tbody td.cell:first-child {border-left:0px;}
+table.bbslist_table_style tbody tr td.cell:first-child {border-left:0px;}
+table.bbslist_table_style tbody tr:first-child td.cell {border-top:0px;}
+
+table.bbsview_table_style {border-top:2px solid #545454; font-size:11px; color:#444;}
+table.bbsview_table_style thead th {height:17px; background:#fafafa; border-left:0px solid #e0e0e0; border-bottom:1px solid #bbbbbb; font-weight:normal;}
+table.bbsview_table_style thead th:first-child {border-left:0px;}
+table.bbsview_table_style tbody td.cell {height:24px; padding-top:4px; padding-bottom:4px; border-bottom:1px solid #e0e0e0; border-left:1px solid #e0e0e0;}
+table.bbsview_table_style tbody td.cell_bar {width:30px; text-align:center; color:#ccc;}
+table.bbsview_table_style tbody td.cell:first-child {border-left:0px;}
+table.bbsview_table_style tbody tr td.cell:first-child {border-left:0px;}
+table.bbsview_table_style tbody tr:first-child td.cell {border-top:0px;}
+
+table.bbswrite_table_style {border-collapse:collapse; border-top:2px solid #545454; font-size:11px; color:#444;}
+table.bbswrite_table_style th.cell,
+table.bbswrite_table_style td.cell {text-indent:10px; text-align:left; height:24px; padding-top:4px; padding-bottom:4px; border-bottom:1px solid #e0e0e0; border-left:1px solid #e0e0e0;}
+table.bbswrite_table_style th.cell {font-weight:normal; font-size:12px;}
+table.bbswrite_table_style td.cell {}
+table.bbswrite_table_style tr th.cell:first-child {border-left:0px;}
+table.bbswrite_table_style tr:first-child th.cell,
+table.bbswrite_table_style tr:first-child td.cell {border-top:0px;}
+
+table.comment_box_table {}
+table.comment_box_table {}
+
+.gray {color:#999}
+.bbs_btn {border:0px; background-color:#000; color:#fff;  font-size:11px; height:20px; letter-spacing:-1px; padding:0 7px; cursor:pointer}
+.bbs_btn_gray {border:0px; background-color:#777; color:#fff;  font-size:11px; height:20px; letter-spacing:-1px; padding:0 7px; cursor:pointer}
+/*
+#bbslist {margin:auto; padding:0 0 30px 0;}
+#bbslist .article_info {font-size:11px; color:#c0c0c0; padding:5px 0 0 5px;}
+#bbslist .article_info a {position:relative; top:3px; left:3px;}
+
+#bbslist table caption {display:none;}
+#bbslist thead .side1 {border-left:#D2D2D2 solid 1px;}
+#bbslist thead .side2 {border-right:#D2D2D2 solid 1px;}
+#bbslist tbody .noticetr td a {font-weight:600;}
+#bbslist tbody .datalist {padding:7px;}
+
+#bbslist .now {color:#ff0000; font-size:11px;}
+#bbslist .cat {font-size:12px;color:#888; letter-spacing:-1px;}
+#bbslist .sbj {text-align:left; padding-left:10px; letter-spacing:0px;}
+#bbslist .sbj .imgpos {margin-bottom:-1px;}
+#bbslist .sbj a {font-size:12px;color:#222222; text-decoration:none; line-height:150%;}
+#bbslist .sbj a:hover {text-decoration:underline;}
+#bbslist .sbj .new {color:#ff0000;}
+#bbslist .sbj .comment {font:normal 11px arial; color:#FC6138;}
+#bbslist .sbj1 {text-align:left; padding:5px 0 3px 10px; font-size:12px;color:#222222; line-height:150%;}
+#bbslist .name {color:#222222; font-size:12px; color:#888;}
+#bbslist .name a {color:#888;}
+#bbslist .hit {font-size:11px; color:#515190;}
+#bbslist .searchform {padding:30px 0 0 0; text-align:center;}
+#bbslist .searchform select {font-size:12px; height:20px; vertical-align:bottom; padding:2px;}
+*/
+
+/*
+#prenextlist {margin:auto; padding:0 0 30px 0;}
+#prenextlist tbody .datalist {padding:7px;}
+#prenextlist span.sbj {text-align:left; padding:5px 0 3px 10px; letter-spacing:0px;}
+#prenextlist span.sbj .imgpos {margin-bottom:-1px;}
+#prenextlist span.sbj a {font-size:12px;color:#222222; text-decoration:none; line-height:150%;}
+#prenextlist span.sbj a:hover {text-decoration:underline;}
+#prenextlist span.sbj .new {color:#ff0000;}
+#prenextlist span.sbj .comment {font:normal 11px arial; color:#FC6138;}
+#prenextlist table {border-collapse:collapse;}
+#prenextlist table td,
+#prenextlist table th {line-height:30px; height:30px; border-top:1px solid #ddd; border-bottom:1px solid #ddd;}
+*/
+/* @list*/
+
+/* view*/
+/*
+#bbsview {margin:auto;}
+#bbsview .viewbox {}
+#bbsview .viewbox .icon {position:absolute; width:50px; height:50px; margin:10px 0 0 0; background:url('../../../../../_var/simbol/0.gif') center center no-repeat;}
+#bbsview .viewbox .subject {height:26px; line-height:26px; padding-left:10px; background:#fafafa; background:url('../../../images/design/tbl_th_bg.gif') repeat-x; border-top:2px solid #545454; border-bottom:1px solid #000; font-weight:normal;}
+#bbsview .viewbox .subject h1 {margin:0px; padding:0px; font-size:12px; font-weight:600; }
+#bbsview .viewbox .info {padding:10px 0 10px 3px; font-size:10px; color:#c0c0c0;}
+#bbsview .viewbox .info .xleft {float:left;}
+#bbsview .viewbox .info .xright {float:right;}
+#bbsview .viewbox .info .xright ul {padding:0; margin:0;}
+#bbsview .viewbox .info .xright li {list-style-type:none; float:left;}
+#bbsview .viewbox .info .xright .g {padding:0 10px 0 0;}
+#bbsview .viewbox .info .xright .g img {position:relative; top:3px; right:3px;}
+#bbsview .viewbox .info .xright .g a {font-size:11px; color:#666;}
+#bbsview .viewbox .info .xright .g a:hover {text-decoration:underline;}
+#bbsview .viewbox .info .xright div {position:absolute; display:none;}
+#bbsview .viewbox .info .xright div ul {position:relative; top:17px; width:79px; border:#dfdfdf solid 1px; background:#ffffff; padding:1px;}
+#bbsview .viewbox .info .xright div li {float:none; display:block; padding:3px 0 3px 3px; color:#333; font-size:11px; cursor:pointer;}
+#bbsview .viewbox .info .xright div li:hover {background:#ECF0F6;}
+#bbsview .viewbox .info .split {padding:0 5px 0 5px; color:#dfdfdf; font-size:10px;}
+#bbsview .viewbox .info .han {font-size:11px;}
+#bbsview .viewbox .info .num {font-size:11px;}
+#bbsview .viewbox .content {padding:20px 10px; line-height:160%;}
+#bbsview .viewbox .content .scorebox {text-align:center; padding:20px 0 20px 0;}
+#bbsview .viewbox .content .snsbox {text-align:right;}
+#bbsview .viewbox .content .snsbox img {cursor:pointer;}
+#bbsview .bottom {padding:10px 0 0 0; text-align:right;}
+#bbsview .comment {padding:0 0 10px 0; color:#c0c0c0; font-weight:600; color:#3EA9CD;}
+#bbsview .comment .icon1 {position:relative; top:3px;}
+*/
+/* @view*/
+
+/* write*/
+
+table.info-table-style {border-collapse:collapse; border-top:1px solid #aaa; border-right:1px solid #dadada;}
+table.info-table-style .its-th {border-left:1px solid #dadada; border-bottom:1px solid #dadada; padding:8px 0px 8px 28px; text-align:left; background-color:#f1f1f1; font-weight:normal;}
+table.info-table-style .its-td {border-left:1px solid #dadada; border-bottom:1px solid #dadada; padding:5px 0 5px 15px; line-height:180%; letter-spacing:0px;}
+table.info-table-style .its-th-align {border-left:1px solid #dadada; border-bottom:1px solid #dadada; padding:8px 0px 8px 0; background-color:#f1f1f1; font-weight:normal;}
+table.info-table-style .its-td-align {border-left:1px solid #dadada; border-bottom:1px solid #dadada; padding:5px 0 5px 0; line-height:180%; letter-spacing:0px;}
+table.info-table-style textarea {background-color:#f0f0f0;}
+table.info-table-style textarea.input-box-default-text {color:#a5a5a5 !important}
+
+
+#bbswrite table.simplelist-table-style {border-collapse:collapse;}
+#bbswrite table.simplelist-table-style th {height:24px; line-height:24px; border:1px solid #c8c8c8; color:#666; font-weight:normal;}
+#bbswrite table.simplelist-table-style td {padding:5px 0; border-bottom:1px solid #d7d7d7; color:#666}
+
+/* @write*/
+
+
+/* view*/
+#boardview {margin:auto; padding:0 0 30px 0;}
+#boardview {padding:20px 0 20px 0; line-height:160%;}
+#boardview .attach {padding:10px 0 0 0; line-height:120%;}
+#boardview .attach ul {padding:0; margin:0;}
+#boardview .attach li {list-style-type:none; padding:0 0 0 15px;}
+#boardview .attach li a {font-size:11px; color:#666;}
+#boardview .attach li a:hover {text-decoration:underline;}
+#boardview .attach li .size {font-size:11px; /*font-family:'돋움', Dotum, AppleGothic, sans-serif;*/color:#999;}
+#boardview .attach li .down {font-size:11px; /*font-family:'돋움', Dotum, AppleGothic, sans-serif;*/color:#333;}
+#boardview .scorebox {text-align:center; padding:20px 0 20px 0;}
+#boardview .snsbox {padding:50px 0 0 0; text-align:right;}
+#boardview .snsbox img {cursor:pointer;}
+#boardview .bottom {padding:10px 0 0 0; text-align:right;}
+#boardview .comment {padding:0 0 10px 0; color:#c0c0c0;}
+#boardview .comment a {font-weight:600; color:#3EA9CD;}
+#boardview .comment .icon1 {position:relative; top:3px;}
+#boardview .han {font-weight:600;}
+/* @view*/
+
+#ui-datepicker-div { z-index:9999999;}
+
+
+/* write*/
+.wrbox {padding:25px 0 0 0;}
+.mdbox {padding:0;}
+#cwrite {}
+#cwrite .box {padding:10px; border:#dfdfdf solid 0px; background:#FCFCFC;}
+#cwrite .box .inputbox {padding:8px 0 0 0;}
+#cwrite .box .inputbox div {padding:5px 0 0 0;}
+#cwrite .box .inputbox div span {position:relative; top:3px; font-size:11px; color:#c0c0c0; padding:0 10px 0 0;}
+#cwrite .box .inputbox .input1 {border:#dfdfdf solid 1px; padding:2px 0 0 5px; height:18px; width:150px;}
+#cwrite .box .inputbox .input2 {border:#dfdfdf solid 1px; padding:2px 0 0 5px; height:18px; width:355px;}w
+#cwrite .box .bottom {}
+#cwrite .box .bottom .l {float:left; font-size:12px; color:#999; letter-spacing:-1px;}
+
+
+#cmtlistlay {}
+#cmtlistlay .box {padding:0px 3px; border:#dfdfdf solid 0px; background:#FCFCFC;}
+#cmtlistlay .box .inputbox {padding:8px 0 0 0;}
+#cmtlistlay .box .inputbox div {padding:5px 0 0 0;}
+#cmtlistlay .box .inputbox div span {position:relative; top:3px; font-size:11px; color:#c0c0c0; padding:0 10px 0 0;}
+#cmtlistlay .box .inputbox .input1 {border:#dfdfdf solid 1px; padding:2px 0 0 5px; height:18px; width:150px;}
+#cmtlistlay .box .inputbox .input2 {border:#dfdfdf solid 1px; padding:2px 0 0 5px; height:18px; width:355px;}
+#cmtlistlay .box .bottom {padding-bottom:10px;}
+#cmtlistlay .box .bottom .l {float:left; font-size:12px; color:#999; letter-spacing:-1px;}
+
+
+.cmtlistlay {}
+.cmtlistlay .box {padding:0px 3px; border:#dfdfdf solid 1px; background:#FCFCFC;}
+.cmtlistlay .box .inputbox {padding:8px 0 0 0;}
+.cmtlistlay .box .inputbox div {padding:5px 0 0 0;}
+.cmtlistlay .box .inputbox div span {position:relative; top:3px; font-size:11px; color:#c0c0c0; padding:0 10px 0 0;}
+.cmtlistlay .box .inputbox .input1 {border:#dfdfdf solid 1px; padding:2px 0 0 5px; height:18px; width:150px;}
+.cmtlistlay .box .inputbox .input2 {border:#dfdfdf solid 1px; padding:2px 0 0 5px; height:18px; width:355px;}
+.cmtlistlay .box .bottom {padding-bottom:10px;}
+.cmtlistlay .box .bottom .l {float:left; font-size:12px; color:#999; letter-spacing:-1px;}
+/* @write*/
+
+
+/* view*/
+/*
+.BoardPwCk {border:#dfdfdf solid 0px; width:300px; padding:0px 10px 0px 10px; margin:10px auto 10px auto;}
+.BoardPwCk .msg {}
+.BoardPwCk .msg h3 {margin:0; padding:0 0 9px 0; font-size:14px; font-weight:600; border-bottom:#dfdfdf dashed 1px;}
+.BoardPwCk .msg h3 img {position:relative; top:3px;}
+.BoardPwCk .msg div {padding:10px 0 0 22px; color:#999;}
+.BoardPwCk .ibox {padding:30px 0 10px 22px;}
+.BoardPwCk .input {width:150px;}
+.BoardPwCk .btnblue {width:80px;}
+*/
+
+
+
+
+.content .reply .sbj {
+padding-bottom:20px; margin:15px 0px 0px; padding-left:0px; padding-right:0px; color:#ff0000; border-top:#dfdfdf 1px solid; font-weight:600; padding-top:10px;
+}
+
+#cmtlist {margin:auto; padding-top:10px;}
+.attach {padding:10px 0 0 0; line-height:120%;}
+.attach ul {padding:0; margin:0;}
+.attach li {list-style-type:none; padding:0 0 5px 15px;}
+.attach li a {font-size:11px; color:#666;}
+.attach li a:hover {text-decoration:underline;}
+.attach li .size {font-size:11px; /*font-family:'돋움', Dotum, AppleGothic, sans-serif;*/color:#999;}
+.attach li .down {font-size:11px; /*font-family:'돋움', Dotum, AppleGothic, sans-serif;*/color:#333;}
+
+/* list */
+ul.bbslist_ul_style {*zoom:1; border-top:1px solid #ddd; border-left:1px solid #ddd; border-right:1px solid #ddd; background-color:#fff}
+ul.bbslist_ul_style:after {content:""; display:block; clear:both;}
+ul.bbslist_ul_style.v2 { margin-top:10px; }
+ul.bbslist_ul_style li {position:relative; padding:10px; border-bottom:1px solid #ddd;}
+ul.bbslist_ul_style li .bus_comment {
+	position:absolute;
+	top:50%;
+	left:100%;
+	width:36px;
+	margin-left:-45px;
+	margin-top:-17px;
+
+	height:34px;
+	line-height:32px;
+	font-size:12px;
+	color:#cc0000;
+	text-align:center;
+}
+ul.bbslist_ul_style li .bus_arrow {position:absolute; right:15px; top:50%; margin-top:-10px; width:12px; height:21px; background-size:12px 21px;}
+
+ul.bbslist_ul_style li.board_contents {padding:0px;}
+ul.bbslist_ul_style li .bus_goods_image {float:left; margin-right:10px; width:48px; height:48px; overflow:hidden; border:1px solid #ccc}
+ul.bbslist_ul_style li .bus_goods_name {padding-bottom:4px;}
+ul.bbslist_ul_style li .bus_subject {display:block; font-weight:bold; color:#000; font-size:13px; padding-bottom:5px;}
+ul.bbslist_ul_style li .bus_record_info {display: flex; align-items: center; line-height: 1; padding-top: 5px;}
+ul.bbslist_ul_style li .bus_record_info:after {content:""; display:block; clear:both;}
+ul.bbslist_ul_style li .bus_record_info .cell {float:left; margin-right:6px; padding-left:6px; font-size:12px; font-family:'돋움'; color:#999; border-left:1px solid #ddd;}
+ul.bbslist_ul_style li .bus_record_info .cell:first-child {border-left:none; padding-left:0px;}
+ul.bbslist_ul_style li .bus_record_info .cell_bar {float:left; color:#ccc; padding:0 5px;}
+ul.bbslist_ul_style li .bus_record_info .cell_bar:first-child {display:none; border-left:none;}
+
+div.bbswrite_division {padding:10px 10px 0;}
+ul.bbswrite_division { padding:0 10px; }
+ul.bbswrite_division>li { padding-top:10px; }
+
+.bbsview_division {padding:10px; border-bottom:1px solid #ddd;}
+
+.bbsview_style .bvs_subject {display:block; font-weight:bold; font-size:14px; padding-bottom:5px;}
+.bbsview_style .bvs_record_info {display:block;*zoom:1;}
+.bbsview_style .bvs_record_info:after {content:""; display:block; clear:both;}
+.bbsview_style .bvs_record_info .cell {float:left; font-size:12px; font-family:"dotum"; color:#999;}
+.bbsview_style .bvs_record_info .cell_bar {float:left; color:#ccc; padding:0 5px;}
+.bbsview_style .bvs_record_info .cell_bar:first-child {display:none;}
+.bbsview_style .bus_comment {
+	position:absolute;
+	top:50%;
+	left:100%;
+	width:36px;
+	margin-left:-45px;
+	margin-top:-17px;
+	height:34px;
+	line-height:32px;
+	font-size:12px;
+	color:#cc0000;
+	text-align:center;
+}
+
+/*
+#prenextlist {margin:auto;}
+#prenextlist li {padding:10px 15px; border-bottom:1px solid #ddd; *zoom:1;}
+#prenextlist li:after {content:""; display:block; clear:both;}
+#prenextlist span.pnl_title {text-align:left;padding:5px 0 3px 10px;letter-spacing:0px;}
+#prenextlist span.pnl_title .imgpos {margin-bottom:-1px;}
+#prenextlist span.pnl_title a {font-size:12px;font-family:gothic,gulim;color:#222222;text-decoration:none;line-height:150%;}
+#prenextlist span.pnl_title a:hover {text-decoration:underline;}
+#prenextlist span.pnl_title .new {color:#ff0000;}
+#prenextlist span.pnl_title .comment {font:normal 11px arial;color:#FC6138;}
+#prenextlist span.pnl_icon	{}
+#prenextlist span.pnl_desc	{padding-left:5px; padding-right:5px;}
+#prenextlist span.pnl_title	{padding-right:10px; font-weight:bold;}
+#prenextlist span.pnl_name	{}
+*/
+
+table.bbslist_table_style {border-top:2px solid #545454; border-bottom:1px solid #000; font-size:11px; color:#444;}
+table.bbslist_table_style thead th {height:26px; background:#fafafa; border-left:1px solid #e0e0e0; border-bottom:1px solid #bbbbbb; font-weight:normal;}
+table.bbslist_table_style thead th:first-child {border-left:0px;border-top:1px solid #e0e0e0;}
+table.bbslist_table_style tbody td.cell {height:24px; padding-top:4px; padding-bottom:4px; border-top:1px solid #e0e0e0;}
+table.bbslist_table_style tbody td.cell:first-child {border-left:0px;}
+table.bbslist_table_style tbody tr td.cell:first-child {border-left:0px;}
+table.bbslist_table_style tbody tr:first-child td.cell {border-top:0px;}
+
+table.bbsview_table_style {border-top:2px solid #545454;font-size:11px; color:#444;}
+table.bbsview_table_style thead th {height:17px; background:#fafafa; border-left:0px solid #e0e0e0; border-bottom:1px solid #bbbbbb; font-weight:normal;}
+table.bbsview_table_style thead th:first-child {border-left:0px;}
+table.bbsview_table_style tbody td.cell {height:24px; padding-top:4px; padding-bottom:4px; border-bottom:1px solid #e0e0e0; border-left:1px solid #e0e0e0;}
+table.bbsview_table_style tbody td.cell_bar {width:30px; text-align:center; color:#ccc;}
+table.bbsview_table_style tbody td.cell:first-child {border-left:0px;}
+table.bbsview_table_style tbody tr td.cell:first-child {border-left:0px;}
+table.bbsview_table_style tbody tr:first-child td.cell {border-top:0px;}
+
+table.bbswrite_table_style {border-collapse:collapse;border-top:2px solid #545454;font-size:11px; color:#444;}
+table.bbswrite_table_style th.cell,
+table.bbswrite_table_style td.cell {text-indent:10px; text-align:left; height:24px; padding-top:4px; padding-bottom:4px; border-bottom:1px solid #e0e0e0; border-left:1px solid #e0e0e0;}
+table.bbswrite_table_style th.cell {font-weight:normal; font-size:12px;}
+table.bbswrite_table_style td.cell {}
+table.bbswrite_table_style tr th.cell:first-child {border-left:0px;}
+table.bbswrite_table_style tr:first-child th.cell,
+table.bbswrite_table_style tr:first-child td.cell {border-top:0px;}
+
+table.comment_box_table {}
+table.comment_box_table {}
+
+.gray {color:#999}
+.bbs_btn {border:0px; background-color:#000; color:#fff; font-family:dotum; font-size:11px; height:20px; letter-spacing:-1px; padding:0 7px; cursor:pointer}
+.bbs_btn_gray {border:0px; background-color:#777; color:#fff; font-family:dotum; font-size:11px; height:20px; letter-spacing:-1px; padding:0 7px; cursor:pointer}
+
+/*
+#bbslist {margin:auto;padding:0 0 0 0;}
+#bbslist .article_info {font-size:11px;font-family:gothic,dotum;color:#c0c0c0;padding:5px 0 0 5px;}
+#bbslist .article_info a {position:relative;top:3px;left:3px;}
+
+#bbslist table caption {display:none;}
+#bbslist thead .side1 {border-left:#D2D2D2 solid 1px;}
+#bbslist thead .side2 {border-right:#D2D2D2 solid 1px;}
+#bbslist tbody .noticetr td a {font-weight:bold;}
+#bbslist tbody .datalist {padding:7px;}
+
+#bbslist .now {color:#ff0000;font-size:11px;}
+#bbslist .cat {font-size:12px;font-family:gothic,gulim;color:#888;letter-spacing:-1px;}
+#bbslist .sbj {text-align:left;padding-left:10px;letter-spacing:0px;}
+#bbslist .sbj .imgpos {margin-bottom:-1px;}
+#bbslist .sbj a {font-size:12px;font-family:gothic,gulim;color:#222222;text-decoration:none;line-height:150%;}
+#bbslist .sbj a:hover {text-decoration:underline;}
+#bbslist .sbj .new {color:#ff0000;}
+#bbslist .sbj .comment {font:normal 11px arial;color:#FC6138;}
+#bbslist .sbj1 {text-align:left;padding:5px 0 3px 10px;font-size:12px;font-family:gothic,gulim;color:#222222;line-height:150%;}
+#bbslist .name {color:#222222;font-family:dotum;font-size:12px;color:#888;}
+#bbslist .name a {color:#888;}
+#bbslist .hit {font-size:11px;color:#515190;}
+#bbslist .searchform {padding:30px 0 0 0;text-align:center;}
+#bbslist .searchform select {font-size:12px;font-family:gulim;height:20px;vertical-align:bottom;padding:2px;}
+*/
+/* @list */
+
+/* view */
+/*
+#bbsview {margin:auto;padding:0;}
+#bbsview .viewbox {}
+#bbsview .viewbox .icon {position:absolute;width:50px;height:50px;margin:10px 0 0 0;background:url('../../../../../_var/simbol/0.gif') center center no-repeat;}
+#bbsview .viewbox .subject {height:26px; line-height:26px; padding-left:10px; background:#fafafa; background:url('../../../images/design/tbl_th_bg.gif') repeat-x; border-top:2px solid #545454; border-bottom:1px solid #000; font-weight:normal;}
+#bbsview .viewbox .subject h1 {margin:0px; padding:0px; font-size:12px;font-weight:bold;font-family:dotum;}
+#bbsview .viewbox .info {padding:10px 0 10px 3px;font-size:10px;font-family:'돋움',Dotum,AppleGothic,sans-serif;color:#c0c0c0;}
+#bbsview .viewbox .info .xleft {float:left;}
+#bbsview .viewbox .info .xright {float:right;}
+#bbsview .viewbox .info .xright ul {padding:0;margin:0;}
+#bbsview .viewbox .info .xright li {list-style-type:none;float:left;}
+#bbsview .viewbox .info .xright .g {padding:0 10px 0 0;}
+#bbsview .viewbox .info .xright .g img {position:relative;top:3px;right:3px;}
+#bbsview .viewbox .info .xright .g a {font-size:11px;font-family:dotum;color:#666;}
+#bbsview .viewbox .info .xright .g a:hover {text-decoration:underline;}
+#bbsview .viewbox .info .xright div {position:absolute;display:none;}
+#bbsview .viewbox .info .xright div ul {position:relative;top:17px;width:79px;border:#dfdfdf solid 1px;background:#ffffff;padding:1px;}
+#bbsview .viewbox .info .xright div li {float:none;display:block;padding:3px 0 3px 3px;color:#333;font-size:11px;cursor:pointer;}
+#bbsview .viewbox .info .xright div li:hover {background:#ECF0F6;}
+#bbsview .viewbox .info .split {padding:0 5px 0 5px;color:#dfdfdf;font-size:10px;}
+#bbsview .viewbox .info .han {font-family:dotum;font-size:11px;}
+#bbsview .viewbox .info .num {font-family:dotum;font-size:11px;}
+#bbsview .viewbox .content {padding:20px 10px;line-height:160%;}
+#bbsview .viewbox .content .attach {padding:10px 0 0 0;line-height:120%;}
+#bbsview .viewbox .content .attach ul {padding:0;margin:0;}
+#bbsview .viewbox .content .attach li {list-style-type:none;padding:0 0 0 15px;}
+#bbsview .viewbox .content .attach li a {font-size:11px;font-family:dotum;color:#666;}
+#bbsview .viewbox .content .attach li a:hover {text-decoration:underline;}
+#bbsview .viewbox .content .attach li .size {font-size:11px;font-family:'돋움',Dotum,AppleGothic,sans-serif;color:#999;}
+#bbsview .viewbox .content .attach li .down {font-size:11px;font-family:'돋움',Dotum,AppleGothic,sans-serif;color:#333;}
+#bbsview .viewbox .content .scorebox {text-align:center;padding:20px 0 20px 0;}
+#bbsview .viewbox .content .snsbox {text-align:right;}
+#bbsview .viewbox .content .snsbox img {cursor:pointer;}
+#bbsview .bottom {padding:10px 0 0 0;text-align:right;}
+#bbsview .comment {padding:0 0 10px 0;color:#c0c0c0;font-weight:bold;color:#3EA9CD;}
+#bbsview .comment .icon1 {position:relative;top:3px;}
+*/
+/* @view */
+
+
+/* write */
+/* 기본 정보 테이블 스타일 */
+table.info-table-style {border-collapse:collapse; border-top:1px solid #aaa; border-right:1px solid #dadada;}
+table.info-table-style .its-th {border-left:1px solid #dadada; border-bottom:1px solid #dadada; padding:8px 0px 8px 28px; text-align:left; background-color:#f1f1f1; font-weight:normal;}
+table.info-table-style .its-td {border-left:1px solid #dadada; border-bottom:1px solid #dadada; padding:5px 0 5px 15px; line-height:180%; letter-spacing:0px;}
+table.info-table-style .its-th-align {border-left:1px solid #dadada; border-bottom:1px solid #dadada; padding:8px 0px 8px 0; background-color:#f1f1f1; font-weight:normal;}
+table.info-table-style .its-td-align {border-left:1px solid #dadada; border-bottom:1px solid #dadada; padding:5px 0 5px 0; line-height:180%; letter-spacing:0px;}
+table.info-table-style textarea {background-color:#f0f0f0;}
+table.info-table-style textarea.input-box-default-text {color:#a5a5a5 !important}
+
+/* 간단 리스트 테이블 스타일 */
+#bbswrite table.simplelist-table-style {border-collapse:collapse;}
+#bbswrite table.simplelist-table-style th {height:24px; line-height:24px; border:1px solid #c8c8c8; color:#666; font-weight:normal;}
+#bbswrite table.simplelist-table-style td {padding:5px 0; border-bottom:1px solid #d7d7d7; color:#666}
+
+/* @write */
+
+
+/* view */
+#boardview {margin:auto;padding:0 0 30px 0;}
+#boardview {padding:20px 0 20px 0;line-height:160%;}
+#boardview .attach {padding:10px 0 0 0;line-height:120%;}
+#boardview .attach ul {padding:0;margin:0;}
+#boardview .attach li {list-style-type:none;padding:0 0 0 15px;}
+#boardview .attach li a {font-size:11px;font-family:dotum;color:#666;}
+#boardview .attach li a:hover {text-decoration:underline;}
+#boardview .attach li .size {font-size:11px;font-family:'돋움',Dotum,AppleGothic,sans-serif;color:#999;}
+#boardview .attach li .down {font-size:11px;font-family:'돋움',Dotum,AppleGothic,sans-serif;color:#333;}
+#boardview .scorebox {text-align:center;padding:20px 0 20px 0;}
+#boardview .snsbox {padding:50px 0 0 0;text-align:right;}
+#boardview .snsbox img {cursor:pointer;}
+#boardview .bottom {padding:10px 0 0 0;text-align:right;}
+#boardview .comment {padding:0 0 10px 0;color:#c0c0c0;}
+#boardview .comment a {font-weight:bold;color:#3EA9CD;}
+#boardview .comment .icon1 {position:relative;top:3px;}
+#boardview .han {font-weight:bold;}
+/* @view */
+
+#ui-datepicker-div { z-index: 9999999; }
+
+
+/* write */
+.wrbox {padding:25px 0 0 0;}
+.mdbox {padding:0;}
+#cwrite {}
+#cwrite .box {padding:10px;border:#dfdfdf solid 0px;background:#FCFCFC;}
+#cwrite .box .inputbox {padding:8px 0 0 0;}
+#cwrite .box .inputbox div {padding:5px 0 0 0;}
+#cwrite .box .inputbox div span {position:relative;top:3px;font-size:11px;font-family:dotum;color:#c0c0c0;padding:0 10px 0 0;}
+#cwrite .box .inputbox .input1 {border:#dfdfdf solid 1px;padding:2px 0 0 5px;height:18px;width:150px;}
+#cwrite .box .inputbox .input2 {border:#dfdfdf solid 1px;padding:2px 0 0 5px;height:18px;width:355px;}w
+#cwrite .box .bottom {}
+#cwrite .box .bottom .l {float:left;font-size:12px;font-family:dotum;color:#999;letter-spacing:-1px;}
+
+
+#cmtlistlay {}
+#cmtlistlay .box {padding:0px 3px;border:#dfdfdf solid 0px;background:#FCFCFC;}
+#cmtlistlay .box .inputbox {padding:8px 0 0 0;}
+#cmtlistlay .box .inputbox div {padding:5px 0 0 0;}
+#cmtlistlay .box .inputbox div span {position:relative;top:3px;font-size:11px;font-family:dotum;color:#c0c0c0;padding:0 10px 0 0;}
+#cmtlistlay .box .inputbox .input1 {border:#dfdfdf solid 1px;padding:2px 0 0 5px;height:18px;width:150px;}
+#cmtlistlay .box .inputbox .input2 {border:#dfdfdf solid 1px;padding:2px 0 0 5px;height:18px;width:355px;}
+#cmtlistlay .box .bottom {padding-bottom:10px;}
+#cmtlistlay .box .bottom .l {float:left;font-size:12px;font-family:dotum;color:#999;letter-spacing:-1px;}
+
+
+.cmtlistlay {}
+.cmtlistlay .box {padding:0px 3px;border:#dfdfdf solid 1px;background:#FCFCFC;}
+.cmtlistlay .box .inputbox {padding:8px 0 0 0;}
+.cmtlistlay .box .inputbox div {padding:5px 0 0 0;}
+.cmtlistlay .box .inputbox div span {position:relative;top:3px;font-size:11px;font-family:dotum;color:#c0c0c0;padding:0 10px 0 0;}
+.cmtlistlay .box .inputbox .input1 {border:#dfdfdf solid 1px;padding:2px 0 0 5px;height:18px;width:150px;}
+.cmtlistlay .box .inputbox .input2 {border:#dfdfdf solid 1px;padding:2px 0 0 5px;height:18px;width:355px;}
+.cmtlistlay .box .bottom {padding-bottom:10px;}
+.cmtlistlay .box .bottom .l {float:left;font-size:12px;font-family:dotum;color:#999;letter-spacing:-1px;}
+/* @write */
+
+
+/* view */
+/*
+.BoardPwCk {border:#dfdfdf solid 0px;width:350px;padding:0px 10px 0px 10px;margin:10px auto 10px auto;}
+.BoardPwCk .msg {}
+.BoardPwCk .msg h3 {margin:0;padding:0 0 9px 0;font-size:14px;font-weight:bold;font-family:"malgun gothic","돋움";border-bottom:#dfdfdf dashed 1px;}
+.BoardPwCk .msg h3 img {position:relative;top:3px;}
+.BoardPwCk .msg div {padding:10px 0 0 22px;color:#999;}
+.BoardPwCk .ibox {padding:30px 0 10px 22px;}
+.BoardPwCk .input {width:150px;}
+.BoardPwCk .btnblue {width:80px;}
+*/
+
+
+
+
+.content .reply .sbj {
+padding-bottom: 20px; margin: 15px 0px 0px; padding-left: 0px; padding-right: 0px; color: #ff0000; border-top: #dfdfdf 1px solid; font-weight: bold; padding-top: 10px;
+}
+
+#cmtlist {margin:auto;padding-top:10px;}
+
+.attach {padding:10px 0 0 0;line-height:120%;}
+.attach ul {padding:0;margin:0;}
+.attach li {list-style-type:none;padding:0 0 5px 15px;}
+.attach li a {font-size:11px;font-family:dotum;color:#666;}
+.attach li a:hover {text-decoration:underline;}
+.attach li .size {font-size:11px;font-family:'돋움',Dotum,AppleGothic,sans-serif;color:#999;}
+.attach li .down {font-size:11px;font-family:'돋움',Dotum,AppleGothic,sans-serif;color:#333;}
+
+.bbstopbox {position:relative; *zoom:1; line-height:40px; height:40px; border-bottom:1px solid #bdc4c6;}
+.bbstopbox:after {content:""; display:block; clear:both;}
+.bbstopbox .pleft {position:absolute; top:0px; left:5px;}
+.bbstopbox .pright {position:absolute; top:0px; right:5px;}
+
+.bbssearchbox {position:relative; }
+.bbssearchbox.v2 { margin-top:10px; text-align:right; }
+.bbssearchbox input[type=text] { width:220px; }
+.bbssearchbox input[type=image] {border:0px;width:36px;height:30px;padding-left:4px;}
+@media only screen and (max-width:479px) {
+	.bbssearchbox input[type=text] { float:left;width:calc(100% - 64px); }
+}
+
+.info_table th{ width:80px; height:40px; text-align:left; padding-left:15px;}
+.info_table td{ height:40px; text-align:left;}
+.agree_box{vertical-align:middle; border:1px solid silver; cursor:pointer;}
+.admincontents {padding:7px; border-top:1px dashed #ddd; background-color:#f6f6f6; }
+
+/* review star */
+.scoreboxlay .score_area { width:90px; }
+.review_showScore{ text-align:center; font-size:16px; color:#ff6600; }
+/* .review_nowScore{ padding-left:10px; } */
+.agree_box{vertical-align:middle; border:1px solid silver; cursor:pointer;}
+.scorebox{display:table-cell; width:30px; height:25px; text-align:center; vertical-align:middle; border:2px solid silver; cursor:pointer;}
+
+.file_add_table th { font-weight:normal; text-align:left; }
+.file_add_table .width_a { width:70px; }
+
+/* .board_detail_contents img, .txc-image { width:auto !important; height:auto !important; } */
+.board_detail_contents img, .txc-image { width:auto; height:auto; }
+
+
+
+
+
+
+
+/* 꽃청 신규 START 서민혁 2023-08-10 - 매거진 메인 */
+
+
+.magazine_title {margin:40px 0 0 0; font-size: 38px; font-weight:bold; color:#0A0A0A;}
+.magazine_title p {margin:18px 0 0 0; font-size: 16px; font-weight:normal;}
+
+.magazine_category {display:flex; justify-content:flex-end; margin:60px 0 0 0; font-size:14px; color:#494949;}
+.magazine_category li {display: flex; justify-content: center; align-items: center; padding:6px 20px; margin:0 0 0 12px; background-color:#E9E9E9; border-radius:30px;}
+.magazine_category li.on {color: #ffffff; background-color:#0A0A0A; }
+
+
+.custom_gallery_board3 {display:flex; flex-wrap: wrap; justify-content: flex-start; gap: 90px; width:100%; margin:40px auto 0; overflow:visible;}
+.custom_gallery_board3 > li {width:360px; height:480px; margin:0 0 30px 0; padding:0; float:none; box-shadow: 10px 10px 18px -6px rgba(0, 0, 0, 0.2); }
+
+
+.magazine_search {display: flex; justify-content: space-between; width:400px; margin: 110px auto 0; padding:8px 0; border:2px solid #0A0A0A; border-radius:50px;}
+.magazine_search > input.res_bbs_search_input {width: 80%; margin:0 0 0 20px; padding:0; border:0px; font-size:16px;}
+.magazine_search > button.btn_resp.size_b {display:flex; justify-content:center; align-items:center; min-width:32px; padding:0; background-color:transparent; border:0px;}
+.magazine_search > button.btn_resp.size_b img {width:56%;}
+
+
+/* 이전 스토리 보러가기 */
+.btn_prev_story {position:absolute; display:block; top: -39px;}
+.btn_prev_story a {font-size:1.6em; color:#b3b3b3;}
+/* 이전 스토리 보러가기 끝 */
+
+
+
+@media (max-width: 1360px) {
+	.custom_gallery_board3 {gap: 0;}
+	.custom_gallery_board3 > li {width:26.5%; height:100%; margin:0 10% 10% 0;}
+	.custom_gallery_board3 > li:nth-child(3n) {margin: 0 0% 10% 0;}
+
+	.magazine_search {margin: 20px auto 0;}
+
+	/* 이전 스토리 보러가기 */
+	.btn_prev_story {position:relative; display:block; margin:94px 0 0 -20px; text-align: center;} 
+	/* 이전 스토리 보러가기 끝 */
+	
+}
+@media (max-width: 1024px) {
+	.magazine_title p {margin:0px 0 0 0;}
+	/* .magazine_search { margin: 12% auto 0; } */
+}
+
+@media (max-width: 768px) {
+	.custom_gallery_board3 {justify-content: space-between;}
+	.custom_gallery_board3 > li {width:45%; height:100%; margin:0 0% 10% 0;}
+	.custom_gallery_board3 > li { box-shadow: 10px 10px 18px -6px rgba(0, 0, 0, 0.2);}
+	.custom_gallery_board3 > li:nth-child(3n) {margin: 0 0 10% 0;}
+}
+
+@media (max-width: 600px) {
+	.magazine_title {width:90%; text-align:center; margin:30px auto 0; font-size: 32px;}
+	.magazine_title p {font-size: 12px; font-weight:normal;}
+	.magazine_category { justify-content:center; flex-wrap:wrap; margin:8% 0 0 0; font-size:12px; }
+	.magazine_category li {display: flex; justify-content: center; align-items: center; padding:8px 16px; margin:0 0 12px 12px;}
+	
+	.custom_gallery_board3 {margin:20px 0 0 0;}
+
+	.magazine_search {width: 280px;padding:4px 0; border:1px solid #0A0A0A;}
+	.magazine_search > input.res_bbs_search_input {width: 80%; margin:0 0 0 16px; font-size:12px;}
+	.magazine_search > button.btn_resp.size_b {min-width:24px; padding:0; background-color:transparent; border:0px;}
+	.magazine_search > button.btn_resp.size_b img {width:48%;}
+
+	/* 이전 스토리 보러가기 */
+	.btn_prev_story {margin:114px 0 0 -20px;}
+	.btn_prev_story a {font-size:1.2em;}
+	/* 이전 스토리 보러가기 끝 */
+}
+
+@media (max-width: 500px) {
+	.magazine_title p {font-size: 12px; font-weight:normal;}
+
+	.magazine_category {margin:8% 0 0 0; font-size:12px; gap:6px; }
+	.bbs_top_wrap:after {display:none;}
+	.magazine_category li {padding:4px 8px; margin:0 0 0px 0px;}
+	
+
+	.custom_gallery_board3 {display:flex; flex-wrap: wrap; justify-content: flex-start; gap: 40px; width:94%; margin:30px auto 0; overflow:visible;}
+	.custom_gallery_board3 > li {width:auto; height:auto; margin:0 0 30px 0; padding:0; float:none; box-shadow: 10px 10px 18px -6px rgba(0, 0, 0, 0.2); }
+
+	.magazine_search { margin: 20% auto 0; }
+}
+
+/* 꽃청 신규 END 서민혁 2023-08-10 - 매거진 메인 */
+
+
+/* 꽃청 신규 START 서민혁 2023-08-11 - 검색 */
+.magazine_search_result {width:80%; margin:60px auto 0px; text-align:center; color:#0a0a0a;}
+.magazine_search_result > h4 {font-size:32px; margin:0 0 60px 0;}
+.magazine_search_result .magazine_search {width:400px; margin:40px auto 0;}
+.magazine_search_result .no_data_area2 {padding:0; font-size:24px; background-image:none; border:0px;}
+.magazine_search_result .no_data_area2 img {width:80px; height:80px; margin:0 0 30px 0;}
+.btn_magazine_list {width:360px; margin:80px auto 0; padding: 14px 80px; font-size: 24px;background-color:#0a0a0a; color:#ffffff; border-radius:8px;}
+.magazine_search_count {margin:40px 0 80px 0; text-align:center; font-size:32px; color:#0a0a0a;}
+.magazine_search_count .count {font-weight:bold; color:#71A200; }
+
+@media (max-width: 600px) {
+	.magazine_search_result {width:90%; margin:8% auto 0px;}
+
+	.magazine_search_result > h4 {font-size:24px; margin:0 0 6% 0;}
+	.magazine_search_result .magazine_search {width:280px; margin:8% auto 0;}
+	.magazine_search_result .no_data_area2 {font-size:18px; background-image:none; border:0px;}
+	.magazine_search_result .no_data_area2 img {width: 70px; height: 70px; margin:0 0 5% 0;}
+	.btn_magazine_list {width:240px; margin:12% auto 0; padding: 12px 60px; font-size: 16px;}
+	.magazine_search_count {margin:8% 0 16% 0; font-size:24px;}
+}
+/* 꽃청 신규 END 서민혁 2023-08-11 - 검색 */
+
+
+/* 꽃청 신규 START 서민혁 2023-08-14 - 상세페이지 */
+.magazine_detail_title {display:flex; justify-content:space-between; align-items:center; width:720px; margin: 40px auto 0; padding: 0 0 10px 0; border-bottom: 1px solid #0a0a0a;}
+.magazine_detail_title h2 {font-size:16px; font-weight:400; color:#888;}
+.magazine_detail_title ul {display:flex; align-items:center;}
+
+.magazine_detail_share_link {padding-top:0px;}
+.magazine_detail_share {}
+
+.board_detail_contents > img {display:block; margin:0 auto;}
+
+.magazine_title_recent {margin:100px 0 0 0; font-size:20px; font-weight:500; color:#0a0a0a;}
+
+@media screen and (max-width:768px) {
+	.magazine_detail_title {width:100%;}
+	.magazine_title_recent {margin:18% 0 0 0; font-size:18px; }
+}
+
+
+/* 콘텐츠 내용 세팅 230831 서민혁 */
+	.magazine_detail_contents {width:720px; margin:0 auto; color:#0a0a0a; text-align: center;box-sizing: border-box;}
+	
+	.magazine_detail_contents section img {display:block; margin:0 auto;}
+
+	.magazine_detail_contents .pc-img {display:block; margin: 0 auto 60px;}
+	.magazine_detail_contents .m-img {display:none;}
+
+	.magazine_detail_contents article {margin-bottom:100px;}
+	.magazine_detail_contents article:last-child {margin-bottom:0px;}
+	.magazine_detail_contents article > img {margin-bottom:60px;}
+	.magazine_detail_contents article.serif {font-family: 'Noto Serif KR', serif;}
+
+	.magazine_detail_contents article .img-comment {margin-bottom:60px; font-size:18px; color:#949494;}
+	.magazine_detail_contents article .img-comment span {display:block; margin-top:10px;} 
+	.magazine_detail_contents article h3 {display:flex; justify-content: center; align-items: center; margin-bottom: 40px; font-size:28px; font-weight:bold;}
+	.magazine_detail_contents article h4 {display:flex; justify-content: center; align-items: center; margin-bottom: 40px; font-size:26px; font-weight:bold;}
+	.magazine_detail_contents article h3.text-left {display:flex; justify-content: left; align-items: center; margin-bottom: 40px; font-size:28px; font-weight:bold; text-align:left;}
+	.magazine_detail_contents article h4.text-left {display:flex; justify-content: left; align-items: center; margin-bottom: 40px; font-size:26px; font-weight:bold; text-align:left;}
+	.magazine_detail_contents article h3.icon_up {display:flex; justify-content: center; align-items: center; flex-direction: column; gap:10px; margin-bottom: 40px; font-size:28px; font-weight:bold;}
+	.magazine_detail_contents article h4.icon_up {display:flex; justify-content: center; align-items: center; flex-direction: column; gap:10px; margin-bottom: 40px; font-size:26px; font-weight:bold;}
+	.magazine_detail_contents article h3 img {margin-right:12px;}
+	.magazine_detail_contents article h4 img {margin-right:12px;}
+	.magazine_detail_contents article p {margin-bottom:30px; font-size:24px; text-align:left;}
+
+	.magazine_detail_contents article .layout_2column {display:flex; justify-content:space-between; gap:10px;}
+	.magazine_detail_contents article .layout_2column.down {align-items:flex-end;}
+	.magazine_detail_contents article .layout_2column section {width:50%;}
+	.magazine_detail_contents article .layout_2column .img-comment {margin-bottom:0px; font-size:18px; color:#949494; text-align: left;}
+
+	.magazine_detail_contents article .layout_3column {display:flex; justify-content:space-between; gap:10px;}
+	.magazine_detail_contents article .layout_3column h5 {margin:8px 0 12px; font-size:20px; font-weight:bold;}
+	.magazine_detail_contents article .layout_3column p {font-size:20px; text-align:center;}
+	.magazine_detail_contents article .layout_3column .img-comment {margin-bottom:0px; font-size:18px; color:#949494;}
+
+
+	.magazine_detail_contents .dp-block {display:block;}
+	.magazine_detail_contents .dp-inline {display:inline;}
+	.magazine_detail_contents .fw-normal {font-weight:normal;}
+	.magazine_detail_contents .fw-bold {font-weight:bold;}
+	.magazine_detail_contents .ff-serif {font-family: serif;}
+	.magazine_detail_contents .ff-sans-serif {font-family: sans-serif;}
+	.magazine_detail_contents .fc-gray {color:#bbbbbb;}
+	.magazine_detail_contents .fc-black {color:#0a0a0a;}
+	.magazine_detail_contents .tx-center {text-align:center;}
+	.magazine_detail_contents .tx-left {text-align:left;}
+	.magazine_detail_contents .tx-rigth {text-align:right;}
+
+	.magazine_detail_contents .fs-14 {font-size:14px !important;}
+	.magazine_detail_contents .fs-16 {font-size:16px !important;}
+	.magazine_detail_contents .fs-18 {font-size:18px !important;}
+	.magazine_detail_contents .fs-20 {font-size:20px !important;}
+	.magazine_detail_contents .fs-24 {font-size:24px !important;}
+	.magazine_detail_contents .fs-28 {font-size:28px !important;}
+
+	.magazine_detail_contents .mc-auto {margin:0 auto !important;}
+	.magazine_detail_contents .mt-00 {margin-top:0px !important;}
+	.magazine_detail_contents .mt-10 {margin-top:10px !important;}
+	.magazine_detail_contents .mt-20 {margin-top:20px !important;}
+	.magazine_detail_contents .mt-30 {margin-top:30px !important;}
+	.magazine_detail_contents .mt-40 {margin-top:40px !important;}
+	.magazine_detail_contents .mt-60 {margin-top:60px !important;}
+	.magazine_detail_contents .mt-100 {margin-top:100px !important;}
+	.magazine_detail_contents .mb-00 {margin-bottom:0px !important;}
+	.magazine_detail_contents .mb-10 {margin-bottom:10px !important;}
+	.magazine_detail_contents .mb-20 {margin-bottom:20px !important;}
+	.magazine_detail_contents .mb-30 {margin-bottom:30px !important;}
+	.magazine_detail_contents .mb-40 {margin-bottom:40px !important;}
+	.magazine_detail_contents .mb-60 {margin-bottom:60px !important;}
+	.magazine_detail_contents .mb-100 {margin-bottom:100px !important;}
+
+	.magazine_detail_contents .pl-00 {padding-left:0px !important;}
+	.magazine_detail_contents .pl-10 {padding-left:10px !important;}
+	.magazine_detail_contents .pl-30 {padding-left:30px !important;}
+	.magazine_detail_contents .pl-40 {padding-left:40px !important;}
+	.magazine_detail_contents .pl-60 {padding-left:60px !important;}
+	.magazine_detail_contents .pr-00 {padding-right:0px !important;}
+	.magazine_detail_contents .pr-10 {padding-right:10px !important;}
+	.magazine_detail_contents .pr-20 {padding-right:20px !important;}
+	.magazine_detail_contents .pr-30 {padding-right:30px !important;}
+	.magazine_detail_contents .pr-40 {padding-right:40px !important;}
+	.magazine_detail_contents .pr-60 {padding-right:60px !important;}
+	.magazine_detail_contents .pt-00 {padding-top:0px !important;}
+	.magazine_detail_contents .pt-10 {padding-top:10px !important;}
+	.magazine_detail_contents .pt-20 {padding-top:20px !important;}
+	.magazine_detail_contents .pt-30 {padding-top:30px !important;}
+	.magazine_detail_contents .pt-40 {padding-top:40px !important;}
+	.magazine_detail_contents .pt-60 {padding-top:60px !important;}
+	.magazine_detail_contents .pb-00 {padding-bottom:0px !important;}
+	.magazine_detail_contents .pb-10 {padding-bottom:10px !important;}
+	.magazine_detail_contents .pb-20 {padding-bottom:20px !important;}
+	.magazine_detail_contents .pb-30 {padding-bottom:30px !important;}
+	.magazine_detail_contents .pb-40 {padding-bottom:40px !important;}
+	.magazine_detail_contents .pb-60 {padding-bottom:60px !important;}
+
+	.magazine_detail_contents .pc-img20 {width:20% !important;}
+	.magazine_detail_contents .pc-img30 {width:30% !important;}
+	.magazine_detail_contents .pc-img40 {width:40% !important;}
+	.magazine_detail_contents .pc-img49 {width:49% !important;}
+	.magazine_detail_contents .pc-img50 {width:50% !important;}
+	.magazine_detail_contents .pc-img60 {width:60% !important;}
+	.magazine_detail_contents .pc-img70 {width:70% !important;}
+	.magazine_detail_contents .pc-img80 {width:80% !important;}
+	.magazine_detail_contents .pc-img90 {width:90% !important;}
+	.magazine_detail_contents .pc-img100 {width:100% !important;}
+
+
+	/* 1회차 코드 */
+	 article.magazine_01 {position:relative; margin-bottom:100px; }
+	 article.magazine_01::after {content:""; display:block; clear:both; }
+	 article.magazine_01 section:first-child {display:flex; justify-content: space-between; gap: 10px; flex-direction:row; text-align:left;}
+	 article.magazine_01 section:last-child {position: relative; top:-90px; display:flex; justify-content: space-between; align-items:flex-end; gap: 10px; flex-direction:row; text-align:left;}
+	 article.magazine_01 .img-comment {position:relative;}
+	/* 1회차 코드 끝 */
+
+
+	/* 인터뷰 하단 공통 부분 - 고객님의 이야기를 들려주세요! */
+	.magazine_detail_contents .footer_interview {border-top:4px solid #0A0A0A;
+	}
+	.magazine_detail_contents .footer_interview section {margin: 40px 0 0 0; padding:30px 20px; text-align:left; background-color:#F5F5F5;}
+	.magazine_detail_contents .footer_interview section h5 {margin-bottom:14px; font-size:20px;  font-weight:bold; color: #0a0a0a;}
+	.magazine_detail_contents .footer_interview section p {margin-bottom: 16px; font-size:16px; font-weight:normal; color:#707070}
+	.magazine_detail_contents .footer_interview section a {font-size:16px; color:#707070;}
+	/* 인터뷰 하단 공통 부분 - 고객님의 이야기를 들려주세요! 끝 */
+	
+
+	@media screen and (max-width:768px) {
+		.magazine_detail_contents article {margin-bottom:16.0vw;}
+
+		.magazine_detail_contents article > img {margin-bottom:12.0vw;}
+
+		.magazine_detail_contents article .img-comment {margin-bottom:12.0vw; font-size:3.2vw;}
+		.magazine_detail_contents article .img-comment span {display:block; margin-top:2.0vw;} 
+		.magazine_detail_contents article h3 {flex-direction: column; margin-bottom: 8.0vw; font-size:4.8vw;}
+		.magazine_detail_contents article h4 {flex-direction: column; margin-bottom: 8.0vw; font-size:4.4vw;}
+		.magazine_detail_contents article h3.text-left {flex-direction: row; margin-bottom: 8.0vw; font-size:4.8vw;}
+		.magazine_detail_contents article h4.text-left {flex-direction: row; margin-bottom: 8.0vw; font-size:4.4vw;}
+		.magazine_detail_contents article h3.icon_up {gap:10px; margin-bottom: 8.0vw; font-size:4.8vw;}
+		.magazine_detail_contents article h4.icon_up {gap:10px; margin-bottom: 8.0vw; font-size:4.4vw;}
+		.magazine_detail_contents article h3 img { width:12%; margin-right:0px; margin-bottom:8px;}
+		.magazine_detail_contents article h4 img { width:12%; margin-right:0px; margin-bottom:8px;}
+		.magazine_detail_contents article h3.text-left img { width:12%; margin-right:8px; margin-bottom:0px;}
+		.magazine_detail_contents article h4.text-left img { width:12%; margin-right:8px; margin-bottom:0px;}
+		.magazine_detail_contents article p {margin-bottom:6.0vw; font-size:4.2vw;}
+
+		.magazine_detail_contents article .layout_2column {flex-direction: column;}
+		.magazine_detail_contents article .layout_2column section {width:100%;}
+		.magazine_detail_contents article .layout_2column .img-comment {font-size:3.2vw;}
+		.magazine_detail_contents article .layout_2column.column-reverse768 {flex-direction:column-reverse;}
+		
+		
+		.magazine_detail_contents article .layout_3column {flex-direction:column;}
+		.magazine_detail_contents article .layout_3column h5 {margin:1.8vw 0 2.4vw; font-size:3.6vw;}
+		.magazine_detail_contents article .layout_3column p {font-size:3.6vw;}
+		.magazine_detail_contents article .layout_3column .img-comment {margin-bottom:0px; font-size:3.2vw;}
+
+
+		/* 인터뷰 하단 공통 부분 - 고객님의 이야기를 들려주세요! */
+		.magazine_detail_contents .footer_interview {border-top:3px solid #0A0A0A;}
+		.magazine_detail_contents .footer_interview section {margin: 8.0vw 0 0 0; padding:30px 20px; }
+		.magazine_detail_contents .footer_interview section h5 {margin-bottom:3.6vw; font-size:4.0vw;  }
+		.magazine_detail_contents .footer_interview section p {margin-bottom: 3.6vw; font-size:3.0vw;}
+		.magazine_detail_contents .footer_interview section a {font-size:3.0vw; }
+		/* 인터뷰 하단 공통 부분 - 고객님의 이야기를 들려주세요! 끝 */
+
+		.magazine_detail_contents {width:100%; margin:0 auto;}
+
+		.magazine_detail_contents .fs-14 {font-size:2.6vw !important;}
+		.magazine_detail_contents .fs-16 {font-size:3.0vw !important;}
+		.magazine_detail_contents .fs-18 {font-size:3.2vw !important;}
+		.magazine_detail_contents .fs-20 {font-size:3.6vw !important;}
+		.magazine_detail_contents .fs-24 {font-size:4.2vw !important;}
+		.magazine_detail_contents .fs-26 {font-size:4.4vw !important;}
+		.magazine_detail_contents .fs-28 {font-size:4.8vw !important;}
+
+		.magazine_detail_contents .mt-00 {margin-top:0vw !important;}
+		.magazine_detail_contents .mt-10 {margin-top:2.0vw !important;}
+		.magazine_detail_contents .mt-20 {margin-top:4.0vw !important;}
+		.magazine_detail_contents .mt-30 {margin-top:6.0vw !important;}
+		.magazine_detail_contents .mt-40 {margin-top:8.0vw !important;}
+		.magazine_detail_contents .mt-60 {margin-top:12.0vw !important;}
+		.magazine_detail_contents .mt-100 {margin-top:16.0vw !important;}
+		.magazine_detail_contents .mb-00 {margin-bottom:0vw !important;}
+		.magazine_detail_contents .mb-10 {margin-bottom:2.0vw !important;}
+		.magazine_detail_contents .mb-20 {margin-bottom:4.0vw !important;}
+		.magazine_detail_contents .mb-30 {margin-bottom:6.0vw !important;}
+		.magazine_detail_contents .mb-40 {margin-bottom:8.0vw !important;}
+		.magazine_detail_contents .mb-60 {margin-bottom:12.0vw !important;}
+		.magazine_detail_contents .mb-100 {margin-bottom:16.0vw !important;}
+
+		.magazine_detail_contents .pl-00 {padding-left:0.0vw !important;}
+		.magazine_detail_contents .pl-10 {padding-left:2.0vw !important;}
+		.magazine_detail_contents .pl-20 {padding-left:4.0vw !important;}
+		.magazine_detail_contents .pl-30 {padding-left:6.0vw !important;}
+		.magazine_detail_contents .pl-40 {padding-left:8.0vw !important;}
+		.magazine_detail_contents .pl-60 {padding-left:12.0vw !important;}
+		.magazine_detail_contents .pr-00 {padding-right:0.0vw !important;}
+		.magazine_detail_contents .pr-10 {padding-right:2.0vw !important;}
+		.magazine_detail_contents .pr-20 {padding-right:4.0vw !important;}
+		.magazine_detail_contents .pr-30 {padding-right:6.0vw !important;}
+		.magazine_detail_contents .pr-40 {padding-right:8.0vw !important;}
+		.magazine_detail_contents .pr-60 {padding-right:12.0vw !important;}
+		.magazine_detail_contents .pt-00 {padding-top:0.0vw !important;}
+		.magazine_detail_contents .pt-10 {padding-top:2.0vw !important;}
+		.magazine_detail_contents .pt-20 {padding-top:4.0vw !important;}
+		.magazine_detail_contents .pt-30 {padding-top:6.0vw !important;}
+		.magazine_detail_contents .pt-40 {padding-top:8.0vw !important;}
+		.magazine_detail_contents .pt-60 {padding-top:12.0vw !important;}
+		.magazine_detail_contents .pb-00 {padding-bottom:0.0vw !important;}
+		.magazine_detail_contents .pb-10 {padding-bottom:2.0vw !important;}
+		.magazine_detail_contents .pb-20 {padding-bottom:4.0vw !important;}
+		.magazine_detail_contents .pb-30 {padding-bottom:6.0vw !important;}
+		.magazine_detail_contents .pb-40 {padding-bottom:8.0vw !important;}
+		.magazine_detail_contents .pb-60 {padding-bottom:12.0vw !important;}
+		
+		.magazine_detail_contents .tb-img20 {width:20% !important;}
+		.magazine_detail_contents .tb-img30 {width:30% !important;}
+		.magazine_detail_contents .tb-img40 {width:40% !important;}
+		.magazine_detail_contents .tb-img49 {width:49% !important;}
+		.magazine_detail_contents .tb-img50 {width:50% !important;}
+		.magazine_detail_contents .tb-img60 {width:60% !important;}
+		.magazine_detail_contents .tb-img70 {width:70% !important;}
+		.magazine_detail_contents .tb-img80 {width:80% !important;}
+		.magazine_detail_contents .tb-img90 {width:90% !important;}
+		.magazine_detail_contents .tb-img100 {width:100% !important;}
+		
+		/* 1회차 코드 */
+		article.magazine_01 {margin-bottom:16.0vw; }
+		article.magazine_01 section:first-child {flex-direction: column; }
+		article.magazine_01 section:last-child {flex-direction: column; top:0px; }
+		article.magazine_01 .img-comment span.position {position:absolute; bottom:12%;}
+		/* 1회차 코드 끝 */
+		
+	}
+
+	@media screen and (max-width:480px) {
+		.magazine_detail_contents {width:100%;}
+
+		.magazine_detail_contents .pc-img {display:none;}
+		.magazine_detail_contents .m-img {display:block; margin: 0 auto 12vw;}
+		
+		.magazine_detail_contents > section > .m-img50 {width:50%;}
+		.magazine_detail_contents .m-img20 {width:20% !important;}
+		.magazine_detail_contents .m-img30 {width:30% !important;}
+		.magazine_detail_contents .m-img40 {width:40% !important;}
+		.magazine_detail_contents .m-img50 {width:50% !important;}
+		.magazine_detail_contents .m-img60 {width:60% !important;}
+		.magazine_detail_contents .m-img70 {width:70% !important;}
+		.magazine_detail_contents .m-img80 {width:80% !important;}
+		.magazine_detail_contents .m-img90 {width:90% !important;}
+		.magazine_detail_contents .m-img100 {width:100% !important;}
+	}
+
+/* 콘텐츠 내용 세팅 230831 서민혁 끝 */
+
+
+/* 꽃청 신규 END 서민혁 2023-08-14 - 상세페이지 */
+
+
+/* 꽃청 신규 START 서민혁 2023-08-14 - 페이지 네비게이션 */
+.magazine_pagenavigation {padding: 40px 0 0 0;}
+.magazine_pagenavigation.paging_navigation a.on {background-color:#0a0a0a;}
+.magazine_pagenavigation.paging_navigation a.red,
+.magazine_pagenavigation.paging_navigation a.on,
+.magazine_pagenavigation.paging_navigation_pop a.red,
+.magazine_pagenavigation.paging_navigation_pop a.on {border-color: #0a0a0a !important; color: #ffffff !important;}
+/* 꽃청 신규 END 서민혁 2023-08-14 - 페이지 네비게이션 */
+
+
+
+
+/* 꽃청 추가 START 윤상희 2023.08.29 - 추천상품 슬라이더  */
+.magazine_recommend_container{ display: flex; flex-direction: column; align-items: center; overflow-x: hidden; }
+.magazine_recommend_container .magazine_recommend_slider{ max-width:1150px; margin-top: 40px; }
+.magazine_recommend_container .magazine_recommend_slider.slick-slider:hover .slick-arrow { opacity:1; }
+.magazine_recommend_container .magazine_recommend_slider.slick-slider:hover .slick-arrow:hover { opacity:1; }
+.magazine_recommend_container .magazine_recommend_slider.slick-slider:hover .slick-prev { transform:translateX( -15px ); }
+.magazine_recommend_container .magazine_recommend_slider.slick-slider:hover .slick-next { transform:translateX( 15px ); }
+.magazine_recommend_container .magazine_recommend_slider .magazine_recommend_slider_item a {display: block; position: relative; transform: translate(0, 0) scale(.85); transition: all .4s ease; }
+.magazine_recommend_container .magazine_recommend_slider .magazine_recommend_slider_item a > div{ border-radius: 30px; overflow: hidden;}
+.magazine_recommend_container .magazine_recommend_slider .magazine_recommend_slider_item a img { filter: brightness(60%) blur(2px); width: 390px; height: 480px; transform: scale(1.01);}
+.magazine_recommend_container .magazine_recommend_slider .magazine_recommend_slider_item.slick-center a { z-index: 1; transform: scale(1); opacity: 1; filter: brightness(100%); }
+.magazine_recommend_container .magazine_recommend_slider .magazine_recommend_slider_item.slick-center a img { filter: blur(0);}
+.magazine_recommend_container .magazine_recommend_slider .magazine_recommend_slider_item .magazine_recommend_slider_item_title { text-align: center; margin-top: 10px; font-size: 18px;}
+.magazine_recommend_container .magazine_recommend_slider.slick-slider .slick-arrow {opacity: 0.8; top: calc( 50% - 51px ); width: 82px; height: 82px;}
+.magazine_recommend_container .magazine_recommend_slider .slick-prev { left: 22%; background-image: url(/app/javascript/plugin/slick/images/arrow_left_gray.png); }
+.magazine_recommend_container .magazine_recommend_slider .slick-next { right: 22%; background-image: url(/app/javascript/plugin/slick/images/arrow_right_gray.png); }
+.magazine_recommend_container .magazine_title_recent{font-size:28px; font-weight:bold;}
+.magazine_recommend_container .magazine_subtitle_recommend{font-size:18px; margin-top: 5px;}
+
+@media screen and (max-width:768px) {
+	.magazine_recommend_container .magazine_recommend_slider{ margin-top: 30px; }
+	.magazine_recommend_container .magazine_recommend_slider.slick-slider:hover .slick-prev { transform:translateX( -5px ); }
+	.magazine_recommend_container .magazine_recommend_slider.slick-slider:hover .slick-next { transform:translateX( 5px ); }
+	.magazine_recommend_container .magazine_recommend_slider.slick-slider .slick-arrow { top: calc( 50% - 30px ); width: 60px; height: 60px; z-index: 2; visibility: visible;}
+	.magazine_recommend_container .magazine_recommend_slider .slick-prev { left: 34%;}
+	.magazine_recommend_container .magazine_recommend_slider .slick-next { right: 34%;}
+	.magazine_recommend_container .magazine_recommend_slider .magazine_recommend_slider_item img{ width: 280px !important; height: 360px !important;}
+	.magazine_recommend_container .magazine_recommend_slider .magazine_recommend_slider_item .magazine_recommend_slider_item_title{ text-align: center; margin-top: 5px; font-size: 16px;}
+	.magazine_recommend_container .magazine_title_recent{font-size:4.8vw;}
+	.magazine_recommend_container .magazine_subtitle_recommend{font-size:3.2vw;}
+}
+/* 꽃청 추가 END */

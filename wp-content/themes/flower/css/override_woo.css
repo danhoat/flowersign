@@ -49,7 +49,8 @@
 }
 
 
-.woocommerce:where(body:not(.woocommerce-uses-block-theme)) ul.products li.product .price{
+.woocommerce:where(body:not(.woocommerce-uses-block-theme)) ul.products li.product .price,
+.woocommerce:where(body:not(.woocommerce-uses-block-theme)) div.product p.price, .woocommerce:where(body:not(.woocommerce-uses-block-theme)) div.product span.price{
     color: #71a200 !important;
 }
 .woocommerce ul.products li.product .price,
