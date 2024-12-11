@@ -1,57 +1,6 @@
 <?php
 
 define('CAT_BANNER_IMG_ID','banner_thumbnail_id');
-/*-------------------------------------------------------------------
-    Add Custom metabox for woocommerce Category page
----------------------------------------------------------------------*/
-
-function product_cat_add_cat_head_field_rj() {  ?>
-    <div class="form-field">
-        <label for="term_meta[cat_head_link]"><?php _e( 'Category Page Image', 'wina-classic' ); ?></label>
-        <input type="text" name="term_meta[cat_head_link]" id="term_meta[cat_head_link]" value="">
-        <p class="description"><?php _e( 'Upload Category Page Image','wina-classic' ); ?></p>
-    </div>
-<?php }
-
-function product_cat_edit_cat_head_field_rj($term) {
-    $t_id = $term->term_id; $term_meta = get_option( "taxonomy_$t_id" ); ?>
-
-    <tr class="form-field">
-    <th scope="row" valign="top"><label for="term_meta[cat_head_link]"><?php _e( 'Category Page Image', 'wina-classic' ); ?></label></th>
-        <td>
-            <img src="<?php echo esc_attr( $term_meta['cat_head_link'] ) ? esc_attr( $term_meta['cat_head_link'] ) : ''; ?>" height="60" width="120" id="category-header-preview" />
-            <input type="hidden" name="term_meta[cat_head_link]" id="category-meta-woo" value="<?php echo esc_attr( $term_meta['cat_head_link'] ) ? esc_attr( $term_meta['cat_head_link'] ) : ''; ?>" style="margin-left: 0px; margin-right: 0px; width: 50%;" />
-            <input type="button" class="button button-secondary" value="Upload Image" id="upload-button-woo" />
-            <p class="description"><?php _e( 'Upload Category Page Image','wina-classic' ); ?></p>
-        </td>
-    </tr>
-<?php
-}
-
-// this action use for add field in add form of taxonomy 
-add_action( 'product_cat_add_form_fields', 'product_cat_add_cat_head_field_rj', 10, 2 );
-// this action use for add field in edit form of taxonomy 
-add_action( 'product_cat_edit_form_fields', 'product_cat_edit_cat_head_field_rj', 10, 2 );
-
-function product_cat_cat_head_link_save( $term_id ) {
-    if ( isset( $_POST['term_meta'] ) ) {
-        $t_id = $term_id;
-        $term_meta = get_option( "taxonomy_$t_id" );
-        $cat_keys = array_keys( $_POST['term_meta'] );
-        foreach ( $cat_keys as $key ) {
-            if ( isset ( $_POST['term_meta'][$key] ) ) {
-                $term_meta[$key] = $_POST['term_meta'][$key];
-            }
-        }
-       update_option( "taxonomy_$t_id", $term_meta );
-    }
-}
-
-// this action use for save field value of edit form of taxonomy 
-add_action( 'edited_product_cat', 'product_cat_cat_head_link_save', 10, 2 );  
-// this action use for save field value of add form of taxonomy 
-add_action( 'create_product_cat', 'product_cat_cat_head_link_save', 10, 2 );
-
 
 
 
