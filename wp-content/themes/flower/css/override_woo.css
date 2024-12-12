@@ -1,3 +1,8 @@
+    .woocommerce ul.products li.product, .woocommerce-page ul.products li.product{
+        width: auto;
+        margin: 0;
+    }
+    
 @media only screen and (min-width: 800px) {
     .woocommerce ul.products{
         display: grid;
@@ -14,10 +19,7 @@
         content: " ";
         display: none;
     }
-    .woocommerce ul.products li.product, .woocommerce-page ul.products li.product{
-        width: auto;
-        margin: 0;
-    }
+
     .woocommerce ul.products li.product .woocommerce-loop-category__title, .woocommerce ul.products li.product .woocommerce-loop-product__title, .woocommerce ul.products li.product h3 {
         padding: .5em 0;
         margin: 0;

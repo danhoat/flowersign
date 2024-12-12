@@ -63,22 +63,22 @@ get_header();
         </div>
 
         <!-- END list categories !-->
+        <?php $heading = 'MY Hear All best wish to you';?>
 
+        
         <?php box_block_best_selling();?>
         <?php block_products_by_category($slug = 'hoa-tot-nghiep', $label ='Hoa Tốt Nghiệp');?>
+        <?php block_image_vs_button($heading);?>
         <?php block_products_by_category($slug = 'hoa-tot-nghiep', $label ='Hoa Tốt Nghiệp');?>
-        <?php block_products_by_category($slug = 'hoa-tot-nghiep', $label ='Hoa Tốt Nghiệp');?>
-        <?php block_products_by_category($slug = 'hoa-tot-nghiep', $label ='Hoa Tốt Nghiệp');?>
-        <?php block_products_by_category($slug = 'hoa-tot-nghiep', $label ='Hoa Tốt Nghiệp');?>
-
+        <?php block_image_vs_button($heading, $bg = 'https://demo.dichvu139.com/wp-content/uploads/2024/12/bg_hydrangea.jpg');?>
         <?php box_block_best_selling();?>
-        <?php box_block_best_selling();?>
+        <?php block_image_vs_button($heading);?>
 
         <?php the_post(); ?>
 
         <div class="post-content">
             <?php  the_content(); ?>
-    </div>
+        </div>
     </div>    
 
 <?php get_footer(); ?>

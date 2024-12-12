@@ -260,18 +260,23 @@ h1.post-title{
 .cs-box-banner .ebox-image-box-img{
     min-height: 120px;
 }
-.cs-box-banner .cs-heading{
+.cs-box-banner .cs-heading,
+.box-heading
+{
     font-size: 2.7em;
-    line-height: 5px;
     color: #000;
     display: block;
     font-weight: 700;
     height: 100%;
-    display: block;
+    display: grid;
     line-height: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    text-indent: 30px;
+}
+
+.cs-box-banner .cs-heading{
+
 }
 .cs-box-banner  .elementor-image-box-content {
     height: 100%;
@@ -334,3 +339,25 @@ h1.post-title{
 .woocommerce .woocommerce-ordering{
     display: none;
 }
+.innner-box{
+    height: 120px;
+    display: grid;
+    align-items: center;
+    grid-template-columns:  4fr 1fr;
+}
+.innner-box{
+    background-size: cover;
+    background-position: center 80%;
+    background-repeat: no-repeat;
+}
+.innner-box .btn-box-detail{
+    padding: 10px 20px;
+    background-color: #000;
+    border-radius: 20px;
+    display: inline-block;
+    max-width: 100px;
+    color: #fff;
+    position: relative;
+    left: 10px;
+}
+
