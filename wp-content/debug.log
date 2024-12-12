@@ -4723,3 +4723,120 @@ Stack trace:
 [11-Dec-2024 06:58:14 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
 [11-Dec-2024 07:20:28 UTC] PHP Parse error:  syntax error, unexpected variable "$html" in D:\laragon\www\flower\wp-content\themes\flower\elementor\widgets\banner.php on line 899
 [11-Dec-2024 07:25:34 UTC] PHP Parse error:  syntax error, unexpected string content "", expecting "-" or identifier or variable or number in D:\laragon\www\flower\wp-content\themes\flower\elementor\widgets\banner.php on line 897
+[12-Dec-2024 15:31:35 UTC] Automatic updates starting...
+[12-Dec-2024 15:31:36 UTC]   Automatic plugin updates starting...
+[12-Dec-2024 15:31:36 UTC]   Automatic plugin updates complete.
+[12-Dec-2024 15:31:37 UTC]   Automatic theme updates starting...
+[12-Dec-2024 15:31:37 UTC]   Automatic theme updates complete.
+[12-Dec-2024 15:31:37 UTC] Automatic updates complete.
+[12-Dec-2024 15:31:46 UTC] PHP Warning:  include(home-intro.php): Failed to open stream: No such file or directory in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[12-Dec-2024 15:31:46 UTC] PHP Warning:  include(): Failed opening 'home-intro.php' for inclusion (include_path='.;D:/laragon/etc/php/pear') in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[12-Dec-2024 15:31:46 UTC] PHP Warning:  include(home-intro.php): Failed to open stream: No such file or directory in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[12-Dec-2024 15:31:46 UTC] PHP Warning:  include(): Failed opening 'home-intro.php' for inclusion (include_path='.;D:/laragon/etc/php/pear') in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[12-Dec-2024 15:31:57 UTC] PHP Warning:  include(home-intro.php): Failed to open stream: No such file or directory in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[12-Dec-2024 15:31:57 UTC] PHP Warning:  include(): Failed opening 'home-intro.php' for inclusion (include_path='.;D:/laragon/etc/php/pear') in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[12-Dec-2024 15:31:58 UTC] PHP Warning:  include(home-intro.php): Failed to open stream: No such file or directory in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[12-Dec-2024 15:31:58 UTC] PHP Warning:  include(): Failed opening 'home-intro.php' for inclusion (include_path='.;D:/laragon/etc/php/pear') in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[12-Dec-2024 15:32:34 UTC] PHP Warning:  include(home-intro.php): Failed to open stream: No such file or directory in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[12-Dec-2024 15:32:34 UTC] PHP Warning:  include(): Failed opening 'home-intro.php' for inclusion (include_path='.;D:/laragon/etc/php/pear') in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[12-Dec-2024 15:33:49 UTC] PHP Warning:  Undefined array key "CA-MAU" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[12-Dec-2024 15:33:49 UTC] PHP Warning:  Undefined array key "BINH-THUAN" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[12-Dec-2024 15:33:49 UTC] PHP Warning:  Undefined array key "BINH-PHUOC" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[12-Dec-2024 15:33:49 UTC] PHP Warning:  Undefined array key "BINH-DINH" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[12-Dec-2024 15:33:49 UTC] PHP Warning:  Undefined array key "BINH-DUONG" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[12-Dec-2024 15:33:49 UTC] PHP Warning:  Undefined array key "DONGNAI" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[12-Dec-2024 15:33:49 UTC] PHP Warning:  Undefined array key "DONGTHAP" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[12-Dec-2024 15:33:49 UTC] PHP Warning:  Undefined array key "CAMAU" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[12-Dec-2024 15:33:49 UTC] PHP Warning:  Undefined array key "LONGAN" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[12-Dec-2024 15:33:49 UTC] PHP Warning:  Undefined array key "TIENGIANG" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[12-Dec-2024 15:33:49 UTC] PHP Warning:  Undefined array key "TRAVINH" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[12-Dec-2024 15:33:49 UTC] PHP Warning:  Undefined array key "HAUGIANG" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[12-Dec-2024 15:33:49 UTC] PHP Warning:  Undefined array key "KIENGIANG" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[12-Dec-2024 15:33:49 UTC] PHP Warning:  Undefined array key "BENTRE" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[12-Dec-2024 15:33:49 UTC] PHP Warning:  Undefined array key "BARIAVUNGTAU" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[12-Dec-2024 15:33:49 UTC] PHP Warning:  Undefined array key "BACLIEU" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[12-Dec-2024 15:33:49 UTC] PHP Warning:  Undefined array key "ANGIANG" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[12-Dec-2024 15:33:49 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[12-Dec-2024 15:33:49 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[12-Dec-2024 15:33:49 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[12-Dec-2024 15:33:49 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[12-Dec-2024 15:33:49 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[12-Dec-2024 15:33:49 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[12-Dec-2024 15:33:49 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[12-Dec-2024 15:33:49 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[12-Dec-2024 15:33:49 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[12-Dec-2024 15:33:49 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[12-Dec-2024 15:33:49 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[12-Dec-2024 15:33:49 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[12-Dec-2024 15:33:49 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[12-Dec-2024 15:33:49 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[12-Dec-2024 15:33:49 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[12-Dec-2024 15:33:49 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[12-Dec-2024 15:33:49 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[12-Dec-2024 15:33:49 UTC] PHP Warning:  Undefined array key "HA-NOI" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[12-Dec-2024 15:33:49 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[12-Dec-2024 15:33:49 UTC] PHP Warning:  Undefined array key "HOCHIMINH" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[12-Dec-2024 15:33:49 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[12-Dec-2024 15:34:05 UTC] PHP Warning:  include(home-intro.php): Failed to open stream: No such file or directory in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[12-Dec-2024 15:34:05 UTC] PHP Warning:  include(): Failed opening 'home-intro.php' for inclusion (include_path='.;D:/laragon/etc/php/pear') in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[12-Dec-2024 15:34:06 UTC] PHP Warning:  include(home-intro.php): Failed to open stream: No such file or directory in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[12-Dec-2024 15:34:06 UTC] PHP Warning:  include(): Failed opening 'home-intro.php' for inclusion (include_path='.;D:/laragon/etc/php/pear') in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[12-Dec-2024 15:34:06 UTC] PHP Warning:  include(home-intro.php): Failed to open stream: No such file or directory in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[12-Dec-2024 15:34:06 UTC] PHP Warning:  include(): Failed opening 'home-intro.php' for inclusion (include_path='.;D:/laragon/etc/php/pear') in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[12-Dec-2024 15:34:06 UTC] PHP Warning:  include(home-intro.php): Failed to open stream: No such file or directory in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[12-Dec-2024 15:34:06 UTC] PHP Warning:  include(): Failed opening 'home-intro.php' for inclusion (include_path='.;D:/laragon/etc/php/pear') in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[12-Dec-2024 15:34:06 UTC] PHP Warning:  include(home-intro.php): Failed to open stream: No such file or directory in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[12-Dec-2024 15:34:06 UTC] PHP Warning:  include(): Failed opening 'home-intro.php' for inclusion (include_path='.;D:/laragon/etc/php/pear') in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[12-Dec-2024 15:35:30 UTC] PHP Warning:  Undefined array key "CA-MAU" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[12-Dec-2024 15:35:30 UTC] PHP Warning:  Undefined array key "BINH-THUAN" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[12-Dec-2024 15:35:30 UTC] PHP Warning:  Undefined array key "BINH-PHUOC" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[12-Dec-2024 15:35:30 UTC] PHP Warning:  Undefined array key "BINH-DINH" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[12-Dec-2024 15:35:30 UTC] PHP Warning:  Undefined array key "BINH-DUONG" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[12-Dec-2024 15:35:30 UTC] PHP Warning:  Undefined array key "DONGNAI" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[12-Dec-2024 15:35:30 UTC] PHP Warning:  Undefined array key "DONGTHAP" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[12-Dec-2024 15:35:30 UTC] PHP Warning:  Undefined array key "CAMAU" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[12-Dec-2024 15:35:30 UTC] PHP Warning:  Undefined array key "LONGAN" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[12-Dec-2024 15:35:30 UTC] PHP Warning:  Undefined array key "TIENGIANG" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[12-Dec-2024 15:35:30 UTC] PHP Warning:  Undefined array key "TRAVINH" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[12-Dec-2024 15:35:30 UTC] PHP Warning:  Undefined array key "HAUGIANG" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[12-Dec-2024 15:35:30 UTC] PHP Warning:  Undefined array key "KIENGIANG" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[12-Dec-2024 15:35:30 UTC] PHP Warning:  Undefined array key "BENTRE" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[12-Dec-2024 15:35:30 UTC] PHP Warning:  Undefined array key "BARIAVUNGTAU" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[12-Dec-2024 15:35:30 UTC] PHP Warning:  Undefined array key "BACLIEU" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[12-Dec-2024 15:35:30 UTC] PHP Warning:  Undefined array key "ANGIANG" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[12-Dec-2024 15:35:30 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[12-Dec-2024 15:35:30 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[12-Dec-2024 15:35:30 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[12-Dec-2024 15:35:30 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[12-Dec-2024 15:35:30 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[12-Dec-2024 15:35:30 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[12-Dec-2024 15:35:30 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[12-Dec-2024 15:35:30 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[12-Dec-2024 15:35:30 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[12-Dec-2024 15:35:30 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[12-Dec-2024 15:35:30 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[12-Dec-2024 15:35:30 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[12-Dec-2024 15:35:30 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[12-Dec-2024 15:35:30 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[12-Dec-2024 15:35:30 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[12-Dec-2024 15:35:30 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[12-Dec-2024 15:35:30 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[12-Dec-2024 15:35:30 UTC] PHP Warning:  Undefined array key "HA-NOI" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[12-Dec-2024 15:35:30 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[12-Dec-2024 15:35:30 UTC] PHP Warning:  Undefined array key "HOCHIMINH" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[12-Dec-2024 15:35:30 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[12-Dec-2024 15:35:31 UTC] PHP Warning:  Attempt to read property "post_content" on null in D:\laragon\www\flower\wp-content\themes\flower\includes\customizer_clone.php on line 946
+[12-Dec-2024 15:35:31 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in D:\laragon\www\flower\wp-content\themes\flower\includes\customizer_clone.php on line 946
+[12-Dec-2024 15:35:31 UTC] PHP Warning:  Attempt to read property "post_content" on null in D:\laragon\www\flower\wp-content\themes\flower\includes\customizer_clone.php on line 946
+[12-Dec-2024 15:35:31 UTC] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in D:\laragon\www\flower\wp-content\themes\flower\includes\customizer_clone.php on line 946
+[12-Dec-2024 15:35:43 UTC] PHP Warning:  Attempt to read property "title" on null in D:\laragon\www\flower\wp-includes\class-wp-customize-widgets.php on line 905
+[12-Dec-2024 15:35:50 UTC] PHP Warning:  include(home-intro.php): Failed to open stream: No such file or directory in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[12-Dec-2024 15:35:50 UTC] PHP Warning:  include(): Failed opening 'home-intro.php' for inclusion (include_path='.;D:/laragon/etc/php/pear') in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[12-Dec-2024 15:35:53 UTC] PHP Warning:  include(home-intro.php): Failed to open stream: No such file or directory in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[12-Dec-2024 15:35:53 UTC] PHP Warning:  include(): Failed opening 'home-intro.php' for inclusion (include_path='.;D:/laragon/etc/php/pear') in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[12-Dec-2024 15:35:53 UTC] PHP Warning:  include(home-intro.php): Failed to open stream: No such file or directory in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[12-Dec-2024 15:35:53 UTC] PHP Warning:  include(): Failed opening 'home-intro.php' for inclusion (include_path='.;D:/laragon/etc/php/pear') in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[12-Dec-2024 15:35:56 UTC] PHP Warning:  include(home-intro.php): Failed to open stream: No such file or directory in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[12-Dec-2024 15:35:56 UTC] PHP Warning:  include(): Failed opening 'home-intro.php' for inclusion (include_path='.;D:/laragon/etc/php/pear') in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[12-Dec-2024 15:35:56 UTC] PHP Warning:  include(home-intro.php): Failed to open stream: No such file or directory in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[12-Dec-2024 15:35:56 UTC] PHP Warning:  include(): Failed opening 'home-intro.php' for inclusion (include_path='.;D:/laragon/etc/php/pear') in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260

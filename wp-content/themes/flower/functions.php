@@ -7,6 +7,7 @@ define('LOAD_STATIC_JS', true);
 require_once __DIR__ .'/includes/required.php';
 require_once __DIR__ .'/woo/inc.php';
 require_once __DIR__ .'/elementor/required.php';
+require_once __DIR__ .'/block/required.php';
 
 
 

@@ -1,0 +1,38 @@
+wc_get_products
+
+wc_get_products
+
+
+// Filter by
+        switch( $settings['eael_product_list_product_filter'] ){
+            case 'featured-products':
+                $args['tax_query'][] = [
+                    'taxonomy' => 'product_visibility',
+                    'field' => 'name',
+                    'terms' => 'featured',
+                ];
+                break;
+
+            case 'best-selling-products':
+                $args['meta_key'] = 'total_sales';
+                $args['orderby'] = 'meta_value_num';
+                $args['order'] = 'desc';
+                break;
+                
+            case 'sale-products':
+                $args['post__in']  = array_merge( array( 0 ), wc_get_product_ids_on_sale() );
+                break;
+                
+            case 'top-products':
+                $args['meta_key'] = '_wc_average_rating';
+                $args['orderby'] = 'meta_value_num';
+                $args['order'] = 'desc';
+                break;
+            
+            case 'manual':
+                $args['post__in'] = ! empty( $settings['eael_product_list_products_in'] ) ? $settings['eael_product_list_products_in'] : [ 0 ];
+                break;
+
+            default:
+                break;
+        }
