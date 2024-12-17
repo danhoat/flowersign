@@ -9,7 +9,9 @@ function box_change_view_rating($html, $rating, $count ){
     if( is_singular('product') ) return ;
 
     global $product;
-    $count = $product->get_review_count();
+    if($product){
+        $count = $product->get_review_count();
+    }
     if($count <1 ) return ;
     $html = '<div class="rating"><i class="fa fa-star text-yellow-400 p-star"></i><span class="mx-1">'.number_format($rating,1).'</span><span>('.$count.')</span></div>';
     return $html;
