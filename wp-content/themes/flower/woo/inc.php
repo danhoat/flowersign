@@ -4,6 +4,7 @@ require_once __DIR__ .'/woocommerce_single_product_summary.php';
 require_once __DIR__ .'/header_danhmuc.php';
 
 require_once __DIR__ .'/be.php';
+require_once __DIR__ .'/woo_rating.php';
 
 
 add_action('after_setup_theme','init_custom_woo');

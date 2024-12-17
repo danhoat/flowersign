@@ -368,3 +368,18 @@ h1.post-title{
     left: 10px;
 }
 
+.wrap-price-rating1{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.flex{
+    display: flex;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+.text-xs {
+    font-size: .85rem;
+    line-height: 1rem;
+}
