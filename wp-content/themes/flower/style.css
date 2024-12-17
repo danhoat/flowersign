@@ -244,14 +244,15 @@ h1.post-title{
     
 }
 .h-heading{
-    font-size: 3rem;
-    font-family1: Roboto, "Noto Sans KR", "Malgun Gothic", sans-serif;
-    font-family: "Dancing Script";
+
+    font-family: Nunito, Prompt, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans";
     font-weight: 700;
     1text-transform: uppercase;
     line-height: 5rem;
     margin-bottom: 20px;
     color: #4c4c4c;
+    font-size: 1.5rem;
+    line-height: 2rem;
 }
 .cs-box-banner{
     width: 100%;
@@ -347,8 +348,11 @@ h1.post-title{
 }
 .innner-box{
     background-size: cover;
-    background-position: center 80%;
+    background-position: center 90%;
     background-repeat: no-repeat;
+}
+.innner-box:hover{
+    background-size: 100%;
 }
 .innner-box .btn-box-detail{
     padding: 10px 20px;
