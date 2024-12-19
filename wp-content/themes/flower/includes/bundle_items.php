@@ -1,34 +1,42 @@
 <?php 
 
-function lisst_bundle_items(){
+function list_bundle_items(){
     $args = array();
     $args[] =  array(
+        'product_id' => 630,
         'title' => 'Gấu Bông Đáng Yêu',
-        'price' => 1000,
+        'price' => 10000,
         'image' => 'https://assets.flowerstore.ph/public/tenantVN/app/assets/images/variant/600_aIlFh7F0uQRQiuqrFxmuj5cOy.webp'
     );
     $args[] =  array(
+        'product_id' => 630,
         'title' => 'Nến Thơm Giáng Sinh Cây Thông',
         'price' => 20000,
         'image' => 'https://assets.flowerstore.ph/public/tenantVN/app/assets/images/variant/600_YRR6d609qQtD2eR4b5uzJkkxI.webp'
     );
     $args[] =  array(
+        'product_id' => 630,
         'title' => ' Banner ( Băng Rôn ) Merry Christmas',
-        'price' => 300000,
+        'price' => 30000,
         'image' => 'https://assets.flowerstore.ph/public/tenantVN/app/assets/images/variant/600_QMMDsxRzUKrXjoX8R3p9uzz9u.webp'
     );
      $args[] =  array(
+        'product_id' => 630,
         'title' => ' Hộp Chocolate Ferrero Rocher (5 viên)',
-        'price' => 400000,
+        'price' => 40000,
         'image' => 'https://assets.flowerstore.ph/public/tenantVN/app/assets/images/variant/600_cXFSDEMW87kZbse3b23rt8bud.webp'
     );
 
-    return (object) $args;
+    return  $args;
 }
 
+function get_bundle_fee($key){
+    $items = list_bundle_items();
+    return (float) $items[$key]['price'];
+}
 function list_bulde_product(){?>
     <ul class="list-bundles">
-    <?php $list = lisst_bundle_items(); ?>
+    <?php $list = (object) list_bundle_items(); ?>
     <?php foreach ($list as $key => $item) {
 
         $item = (object) $item;
@@ -36,7 +44,7 @@ function list_bulde_product(){?>
      ?>
        <li class="splide__slide is-active is-visible" id="splide02-slide09" style="margin-right: 8px; width: 142px;" aria-hidden="false" tabindex="0">
             <div class="relative">
-                <input id="hiddenChoice332" type="checkbox" class="hidden_choice_checkbox hidden" value="0" data-gtm-form-interact-field-id="0" name="bundles[]">
+                <input id="hiddenChoice332" type="checkbox" class="hidden_choice_checkbox hidden" value="<?php echo $item->product_id;?>" data-gtm-form-interact-field-id="0" name="bundles[]">
                 <div class="addon-container flex flex-col justify-between px-3 pb-2 rounded-md border-2 border-blue-light text-center choice addon-box cursor-pointer hover:bg-gray-50" data-addonid="332"><div class="absolute addon-info cursor-pointer" data-id="8"><i class="fa fa-info pointer-events-none"></i></div>
 
                 <div class="addon-name text-red pr-2 addon-title line-clamp-2" data-addonid="332"><?php echo $item->title;?></div>
