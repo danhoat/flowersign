@@ -1,0 +1,78 @@
+
+@media only screen and (min-width: 750px) {
+    .blog-post{
+        grid-template-columns: auto auto auto auto;
+    }
+
+    .bestselling  ul.products {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .love-story,
+    .overview {
+        width: 50%;
+        margin: 30px auto 50px auto;
+        text-align: center;
+
+    }
+
+}
+
+@media only screen and (max-width: 750px){
+    .blog-post{
+        grid-template-columns: auto auto ;
+    }
+    .post-item-first{
+        grid-template-columns: 1fr;
+    }
+    .post-item-first img{
+        height: auto;
+    }
+    .post-item img {
+        height: auto;
+    }
+    .post-item-first .post-title {
+        font-size: 1.5rem;
+        text-align: justify;
+    }
+    #layout_body, .resp_wrap {
+        max-width: 100%;
+        padding: 0px !important;
+    }
+    .post-content,
+    .sidebar{
+        width: initial;
+        float: none;
+        display: block;
+        max-width: 100%;
+    }
+    h1.post-title{
+        text-align: justify;
+        font-size: 2.5rem;
+    }
+    .post-content{
+        padding-right: 0;
+    }
+    .bestselling ul.products{
+        grid-template-columns: 1fr 1fr;
+    }
+    .fixed_bg{
+        height: 350px;
+    }
+    .cs-box-banner .cs-heading, .box-heading{
+        font-size: 19px;
+        text-indent: 15px;
+    }
+    .arow{
+        padding: 10px;
+    }
+    .image-box.arow{
+        padding: 0;
+    }
+    .innner-box .btn-box-detail{
+        max-width: unset;
+        padding: 8px;
+        position: initial;
+        width: 111px;
+        text-align: center;
+    }
+}

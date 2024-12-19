@@ -1,0 +1,84 @@
+    .woocommerce ul.products li.product, .woocommerce-page ul.products li.product{
+        width: auto;
+        margin: 0;
+    }
+    
+@media only screen and (min-width: 800px) {
+    .woocommerce ul.products{
+        display: grid;
+        
+        gap: 32px 20px;
+    }
+    .woocommerce ul.products.columns-5{
+        grid-template-columns: auto auto auto auto auto;
+    }
+    .woocommerce ul.products.columns-4{
+        grid-template-columns: auto auto auto auto;
+    }
+    .woocommerce ul.products::before {
+        content: " ";
+        display: none;
+    }
+
+    .woocommerce ul.products li.product .woocommerce-loop-category__title, .woocommerce ul.products li.product .woocommerce-loop-product__title, .woocommerce ul.products li.product h3 {
+        padding: .5em 0;
+        margin: 0;
+        font-size: 1em;
+        color: #5c5b5b;
+        font-weight: 500;
+    }
+    .woocommerce ul.products li.product .button{
+        font-size: 100%;
+        margin: 0;
+        line-height: 1;
+        cursor: pointer;
+        position: relative;
+        text-decoration: none;
+        overflow: visible;
+        padding: .618em 1em;
+        font-weight: 700;
+        border-radius: 3px;
+        left: auto;
+        color: #515151;
+        background-color: #e9e6ed;
+        border: 0;
+        display: inline-block;
+        background-image: none;
+        box-shadow: none;
+        text-shadow: none;
+    
+    }
+}
+
+
+.woocommerce:where(body:not(.woocommerce-uses-block-theme)) ul.products li.product .price,
+.woocommerce:where(body:not(.woocommerce-uses-block-theme)) div.product p.price, .woocommerce:where(body:not(.woocommerce-uses-block-theme)) div.product span.price{
+    color: #71a200 !important;
+}
+.woocommerce ul.products li.product .price,
+.woocommerce ul.products li.product .price ins{
+    font-size: .85rem;
+    line-height: 1rem;
+    font-weight: 500;
+    letter-spacing: -1px;
+    color: rgb(158 166 212) !important;
+    text-decoration: none;
+}
+.woocommerce ul.products li.product .price del{
+    margin-right: 10px;
+}
+.woocommerce-products-header{
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+}
+ .woocommerce ul.products li.product .woocommerce-loop-product__title{
+    font-size: .975rem;
+    line-height: 1.25rem;
+    font-family: "Nunito", serif;
+    color: #181c18;
+ }
+ .woocommerce ul.products li.product .price del{
+
+ color: rgb(156 163 175);
+}
