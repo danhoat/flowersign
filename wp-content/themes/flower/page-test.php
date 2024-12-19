@@ -81,34 +81,37 @@ get_header();
             <?php  //  the_content(); ?>
         </div>
     </div>    
+</div>
 
-     <div class="block-story">
-            <div class="container ">
-                <center>
-                <img src="https://demo.dichvu139.com/wp-content/uploads/2024/12/floral-flowers-transparent-600x251.png" width="300">
-                </center>
-                <div class="cl-6 love-story ">
-                    <h2>Love Story</h2>
-                    <div class="text-center right-text-styling w-50 mx-auto">
-                        <p>FlowerSight tự hào là một trong những shop hoa tươi Sài Gòn, Hà Nội uy tín và có tiếng trong ngành. Chúng tôi cung cấp dịch vụ đặt hoa online, đặt hoa tươi TPHCM và Hà Nội ship siêu tốc trong ngày. Tiệm hoa tươi giá rẻ ở Sài Gòn FlowerSight mang đến cho khách hàng những bó hoa, lẵng hoa, giỏ hoa tặng sinh nhật, hoa khai trương, hoa cưới cầm tay,hoa chia buồn, hoa sự kiện đầy nghệ thuật hay hoa tang tỏ lòng thành kính</p>
-                    </div>
-                </div>
+<div class=" full block-story">
+    <div class="container ">
+        <center>
+        <img src="https://demo.dichvu139.com/wp-content/uploads/2024/12/floral-flowers-transparent-600x251.png" width="300">
+        </center>
+        <div class="cl-6 love-story ">
+            <h2>Love Story</h2>
+            <div class="text-center right-text-styling w-50 mx-auto">
+                <p>FlowerSight tự hào là một trong những shop hoa tươi Sài Gòn, Hà Nội uy tín và có tiếng trong ngành. Chúng tôi cung cấp dịch vụ đặt hoa online, đặt hoa tươi TPHCM và Hà Nội ship siêu tốc trong ngày. Tiệm hoa tươi giá rẻ ở Sài Gòn FlowerSight mang đến cho khách hàng những bó hoa, lẵng hoa, giỏ hoa tặng sinh nhật, hoa khai trương, hoa cưới cầm tay,hoa chia buồn, hoa sự kiện đầy nghệ thuật hay hoa tang tỏ lòng thành kính</p>
             </div>
         </div>
+    </div>
+</div>
 
-        <div class="block-testimonial">
-            <div class="container ">
-                <div class="overview">
-                    <h3 class="elementor-heading-title elementor-size-default">Our Clients</h3>
-                    <h2>What Clients Says</h2>
-                    <p>Blandit libero volutpat sed cras ornare arcu dui vivamus.<br>Proin fermentum leo vel orci porta non</p>
-                </div>
-            </div>
-            <div class="list-testimonial ">
-               <?php testimonial_item();?>
-               <?php testimonial_item();?>
-               <?php testimonial_item();?>
-            </div>
+
+<div class="full block-testimonial">
+    <div class="container ">
+        <div class="overview">
+            <h3 class="elementor-heading-title elementor-size-default">Our Clients</h3>
+            <h2>What Clients Says</h2>
+            <p>Blandit libero volutpat sed cras ornare arcu dui vivamus.<br>Proin fermentum leo vel orci porta non</p>
         </div>
+    
+        <div class="list-testimonial ">
+           <?php testimonial_item();?>
+           <?php testimonial_item();?>
+           <?php testimonial_item();?>
+        </div>
+    </div>
+
 
 <?php get_footer(); ?>
