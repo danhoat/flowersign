@@ -484,7 +484,7 @@ h1.post-title{
 }
 .block-testimonial h3{
 color: #2E2E2E;
-    font-family: "Montserrat", Sans-serif;
+    font-family: "Lato", Sans-serif;
     font-size: 28px;
     font-weight: 400;
     text-transform: none;
@@ -530,8 +530,9 @@ color: #2E2E2E;
     padding-top: 12%;
 }
 .fixed_bg h2{
-       font-size: 1.6em;
+       font-size: 1.8em;
     font-weight: 700;
     color: #3c3c3c;
     line-height: 2em;
+    font-family: "Lato", serif;
 }
