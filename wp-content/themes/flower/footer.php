@@ -36,23 +36,26 @@ var hpt_info = {'_account':'UHPT-20592','_server':'a24'};
         <div class="resp_wrap">
             <ul class="menu1">
                 <li class="foot_menu_d1 cs">
-                    <h4 class="title"><a href="/service/cs" designelement="text" textindex="1">고객센터  <span class="title_sub">(연중무휴)</span></a></h4>
+                    <h4 class="title"><a href="#" designelement="text" textindex="1">Customer Center  <span class="title_sub">(24/7)</span></a></h4>
                     <ul class="list v4">
                         <li class="compay_phone">
                             <a href="tel:1800-7879">
                                 <!-- <img src="https://f-mans.com/data/skin/responsive_ver1_default_gl/images/common/icon_call_02.png" class="img_call" alt="" /> -->
-                                1800-7879<span>(문자수신 가능)</span>
+                                1800-7879<span>(Available)</span>
                             </a>
                         </li>
-                        <li><span designelement="text" textindex="2" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2Zvb3Rlci9zdGFuZGFyZC5odG1s">문자 전송시 지역번호를 제외한<br>대표번호로 보내주세요.</span></li>
+                        <li><span designelement="text" textindex="2" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2Zvb3Rlci9zdGFuZGFyZC5odG1s">
+                            
+                            When sending a text message, please send it to the main number<br /> excluding the area code.
+                        </span></li>
 
                         <!-- 221114 고객센터 상담시간 변경  -->
                         <li class="footer_date footer_date_first">
                             <span designelement="text" textindex="3" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2Zvb3Rlci9zdGFuZGFyZC5odG1s">
                                 <table>
                                     <tbody><tr>
-                                        <td>상담시간 | </td>
-                                        <td>오전 8시 ~ 오후 8시</td>
+                                        <td>Consulation hours | </td>
+                                        <td>8AM-8PM</td>
                                     </tr>
                                 </tbody></table>
                                 <!--  해당 날짜에 노출 및 미노출 설정 -->
@@ -62,8 +65,8 @@ var hpt_info = {'_account':'UHPT-20592','_server':'a24'};
                             <span designelement="text" textindex="4" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2Zvb3Rlci9zdGFuZGFyZC5odG1s">
                                 <table>
                                     <tbody><tr>
-                                        <td>점심시간 | </td>
-                                        <td>오후 12시 ~ 1시</td>
+                                        <td>Lunch Time | </td>
+                                        <td>12PM-1PM</td>
                                     </tr>
                                 </tbody></table>
                             </span>
@@ -72,7 +75,7 @@ var hpt_info = {'_account':'UHPT-20592','_server':'a24'};
                             <span designelement="text" textindex="5" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2Zvb3Rlci9zdGFuZGFyZC5odG1s">
                                 <table>
                                     <tbody><tr>
-                                        <td>해외주문 | </td>
+                                        <td>Overseas Order | </td>
                                         <td>+82-70-7806-7050</td>
                                     </tr>
                                 </tbody></table>
@@ -96,7 +99,7 @@ var hpt_info = {'_account':'UHPT-20592','_server':'a24'};
                         <li class="footer_kakao">
                             <a href="http://pf.kakao.com/_Kyfxhl">
                                 <h4 class="title">
-                                    카카오톡 문의
+                                    Kako Talk inquiry
                                 </h4>
                                 <span designelement="text" textindex="6" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2Zvb3Rlci9zdGFuZGFyZC5odG1s">
                                     <i><img src="https://f-mans.com/data/images/icon/footer/icon_kakao_CH.png" alt=""></i>꽃집청년들 | 오전 8시 ~ 오후 8시</span>
@@ -110,64 +113,72 @@ var hpt_info = {'_account':'UHPT-20592','_server':'a24'};
                     </ul> -->
                 </li>
                 <li class="foot_menu_d2 bank">
-                    <h4 class="title"><span designelement="text" textindex="7" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2Zvb3Rlci9zdGFuZGFyZC5odG1s">입금계좌 정보</span></h4>
+                    <h4 class="title"><span designelement="text" textindex="7" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2Zvb3Rlci9zdGFuZGFyZC5odG1s">
+                        Deposit Account Infomation
+                    </span></h4>
                     <ul class="list v3 gray_03">
                         <li>
-                            <p>우리 &nbsp;:&nbsp; 1005-402-463003</p>
-                            <!--<p><span class="gray_06" designElement="text">예금주 :</span> 주식회사 청년들</p>-->
-                                                    </li>
-                        <li>
-                            <p>농협 &nbsp;:&nbsp; 301-0149-4037-31</p>
-                            <!--<p><span class="gray_06" designElement="text">예금주 :</span> 주식회사 청년들</p>-->
-                                                    </li>
-                        <li>
-                            <p>국민 &nbsp;:&nbsp; 464401-04-120835</p>
-                            <!--<p><span class="gray_06" designElement="text">예금주 :</span> 주식회사 청년들</p>-->
-                                                    </li>
-                        <li>
-                            <p>기업 &nbsp;:&nbsp; 048-127650-01-016</p>
-                            <!--<p><span class="gray_06" designElement="text">예금주 :</span> 주식회사 청년들</p>-->
-                                                    </li>
-                        <li><p><span class="" designelement="text" textindex="8" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2Zvb3Rlci9zdGFuZGFyZC5odG1s">예금주 :</span> 주식회사 청년들</p></li>
+                        <p><i class=" zmdi zmdi-home "></i> Công ty TNHH Hoa Tươi FLOWERSIGHT</p>
+                    </li><li>
+                            <p><i class="zmdi zmdi-pin "></i> Văn Phòng: <a href="https://maps.app.goo.gl/SN7vzkUxu7kh37KD7" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer">235A Hoàng Hoa Thám, P. 5, Quận Phú Nhuận, TP.HCM</a></p>
+                            </li><li>
+                            <p><i class="zmdi zmdi-pin"></i> Địa chỉ: <a href="https://maps.app.goo.gl/siLaGQ55WbsdmS877" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer">120B Huỳnh Văn Bánh, P.11, Quận Phú Nhuận, TP.HCM</a></p>
+                            </li><li>
+                            <p><i class="zmdi zmdi-pin"></i> Địa chỉ: <a href="https://maps.app.goo.gl/SNbzGMLxxBCpkpWc6" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer">25B P. Bà Triệu, Hàng Bài, Hoàn Kiếm, Hà Nội</a></p>
+                            </li><li>
+                            <p><i class="zmdi zmdi-star "></i> MST: 0317679292 - Cấp bởi Sở kế hoạch đầu tư TPHCM</p>
+                            </li><li>
+                            <p><i class="zmdi zmdi-phone"></i> Điện thoại: 0934 072 575- 0362798979&nbsp;</p>
+                            </li><li>
+                            <p><i class="zmdi zmdi-email"></i> Email: info@flowersight.com</p>
+                        </li>
                     </ul>
 
-                    <!-- Menconet 꽃집청년들 파트너스 -->
-                    <h4 class="title footer_menconet wide_only"><span designelement="text" textindex="9" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2Zvb3Rlci9zdGFuZGFyZC5odG1s">Menconet</span></h4>
-                    <p class="menconet">
-                        <a href="http://menconet.com/" target="_blank">
-                            <i><img src="https://f-mans.com/data/images/icon/footer/icon_menconet.png" alt="멘코넷 아이콘"></i>
-                            꽃집청년들 파트너스 <span></span>
-                        </a>
-                    </p>
-                    <!-- Menconet 꽃집청년들 파트너스 끝 -->
+                  
                 </li>
                 <li class="foot_menu_d5">
                     
                     <h4 class="title footer_sns wide_only"><span designelement="text" textindex="10" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2Zvb3Rlci9zdGFuZGFyZC5odG1s">SNS</span></h4>
                     <ul class="list v6">
-                        <li>
-                            <a href="https://story.kakao.com/07078067050" target="_blank">
-                                <img src="https://f-mans.com/data/images/icon/footer/icon_kakao.png" alt="카카오톡">
+
+                         <li>
+                            <a href="https://www.facebook.com/FlowerSight/" target="_blank">
+                               <img src="<?php echo BOXTHEME_URL;?>/images/icon_facebook.png" alt="페이스북">
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.instagram.com/flower_youths/" target="_blank">
-                                <img src="https://f-mans.com/data/images/icon/footer/icon_instar.png" alt="인스타그램">
+                            <a href="https://www.youtube.com/@flowersight" target="_blank">
+                               <img src="<?php echo BOXTHEME_URL;?>/images/icon_youtube.png" alt="유튜브">
+                            </a>
+                        </li>
+                      
+                        <li>
+                            <a href="https://www.instagram.com/flowersightstore" target="_blank">
+                               <img src="<?php echo BOXTHEME_URL;?>/images/icon_instar.png" alt="인스타그램">
                             </a>
                         </li>
                         <li>
+                            <a href="#" target="_blank">
+                                <img src="<?php echo BOXTHEME_URL;?>/images/icon_printest.jpg" alt="블로그">
+                            </a>
+                        </li>
+
+                         <li>
+                            <a href="https://twitter.com/flowerSightcom" target="_blank">
+                                <img src="<?php echo BOXTHEME_URL;?>/images/icon_x.jpg" alt="블로그">
+                            </a>
+                        </li>
+                        
+                         <li class="hide">
                             <a href="https://blog.naver.com/ripl10" target="_blank">
                                 <img src="https://f-mans.com/data/images/icon/footer/icon_blog.png" alt="블로그">
                             </a>
                         </li>
-                        <li>
-                            <a href="https://www.facebook.com/flowermen01" target="_blank">
-                                <img src="https://f-mans.com/data/images/icon/footer/icon_facebook.png" alt="페이스북">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.youtube.com/channel/UCorkJMb3TgAt3SHFKp9dYoA?view_as=subscriber" target="_blank">
-                                <img src="https://f-mans.com/data/images/icon/footer/icon_youtube.png" alt="유튜브">
+
+
+                          <li class="hide">
+                            <a href="https://story.kakao.com/07078067050" target="_blank">
+                                <img src="https://f-mans.com/data/images/icon/footer/icon_kakao.png" alt="카카오톡">
                             </a>
                         </li>
                     </ul>
