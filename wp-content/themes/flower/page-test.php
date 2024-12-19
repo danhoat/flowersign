@@ -70,7 +70,7 @@ get_header();
         <?php block_products_by_category($slug = 'hoa-tot-nghiep', $label ='Hoa Tốt Nghiệp');?>
         <?php block_image_vs_button($heading);?>
         <?php block_products_by_category($slug = 'hoa-cuoi', $label ='Hoa Cưới');?>
-        <?php block_image_vs_button($heading, $bg = 'https://demo.dichvu139.com/wp-content/uploads/2024/12/bg_hydrangea.jpg');?>
+        <?php block_image_vs_button($heading, $bg = IMAGE_URL.'/banner/bg_hydrangea.jpg');?>
         <?php block_products_by_category($slug = 'hoa-tinh-yeu', $label ='Hoa Tình Yêu');?>
         <?php block_image_vs_button($heading);?>
 

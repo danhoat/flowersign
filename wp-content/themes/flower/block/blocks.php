@@ -86,7 +86,7 @@ function block_products_by_category($slug = '', $label = ''){
 function block_image_vs_button($heading = '', $bg_img = ''){
     
     if(empty($bg_img) ){
-        $bg_img = 'http://localhost/flower/wp-content/uploads/2024/11/bg_magazine_banner.jpg';
+        $bg_img = IMAGE_URL.'/banner/bg_magazine_banner.jpg';
     }
     ?>
     <div class="image-box  arow">
