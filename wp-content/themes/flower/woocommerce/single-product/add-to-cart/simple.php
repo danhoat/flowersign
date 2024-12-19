@@ -83,6 +83,25 @@ if ( $product->is_in_stock() ) : ?>
 			<?php list_bulde_product();?>
 		</div>
 
+		<?php 
+		$today = date('d/m',time());
+		
+		//$today = str_replace("/", ' Thg ', $today);
+		$today =  wp_date( 'j/m ', time() );
+		$today = str_replace("/", ' Thg ', $today);
+
+		$tomorrow =  wp_date( 'j/m ', strtotime("+1 day") );
+		$tomorrow = str_replace("/", ' Thg ', $tomorrow);
+
+		$next_2days =  wp_date( 'j/m ', strtotime("+2 days") );
+		$n_week = wp_date('l',  strtotime("+2 days"));
+		
+		$next_2days = str_replace("/", ' Thg ', $next_2days);
+
+
+	
+
+		?>
 		<div class="full">
 			<div class="text-xs" id="delivery-date" product_price="719000" style="">
 				<span class="label">Chọn ngày giao hàng:</span>
@@ -92,7 +111,7 @@ if ( $product->is_in_stock() ) : ?>
 					<div class="date-item"><!---->
 						<input type="radio" class="hidden_choice right-0 rounded-none" name="delivery_date" value="2024-10-19">
 						<div class="card-form choice uppercase grid content-center id-2024-10-19-lg">
-							<p class="block sm:hidden xl:hidden date-month">19 Thg 10</p>
+							<p class="block sm:hidden xl:hidden date-month"><?php echo $today;?></p>
 							<span class="font-bold text-black text-xxs xs:text-xs sm:text-sm lg:text-xs xl:text-sm relative date-week-day">Hôm nay</span></div>
 					</div>
 
@@ -100,15 +119,15 @@ if ( $product->is_in_stock() ) : ?>
 						<!---->
 						<input type="radio" class="hidden_choice right-0 rounded-none" name="delivery_date" value="2024-10-20">
 						<div class="card-form choice uppercase grid content-center id-2024-10-20-lg">
-							<p class="block sm:hidden xl:hidden date-month">20 Thg 10</p>
+							<p class="block sm:hidden xl:hidden date-month"><?php echo $tomorrow;?></p>
 							<span class="font-bold text-black text-xxs xs:text-xs sm:text-sm lg:text-xs xl:text-sm relative date-week-day">Ngày mai</span>
 						</div>
 					</div>
 					<div class="date-item">
 						<!----><input type="radio" class="hidden_choice right-0 rounded-none" name="delivery_date" value="2024-10-21">
 						<div class="card-form choice uppercase grid content-center id-2024-10-21-lg">
-							<p class="block sm:hidden xl:hidden date-month">21 Thg 10</p>
-							<span class="font-bold text-black text-xxs xs:text-xs sm:text-sm lg:text-xs xl:text-sm relative date-week-day">thứ hai</span></div>
+							<p class="block sm:hidden xl:hidden date-month"><?php echo $next_2days;?></p>
+							<span class="font-bold text-black text-xxs xs:text-xs sm:text-sm lg:text-xs xl:text-sm relative date-week-day"><?php echo $n_week;?></span></div>
 					</div>
 					<div class="date-item">
 						<div id="calendar">

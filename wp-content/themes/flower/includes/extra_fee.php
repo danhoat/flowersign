@@ -37,9 +37,9 @@ function action_woocommerce_cart_calculate_fees( $cart ) {
         }       
     }
 }
-add_action( 'woocommerce_cart_calculate_fees', 'action_woocommerce_cart_calculate_fees', 10, 1 );
+// add_action( 'woocommerce_cart_calculate_fees', 'action_woocommerce_cart_calculate_fees', 10, 1 );
 
- add_action( 'woocommerce_before_calculate_totals', 'add_custom_price' );
+// add_action( 'woocommerce_before_calculate_totals', 'add_custom_price' );
 
 function add_custom_price( $cart_object ) {
     
@@ -70,7 +70,7 @@ function add_custom_price( $cart_object ) {
 
     }
 }
-add_action( 'woocommerce_after_calculate_totals', 'add_custom_price' );
+//add_action( 'woocommerce_after_calculate_totals', 'add_custom_price' );
 
 function box_add_extra_fee_to_cart( $cart_subtotal, $compound, $object ){
     $new_price = 10;
