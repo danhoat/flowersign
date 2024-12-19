@@ -102,7 +102,13 @@ if ( $product->is_in_stock() ) : ?>
 	
 
 		?>
+	
+
 		<div class="full">
+
+			
+
+
 			<div class="text-xs" id="delivery-date" product_price="719000" style="">
 				<span class="label">Chọn ngày giao hàng:</span>
 				<input type="hidden" name="delivery_date" value="">
@@ -131,12 +137,45 @@ if ( $product->is_in_stock() ) : ?>
 					</div>
 					<div class="date-item">
 						<div id="calendar">
-							<input type="radio" class="hidden_choice right-0 rounded-none" name="delivery_date" value="Calendar">
+							<input type="radio" class="hidden_choice right-0 rounded-none" name="delivery_date" value="">
 							<div class="card-form choice pb-3 sm:py-3 lg:py-2 xl:py-3 xl:px-7 grid content-center">
 								<i class="fa fa-calendar-days text-xl xxs:text-md"></i>
-							<span class="font-bold sm:block date-week-day">LỊCH</span></div>
-							<div class="vc-popover-content-wrapper" placement="bottom-start"><!----></div>
-					</div>
+							<span class="font-bold sm:block date-week-day" >LỊCH</span></div>
+							<input id="datepicker"  />
+						    <script>
+						        $('#datepicker').datepicker({
+						            uiLibrary: 'bootstrap5',
+						            //dateFormat:'dd/mm/yy',
+						            // startDate: '+1d',
+						            // setStartDate: "22-12-2024",
+						            minDate: 3,
+						            maxDate: 30,
+
+						            onSelect: function(dateText) {
+										        console.log("Selected date: " + dateText + "; input's current value: " + this.value);
+										        $(this).val(this.value);
+										        let item = $(this).closest('.date-item');
+										        item.find(".hidden_choice").prop('checked', true);
+										        const weekday = ["Chủ Nhật","Thứ Hai","Thứ Ba","Thứ Tư","Thứ Năm","Thứ sáu","Thứ Bảy"];
+										        const months = ['1','2','3','4','5','6','7','8','9','10','11','12'];
+
+
+										        const d = new Date(this.value);
+										        let month = months[d.getMonth()] ;
+										        let day = weekday[d.getDay()];
+										    
+										       	let date = d.getDate() + ' Thg '+ month;
+										       	let deliverydate = d.getDate()+'/'+month+'/'+ d.getYear();
+
+										       	let html = '<p class="block sm:hidden xl:hidden date-month">'+date+'</p>';
+										       	 html+='<span class="font-bold text-black text-xxs xs:text-xs sm:text-sm lg:text-xs xl:text-sm relative date-week-day">'+day+'</span>';
+										      
+										       	item.find(".choice").html(html);
+										       	item.find(".hidden_choice").val(deliverydate);
+										}
+									});
+						    </script>
+						</div>
 					</div>
 				</div>
 				<!----></div>

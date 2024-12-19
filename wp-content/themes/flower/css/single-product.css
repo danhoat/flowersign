@@ -333,3 +333,15 @@ input:checked~div.choice,
 input:checked + .choice{
     background-color: red1;
 }
+.date-item .fa-calendar-days{
+    max-height: 24px;
+}
+#datepicker {
+    z-index: 9999;
+    opacity: 0;
+    position: absolute;
+    height: 100px;
+    background: red;
+    top: 0;
+    cursor: pointer;
+}
