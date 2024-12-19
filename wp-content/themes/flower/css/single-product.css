@@ -262,7 +262,7 @@ audio, canvas, embed, iframe, img, object, svg, video {
 .splide__slide img {
     vertical-align: bottom;
 }
-.list-bundles  .relative{
+.choice{
     border: 2px solid #d9d6d6;
     border-radius: 5px;
 }
@@ -307,4 +307,29 @@ audio, canvas, embed, iframe, img, object, svg, video {
 }
 .hidden {
     display: none;
+}
+.list-bundles li input[type=checkbox] {
+    width: 100%;
+    height: 209px;
+    position: absolute;
+    z-index: 999;
+     opacity: 0;
+    /* visibility: hidden; */
+    top: 0;
+    left: 0;
+}
+.hidden_choice:checked~div.choice, .hidden_choice_checkbox:checked~div.choice {
+    --tw-border-opacity: 1;
+    border-color: rgba(158, 166, 212, var(--tw-border-opacity));
+    border-width: 2px;
+}
+.hidden_choice:checked~div.choice, .hidden_choice_checkbox:checked~div.choice {
+    --tw-border-opacity: 1;
+    border-color: rgba(158, 166, 212, var(--tw-border-opacity));
+    border-width: 2px;
+    border: 2px solid rgba(158, 166, 212);
+}
+input:checked~div.choice,
+input:checked + .choice{
+    background-color: red1;
 }

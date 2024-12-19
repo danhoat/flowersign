@@ -44,7 +44,7 @@ function list_bulde_product(){?>
      ?>
        <li class="splide__slide is-active is-visible" id="splide02-slide09" style="margin-right: 8px; width: 142px;" aria-hidden="false" tabindex="0">
             <div class="relative">
-                <input id="hiddenChoice332" type="checkbox" class="hidden_choice_checkbox hidden" value="<?php echo $item->product_id;?>" data-gtm-form-interact-field-id="0" name="bundles[]">
+                <input id="hiddenChoice332" type="checkbox" class="hidden_choice_checkbox " value="<?php echo $item->product_id;?>" data-gtm-form-interact-field-id="0" name="bundles[]">
                 <div class="addon-container flex flex-col justify-between px-3 pb-2 rounded-md border-2 border-blue-light text-center choice addon-box cursor-pointer hover:bg-gray-50" data-addonid="332"><div class="absolute addon-info cursor-pointer" data-id="8"><i class="fa fa-info pointer-events-none"></i></div>
 
                 <div class="addon-name text-red pr-2 addon-title line-clamp-2" data-addonid="332"><?php echo $item->title;?></div>
