@@ -4840,3 +4840,65 @@ Stack trace:
 [12-Dec-2024 15:35:56 UTC] PHP Warning:  include(): Failed opening 'home-intro.php' for inclusion (include_path='.;D:/laragon/etc/php/pear') in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
 [12-Dec-2024 15:35:56 UTC] PHP Warning:  include(home-intro.php): Failed to open stream: No such file or directory in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
 [12-Dec-2024 15:35:56 UTC] PHP Warning:  include(): Failed opening 'home-intro.php' for inclusion (include_path='.;D:/laragon/etc/php/pear') in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[19-Dec-2024 09:04:48 UTC] PHP Fatal error:  Uncaught Error: Object of class WP_Error could not be converted to string in D:\laragon\www\flower\wp-content\themes\flower\block\blocks.php:56
+Stack trace:
+#0 D:\laragon\www\flower\wp-content\themes\flower\page-test.php(70): block_products_by_category('hoa-tot-nghiep', 'Hoa T\xE1\xBB\x91t Nghi\xE1...')
+#1 D:\laragon\www\flower\wp-includes\template-loader.php(106): include('D:\\laragon\\www\\...')
+#2 D:\laragon\www\flower\wp-blog-header.php(19): require_once('D:\\laragon\\www\\...')
+#3 D:\laragon\www\flower\index.php(17): require('D:\\laragon\\www\\...')
+#4 {main}
+  thrown in D:\laragon\www\flower\wp-content\themes\flower\block\blocks.php on line 56
+[19-Dec-2024 09:04:49 UTC] PHP Warning:  include(home-intro.php): Failed to open stream: No such file or directory in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[19-Dec-2024 09:04:49 UTC] PHP Warning:  include(): Failed opening 'home-intro.php' for inclusion (include_path='.;D:/laragon/etc/php/pear') in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[19-Dec-2024 09:04:49 UTC] PHP Warning:  include(home-intro.php): Failed to open stream: No such file or directory in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[19-Dec-2024 09:04:49 UTC] PHP Warning:  include(): Failed opening 'home-intro.php' for inclusion (include_path='.;D:/laragon/etc/php/pear') in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[19-Dec-2024 09:04:51 UTC] PHP Fatal error:  Uncaught Error: Object of class WP_Error could not be converted to string in D:\laragon\www\flower\wp-content\themes\flower\block\blocks.php:56
+Stack trace:
+#0 D:\laragon\www\flower\wp-content\themes\flower\page-test.php(70): block_products_by_category('hoa-tot-nghiep', 'Hoa T\xE1\xBB\x91t Nghi\xE1...')
+#1 D:\laragon\www\flower\wp-includes\template-loader.php(106): include('D:\\laragon\\www\\...')
+#2 D:\laragon\www\flower\wp-blog-header.php(19): require_once('D:\\laragon\\www\\...')
+#3 D:\laragon\www\flower\index.php(17): require('D:\\laragon\\www\\...')
+#4 {main}
+  thrown in D:\laragon\www\flower\wp-content\themes\flower\block\blocks.php on line 56
+[19-Dec-2024 09:04:51 UTC] PHP Warning:  include(home-intro.php): Failed to open stream: No such file or directory in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[19-Dec-2024 09:04:51 UTC] PHP Warning:  include(): Failed opening 'home-intro.php' for inclusion (include_path='.;D:/laragon/etc/php/pear') in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[19-Dec-2024 09:04:52 UTC] PHP Warning:  include(home-intro.php): Failed to open stream: No such file or directory in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[19-Dec-2024 09:04:52 UTC] PHP Warning:  include(): Failed opening 'home-intro.php' for inclusion (include_path='.;D:/laragon/etc/php/pear') in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[19-Dec-2024 09:05:04 UTC] PHP Fatal error:  Uncaught Error: Object of class WP_Error could not be converted to string in D:\laragon\www\flower\wp-content\themes\flower\block\blocks.php:56
+Stack trace:
+#0 D:\laragon\www\flower\wp-content\themes\flower\page-test.php(70): block_products_by_category('hoa-tot-nghiep', 'Hoa T\xE1\xBB\x91t Nghi\xE1...')
+#1 D:\laragon\www\flower\wp-includes\template-loader.php(106): include('D:\\laragon\\www\\...')
+#2 D:\laragon\www\flower\wp-blog-header.php(19): require_once('D:\\laragon\\www\\...')
+#3 D:\laragon\www\flower\index.php(17): require('D:\\laragon\\www\\...')
+#4 {main}
+  thrown in D:\laragon\www\flower\wp-content\themes\flower\block\blocks.php on line 56
+[19-Dec-2024 09:05:05 UTC] PHP Warning:  include(home-intro.php): Failed to open stream: No such file or directory in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[19-Dec-2024 09:05:05 UTC] PHP Warning:  include(): Failed opening 'home-intro.php' for inclusion (include_path='.;D:/laragon/etc/php/pear') in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[19-Dec-2024 09:05:05 UTC] PHP Warning:  include(home-intro.php): Failed to open stream: No such file or directory in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[19-Dec-2024 09:05:05 UTC] PHP Warning:  include(): Failed opening 'home-intro.php' for inclusion (include_path='.;D:/laragon/etc/php/pear') in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[19-Dec-2024 09:05:16 UTC] PHP Fatal error:  Uncaught Error: Object of class WP_Error could not be converted to string in D:\laragon\www\flower\wp-content\themes\flower\block\blocks.php:56
+Stack trace:
+#0 D:\laragon\www\flower\wp-content\themes\flower\page-test.php(70): block_products_by_category('hoa-tot-nghiep', 'Hoa T\xE1\xBB\x91t Nghi\xE1...')
+#1 D:\laragon\www\flower\wp-includes\template-loader.php(106): include('D:\\laragon\\www\\...')
+#2 D:\laragon\www\flower\wp-blog-header.php(19): require_once('D:\\laragon\\www\\...')
+#3 D:\laragon\www\flower\index.php(17): require('D:\\laragon\\www\\...')
+#4 {main}
+  thrown in D:\laragon\www\flower\wp-content\themes\flower\block\blocks.php on line 56
+[19-Dec-2024 09:05:16 UTC] PHP Warning:  include(home-intro.php): Failed to open stream: No such file or directory in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[19-Dec-2024 09:05:16 UTC] PHP Warning:  include(): Failed opening 'home-intro.php' for inclusion (include_path='.;D:/laragon/etc/php/pear') in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[19-Dec-2024 09:05:16 UTC] PHP Warning:  include(home-intro.php): Failed to open stream: No such file or directory in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[19-Dec-2024 09:05:16 UTC] PHP Warning:  include(): Failed opening 'home-intro.php' for inclusion (include_path='.;D:/laragon/etc/php/pear') in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[19-Dec-2024 09:05:42 UTC] PHP Warning:  include(home-intro.php): Failed to open stream: No such file or directory in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[19-Dec-2024 09:05:42 UTC] PHP Warning:  include(home-intro.php): Failed to open stream: No such file or directory in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[19-Dec-2024 09:05:42 UTC] PHP Warning:  include(): Failed opening 'home-intro.php' for inclusion (include_path='.;D:/laragon/etc/php/pear') in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[19-Dec-2024 09:05:42 UTC] PHP Warning:  include(): Failed opening 'home-intro.php' for inclusion (include_path='.;D:/laragon/etc/php/pear') in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[19-Dec-2024 09:06:30 UTC] PHP Warning:  include(home-intro.php): Failed to open stream: No such file or directory in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[19-Dec-2024 09:06:30 UTC] PHP Warning:  include(): Failed opening 'home-intro.php' for inclusion (include_path='.;D:/laragon/etc/php/pear') in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[19-Dec-2024 09:06:30 UTC] PHP Warning:  include(home-intro.php): Failed to open stream: No such file or directory in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[19-Dec-2024 09:06:30 UTC] PHP Warning:  include(): Failed opening 'home-intro.php' for inclusion (include_path='.;D:/laragon/etc/php/pear') in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[19-Dec-2024 09:06:30 UTC] PHP Warning:  include(home-intro.php): Failed to open stream: No such file or directory in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[19-Dec-2024 09:06:30 UTC] PHP Warning:  include(): Failed opening 'home-intro.php' for inclusion (include_path='.;D:/laragon/etc/php/pear') in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[19-Dec-2024 09:06:30 UTC] PHP Warning:  include(home-intro.php): Failed to open stream: No such file or directory in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[19-Dec-2024 09:06:30 UTC] PHP Warning:  include(): Failed opening 'home-intro.php' for inclusion (include_path='.;D:/laragon/etc/php/pear') in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[19-Dec-2024 09:06:30 UTC] PHP Warning:  include(home-intro.php): Failed to open stream: No such file or directory in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[19-Dec-2024 09:06:30 UTC] PHP Warning:  include(): Failed opening 'home-intro.php' for inclusion (include_path='.;D:/laragon/etc/php/pear') in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260

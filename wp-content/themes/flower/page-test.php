@@ -35,7 +35,7 @@ get_header();
             'order' => 'DESC',
         ) );
         ?>
-        <div class="theme_content">
+        <div class="theme_content block-categories">
             <div class="row g-3 g-md-2">
                 <?php  foreach($categories as $cat ){ ?> 
                 <div class="col col-md-3">
@@ -96,7 +96,7 @@ get_header();
 <div class=" full block-story">
     <div class="container ">
         <center>
-        <img src="https://demo.dichvu139.com/wp-content/uploads/2024/12/floral-flowers-transparent-600x251.png" width="300">
+        <img src="<?php echo IMAGE_URL;?>/home/img-love-story.png" width="300">
         </center>
         <div class="cl-6 love-story ">
             <h2>Love Story</h2>

@@ -9,39 +9,57 @@
 function box_block_best_selling() {
 
     $top_selling_products = wc_get_products( array(
-            'meta_key' => 'total_sales', // our custom query meta_key
-            'return'   => 'ids', // needed to pass to $post_object
-            'orderby'  => array( 'meta_value_num' => 'DESC', 'title' => 'ASC' ), // order from highest to lowest of top sellers
-        ) );
-        ?>
-        <div class="woocommerce bestselling arow">
-            <h2 class="home-label h-heading">  Bán chạy nhất  </h2>
-            <?php if ( $top_selling_products ) {
+        'meta_key' => 'total_sales', // our custom query meta_key
+        'posts_per_page' => 10,
+        'return'   => 'ids', // needed to pass to $post_object
+        'orderby'  => array( 'meta_value_num' => 'DESC', 'title' => 'ASC' ), // order from highest to lowest of top sellers
+    ) );
 
-                echo '<ul class="products cls-5">';
-                foreach ( $top_selling_products as $top_selling_product ) {
-                    $post_object = get_post( $top_selling_product );
-                    setup_postdata( $GLOBALS['post'] =& $post_object );
-                    wc_get_template_part( 'content', 'product' );
+    $shop_page_url = get_permalink( wc_get_page_id( 'shop' ) );
+    ?>
+    <div class="woocommerce bestselling arow">
 
-                }
-                wp_reset_postdata();
-
-                echo '</ul>';  
-            } ?>
+        <div class="full flex  line-heading justify-between">
+            <a class="#" href="" class="h2heading">
+                <h2 class="home-label h-heading"> Bán chạy nhất</h2>
+            </a>
+            <a class="link-collection" href="<?php echo $shop_page_url;?>">Thêm nhiều lựa chọn</a>
         </div>
-    <?php
+
+      
+        <?php if ( $top_selling_products ) {
+
+            echo '<ul class="products cls-5">';
+            foreach ( $top_selling_products as $top_selling_product ) {
+                $post_object = get_post( $top_selling_product );
+                setup_postdata( $GLOBALS['post'] =& $post_object );
+                wc_get_template_part( 'content', 'product' );
+
+            }
+            wp_reset_postdata();
+
+            echo '</ul>';  
+        } ?>
+    </div>
+<?php
 }
 function block_products_by_category($slug = '', $label = ''){
     $args = array(
         'category' => array( $slug ),
+        'posts_per_page' => 10,
         'return'   => 'ids', // needed to pass to $post_object
     );
-
+    $term_link = get_term_link($slug, 'product_cat');
+    if(is_wp_error($term_link)) return;
     $products = wc_get_products( $args );
     ?>
     <div class="woocommerce bestselling arow">
-        <h2 class="home-label h-heading"><?php echo $label;?></h2>
+        <div class="full flex  line-heading justify-between">
+            <a class="#" href="" class="h2heading">
+                <h2 class="home-label h-heading"><?php echo $label;?></h2>
+            </a>
+            <a class="link-collection" href="<?php echo $term_link;?>">Thêm nhiều lựa chọn</a>
+        </div>
         
         <?php if ( $products ) { ?>
 

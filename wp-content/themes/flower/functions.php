@@ -1,6 +1,7 @@
 <?php
 
 define('BOXTHEME_URL', get_template_directory_uri() );
+define('IMAGE_URL', BOXTHEME_URL.'/images' );
 define('BOXTHEME_PATH', __DIR__);
 define('PRODUCT_PATH', __DIR__.'/products');
 define('LOAD_STATIC_JS', true);
