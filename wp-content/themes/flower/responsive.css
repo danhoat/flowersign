@@ -34,9 +34,9 @@
         font-size: 1.5rem;
         text-align: justify;
     }
-    .resp_wrap {
+    #layout_body, .resp_wrap {
         max-width: 100%;
-        padding: 15px;
+        padding: 0px !important;
     }
     .post-content,
     .sidebar{
@@ -55,5 +55,24 @@
     .bestselling ul.products{
         grid-template-columns: 1fr 1fr;
     }
-
+    .fixed_bg{
+        height: 350px;
+    }
+    .cs-box-banner .cs-heading, .box-heading{
+        font-size: 19px;
+        text-indent: 15px;
+    }
+    .arow{
+        padding: 10px;
+    }
+    .image-box.arow{
+        padding: 0;
+    }
+    .innner-box .btn-box-detail{
+        max-width: unset;
+        padding: 8px;
+        position: initial;
+        width: 111px;
+        text-align: center;
+    }
 }

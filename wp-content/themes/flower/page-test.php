@@ -35,7 +35,7 @@ get_header();
             'order' => 'DESC',
         ) );
         ?>
-        <div class="theme_content block-categories">
+        <div class="theme_content block-categories arow">
             <div class="row g-3 g-md-2">
                 <?php  foreach($categories as $cat ){ ?> 
                 <div class="col col-md-3">
