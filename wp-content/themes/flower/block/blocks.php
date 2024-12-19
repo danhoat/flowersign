@@ -9,10 +9,11 @@
 function box_block_best_selling() {
 
     $top_selling_products = wc_get_products( array(
-        'meta_key' => 'total_sales', // our custom query meta_key
-        'posts_per_page' => 10,
-        'return'   => 'ids', // needed to pass to $post_object
-        'orderby'  => array( 'meta_value_num' => 'DESC', 'title' => 'ASC' ), // order from highest to lowest of top sellers
+        'meta_key'          => 'total_sales', // our custom query meta_key
+        'posts_per_page'    => 10,
+        'post__not_in'  => LIST_BUNDLES_ITEM,
+        'return'        => 'ids', // needed to pass to $post_object
+        'orderby'   => array( 'meta_value_num' => 'DESC', 'title' => 'ASC' ), // order from highest to lowest of top sellers
     ) );
 
     $shop_page_url = get_permalink( wc_get_page_id( 'shop' ) );
@@ -47,6 +48,7 @@ function block_products_by_category($slug = '', $label = ''){
     $args = array(
         'category' => array( $slug ),
         'posts_per_page' => 10,
+        'post__not_in'  => LIST_BUNDLES_ITEM,
         'return'   => 'ids', // needed to pass to $post_object
     );
     $term_link = get_term_link($slug, 'product_cat');
