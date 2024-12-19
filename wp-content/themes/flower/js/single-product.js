@@ -33,6 +33,7 @@
              $("html, body").animate({ scrollTop: 0 }, "slow");
             form_validate_fail('Lỗi chưa chọn ngày giao hàng.', 3000);
             console.log('false');
+            $(this).removeClass('devvn-quickbuy');
             return false;
         }
 

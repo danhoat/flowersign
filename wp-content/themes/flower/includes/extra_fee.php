@@ -10,6 +10,7 @@ function box_add_to_cart_validation( $passed, $product_id, $quantity, $variation
     // var_dump($_POST);
     // echo '</pre>';
     // die();
+    if( isset($_POST['is_buy_now']) ) return $passed;
     if ( empty( $_POST['delivery_date'] ) ) {
         $passed = false;
         wc_add_notice( __( 'Vui lòng chọn ngày giao hàng.', 'webkul' ), 'error' );
