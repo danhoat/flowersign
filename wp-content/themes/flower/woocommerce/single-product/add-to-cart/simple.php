@@ -144,7 +144,7 @@ if ( $product->is_in_stock() ) : ?>
 
 		<div class="full">
 			<p>
-				<h3 class="flex my-1 text-lg">Tổng: <span class="text-brand font-bold self-center ml-2 whitespace-nowrap"> <?php echo $product->get_price_html();?></span></h3>
+				<h3 class="flex my-1 text-lg">Tổng: <span class="text-brand font-bold self-center ml-2 whitespace-nowrap">  <?php echo wc_get_price_to_display($product);?> đ</span></h3>
 			</p>
 		</div>
 		<div class="grid full grid-cols-2 form-btn">

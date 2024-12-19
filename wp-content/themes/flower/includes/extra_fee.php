@@ -10,10 +10,10 @@ function box_add_to_cart_validation( $passed, $product_id, $quantity, $variation
     // var_dump($_POST);
     // echo '</pre>';
     // die();
-    // if ( empty( $_POST['custom-field'] ) ) {
-    //     $passed = false;
-    //     wc_add_notice( __( 'Quote is a required field.', 'webkul' ), 'error' );
-    // }
+    if ( empty( $_POST['delivery_date'] ) ) {
+        $passed = false;
+        wc_add_notice( __( 'Vui lòng chọn ngày giao hàng.', 'webkul' ), 'error' );
+    }
     if( isset($_POST['bundles'] ) && !empty($_POST['bundles'] ) ){
         foreach( $_POST['bundles'] as $id ) {
             wc()->cart->add_to_cart( $id );

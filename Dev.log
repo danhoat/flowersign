@@ -1,0 +1,33 @@
+ssh-add -K /c/Users/danho/.ssh/id_rsa
+
+"C:\Users\danho\.ssh\id_rsa"
+
+
+ssh-keygen -C  "danhoat@gmail.com" -t rsa
+2:
+C:\Users\danho/.ssh/id_rsa
+
+
+git add wp-includes/.gitignore
+
+
+
+git rm --cached vnpay_bk/flo55149_wp_r4uo2.sql
+
+
+echo "vnpay_bk/flo55149_wp_r4uo2.sql" >> .gitignore
+git add .gitignore
+
+git rm --cached vnpay_bk/flo55149_wp_r4uo2.sql
+
+
+git filter-branch -f --index-filter 'git rm --cached --ignore-unmatch vnpay_bk/flo55149_wp_r4uo2.sql'
+
+
+
+2
+
+git filter-repo --path vnpay_bk/flo55149_wp_r4uo2.sql --invert-paths --force
+$ git log -- path/to/file/to/be/excluded
+$ git push --tags --force
+$ git push --all --force
