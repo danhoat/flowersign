@@ -87,16 +87,16 @@ if ( $product->is_in_stock() ) : ?>
 		$today = date('d/m',time());
 		
 		//$today = str_replace("/", ' Thg ', $today);
-		$today =  wp_date( 'j/m ', time() );
-		$today = str_replace("/", ' Thg ', $today);
+		$today =  wp_date( 'j/m', time() );
+		$today_show = str_replace("/", ' Thg ', $today);
 
-		$tomorrow =  wp_date( 'j/m ', strtotime("+1 day") );
-		$tomorrow = str_replace("/", ' Thg ', $tomorrow);
+		$tomorrow =  wp_date( 'j/m', strtotime("+1 day") );
+		$tomorrow_show = str_replace("/", ' Thg ', $tomorrow);
 
-		$next_2days =  wp_date( 'j/m ', strtotime("+2 days") );
+		$next_2days =  wp_date( 'j/m', strtotime("+2 days") );
 		$n_week = wp_date('l',  strtotime("+2 days"));
 		
-		$next_2days = str_replace("/", ' Thg ', $next_2days);
+		$next_2days_show = str_replace("/", ' Thg ', $next_2days);
 
 
 	
@@ -109,29 +109,30 @@ if ( $product->is_in_stock() ) : ?>
 
 				<div class="grid select-date gap-5 grid-cols-4">
 					<div class="date-item"><!---->
-						<input type="radio" class="hidden_choice right-0 rounded-none" name="delivery_date" value="2024-10-19">
+						<input type="radio" class="hidden_choice right-0 rounded-none" name="delivery_date" value="<?php echo wp_date( 'j/m/Y',  time() );?>">
 						<div class="card-form choice uppercase grid content-center id-2024-10-19-lg">
-							<p class="block sm:hidden xl:hidden date-month"><?php echo $today;?></p>
+							<p class="block sm:hidden xl:hidden date-month"><?php echo $today_show;?></p>
 							<span class="font-bold text-black text-xxs xs:text-xs sm:text-sm lg:text-xs xl:text-sm relative date-week-day">Hôm nay</span></div>
 					</div>
 
 					<div class="date-item">
 						<!---->
-						<input type="radio" class="hidden_choice right-0 rounded-none" name="delivery_date" value="2024-10-20">
+						<input type="radio" class="hidden_choice right-0 rounded-none" name="delivery_date" value="<?php  echo wp_date( 'j/m/Y', strtotime("+1 day") );?>">
 						<div class="card-form choice uppercase grid content-center id-2024-10-20-lg">
-							<p class="block sm:hidden xl:hidden date-month"><?php echo $tomorrow;?></p>
+							<p class="block sm:hidden xl:hidden date-month"><?php echo $tomorrow_show;?></p>
 							<span class="font-bold text-black text-xxs xs:text-xs sm:text-sm lg:text-xs xl:text-sm relative date-week-day">Ngày mai</span>
 						</div>
 					</div>
 					<div class="date-item">
-						<!----><input type="radio" class="hidden_choice right-0 rounded-none" name="delivery_date" value="2024-10-21">
+						<!----><input type="radio" class="hidden_choice right-0 rounded-none" name="delivery_date" value="<?php echo wp_date( 'j/m/Y', strtotime("+2 days")) ;?>">
 						<div class="card-form choice uppercase grid content-center id-2024-10-21-lg">
-							<p class="block sm:hidden xl:hidden date-month"><?php echo $next_2days;?></p>
+							<p class="block sm:hidden xl:hidden date-month"><?php echo $next_2days_show;?></p>
 							<span class="font-bold text-black text-xxs xs:text-xs sm:text-sm lg:text-xs xl:text-sm relative date-week-day"><?php echo $n_week;?></span></div>
 					</div>
 					<div class="date-item">
 						<div id="calendar">
-							<input type="radio" class="hidden_choice right-0 rounded-none" name="delivery_date" value="Calendar"><div class="card-form choice pb-3 sm:py-3 lg:py-2 xl:py-3 xl:px-7 grid content-center">
+							<input type="radio" class="hidden_choice right-0 rounded-none" name="delivery_date" value="Calendar">
+							<div class="card-form choice pb-3 sm:py-3 lg:py-2 xl:py-3 xl:px-7 grid content-center">
 								<i class="fa fa-calendar-days text-xl xxs:text-md"></i>
 							<span class="font-bold sm:block date-week-day">LỊCH</span></div>
 							<div class="vc-popover-content-wrapper" placement="bottom-start"><!----></div>
