@@ -102,8 +102,12 @@ function box_add_to_cart_validation( $passed, $product_id, $quantity, $variation
     //     $passed = false;
     //     wc_add_notice( __( 'Quote is a required field.', 'webkul' ), 'error' );
     // }
-      $extra_id = 630;
-     wc()->cart->add_to_cart( $extra_id );
+    if( isset($_POST['bundles'] ) && !empty($_POST['bundles'] ) ){
+        foreach( $_POST['bundles'] as $id ) {
+            wc()->cart->add_to_cart( $id );
+        }
+    }
+     
 
     return $passed;
 }
