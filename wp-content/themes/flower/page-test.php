@@ -82,6 +82,16 @@ get_header();
         </div>
     </div>    
 </div>
+<div class="full fixed_bg">
+    <div class="container">
+        <div class="desc aos-init aos-animate" data-aos="fade-right">
+        <h2>The story of the flower lounge filled with happiness</h2>
+        <div class="bar"></div>
+        <p>I want to share the happiness that flowers give with many peoples.</p>
+    </div>
+
+    </div>
+</div>
 
 <div class=" full block-story">
     <div class="container ">
@@ -107,9 +117,9 @@ get_header();
         </div>
     
         <div class="list-testimonial ">
-           <?php testimonial_item();?>
-           <?php testimonial_item();?>
-           <?php testimonial_item();?>
+           <?php testimonial_item1();?>
+           <?php testimonial_item2();?>
+           <?php testimonial_item3();?>
         </div>
     </div>
 
