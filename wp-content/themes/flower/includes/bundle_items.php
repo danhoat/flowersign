@@ -9,19 +9,19 @@ function list_bundle_items(){
         'image' => 'https://assets.flowerstore.ph/public/tenantVN/app/assets/images/variant/600_aIlFh7F0uQRQiuqrFxmuj5cOy.webp'
     );
     $args[] =  array(
-        'product_id' => 630,
+        'product_id' => 631,
         'title' => 'Nến Thơm Giáng Sinh Cây Thông',
         'price' => 20000,
         'image' => 'https://assets.flowerstore.ph/public/tenantVN/app/assets/images/variant/600_YRR6d609qQtD2eR4b5uzJkkxI.webp'
     );
     $args[] =  array(
-        'product_id' => 630,
+        'product_id' => 632,
         'title' => ' Banner ( Băng Rôn ) Merry Christmas',
         'price' => 30000,
         'image' => 'https://assets.flowerstore.ph/public/tenantVN/app/assets/images/variant/600_QMMDsxRzUKrXjoX8R3p9uzz9u.webp'
     );
      $args[] =  array(
-        'product_id' => 630,
+        'product_id' => 633,
         'title' => ' Hộp Chocolate Ferrero Rocher (5 viên)',
         'price' => 40000,
         'image' => 'https://assets.flowerstore.ph/public/tenantVN/app/assets/images/variant/600_cXFSDEMW87kZbse3b23rt8bud.webp'
