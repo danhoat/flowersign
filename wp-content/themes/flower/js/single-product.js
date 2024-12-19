@@ -52,4 +52,15 @@
     });
 
     $(".chosen-select").chosen();
-}(jQuery))
+
+    $(document).ready(function(){
+
+        $(".cool-cash-box-detail").click(function(){
+            console.log('js click');
+            $(this).find(".js-coolcash-content").toggleClass('tw-max-h-0');
+        });
+    });
+
+
+
+}(jQuery));
