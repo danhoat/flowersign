@@ -7,6 +7,13 @@
     .bestselling  ul.products {
         grid-template-columns: repeat(5, 1fr);
     }
+    .love-story,
+    .overview {
+        width: 50%;
+        margin: 30px auto 50px auto;
+        text-align: center;
+
+    }
 
 }
 
