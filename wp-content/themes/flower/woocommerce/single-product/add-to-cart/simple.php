@@ -110,6 +110,7 @@ if ( $product->is_in_stock() ) : ?>
 				</div>
 				<!----></div>
 		</div>
+		<div class="full"><?php list_bulde_product();?></div>
 		<div class="full">
 			<p>
 				<h3 class="flex my-1 text-lg">Tổng: <span class="text-brand font-bold self-center ml-2 whitespace-nowrap">719,000 ₫</span></h3>
