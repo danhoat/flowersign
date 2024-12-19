@@ -254,7 +254,7 @@ h1.post-title{
     line-height: 5rem;
     margin-bottom: 20px;
     color: #4c4c4c;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     line-height: 2rem;
 }
 .cs-box-banner{
@@ -386,4 +386,8 @@ h1.post-title{
 .arow{
     margin-bottom: 30px;
     margin-top: 20px;
+}
+.text-yellow-400 {
+    --tw-text-opacity: 1;
+    color: rgba(251, 191, 36, var(--tw-text-opacity));
 }

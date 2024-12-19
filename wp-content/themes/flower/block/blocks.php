@@ -61,7 +61,7 @@ function block_products_by_category($slug = '', $label = ''){
             <?php _e('No post found in  cat '.$slug,'box');?>
         <?php } ?>
     </div>
-<?php }?>
+<?php } ?>
 
 <?php
 
