@@ -23,6 +23,9 @@ if ( ! $product->is_purchasable() ) {
 	return;
 }
 
+
+
+
 // $product->get_regular_price();
 // $product->get_sale_price();
 // $product->get_price();
@@ -72,6 +75,14 @@ if ( $product->is_in_stock() ) : ?>
 		<div class="full">
 			<div class="text-xs mb-2"><p>Đơn hàng sẽ được giao bởi một trong những đối tác của chúng tôi.</p></div>
 		</div>
+		
+		<div class="full">
+
+			<div class="mt-2 text-xs">Chọn thêm sản phẩm:</div>
+
+			<?php list_bulde_product();?>
+		</div>
+
 		<div class="full">
 			<div class="text-xs" id="delivery-date" product_price="719000" style="">
 				<span class="label">Chọn ngày giao hàng:</span>
@@ -110,10 +121,10 @@ if ( $product->is_in_stock() ) : ?>
 				</div>
 				<!----></div>
 		</div>
-		<div class="full"><?php list_bulde_product();?></div>
+
 		<div class="full">
 			<p>
-				<h3 class="flex my-1 text-lg">Tổng: <span class="text-brand font-bold self-center ml-2 whitespace-nowrap">719,000 ₫</span></h3>
+				<h3 class="flex my-1 text-lg">Tổng: <span class="text-brand font-bold self-center ml-2 whitespace-nowrap"> <?php echo $product->get_price_html();?></span></h3>
 			</p>
 		</div>
 		<div class="grid full grid-cols-2 form-btn">

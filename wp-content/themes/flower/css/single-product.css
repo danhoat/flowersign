@@ -190,6 +190,7 @@ audio, canvas, embed, iframe, img, object, svg, video {
 .list-bundles{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 20px;
 }
 .addon-box {
     height: 200px;
@@ -261,6 +262,10 @@ audio, canvas, embed, iframe, img, object, svg, video {
 .splide__slide img {
     vertical-align: bottom;
 }
+.list-bundles  .relative{
+    border: 2px solid #d9d6d6;
+    border-radius: 5px;
+}
 
 .addon-img {
     height: 100px;
@@ -281,4 +286,25 @@ audio, canvas, embed, iframe, img, object, svg, video {
 }
 .cursor-pointer {
     cursor: pointer;
+}
+.hidden_choice{
+    z-index: 20;
+}
+.hidden_choice:checked~div.choice, .hidden_choice_checkbox:checked~div.choice {
+    --tw-border-opacity: 1;
+    border-color: rgba(158, 166, 212, var(--tw-border-opacity));
+    border-width: 2px;
+}
+[type=checkbox]:checked {
+    background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 16 16' fill='%23fff' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.207 4.793a1 1 0 0 1 0 1.414l-5 5a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L6.5 9.086l4.293-4.293a1 1 0 0 1 1.414 0z'/%3E%3C/svg%3E);
+}
+[type=checkbox]:checked, [type=radio]:checked {
+    background-color: currentColor;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-color: transparent;
+}
+.hidden {
+    display: none;
 }

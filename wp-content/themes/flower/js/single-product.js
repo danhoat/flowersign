@@ -28,7 +28,7 @@
             top = 0;
         }
         var delivery_date = form.find("input[name='delivery_date']:checked").val();
-
+        return true;
         if(! delivery_date){
              $("html, body").animate({ scrollTop: 0 }, "slow");
             form_validate_fail('Lỗi chưa chọn ngày giao hàng.', 3000);
@@ -38,20 +38,20 @@
 
         //return true;
     });
-    $("#tinh_tp").change(function(event){
+    // $("#tinh_tp").change(function(event){
 
-        var ttp_name = $(this).val();
+    //     var ttp_name = $(this).val();
 
-        console.log(feeShip);
-        console.log(ttp_name);
-        var price = $("#static_price").val();
+    //     console.log(feeShip);
+    //     console.log(ttp_name);
+    //     var price = $("#static_price").val();
 
-        var newPrice = parseFloat(price) + parseFloat(feeShip[ttp_name]);
-        console.log("new Price:", newPrice);
-        $("#woo_price").html(newPrice);
-    });
+    //     var newPrice = parseFloat(price) + parseFloat(feeShip[ttp_name]);
+    //     console.log("new Price:", newPrice);
+    //     $("#woo_price").html(newPrice);
+    // });
 
-    $(".chosen-select").chosen();
+    //$(".chosen-select").chosen();
 
     $(document).ready(function(){
 
