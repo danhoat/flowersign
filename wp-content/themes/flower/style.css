@@ -398,14 +398,17 @@ h1.post-title{
   .love-story  h2,
   .block-testimonial h2{
     line-height: 1em;
-    font-size: 1.5em;
+    font-size: 3.5em;
     margin-bottom: 30px;
+    font-family: "Dancing Script", Sans-serif;
+    color: #000000;
   }
 .block-story{
       background-image:url('https://demo.dichvu139.com/wp-content/uploads/2024/12/watercolor-flower-plant-illustration_919294-1638-300x300.jpg');
       background-position: left top;
       background-size: auto;
       background-repeat: no-repeat;
+      margin-bottom: 50px;
 }
 .block-testimonial{
 
@@ -423,7 +426,7 @@ h1.post-title{
     gap: 50px 100px;
     flex-wrap: nowrap;
     background-transition: 0.3s;
-    margin-top: 100px;
+    margin-top: 60px;
     margin-bottom: 0px;
     margin-left: 0px;
     margin-right: 0px;
@@ -433,8 +436,9 @@ h1.post-title{
 }
 .testimonial-item img{
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
+    margin: 10px 0;
 }
 .testimonial-item .testimonial-name{
     color: #333333;
@@ -459,4 +463,17 @@ h1.post-title{
     letter-spacing: 0px;
     word-spacing: 0px;
     text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.3);
+}
+.block-testimonial h3{
+color: #2E2E2E;
+    font-family: "Montserrat", Sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    text-transform: none;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 26px;
+    letter-spacing: 0px;
+    word-spacing: 0em;
+    margin-bottom: 23px;
 }

@@ -6,13 +6,9 @@
 window.Firstmall.Config = {"Environment":{"MobileMode":true,"SetMode":null,"Language":"KR","isAdmin":false,"isSellerAdmin":false,"isUser":false,"Currency":{"Basic":{"Id":"KRW","Symbol":"원","Position":"after"},"Skin":{"Id":"KRW","Symbol":"원","Position":"after"}},"serviceLimit":{"H_FR":false,"H_AD":false,"H_NFR":true},"OperationType":"light","Protocol":"https","CacheBreaker":"afe0eba294279d50c8408292d8af4a8f517cd1d6"},"Security":{"PreventDrag":true,"PreventContextMenu":true,"MemberLogoutLimit":"30"},"Search":{"AutoComplete":true,"Suggest":false}};
 (function(){ var aliases = {"gl_operation_type":window.Firstmall.Config.Environment.OperationType,"gl_mobile_mode":window.Firstmall.Config.Environment.MobileMode,"gl_set_mode":window.Firstmall.Config.Environment.SetMode,"gl_language":window.Firstmall.Config.Environment.Language,"gl_basic_currency":window.Firstmall.Config.Environment.Currency.Basic.Id,"gl_skin_currency":window.Firstmall.Config.Environment.Currency.Skin.Id,"gl_basic_currency_symbol":window.Firstmall.Config.Environment.Currency.Basic.Symbol,"gl_basic_currency_symbol_position":window.Firstmall.Config.Environment.Currency.Basic.Position,"gl_protocol":window.Firstmall.Config.Environment.Protocol+"://","gl_broadcast":window.Firstmall.Config.Environment.Broadcast}; for(var attr in aliases) { window[attr] = aliases[attr]; }})();</script>
 
-
-<!-- 구글 웹폰트 -->
-<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700&amp;subset=korean" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" type="text/css" href="https://f-mans.com/data/skin/responsive_ver1_default_gl/css/jqueryui/black-tie/jquery-ui-1.8.16.custom.css">
 <link rel="stylesheet" type="text/css" href="https://f-mans.com/app/javascript/plugin/slick/slick.css"><!-- 반응형 슬라이드 -->
