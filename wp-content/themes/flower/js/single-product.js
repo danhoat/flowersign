@@ -28,7 +28,7 @@
             top = 0;
         }
         var delivery_date = form.find("input[name='delivery_date']:checked").val();
-        return true;
+
         if(! delivery_date){
              $("html, body").animate({ scrollTop: 0 }, "slow");
             form_validate_fail('Lỗi chưa chọn ngày giao hàng.', 3000);
@@ -59,7 +59,31 @@
             console.log('js click');
             $(this).find(".js-coolcash-content").toggleClass('tw-max-h-0');
         });
+        var total = $("#woo_price").html();
+        total = parseFloat(total);
+
+        console.log('total:', total);
+        $(".hidden_choice_checkbox ").change(function(){
+            var checked = $(this).is(":checked");
+            console.log('checked:', checked);
+
+            var price = $(this).attr('att_price');
+            price = parseFloat(price);
+            console.log('price: ', price);
+
+            if( checked){
+                total = total + price;
+            }else{
+                total = total - price;
+            }
+            
+  
+            console.log('total:', total);
+            var new_price = new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(total)
+            $("#subtotal").html(new_price);
+        })
     });
+
 
 
 
