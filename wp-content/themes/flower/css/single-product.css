@@ -358,7 +358,7 @@ input:checked + .choice{
 .woocommerce .quantity .qty{
    border: 0;
     color: rgb(158 166 212);
-    width: 26px;
+    width: 33px;
     min-width: unset;
     font-size: .98rem;
     font-weight: 500;
