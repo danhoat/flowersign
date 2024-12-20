@@ -60,19 +60,40 @@ if ( $product->is_in_stock() ) : ?>
 		</div>
 
 		<?php
-		do_action( 'woocommerce_before_add_to_cart_quantity' );
+		
 
-		woocommerce_quantity_input(
-			array(
-				'min_value'   => apply_filters( 'woocommerce_quantity_input_min', $product->get_min_purchase_quantity(), $product ),
-				'max_value'   => apply_filters( 'woocommerce_quantity_input_max', $product->get_max_purchase_quantity(), $product ),
-				'input_value' => isset( $_POST['quantity'] ) ? wc_stock_amount( wp_unslash( $_POST['quantity'] ) ) : $product->get_min_purchase_quantity(), // WPCS: CSRF ok, input var ok.
-			)
-		);
+		// woocommerce_quantity_input(
+		// 	array(
+		// 		'min_value'   => apply_filters( 'woocommerce_quantity_input_min', $product->get_min_purchase_quantity(), $product ),
+		// 		'max_value'   => apply_filters( 'woocommerce_quantity_input_max', $product->get_max_purchase_quantity(), $product ),
+		// 		'input_value' => isset( $_POST['quantity'] ) ? wc_stock_amount( wp_unslash( $_POST['quantity'] ) ) : $product->get_min_purchase_quantity(), // WPCS: CSRF ok, input var ok.
+		// 	)
+		// );
 
-		do_action( 'woocommerce_after_add_to_cart_quantity' );
+		
 		?>
-		<div class="full">
+		<div data-v-53b46760="" class="h-10 col-span-2 grid grid-cols-3 w-40 text-brand">
+			<div data-v-53b46760="" class="flex">
+				<span data-v-53b46760="" class="btn text-xs self-center text-brand hover:text-brand-dark btn-minus-quantity"><i data-v-53b46760="" class="fa-solid fa-minus"></i></span>
+			</div>
+
+			
+			<?php
+			do_action( 'woocommerce_before_add_to_cart_quantity' );
+			woocommerce_quantity_input(
+				array(
+					'min_value'   => apply_filters( 'woocommerce_quantity_input_min', $product->get_min_purchase_quantity(), $product ),
+					'max_value'   => apply_filters( 'woocommerce_quantity_input_max', $product->get_max_purchase_quantity(), $product ),
+					'input_value' => isset( $_POST['quantity'] ) ? wc_stock_amount( wp_unslash( $_POST['quantity'] ) ) : $product->get_min_purchase_quantity(), // WPCS: CSRF ok, input var ok.
+				)
+			);
+			do_action( 'woocommerce_after_add_to_cart_quantity' );
+			?>
+
+			<div data-v-53b46760="" class="flex"><span data-v-53b46760="" class="btn text-xs self-center text-brand hover:text-brand-dark btn-plus-quantity"><i data-v-53b46760="" class="fa-solid fa-plus"></i></span></div>
+		</div>
+
+		<div class="full mt10 mb10">
 			<div class="text-xs mb-2"><p>Đơn hàng sẽ được giao bởi một trong những đối tác của chúng tôi.</p></div>
 		</div>
 		
@@ -183,7 +204,7 @@ if ( $product->is_in_stock() ) : ?>
 
 		<div class="full">
 			<p>
-				<h3 class="flex my-1 text-lg">Tổng: <span class="text-brand font-bold self-center ml-2 whitespace-nowrap" id="subtotal">  <?php echo wc_price($product->get_price());?></span></h3>
+				<h3 class="flex my-1 text-lg">Tổng: <span class="text-brand font-bold self-center whitespace-nowrap" id="subtotal">  <?php echo wc_price($product->get_price());?></span></h3>
 			</p>
 		</div>
 		<div class="grid full grid-cols-2 form-btn">

@@ -9,8 +9,9 @@ function box_add_to_cart_validation( $passed, $product_id, $quantity, $variation
     // echo '<pre>';
     // var_dump($_POST);
     // echo '</pre>';
-    // die();
-    if( isset($_POST['is_buy_now']) ) return $passed;
+    // die('1111');
+    if( isset($_POST['is_buy_now']) && (int) $_POST['is_buy_now'] > 0 ) return $passed;
+
     if ( empty( $_POST['delivery_date'] ) ) {
         $passed = false;
         wc_add_notice( __( 'Vui lòng chọn ngày giao hàng.', 'webkul' ), 'error' );
@@ -24,7 +25,7 @@ function box_add_to_cart_validation( $passed, $product_id, $quantity, $variation
 
     return $passed;
 }
-add_filter( 'woocommerce_add_to_cart_validation', 'box_add_to_cart_validation', 10, 4 );
+add_filter( 'woocommerce_add_to_cart_validation', 'box_add_to_cart_validation', 99, 4 );
 
 
 

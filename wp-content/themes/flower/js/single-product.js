@@ -89,7 +89,21 @@
         // })
     });
 
+    $(".btn-minus-quantity").click(function(){
 
+        let newNumber = parseInt($(".qty").val());
+        if(newNumber == 1) return;
+
+        $(".qty").val(newNumber-1);
+    });
+
+    $(".btn-plus-quantity").click(function(){
+
+        let newNumber = parseInt($(".qty").val());
+        if(newNumber > 10) return;
+
+        $(".qty").val(newNumber+1);
+    });
 
 
 }(jQuery));

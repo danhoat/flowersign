@@ -345,3 +345,38 @@ input:checked + .choice{
     top: 0;
     cursor: pointer;
 }
+.grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.w-40 {
+    width: 10rem;
+}
+.woocommerce .quantity .qty{
+   border: 0;
+    color: rgb(158 166 212);
+    width: 26px;
+    min-width: unset;
+    font-size: .98rem;
+    font-weight: 500;
+}
+.text-brand{
+    color: rgb(158 166 212);
+    align-items: center;
+    font-size: 1rem;
+}
+.border-0 {
+    border-width: 0;
+}
+.w-16 {
+    width: 4rem;
+}
+.h-10 {
+    height: 2.5rem;
+}
+
+.btn-minus-quantity{
+    text-indent: 5px;
+}
+.btn {
+    cursor: pointer;
+}
