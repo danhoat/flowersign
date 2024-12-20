@@ -1,3 +1,6 @@
+h1, h2, h3{
+    font-family: Nunito, Prompt, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
 body.single-product form.cart select{
     width: 100%;
 }
@@ -380,4 +383,33 @@ input:checked + .choice{
 }
 .btn {
     cursor: pointer;
+}
+.woocommerce .star-rating span:first-child,
+.woocommerce .star-rating span:first-child i,
+span.rate-score{
+    color: rgb(251 191 36);
+}
+
+ span.rate-score {
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+    top: 3px;
+}
+.woocommerce div.product .product_title{
+    color: rgb(0 0 0);
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    margin-bottom: .75rem;
+    text-transform: uppercase;
+    position: relative;
+}
+.woocommerce div.product .product_title:after {
+    border: 1px solid #e6eaed;
+    bottom: -10px;
+    content: "";
+    left: 0;
+    position: absolute;
+    width: 30%;
 }

@@ -6,7 +6,7 @@
 
 remove_action('woocommerce_after_shop_loop_item','woocommerce_template_loop_add_to_cart');
 function box_change_view_rating($html, $rating, $count ){
-    if( is_singular('product') ) return ;
+    if( is_singular('product') ) return $html.'<span class="rate-score">'.$rating.'</span>';
 
     global $product;
     if($product){
@@ -41,3 +41,5 @@ function close_div_wrap(){
 add_action( 'woocommerce_after_shop_loop_item_title', 'close_div_wrap', 16 );
 
 
+
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price' );
