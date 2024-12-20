@@ -50,7 +50,7 @@ body.single-product form.cart input.hidden_choice{
     height: 100%;
 }
 body.single-product form.cart input.hidden_choice:checked+.choice{
-    border-color: red;
+    border-color: rgb(158 166 212);
 }
 body.single-product form.cart .full{
     margin-bottom: 15px;
