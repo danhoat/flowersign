@@ -27,7 +27,15 @@
         if( ! elementExists || top > 600 ){
             top = 0;
         }
-        return true;
+        var is_buy_now = 0;
+        $.each(data, function(i, field){
+            if(field.name == 'is_buy_now'){
+                is_buy_now = field.value;
+            }
+        });
+        if( is_buy_now ) return true;
+    
+
         var delivery_date = form.find("input[name='delivery_date']:checked").val();
 
         if(! delivery_date){
