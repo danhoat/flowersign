@@ -74,20 +74,20 @@ function wpdocs_theme_name_scripts() {
 
     //wp_enqueue_script( 'box-js', BOXTHEME_URL. '/js/box.js', array('jquery'), rand(), true );
     if( is_singular('product') ){
-        wp_enqueue_style( 'single-product', BOXTHEME_URL.'/css/single-product.css', rand() );
+        wp_enqueue_style( 'single-product', BOXTHEME_URL.'/css/single-product.css',array(), rand() );
         wp_enqueue_script( 'single-product', BOXTHEME_URL. '/js/single-product.js', array('jquery'), rand(), true );
     }
     if( is_singular('post') || is_page_template('page-blog.php')){
-        wp_enqueue_style( 'blog-post', BOXTHEME_URL.'/css/blog.css', rand() );
+        wp_enqueue_style( 'blog-post', BOXTHEME_URL.'/css/blog.css',array(), rand() );
     }
-    wp_enqueue_style('responsive-css', BOXTHEME_URL.'/responsive.css', rand() );
+    wp_enqueue_style('responsive-css', BOXTHEME_URL.'/responsive.css',array(), rand() );
     if(! LOAD_STATIC_JS){
         $jss = box_js_enqueue();
         foreach($jss as $key=>$url){
             wp_enqueue_script('abc-'.$key, trim($url) );
         }
     }
-    wp_enqueue_style('woo-css', BOXTHEME_URL.'/css/override_woo.css', rand() );
+    wp_enqueue_style('woo-css', BOXTHEME_URL.'/css/override_woo.css',array(), rand() );
 }
 add_action( 'wp_enqueue_scripts', 'wpdocs_theme_name_scripts' );
 

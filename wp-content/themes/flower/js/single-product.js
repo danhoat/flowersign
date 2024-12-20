@@ -100,7 +100,7 @@
     $(".btn-plus-quantity").click(function(){
 
         let newNumber = parseInt($(".qty").val());
-        if(newNumber > 10) return;
+        if(newNumber > 9 ) return;
 
         $(".qty").val(newNumber+1);
     });
