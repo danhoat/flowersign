@@ -75,4 +75,9 @@
         width: 111px;
         text-align: center;
     }
+    .list-bundles{
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        overflow: hidden;
+    }
 }
