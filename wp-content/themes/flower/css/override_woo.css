@@ -127,6 +127,9 @@ color: rgb(153 153 153);
     .is-large.wc-block-cart .wc-block-cart-items td{
         padding-bottom: 1px !important;
     }
+    .is-large.wc-block-cart .wc-block-cart-items td.wc-block-cart-item__image{
+        padding-left: 0;
+    }
 }
 .woocommerce nav.woocommerce-pagination ul li,
 .woocommerce nav.woocommerce-pagination ul{

@@ -17,8 +17,11 @@ window.Firstmall.Config = {"Environment":{"MobileMode":true,"SetMode":null,"Lang
 
 
 <link rel="stylesheet" type="text/css" href="https://f-mans.com/data/skin/responsive_ver1_default_gl/css/jqueryui/black-tie/jquery-ui-1.8.16.custom.css">
+<?php 
+if(!is_singular('product') ){?>
 <link rel="stylesheet" type="text/css" href="https://f-mans.com/app/javascript/plugin/slick/slick.css"><!-- 반응형 슬라이드 -->
 <link rel="stylesheet" type="text/css" href="https://f-mans.com/data/design/goods_info_style.css?v=2"><!-- 상품디스플레이 CSS -->
+<?php } ?>
 <link rel="stylesheet" type="text/css" href="https://f-mans.com/data/design/goods_info_user.css"><!-- ++++++++++++ 상품디스플레이 사용자/제작자 CSS ++++++++++++ -->
 <link rel="stylesheet" type="text/css" href="https://f-mans.com/data/skin/responsive_ver1_default_gl/css/lib.css">
 <link rel="stylesheet" type="text/css" href="<?php echo BOXTHEME_URL;?>/css/common.css?date=20241013&amp;v=11">

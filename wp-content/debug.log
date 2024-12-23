@@ -6697,3 +6697,30 @@ Stack trace:
 [23-Dec-2024 17:41:07 UTC] PHP Warning:  Attempt to read property "menu_item_parent" on null in D:\laragon\www\flower\wp-content\themes\flower\templates\primary-menu.php on line 62
 [23-Dec-2024 17:41:08 UTC] PHP Warning:  Undefined array key 8 in D:\laragon\www\flower\wp-content\themes\flower\templates\primary-menu.php on line 62
 [23-Dec-2024 17:41:08 UTC] PHP Warning:  Attempt to read property "menu_item_parent" on null in D:\laragon\www\flower\wp-content\themes\flower\templates\primary-menu.php on line 62
+[23-Dec-2024 19:11:18 UTC] PHP Parse error:  syntax error, unexpected double-quoted string "priority", expecting ")" in D:\laragon\www\flower\wp-content\themes\flower\woo\add_tabs.php on line 9
+[23-Dec-2024 19:11:35 UTC] PHP Parse error:  syntax error, unexpected double-quoted string "priority", expecting ")" in D:\laragon\www\flower\wp-content\themes\flower\woo\add_tabs.php on line 9
+[23-Dec-2024 19:11:37 UTC] PHP Parse error:  syntax error, unexpected double-quoted string "priority", expecting ")" in D:\laragon\www\flower\wp-content\themes\flower\woo\add_tabs.php on line 9
+[23-Dec-2024 19:11:37 UTC] PHP Parse error:  syntax error, unexpected double-quoted string "priority", expecting ")" in D:\laragon\www\flower\wp-content\themes\flower\woo\add_tabs.php on line 9
+[23-Dec-2024 19:11:54 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func(): Argument #1 ($callback) must be a valid callback, function "woocommerce_product_new_tab" not found or invalid function name in D:\laragon\www\flower\wp-content\themes\flower\woocommerce\single-product\tabs\tabs.php:54
+Stack trace:
+#0 D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\wc-core-functions.php(345): include()
+#1 D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1735): wc_get_template('single-product/...')
+#2 D:\laragon\www\flower\wp-includes\class-wp-hook.php(324): woocommerce_output_product_data_tabs('')
+#3 D:\laragon\www\flower\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#4 D:\laragon\www\flower\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 D:\laragon\www\flower\wp-content\plugins\woocommerce\templates\content-single-product.php(72): do_action('woocommerce_aft...')
+#6 D:\laragon\www\flower\wp-includes\template.php(812): require('D:\\laragon\\www\\...')
+#7 D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\wc-core-functions.php(284): load_template('D:\\laragon\\www\\...', false)
+#8 D:\laragon\www\flower\wp-content\themes\flower\woocommerce\single-product.php(37): wc_get_template_part('content', 'single-product')
+#9 D:\laragon\www\flower\wp-includes\template-loader.php(106): include('D:\\laragon\\www\\...')
+#10 D:\laragon\www\flower\wp-blog-header.php(19): require_once('D:\\laragon\\www\\...')
+#11 D:\laragon\www\flower\index.php(17): require('D:\\laragon\\www\\...')
+#12 {main}
+  thrown in D:\laragon\www\flower\wp-content\themes\flower\woocommerce\single-product\tabs\tabs.php on line 54
+[23-Dec-2024 19:33:10 UTC] PHP Warning:  Undefined array key "HA-NOI" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[23-Dec-2024 19:33:10 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[23-Dec-2024 19:33:10 UTC] PHP Warning:  Undefined array key "HOCHIMINH" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[23-Dec-2024 19:33:10 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[23-Dec-2024 19:33:10 UTC] PHP Warning:  Undefined array key "CAMAU" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[23-Dec-2024 19:33:10 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[23-Dec-2024 19:50:24 UTC] PHP Parse error:  syntax error, unexpected token ";" in D:\laragon\www\flower\wp-content\themes\flower\includes\bundle_items.php on line 32

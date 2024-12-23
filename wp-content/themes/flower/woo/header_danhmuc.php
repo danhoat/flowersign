@@ -10,7 +10,7 @@ function woocommerce_product_archive_description() {
     if ( is_product_taxonomy() && 0 === absint( get_query_var( 'paged' ) ) ) {
 
         ?>
-        <h1 class="woocommerce-products-header__title page-title line266">
+        <h1 class="woocommerce-products-header__title">
             <?php
                 woocommerce_page_title();
             ?>
@@ -29,7 +29,7 @@ function woocommerce_product_archive_description() {
         
             if($thumbnail_id){
                 $image = wp_get_attachment_image_src( $thumbnail_id, 'full' );
-                echo '<img src="' . $image[0] . '" alt="" />'; 
+                echo '<img class="cat-thumbnail" src="' . $image[0] . '" alt="" />'; 
             }
 
             /**

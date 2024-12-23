@@ -29,17 +29,17 @@ function list_bulde_product(){?>
          ?>
            <li class="splide__slide is-active is-visible"  >
                 <div class="relative">
-                    <input   type="checkbox" class="hidden_choice_checkbox " value="<?php echo $item->get_ID();?>"  name="bundles[]" att_price = "<?php echo $item->get_price();?>">
+                    <input   type="checkbox" class="hidden_choice_checkbox " value="<?php echo $item->get_ID();?>"  name="bundles[]" att_price = "<?php echo $item->get_price(); ?>">
                     <div class="addon-container flex flex-col justify-between px-3 pb-2 rounded-md border-2 border-blue-light text-center choice addon-box cursor-pointer hover:bg-gray-50" >
                         <div class="absolute addon-info cursor-pointer" data-id="8"><i class="fa fa-info pointer-events-none"></i></div>
 
-                    <div class="addon-name text-red pr-2 addon-title line-clamp-2" data-addonid="332"><?php echo $item->get_title();?></div>
+                        <div class="addon-name text-red pr-2 addon-title line-clamp-2" data-addonid="332"><?php echo $item->get_title();?></div>
 
-                    <img src="<?php echo $thumbnail_url;?>" alt="<?php echo esc_attr($item->get_title());?>" class="addon-image w-24 h-24 object-cover object-center my-1 self-center addon-img cursor-pointer" >
-                    <span class="addon-price font-bold cursor-pointer" data-addonid="332"><?php echo $item->get_price();?> ₫</span>
+                        <img src="<?php echo $thumbnail_url;?>" alt="<?php echo esc_attr($item->get_title());?>" class="addon-image w-24 h-24 object-cover object-center my-1 self-center addon-img cursor-pointer" >
+                        <span class="addon-price font-bold cursor-pointer" ><?php echo wc_price($item->get_price());?></span>
+                    </div>
                 </div>
-                </div>
-                <div class="grid-cols-3 hidden" id="qty-332"><span class="btn text-sm hover:text-brand-dark" data-symb="-" data-id="332">-</span>
+                <div class="grid-cols-3 hidden" ><span class="btn text-sm hover:text-brand-dark" data-symb="-">-</span>
                     <span class="self-center justify-self-center">0</span><span class="btn text-sm hover:text-brand-dark" data-symb="+" data-id="332">+</span>
                 </div>
             </li>
