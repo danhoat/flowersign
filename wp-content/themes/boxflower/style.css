@@ -725,3 +725,10 @@ color: #2E2E2E;
     outline: none;
     color: #999;
 }
+.wc-block-cart-item__wrap{
+
+}
+.wc-block-cart-item__wrap .wc-block-components-sale-badge{
+   display: none;
+   opacity: 0;
+}
