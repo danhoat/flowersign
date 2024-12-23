@@ -1,5 +1,5 @@
 <?php /**
- * Template Name: Front page
+ * Template Name: Page Front
  *
  */
 
@@ -27,13 +27,7 @@ get_header();
 
 
 <div id="layout_body" class="layout_body page-front.php">
-    <div class="resp_wrap 99999 home" style="position:relative;">
-
-
-        <!-- start list categories !-->
-
-        <!-- 꽃청 수정 START 김태섭 2023-07-04 - 테마메뉴 UI -->
-
+    <div class="resp_wrap " style="position:relative;">
         <?php 
         $categories = get_terms( 'product_cat', array(
             'orderby'    => 'count',
@@ -41,7 +35,7 @@ get_header();
             'order' => 'DESC',
         ) );
         ?>
-        <div class="theme_content">
+        <div class="theme_content block-categories arow">
             <div class="row g-3 g-md-2">
                 <?php  foreach($categories as $cat ){ ?> 
                 <div class="col col-md-3">
@@ -68,12 +62,54 @@ get_header();
             </div>
         </div>
 
-    <!-- END list categories !-->
-    <?php the_post(); ?>
+        <!-- END list categories !-->
+        <?php $heading = 'MY Hear All best wish to you';?>
 
-    <div class="post-content">
-        <?php  the_content(); ?>
+        
+        <?php box_block_best_selling();?>
+        <?php block_products_by_category($slug = 'hoa-tot-nghiep', $label ='Hoa Tốt Nghiệp');?>
+        <?php block_image_vs_button($heading);?>
+        <?php block_products_by_category($slug = 'hoa-cuoi', $label ='Hoa Cưới');?>
+        <?php block_image_vs_button($heading, $bg = IMAGE_URL.'/banner/bg_hydrangea.jpg');?>
+        <?php block_products_by_category($slug = 'hoa-tinh-yeu', $label ='Hoa Tình Yêu');?>
+        <?php block_image_vs_button($heading);?>
+        <?php block_products_by_category($slug = 'hoa-chuc-mung', $label ='Hoa Chúc Mừng ');?>
+    </div>    
+</div>
+<div class="full fixed_bg">
+    <div class="container">
+        <div class="desc aos-init aos-animate" data-aos="fade-right">
+        <h2>The story of the flower lounge filled with happiness</h2>
+        <div class="bar"></div>
+        <p>I want to share the happiness that flowers give with many peoples.</p>
     </div>
-            
+
+    </div>
+</div>
+
+<div class=" full block-story">
+    <div class="container ">
+        <center>
+        <img src="<?php echo IMAGE_URL;?>/home/img-love-story.png" width="300">
+        </center>
+        <div class="cl-6 love-story ">
+            <h2>Love Story</h2>
+            <div class="text-center right-text-styling w-50 mx-auto">
+                <p>FlowerSight tự hào là một trong những shop hoa tươi Sài Gòn, Hà Nội uy tín và có tiếng trong ngành. Chúng tôi cung cấp dịch vụ đặt hoa online, đặt hoa tươi TPHCM và Hà Nội ship siêu tốc trong ngày. Tiệm hoa tươi giá rẻ ở Sài Gòn FlowerSight mang đến cho khách hàng những bó hoa, lẵng hoa, giỏ hoa tặng sinh nhật, hoa khai trương, hoa cưới cầm tay,hoa chia buồn, hoa sự kiện đầy nghệ thuật hay hoa tang tỏ lòng thành kính</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="full block-testimonial">
+    <div class="container">
+        <?php get_template_part('testimonial/slider');?>
+
+
+    </div>
+</div>
 
 <?php get_footer(); ?>

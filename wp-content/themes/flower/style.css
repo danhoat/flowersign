@@ -148,10 +148,7 @@ div.notice{
 .text-right{
     text-align: right;
 }
-.woo-price{
-    font-size: 18px;
-    font-weight: 500;
-}
+
 .full{
     width: 100%;
     display: block;
@@ -585,14 +582,10 @@ color: #2E2E2E;
 .wrap_pagi{
     position: relative;
 }
-.select-number-items{
-    position: absolute;
-    right: 0;
-    top:0;
-}
+
 .select-number-items span{
     position: relative;
-    top:3px;
+    top:7px;
 }
 .select-number-items select{
     width: 50px;
@@ -704,4 +697,24 @@ color: #2E2E2E;
     justify-content: center;
     align-items: center;
     font-size: 2em;
+}
+.page-title{
+    text-indent: 15px;
+    margin-bottom: 30px;
+}
+
+.wrap_pagi {
+    position: relative;
+    display: flex
+;
+    align-items: center;
+    vertical-align: c;
+    vertical-align: center;
+    text-align: center;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 23px;
+}
+.sub-menu{
+    display: none;
 }

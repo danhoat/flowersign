@@ -194,6 +194,7 @@ audio, canvas, embed, iframe, img, object, svg, video {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin-top: 20px;
+    gap: 10px;
 }
 .addon-box {
     height: 200px;
@@ -362,11 +363,20 @@ input:checked + .choice{
     min-width: unset;
     font-size: .98rem;
     font-weight: 500;
-    -webkit-appearance: none;
-     -moz-appearance: textfield;
+    -moz-appearance: textfield;
      margin: 0;
 
 }
+.woocommerce .quantity input.qty::-webkit-outer-spin-button,
+.woocommerce .quantity input.qty::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.woocommerce .quantity input.qty:focus{
+    border:0;
+    outline: none;
+}
+
 .text-brand{
     color: rgb(158 166 212);
     align-items: center;
@@ -419,4 +429,16 @@ span.rate-score{
 }
 .related.products h2{
     margin-bottom: 20px;
+    text-align: center;
+}
+
+.woo-price .amount{
+    font-size: 20px;
+    font-weight: 700;
+}
+@media only screen and (max-width: 750px){
+    
+    body.single-product form.cart .select-date{
+        gap: 0;
+    }
 }

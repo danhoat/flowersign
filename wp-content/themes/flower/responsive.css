@@ -44,8 +44,11 @@
     }
 }
 @media only screen and (max-width: 750px){
+    .hide-mb{
+        display: none;
+    }
     .site-main{
-        padding: 15px;
+        padding: 10px;
     }
     .blog-post{
         grid-template-columns: auto auto ;
@@ -107,12 +110,15 @@
     .list-bundles{
         width: 103%;
         overflow: hidden;
-        gap: 19px 0px;
+        gap: 19px 5px;
         margin-left: -2%;
         margin-right: -2%;
     }
     .list-bundles li{
         width: auto !important;
         margin-right: 0 !important;
+    }
+    .term-description{
+        padding: 10px;
     }
 }

@@ -38,17 +38,18 @@ if ( $product->is_in_stock() ) : ?>
 
 
 	<div class="full">
-		<p class="woo-price text-right">
-			<span id="woo_price"><?php echo $product->get_price();?></span>
-			<span><?php echo get_woocommerce_currency_symbol();?></span>
+		<p class="woo-price woo-first-price text-right">
+			<span id="woo_price" class=""><?php echo wc_price($product->get_price()); ?></span>
 			<input type="hidden" id="static_price"  value="<?php echo $product->get_price();?>">
 		</p>
-		<p class="woo-price text-right">
+		<?php if($product->is_on_sale() ) {?>
+		<p class="woo-price woo-second-price text-right ">
 			<del>
-				<span id="woo_regular_price"><?php echo $product->get_regular_price();?></span>
-				<span><?php echo get_woocommerce_currency_symbol();?> </span>
+				<span id="woo_regular_price"><?php echo wc_price($product->get_regular_price());?></span>
+				
 			</del>
 		</p>
+		<?php } ?>
 
 	</div>
 	<form class="cart" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data'>
@@ -56,22 +57,8 @@ if ( $product->is_in_stock() ) : ?>
 
 		
 		<div class="full">
-			<span>Số lượng:</span>
+			<span>Số lượng: </span>
 		</div>
-
-		<?php
-		
-
-		// woocommerce_quantity_input(
-		// 	array(
-		// 		'min_value'   => apply_filters( 'woocommerce_quantity_input_min', $product->get_min_purchase_quantity(), $product ),
-		// 		'max_value'   => apply_filters( 'woocommerce_quantity_input_max', $product->get_max_purchase_quantity(), $product ),
-		// 		'input_value' => isset( $_POST['quantity'] ) ? wc_stock_amount( wp_unslash( $_POST['quantity'] ) ) : $product->get_min_purchase_quantity(), // WPCS: CSRF ok, input var ok.
-		// 	)
-		// );
-
-		
-		?>
 		<div data-v-53b46760="" class="h-10 col-span-2 grid grid-cols-3 w-40 text-brand">
 			<div data-v-53b46760="" class="flex">
 				<span data-v-53b46760="" class="btn text-xs self-center text-brand hover:text-brand-dark btn-minus-quantity"><i data-v-53b46760="" class="fa-solid fa-minus"></i></span>
@@ -120,15 +107,11 @@ if ( $product->is_in_stock() ) : ?>
 		$next_2days_show = str_replace("/", ' Thg ', $next_2days);
 
 
-	
 
 		?>
 	
 
 		<div class="full">
-
-			
-
 
 			<div class="text-xs" id="delivery-date" product_price="719000" style="">
 				<span class="label">Chọn ngày giao hàng:</span>
@@ -205,7 +188,7 @@ if ( $product->is_in_stock() ) : ?>
 
 		<div class="full">
 			<p>
-				<h3 class="flex my-1 text-lg">Tổng: <span class="text-brand font-bold self-center whitespace-nowrap" id="subtotal">  <?php echo wc_price($product->get_price());?></span></h3>
+				<h3 class=" text-lg">Tổng: <span class="text-brand font-bold self-center whitespace-nowrap" id="subtotal">  <?php echo wc_price($product->get_price());?></span></h3>
 			</p>
 		</div>
 		<div class="grid full grid-cols-2 form-btn">
@@ -219,19 +202,24 @@ if ( $product->is_in_stock() ) : ?>
 
 		<div class="tw-bg-[#F1F3FF] tw-rounded-lg cool-cash-box">
 			
-		<div class="tw-py-2 tw-px-3 tw-rounded-lg cool-cash-box-detail"><div class="tw-flex tw-items-center tw-justify-between tw-cursor-pointer js-coolcash-toggle">
+		<div class="tw-py-2 tw-px-3 tw-rounded-lg cool-cash-box-detail">
+			<div class="tw-flex tw-items-center tw-justify-between tw-cursor-pointer js-coolcash-toggle">
 
 
 				<div class="tw-flex tw-items-center tw-gap-2 tw-text-sm">
 					<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.8021 0.0161133H3.19787C1.43133 0.0161133 0 1.44212 0 3.20866V12.7916C0 14.5529 1.43133 15.9842 3.19787 15.9842H12.8021C14.5687 15.9842 16 14.5582 16 12.7916V3.20866C15.9947 1.44212 14.5687 0.0161133 12.8021 0.0161133ZM14.9305 12.7863C14.9305 13.9569 13.9727 14.9147 12.8021 14.9147H3.19787C2.02195 14.9147 1.0695 13.9622 1.0695 12.7863V3.20334C1.0695 2.03274 2.02727 1.07498 3.19787 1.07498H12.8021C13.9781 1.07498 14.9305 2.02742 14.9305 3.20334V12.7863Z" fill="#2F5ACF"></path> <path d="M8.53963 4.74634H7.39032H7.37967C7.37435 5.72007 6.84758 6.32133 6.00156 6.32133C5.15553 6.32133 4.62876 5.72007 4.62344 4.74634H3.47412C3.47412 6.30537 4.44253 7.43872 6.00156 7.43872C6.8529 7.43872 7.52866 7.1035 7.9703 6.54481C8.32148 6.10317 8.51835 5.52851 8.53963 4.86872C8.53963 4.82615 8.53963 4.78891 8.53963 4.74634Z" fill="#2F5ACF"></path> <path d="M11.3595 4.74634C11.3542 5.72007 10.7955 6.32133 9.94945 6.32133C9.13535 6.32133 8.59261 5.76795 8.5394 4.86872C8.5394 4.83147 8.53408 4.78891 8.53408 4.74634H7.38477C7.38477 5.45402 7.59228 6.07657 7.96474 6.54481C8.4117 7.1035 9.09278 7.43872 9.94413 7.43872C11.5032 7.43872 12.5195 6.30537 12.5195 4.74634H11.3595Z" fill="#2F5ACF"></path> <path d="M4.62344 4.74634H3.47412C3.47412 4.75698 3.6976 10.1151 3.6976 10.1205H4.84691C4.84691 10.1098 4.62344 4.75698 4.62344 4.74634Z" fill="#2F5ACF"></path> <path d="M11.3748 4.74634H12.5242C12.5242 4.75698 12.3007 10.1151 12.3007 10.1205H11.1514C11.1514 10.1098 11.3748 4.75698 11.3748 4.74634Z" fill="#2F5ACF"></path> <path d="M12.3075 10.1206H3.69824V11.2433H12.3075V10.1206Z" fill="#2F5ACF"></path></svg> 
 
 
-			<span>Được hoàn<span class="js-coolcash-title-text"> lên đến</span> <span class="tw-font-medium js-coolcash-amount">38.000</span> CoolCash.</span> 
+					<span>Được hoàn<span class="js-coolcash-title-text"> lên đến</span> <span class="tw-font-medium js-coolcash-amount">38.000</span> CoolCash.</span> 
 
 
-			<p class="tw-text-cm-blue tw-no-underline tw-font-semibold tw-cursor-pointer js-coolcash-detail-link">Chi tiết</p></div> <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="tw-w-4 tw-h-4 tw-transition-transform js-coolcash-arrow"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></div> <div class="tw-text-sm tw-text-cm-black tw-overflow-hidden tw-transition-all tw-duration-300 tw-max-h-0 js-coolcash-content"><div class="tw-p-2 tw-mt-2 tw-border-t tw-border-cm-black/20"><div>
+					<p class="tw-text-cm-blue tw-no-underline tw-font-semibold tw-cursor-pointer js-coolcash-detail-link">Chi tiết</p>
+				</div> 
+				<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="tw-w-4 tw-h-4 tw-transition-transform js-coolcash-arrow"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+			</div>
+	 <div class="tw-text-sm tw-text-cm-black tw-overflow-hidden tw-transition-all tw-duration-300 tw-max-h-0 js-coolcash-content"><div class="tw-p-2 tw-mt-2 tw-border-t tw-border-cm-black/20"><div>
                     Đây là số CoolCash ước tính bạn sẽ được hoàn lại khi mua sản phẩm hôm nay, tương ứng với quyền lợi hạng
-                    <img src="https://media3.coolmate.me/cdn-cgi/image/width=450,height=663,quality=80/uploads/November2024/mceclip0_84.png" alt="" class="tw-h-5 tw-object-contain js-ranking-image"></div> <div class="tw-mt-3 md:tw-mt-5 js-login-message" style="">
+                    <img src="<?php echo IMAGE_URL;?>/icon_backkim.png" alt="" class="tw-h-5 tw-object-contain js-ranking-image"></div> <div class="tw-mt-3 md:tw-mt-5 js-login-message" style="">
                     CoolCash có giá trị như tiền mặt dùng để mua hàng tại website Coolmate.me <br> <span rel-script="toggle-login-popup" class="tw-font-semibold tw-cursor-pointer tw-text-cm-blue">Đăng nhập</span> hoặc <span rel-script="toggle-register-popup" class="tw-font-semibold tw-cursor-pointer tw-text-cm-blue">Đăng ký</span> ngay để kiểm tra mức hoàn tiền chính xác nhất dành cho bạn.
                 </div></div></div></div></div>
 

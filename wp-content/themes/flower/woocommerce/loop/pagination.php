@@ -40,18 +40,22 @@ if ( $total <= 1 ) {
 					'add_args'  => false,
 					'current'   => max( 1, $current ),
 					'total'     => $total,
-					'prev_text' => is_rtl() ? '&rarr;' : '&larr;',
-					'next_text' => is_rtl() ? '&larr;' : '&rarr;',
-					'type'      => 'list',
+					// 'prev_text' => is_rtl() ? '&rarr;' : '&larr;',
+					// 'next_text' => is_rtl() ? '&larr;' : '&rarr;',
+					 'type'      => 'list',
 					'end_size'  => 3,
 					'mid_size'  => 3,
+					 'prev_text' => '<i class="fa-solid fa-angle-left"></i>',
+        			'next_text' => '<i class="fa-solid fa-angle-right"></i>',
 				)
 			)
 		);
+		// <i class="fa-solid fa-angle-left"></i>
+		// <i class="fa-solid fa-angle-right"></i>
 		?>
 	</nav>
 	<div class="select-number-items">
-		<span class="text-des"> Select Item Shows</span>
+		<span class="text-des hide-mb"> Show: </span>
 		<select name="per" class="select_number_items">
 			<option value="20" <?php is_selected_limit(20);?> >&nbsp;20&nbsp;</option>
 			<option value="40"<?php is_selected_limit(40);?>>&nbsp;40&nbsp;</option>

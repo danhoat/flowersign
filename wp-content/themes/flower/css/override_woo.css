@@ -65,6 +65,14 @@
     color: #70A100;
     text-decoration: none;
 }
+.woocommerce ul.products li.product .price,
+.woocommerce ul.products li.product .price ins,
+.woo-first-price .amount{
+  
+    color: #70A100;
+    
+}
+
 .woocommerce ul.products li.product .price del{
     margin-right: 10px;
 }
@@ -80,8 +88,12 @@
     color: #181c18;
  }
  .woocommerce ul.products li.product .price del{
-    color: #70A100;
+    color: rgb(156 163 175);
 }
+ .woo-price del .amount {
+color: rgb(153 153 153);
+}
+
 .woocommerce ul.products li.first, .woocommerce-page ul.products li.first,
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product{
     clear: none;
@@ -94,4 +106,47 @@
 .related.products{
 
 }
-.related.products
+
+@media only screen and (min-width: 1000px){
+    .wc-block-cart-item__product .wc-block-components-product-price,
+    table.wc-block-cart-items .wc-block-cart-items__row .wc-block-components-product-name ,
+    table.wc-block-cart-items .wc-block-cart-items__row .wc-block-cart-item__prices{
+        display: inline-block !important;
+    }
+    table.wc-block-cart-items .wc-block-cart-items__row .wc-block-components-product-name{
+        margin-right: 20px;
+    }
+    .wc-block-cart-items__row{
+        position: relative;
+    }
+    table.wc-block-cart-items .wc-block-cart-items__row .wc-block-cart-item__quantity .wc-block-cart-item__remove-link{
+       position: absolute;
+        right: 14px;
+        bottom: 50px;
+    }
+    .is-large.wc-block-cart .wc-block-cart-items td{
+        padding-bottom: 1px !important;
+    }
+}
+.woocommerce nav.woocommerce-pagination ul li,
+.woocommerce nav.woocommerce-pagination ul{
+    border:0;
+}
+.woocommerce nav.woocommerce-pagination ul li span.current{
+    background-color: #fff;
+}
+.woocommerce nav.woocommerce-pagination ul li a, .woocommerce nav.woocommerce-pagination ul li span{
+    padding: .8rem 1rem;
+}
+.select-number-items select{
+    border-radius: 5px;
+    min-width: 66px;
+    color: rgb(75 85 99);
+}
+.woocommerce nav.woocommerce-pagination ul li a, .woocommerce nav.woocommerce-pagination ul li span,
+.select-number-items select{
+    color: rgb(75 85 99);
+}
+.woocommerce nav.woocommerce-pagination ul li a:focus, .woocommerce nav.woocommerce-pagination ul li a:hover, .woocommerce nav.woocommerce-pagination ul li span.current{
+    color: rgb(158 166 212);
+}

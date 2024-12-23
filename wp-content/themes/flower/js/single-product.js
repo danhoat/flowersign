@@ -66,11 +66,12 @@
 
     $(document).ready(function(){
 
-        $(".cool-cash-box-detail").click(function(){
+        $(".js-coolcash-toggle").click(function(){
             console.log('js click');
-            $(this).find(".js-coolcash-content").toggleClass('tw-max-h-0');
+            //$(this).find(".js-coolcash-content").toggleClass('tw-max-h-0');
+            $(this).next().toggleClass('tw-max-h-0');
         });
-        var total = $("#woo_price").html();
+        var total = $("#static_price").val();
         total = parseFloat(total);
 
         console.log('total:', total);

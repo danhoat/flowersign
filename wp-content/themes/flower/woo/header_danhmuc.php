@@ -43,16 +43,16 @@ function woocommerce_product_archive_description() {
             $term_description = apply_filters( 'woocommerce_taxonomy_archive_description_raw', $term->description, $term );
             $overview = explode("[xem_them]", $term_description);
 
-            if ( ! empty( $overview[0] ) ) {
-                $btn_xemthem = '<span class="btn-view-full"> Xem thêm ...</a>';
-                $btn_thugon = '<span class="btn-view-less">Thu gọn </a>';
-                $the_last = '';
-                if(isset($overview[1])){
-                    $the_last = '<div class="toggle">'.$overview[1].$btn_thugon.'<span>';
-                }
+            // if ( ! empty( $overview[0] ) ) {
+            //     $btn_xemthem = '<span class="btn-view-full"> Xem thêm ...</a>';
+            //     $btn_thugon = '<span class="btn-view-less">Thu gọn </a>';
+            //     $the_last = '';
+            //     if(isset($overview[1])){
+            //         $the_last = '<div class="toggle">'.$overview[1].$btn_thugon.'<span>';
+            //     }
 
-              //  echo '<div class="term-description "> ' . wc_format_content( wp_kses_post( $overview[0].$btn_xemthem ) ).$the_last.'</div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-            }
+            //   //  echo '<div class="term-description "> ' . wc_format_content( wp_kses_post( $overview[0].$btn_xemthem ) ).$the_last.'</div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+            // }
         }
     }
 }
@@ -83,10 +83,12 @@ function woocommerce_product_cat_description(){
             $overview = explode("[xem_them]", $term_description);
 
             if ( ! empty( $overview[0] ) ) {
-                $btn_xemthem = '<span class="btn-view-full"> Xem thêm ...</a>';
-                $btn_thugon = '<span class="btn-view-less">Thu gọn </a>';
+               
+                
                 $the_last = '';
-                if(isset($overview[1])){
+                if( isset($overview[1]) && !empty($overview[1]) ){
+                    $btn_xemthem = '<span class="btn-view-full 111"> Xem thêm ...</a>';
+                    $btn_thugon = '<span class="btn-view-less">Thu gọn </a>';
                     $the_last = '<div class="toggle">'.$overview[1].$btn_thugon.'</div>';
                 }
                 echo '<div class = "container">';
@@ -253,6 +255,7 @@ function wpdocs_modify_query_exclude_category( $query ) {
     if( is_front_page() || is_archive() ){
         $query->set( 'post__not_in', LIST_BUNDLES_ITEM );
     }
+    //$query->set( 'posts_per_page',6);
     
 }
 add_action( 'pre_get_posts', 'wpdocs_modify_query_exclude_category' );
