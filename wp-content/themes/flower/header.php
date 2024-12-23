@@ -160,24 +160,8 @@ var kid_agree = "";
             </div>
 
             <!-- 꽃청 수정 START 윤상희 2023.04.07 - 네비게이션 수정 -->
-            <!-- bookmark -->
-            <a class="bookmark hide" href="javascript:;" onclick="bookmarksite('http://f-mans.com/main/index', '꽃집청년들-꽃배달서비스 1위')" title="북마크"><img src="https://f-mans.com/data/skin/responsive_ver1_default_gl/images/common/icon_bookmark.png" alt="bookmark"> <span designelement="text" textindex="2" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2hlYWRlci9zdGFuZGFyZC5odG1s">BOOKMARK</span></a>
+    
 
-            <ul class="util_wrap_menu2 hide">
-            <!-- 꽃청 수정 END -->
-                <li><a href="/member/login" designelement="text" textindex="7" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2hlYWRlci9zdGFuZGFyZC5odG1s">LOGIN</a></li>
-                <li>
-                    <a href="/member/agreement" designelement="text" textindex="8" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2hlYWRlci9zdGFuZGFyZC5odG1s">JOIN</a>
-                    <div class="benefit">
-                        <span class="arrow">▲</span>
-                        + 2,000
-                    </div>
-                </li>
-                <li><a href="/mypage" designelement="text" textindex="9" >MY SHOPPING</a></li>
-                <li><a href="/mypage/order_catalog" designelement="text">ORDER</a></li>
-                <li class="respCartArea"><a href="<?php echo wc_get_cart_url();?>><span designelement="text" textindex="11">CART</span><span class="cart_cnt1">0</span></a></li>
-                <li><a href="/service/cs" designelement="text" textindex="12">CS CENTER</a></li>
-            </ul>
         </div>
     </div>
 
