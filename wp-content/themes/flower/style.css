@@ -721,3 +721,6 @@ color: #2E2E2E;
 .sub-menu{
     display: none;
 }
+.filtered_item_sorting .item_viewnum select{
+    outline: none;
+}

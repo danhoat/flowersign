@@ -197,13 +197,20 @@ var hpt_info = {'_account':'UHPT-20592','_server':'a24'};
     <div class="footer_c">
         <div class="resp_wrap">
             <ul class="list v5">
-                <li><a href="/thong-tin/" >Thông tin</a></li>
-                <i></i>
-                <li><a href="/gioi-thieu/" >Giới Thiệu</a></li>
+ 
+                <li><a href="/gioi-thieu/" >Về chúng tôi</a></li>
                 <i></i>
                 <li><a href="/partner/" >Hợp Tác</a></li>
                 <i></i>
                 <li><a href="/agreement/"> Điều Khoản</a></li>
+                <i></i>
+                <li><a href="#"> Chính sách bảo mật</a></li>
+                <i></i>
+                <li><a href="#"> Chính sách đổi trả</a></li>
+                <i></i>
+                <li><a href="#">Câu hỏi thường gặp</a></li>
+                 <i></i>
+                <li><a href="#">Hướng dẫn mua hàng</a></li>
                
             </ul>
             
