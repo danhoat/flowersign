@@ -195,12 +195,14 @@ if ( woocommerce_product_loop() ) {
 	do_action( 'woocommerce_no_products_found' );
 }
 
+
 /**
  * Hook: woocommerce_after_main_content.
  *
  * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
  */
 do_action( 'woocommerce_after_main_content' );
+woocommerce_product_cat_description();
 
 if( is_tax('product_cat') ){ ?>
 	<div class="full bg-slate-100">
