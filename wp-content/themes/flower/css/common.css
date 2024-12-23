@@ -28,7 +28,7 @@ em, address {font-style:normal}
 label {cursor:pointer}
 form {clear:both}
 
-
+body,th,td,input,select,textarea,button,pre{ font-size:13px; line-height:1.4; font-weight:400; color:#666; font-family:'Roboto','Noto Sans KR','Malgun Gothic',sans-serif;}
 input[type=text], input[type=password], input[type=email], input[type=tel], input[type=number] { box-sizing:border-box; padding:0 9px; width:180px; height:32px; font-size:13px; line-height:32px; color:#333; border:1px #ccc solid; border-radius:2px; }
 input[type=number] { position:relative; padding:0 4px; text-align:center; min-width:32px; }
 input[type=number]::-webkit-outer-spin-button,
@@ -1888,12 +1888,13 @@ table.cmt_box>tbody>tr:first-child>td { padding-top:5px; }
 /* //큰 레이어 팝업 */
 
 /* 작은 레이어 팝업 */
-.layer_simple_basic { position:absolute; left:0; top:8px; z-index:10; width:300px; padding:10px; border:1px #999 solid; background:#fff; }
-.layer_simple_basic .btn_close_x { display:block; position:absolute; right:0; top:0; width:40px; height:40px; text-align:center; font-size:16px; line-height:40px; color:#767676; }
+.layer_simple_basic { position:absolute; left:0; top:8px; z-index:120; width:300px; padding:10px; border:1px #999 solid; background:#fff; }
+.layer_simple_basic .btn_close_x { display:block; position:absolute; right:0; top:0; width:40px; height:40px; background: url('../images/common/icon_close_layer.png') no-repeat center; background-size: 16px 16px; text-indent:-9999px; text-align:center; font-size:16px; line-height:40px; color:#767676; }
 .layer_simple_basic.px { padding:0; }
 .layer_simple_basic.px .detail_option_table { border:none; }
 .layer_simple_basic.p_right { left:auto; right:0; }
 .layer_simple_basic.country_list { left:auto; right:0; max-height:300px; overflow-y:auto; }
+.layer_simple_basic .btn_style { border:1px solid #999; }
 
 /* 
 2024-4-9 김태섭 Close
@@ -3074,7 +3075,7 @@ td>.goodsviewbox:first-child { border:none; }
 .settle_tab>li.current>a { border-color:#666; height:41px; background:#fff; color:#333; font-weight:500; }
 
 .ship_possible { padding-bottom:10px; color:#ed3347; }
-.now_shipping_nation { overflow:hidden; zoom:1; border-bottom:1px #999 solid; padding:16px 0 10px; font-size:14px; background:#fff; position:absolute; left:10px; top:40px; width:calc(100% - 37px); }
+.now_shipping_nation { overflow:hidden; zoom:1; border-bottom:1px #999 solid; padding:16px 0 10px; font-size:14px; background:#fff; position:absolute; left:20px; top:50px; width:calc(100% - 37px); }
 #nation_gl_type { float:right; margin-top:-6px; }
 .layer_nation_list { margin-top:46px; }
 .layer_nation_list>li { display:table; width:100%; table-layout:Fixed; border-top:1px #ddd solid; cursor:pointer; }
@@ -3192,12 +3193,8 @@ div.coupon_detail { padding:10px 0; }
 
 
 /* -------------------------------------- Layout --------------------------------------------- */
-
 #layout_body,
-.resp_wrap { max-width:1260px; margin:0 auto; padding-left:10px; padding-right:10px; padding-top:0px }
-#layout_body{
-	padding-top: 25px;
-}
+.resp_wrap { max-width:1260px; margin:0 auto; padding-left:40px; padding-right:40px; }
 .resp_wrap:after {display:block; content:""; clear:both;}
 .wrap_aside { padding:0 10px; }
 .wrap_aside.v2 { padding-top:30px; }
@@ -3369,7 +3366,7 @@ iframe#actionFrame { width:0; height:0; position:absolute; left:0; bottom:0; vis
 .layout_header .cart_cnt2 { display:inline-block; vertical-align:top; margin-top:-3px; text-align:center; height:20px; padding:0 5px; min-width:10px; border-radius:10px; font-size:11px; line-height:21px; font-weight:300; background:#333; color:#fff; }
 
 /* 햄버거 */
-.resp_top_hamburger { position:absolute; left:25px; top:50%; margin-top:-15px; }
+.resp_top_hamburger { position:absolute; left:51px; top:50%; margin-top:-15px; }
 .resp_top_hamburger>a { display:block; position:relative; width:30px; height:22px; }
 .resp_top_hamburger>a>b,
 .resp_top_hamburger>a:before,
@@ -3659,7 +3656,7 @@ iframe#actionFrame { width:0; height:0; position:absolute; left:0; bottom:0; vis
 .resp_top_search .search_ver2 .search_new .searching_list>li>a:hover { background-color:#f8f8f8; color:#333; }
 .resp_top_search .search_ver2 .search_new .searching_list>li>a.searched_item { padding:0 30px 0 10px; overflow:hidden;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;-ms-text-overflow:ellipsis;-moz-binding:url('ellipsis.xml#ellipsis');word-wrap:normal !important; }
 .resp_top_search .search_ver2 .search_new .searching_list>li>a.searched_item.event { padding-right:62px; }
-.resp_top_search .search_ver2 .search_new .searching_list>li>a.searching_item_close { position:absolute; right:0; top:0; width:30px; overflow:hidden; text-indent:-999px; opacity:0.5; }
+.resp_top_search .search_ver2 .search_new .searching_list>li>a.searching_item_close { position:absolute; right:0; top:0; width:30px; overflow:hidden; text-indent:-999px; background:url(../images/common/icon_close_gray2.png) 50% 50% no-repeat; opacity:0.5; }
 .resp_top_search .search_ver2 .search_new .searching_list>li>a.searching_item_close:hover { background-color:#ffe4e4; }
 .resp_top_search .search_ver2 .search_new .searching_list>li>a.goto_event { position:absolute; right:0; top:0; padding:0; width:62px; text-align:center; color:#aaa; }
 .resp_top_search .search_ver2 .search_new .searching_list>li>a.goto_event:hover { background-color:#edfaff; color:#333; }
@@ -3671,7 +3668,7 @@ iframe#actionFrame { width:0; height:0; position:absolute; left:0; bottom:0; vis
 .resp_top_search .search_ver2 .search_new .recent_item_list .display_zzim { position:absolute; right:10px; bottom:10px; }
 .resp_top_search .search_ver2 .search_new .recent_item_list .display_zzim { width:16px; cursor:pointer; }
 .resp_top_search .search_ver2 .search_new .recent_item_list .item_img { max-width:100%; }
-.resp_top_search .search_ver2 .search_new .recent_item_list .item_delete { position:absolute; right:-2px; top:-2px; opacity:0.7; display:block; width:20px; height:20px; }
+.resp_top_search .search_ver2 .search_new .recent_item_list .item_delete { position:absolute; right:-2px; top:-2px; opacity:0.7; display:block; width:20px; height:20px; background:url('../images/common/icon_close_gray2.png') 50% 50% no-repeat; }
 .resp_top_search .search_ver2 .search_new .recent_item_list .item_wish { position:absolute; right:2px; bottom:2px; }
 .resp_top_search .search_ver2 .search_new .recent_item_list .item_wish img { opacity:0.5; }
 
@@ -3693,7 +3690,7 @@ iframe#actionFrame { width:0; height:0; position:absolute; left:0; bottom:0; vis
 
 @media only screen and (max-width:1023px) {
 	.resp_top_search { right:10px; top:50%; margin-top:-21px; }
-	.resp_top_search a.btn_search_open { width:26px; height:26px; margin-top:7px; background-size:100%; }
+	.resp_top_search a.btn_search_open { width:26px; height:26px; margin-top:7px; background:url('../images/common/btn_zoom.png') 50% 50% no-repeat; background-size:100%; }
 }
 
 @media only screen and (max-width:767px) {
@@ -5195,7 +5192,7 @@ div.goodsPopupLayerBtnWrap {margin-top:20px; border-top:1px solid #ddd}
 
 /* O2O 쿠폰 */
 .o2o_wrap .title.coupon {padding-left:50px}
-.o2o_wrap .contents_wrap.coupon {width:918px; height:561px; background-color:#FFF;}
+.o2o_wrap .contents_wrap.coupon {width:918px; height:561px; background:url("../images/design/coupon_back.png") no-repeat bottom right; background-color:#FFF;}
 .o2o_coupon_list { overflow:hidden; zoom:1; text-align:left; padding:45px 60px 10px; line-height: 15px;}
 .o2o_coupon_list>li { float:left; width:50%; box-sizing:border-box; }
 .o2o_coupon_list>li>.coupon{border:1px solid #cbcbcb; margin:7px 10px; padding:10px 80px 10px 15px; box-sizing:border-box; height:130px; background-size:38px 126px; background:#FFF;}
@@ -5236,8 +5233,8 @@ div.goodsPopupLayerBtnWrap {margin-top:20px; border-top:1px solid #ddd}
 .gallery_detail_filelist .slick-arrow { opacity:0.2; width:60px; height:80px; background-size:auto; border-radius:2px; }
 .gallery_detail_filelist:hover .slick-arrow { opacity:1; background-color:rgba(255,255,255,0.5); }
 .gallery_detail_filelist .slick-arrow:hover { background-color:#fff; }
-.gallery_detail_filelist .slick-prev { left:5px; }
-.gallery_detail_filelist .slick-next { right:5px; }
+.gallery_detail_filelist .slick-prev { left:5px; background-image:url('../images/o2o_img/arrow_prev.png'); }
+.gallery_detail_filelist .slick-next { right:5px; background-image:url('../images/o2o_img/arrow_next.png'); }
 .gallery_detail_filelist .slick-dots { bottom:-24px; }
 .gallery_detail_filelist .gallery_detail_img { max-height:80vh; }
 

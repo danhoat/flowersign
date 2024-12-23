@@ -16,39 +16,41 @@ window.Firstmall.Config = {"Environment":{"MobileMode":true,"SetMode":null,"Lang
 
 
 
-<link rel="stylesheet" type="text/css" href="https://f-mans.com/data/skin/responsive_ver1_default_gl/css/jqueryui/black-tie/jquery-ui-1.8.16.custom.css">
+<link rel="stylesheet" type="text/css" href="<?php echo BOXTHEME_URL;?>/css/jquery-ui-1.8.16.custom.css">
 <?php 
 if(!is_singular('product') ){?>
-<link rel="stylesheet" type="text/css" href="https://f-mans.com/app/javascript/plugin/slick/slick.css"><!-- 반응형 슬라이드 -->
-<link rel="stylesheet" type="text/css" href="https://f-mans.com/data/design/goods_info_style.css?v=2"><!-- 상품디스플레이 CSS -->
+<link rel="stylesheet" type="text/css" href="<?php echo BOXTHEME_URL;?>/css/slick.css"><!-- 반응형 슬라이드 -->
+<link rel="stylesheet" type="text/css" href="<?php echo BOXTHEME_URL;?>/css/goods_info_style.css?v=2"><!-- 상품디스플레이 CSS -->
 <?php } ?>
-<link rel="stylesheet" type="text/css" href="https://f-mans.com/data/design/goods_info_user.css"><!-- ++++++++++++ 상품디스플레이 사용자/제작자 CSS ++++++++++++ -->
-<link rel="stylesheet" type="text/css" href="https://f-mans.com/data/skin/responsive_ver1_default_gl/css/lib.css">
+<link rel="stylesheet" type="text/css" href="<?php echo BOXTHEME_URL;?>/css/goods_info_user.css"><!-- ++++++++++++ 상품디스플레이 사용자/제작자 CSS ++++++++++++ -->
+<link rel="stylesheet" type="text/css" href="<?php echo BOXTHEME_URL;?>/css/lib.css">
 <link rel="stylesheet" type="text/css" href="<?php echo BOXTHEME_URL;?>/css/common.css?date=20241013&amp;v=11">
-<link rel="stylesheet" type="text/css" href="https://f-mans.com/data/skin/responsive_ver1_default_gl/css/board.css?date=20241013&amp;v=12">
-<link rel="stylesheet" type="text/css" href="https://f-mans.com/data/skin/responsive_ver1_default_gl/css/buttons.css">
-<link rel="stylesheet" type="text/css" href="https://f-mans.com/data/skin/responsive_ver1_default_gl/css/mobile_pagination.css">
-<link rel="stylesheet" type="text/css" href="/link/css?k=quickdesign&amp;v=20241013012605"><!-- Quick Design CSS -->
-<link rel="stylesheet" type="text/css" href="https://f-mans.com/data/skin/responsive_ver1_default_gl/css/broadcast.css">
+<link rel="stylesheet" type="text/css" href="<?php echo BOXTHEME_URL;?>/css/board.css?date=20241013&amp;v=12">
+<link rel="stylesheet" type="text/css" href="<?php echo BOXTHEME_URL;?>/css/buttons.css">
+<link rel="stylesheet" type="text/css" href="<?php echo BOXTHEME_URL;?>/css/mobile_pagination.css">
+<link rel="stylesheet" type="text/css" href="<?php echo BOXTHEME_URL;?>/css/quick_design.css">
+
+<link rel="stylesheet" type="text/css" href="<?php echo BOXTHEME_URL;?>/css/broadcast.css">
+
 
 <!-- // 꽃청 수정 START 홍우기 20.07.31 - 상대경로에서 절대경로로  -->
-<link rel="stylesheet" type="text/css" href="https://f-mans.com/data/skin/responsive_ver1_default_gl/css/user.css?date=20241013&amp;v=111">
-<link rel="stylesheet" type="text/css" href="https://f-mans.com/data/skin/responsive_ver1_default_gl/css/modal.css?date=20241013&amp;v=1">
-<link rel="stylesheet" type="text/css" href="https://f-mans.com/data/skin/responsive_ver1_default_gl/css/_layout.css?date=20241013&amp;v=1">
+<link rel="stylesheet" type="text/css" href="<?php echo BOXTHEME_URL;?>/css/user.css?date=20241013&amp;v=111">
+<link rel="stylesheet" type="text/css" href="<?php echo BOXTHEME_URL;?>/css/modal.css?date=20241013&amp;v=1">
+<link rel="stylesheet" type="text/css" href="<?php echo BOXTHEME_URL;?>/css/_layout.css?date=20241013&amp;v=1">
 
 
 <!-- css 추가 상세페이지 및 추가 디자인 부분 -->
-<link rel="stylesheet" type="text/css" href="https://f-mans.com/data/css/detail.css?date=20241013&amp;ver=22"><!-- ++++++++++++ 상세페이지 및 공통 부분 CSS ++++++++++++ -->
+<link rel="stylesheet" type="text/css" href="<?php echo BOXTHEME_URL;?>/css/detail.css?date=20241013&amp;ver=22"><!-- ++++++++++++ 상세페이지 및 공통 부분 CSS ++++++++++++ -->
 
 
 <!-- 꽃청 추가 START 김태섭 2023-12-18 - splide -->
-<link rel="stylesheet" type="text/css" href="https://f-mans.com/data/skin/responsive_ver1_default_gl/css/splide/splide.min.css">
+<link rel="stylesheet" type="text/css" href="<?php echo BOXTHEME_URL;?>/css/splide.min.css">
 <!-- 꽃청 추가 END 김태섭 2023-12-18 - splide -->
 
 
-<link rel="stylesheet" href="https://f-mans.com/app/javascript/plugin/touchSlider/swiper.css">
+<link rel="stylesheet" href="<?php echo BOXTHEME_URL;?>/css/swiper.css">
 <!-- /CSS -->
-<link rel="stylesheet" type="text/css" href="https://f-mans.com/app/javascript/plugin/jquery_swipe/jquery_swipe.css">
+<link rel="stylesheet" type="text/css" href="<?php echo BOXTHEME_URL;?>/css/jquery_swipe.css">
 
 
 
