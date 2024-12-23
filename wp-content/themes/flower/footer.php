@@ -97,12 +97,11 @@ var hpt_info = {'_account':'UHPT-20592','_server':'a24'};
                         <!-- <li><span designElement="text">H.P | 010-4125-7050 (문자전용)</span></li> -->
                         <!--<li class="Pt2"><a href="mailto:admin@mencoz.com">admin@mencoz.com</a></li>-->
                         <li class="footer_kakao">
-                            <a href="http://pf.kakao.com/_Kyfxhl">
+                            <a href="#">
                                 <h4 class="title">
-                                    Kako Talk inquiry
+                                    Thông Tin Công Ty
                                 </h4>
-                                <span designelement="text" textindex="6" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2Zvb3Rlci9zdGFuZGFyZC5odG1s">
-                                    <i><img src="https://f-mans.com/data/images/icon/footer/icon_kakao_CH.png" alt=""></i>꽃집청년들 | 오전 8시 ~ 오후 8시</span>
+                                <span> 꽃집청년들 | 오전 8시 ~ 오후 8시</span>
                             </a>
                             <!-- <span designElement="text">@꽃집청년들 | 오전 8시 ~ 오후 10시</span> -->
                         </li>
@@ -198,15 +197,14 @@ var hpt_info = {'_account':'UHPT-20592','_server':'a24'};
     <div class="footer_c">
         <div class="resp_wrap">
             <ul class="list v5">
-                <li><a href="/board/?id=notice" designelement="text" textindex="11" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2Zvb3Rlci9zdGFuZGFyZC5odG1s">공지사항</a></li>
+                <li><a href="#" >Thông tin</a></li>
                 <i></i>
-                <li><a href="/page/company" designelement="text" textindex="12" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2Zvb3Rlci9zdGFuZGFyZC5odG1s">꽃집청년들소개</a></li>
+                <li><a href="#" >Giới Thiệu</a></li>
                 <i></i>
-                <li><a href="/page/sub/partner" designelement="text" textindex="13" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2Zvb3Rlci9zdGFuZGFyZC5odG1s">기업제휴</a></li>
+                <li><a href="#" >Hợp Tác</a></li>
                 <i></i>
-                <li><a href="/service/agreement" designelement="text" textindex="14" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2Zvb3Rlci9zdGFuZGFyZC5odG1s">이용약관</a></li>
-                <i></i>
-                <li><a href="/service/privacy" designelement="text" textindex="15" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2Zvb3Rlci9zdGFuZGFyZC5odG1s">개인정보처리방침</a></li>
+                <li><a href="/service/agreement"> Điều Khoản</a></li>
+               
             </ul>
             
             <ul class="menu3">
