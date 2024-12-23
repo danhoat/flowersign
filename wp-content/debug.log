@@ -6731,3 +6731,5 @@ Stack trace:
 [23-Dec-2024 20:25:13 UTC]   Automatic theme updates starting...
 [23-Dec-2024 20:25:13 UTC]   Automatic theme updates complete.
 [23-Dec-2024 20:25:13 UTC] Automatic updates complete.
+[23-Dec-2024 21:01:17 UTC] PHP Parse error:  syntax error, unexpected token "}" in D:\laragon\www\flower\wp-content\themes\flower\header.php on line 198
+[23-Dec-2024 21:01:31 UTC] PHP Parse error:  syntax error, unexpected token "}" in D:\laragon\www\flower\wp-content\themes\flower\templates\primary-menu.php on line 71

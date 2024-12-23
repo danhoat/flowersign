@@ -153,6 +153,7 @@ function box_js_enqueue(){
         'user' =>'https://f-mans.com/data/skin/responsive_ver1_default_gl/common/user.js?ver=5?v=afe0eba294279fffd50c840',
 
         'bxslider' =>'https://f-mans.com/app/javascript/plugin/jquery.bxslider.js?v=afe0eba294279d50c840',
+        'searchJS' => 'https://f-mans.com/data/skin/responsive_ver1_default_gl/common/search_ver2_ready.js?v=1',
     ); 
     return $js;
 

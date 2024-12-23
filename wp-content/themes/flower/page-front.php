@@ -12,7 +12,6 @@ $customizer = get_customizer_values();
 get_header();
 ?>
 
-<script type="text/javascript" src="https://f-mans.com/data/skin/responsive_ver1_default_gl/common/search_ver2_ready.js?v=1"></script><!-- 반응형 관련 프론트 js : 검색, 자동검색어 최근본상품 -->
 
 <?php // js_home();?>
 
