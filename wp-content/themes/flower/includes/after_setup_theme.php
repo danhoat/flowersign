@@ -98,10 +98,11 @@ function wpdocs_theme_name_scripts() {
         wp_enqueue_style( 'woo-checkout', BOXTHEME_URL.'/css/checkout.css',array(), rand() );
     }
     wp_enqueue_style('responsive-css', BOXTHEME_URL.'/responsive.css?ok',array(), rand() );
+
     if(! LOAD_STATIC_JS){
         $jss = box_js_enqueue();
         foreach($jss as $key=>$url){
-            wp_enqueue_script('abc-'.$key, trim($url) );
+            wp_enqueue_script('abc-'.$key, trim($url) ,array() ,rand() ,true  );
         }
     }
     wp_enqueue_style('woo-css', BOXTHEME_URL.'/css/override_woo.css',array(), rand() );
@@ -110,10 +111,10 @@ add_action( 'wp_enqueue_scripts', 'wpdocs_theme_name_scripts' );
 
 function box_js_enqueue(){
     $js = array(
-        //'jquery' => JS_URL.'/jquery.min.js',
+        'jquery' => JS_URL.'/jquery.min.js',
         
         //'jquery' => 'ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js',
-        'jquery' => JS_URL.'/jquery.min.171.js',
+        //'jquery' => JS_URL.'/jquery.min.171.js',
 
         //'jquery' => SITE_URL.'/wp-includes/js/jquery/jquery.min.js',
         'jquery.ui' => JS_URL.'/jquery-ui.min.js',
@@ -130,6 +131,7 @@ function box_js_enqueue(){
         'validate' => JS_URL.'/jquery.validate.js',
         'ezmark' => JS_URL.'/jquery.ezmark.min.js',
         'select_box' =>JS_URL.'/custom-select-box.js',
+
         'pagination' =>JS_URL.'/custom-mobile-pagination.js',
         'slick' => JS_URL.'/slick.min.js',
         'jquery_swipe' => JS_URL.'/jquery_swipe/jquery.event.swipe.js',
@@ -159,6 +161,10 @@ function box_js_enqueue(){
         'bxslider' => JS_URL.'/jquery.bxslider.js', // https://f-mans.com/app/javascript/plugin/jquery.bxslider.js?v=afe0eba294279d50c840',
         'searchJS' => JS_URL.'/search_ver2_ready.js', // https://f-mans.com/data/skin/responsive_ver1_default_gl/common/search_ver2_ready.js?v=1',
     ); 
+    if( !wp_is_mobile() ){
+        unset($js['pagination']);
+        unset($js['mobile']);
+    }
     return $js;
 
 }

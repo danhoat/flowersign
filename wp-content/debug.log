@@ -6747,3 +6747,15 @@ Stack trace:
 #9 {main}
   thrown in D:\laragon\www\flower\wp-content\themes\flower\includes\after_setup_theme.php on line 117
 [23-Dec-2024 21:23:16 UTC] PHP Parse error:  syntax error, unexpected identifier "define" in D:\laragon\www\flower\wp-content\themes\flower\functions.php on line 5
+[23-Dec-2024 22:11:53 UTC] PHP Warning:  Undefined array key "HA-NOI" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[23-Dec-2024 22:11:53 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[23-Dec-2024 22:11:53 UTC] PHP Warning:  Undefined array key "HOCHIMINH" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[23-Dec-2024 22:11:53 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[23-Dec-2024 22:11:53 UTC] PHP Warning:  Undefined array key "CAMAU" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[23-Dec-2024 22:11:53 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[23-Dec-2024 22:11:54 UTC] PHP Warning:  Undefined array key "HA-NOI" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[23-Dec-2024 22:11:54 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[23-Dec-2024 22:11:54 UTC] PHP Warning:  Undefined array key "HOCHIMINH" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[23-Dec-2024 22:11:54 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[23-Dec-2024 22:11:54 UTC] PHP Warning:  Undefined array key "CAMAU" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[23-Dec-2024 22:11:54 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138

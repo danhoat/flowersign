@@ -193,14 +193,17 @@ var kid_agree = "";
                 </div>
             </div>
             <script type="text/javascript">
-            $(function() {
-                $('.light_style_1_2').slick({
-                    autoplay: true,
-                    vertical: true,
-                    speed: 400,
-                    autoplaySpeed: 6000,
+
+           (function($){
+                $(document).ready(function(){
+                    $('.light_style_1_2').slick({
+                        autoplay: true,
+                        vertical: true,
+                        speed: 400,
+                        autoplaySpeed: 6000,
+                    });
                 });
-            });
+           }(jQuery));
             </script>
             <!-- 슬라이드 배너 영역 (light_style_1_2) :: END -->
         </div>

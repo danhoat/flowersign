@@ -49,20 +49,7 @@
 
         //return true;
     });
-    // $("#tinh_tp").change(function(event){
 
-    //     var ttp_name = $(this).val();
-
-    //     console.log(feeShip);
-    //     console.log(ttp_name);
-    //     var price = $("#static_price").val();
-
-    //     var newPrice = parseFloat(price) + parseFloat(feeShip[ttp_name]);
-    //     console.log("new Price:", newPrice);
-    //     $("#woo_price").html(newPrice);
-    // });
-
-    //$(".chosen-select").chosen();
 
     $(document).ready(function(){
 

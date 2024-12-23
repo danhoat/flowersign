@@ -42,108 +42,109 @@ function box_left_swing(){ ?>
     var nav_category_area_height = 0;
     var layout_footer_height = 0;
     function decide_wing_position(){
-    //네비게이션바 위치 + 네비게이션바 높이 50 + (index면 메인화면 슬라이드) - 상단팝업 높이
-    wing_up = nav_category_area_height+main_slide_height-$('.bn_top').height();
-    wing_down = layout_footer_height-155;
-    scroll = $(window).scrollTop();
-    if( $(window).scrollTop() < wing_up ){
-        scroll = wing_up;
-    }else if( $(window).scrollTop() > wing_down ){
-        scroll = wing_down
-    }
-    }
-
-
-    $(document).ready(function(){
-    $(window).scroll(function() {
-        
-        var check = $(".sidebar").scrollTop();
-
-        var y = window.scrollY;
-        console.log('y:', y);
-        if( y > 500){
-            $(".sidebar").addClass('sticky');
-        } else{
-            $(".sidebar").removeClass('sticky');
+        //네비게이션바 위치 + 네비게이션바 높이 50 + (index면 메인화면 슬라이드) - 상단팝업 높이
+        wing_up = nav_category_area_height+main_slide_height-$('.bn_top').height();
+        wing_down = layout_footer_height-155;
+        scroll = $(window).scrollTop();
+        if( $(window).scrollTop() < wing_up ){
+            scroll = wing_up;
+        }else if( $(window).scrollTop() > wing_down ){
+            scroll = wing_down
         }
-    });
+    }
+    (function($){
 
-    <?php if( is_home() || is_front_page() ){ ?>
-        nav_category_area_height = $('.nav_category_area').offset().top+50;
-        layout_footer_height = $('.layout_footer').offset().top-40;
-        //최초 로드시 위치 지정
-                                main_slide_height = $('.custom_slider').height()+453;
-                            decide_wing_position();
-        $('.wing_area').css('top',wing_up+'px').css('visibility','visible');
+        $(document).ready(function(){
+                $(window).scroll(function() {
+                    
+                    var check = $(".sidebar").scrollTop();
 
-        //스크롤시 위치 지정
-        
-        $(window).scroll(function() {
-            nav_category_area_height = $('.nav_category_area').offset().top+50;
-            layout_footer_height = $('.layout_footer').offset().top-40;
-            decide_wing_position();
-            var timer = setTimeout(function(){
-                // 꽃청 추가 START 윤상희 2023.04.21 - 윙배너 위치 수정
-                if($('.catalog_title.flying').length > 0){
-                    scroll = scroll + 10;
-                }
-                // 꽃청 추가 END
-                $('.wing_area').animate({'top':scroll+'px'});
-                $('.wing_area').clearQueue();
-                clearTimeout(timer);
-            }, 100);
-        })
-    <?php } else{ ?>
-        //스크롤시 위치 지정
-        nav_category_area_height = $('.nav_category_area').offset().top+50;
-        layout_footer_height = $('.layout_footer').offset().top-40;
-        //최초 로드시 위치 지정
-                            decide_wing_position();
-        $('.wing_area').css('top',wing_up+'px').css('visibility','visible');
+                    var y = window.scrollY;
+                    console.log('y:', y);
+                    if( y > 500){
+                        $(".sidebar").addClass('sticky');
+                    } else{
+                        $(".sidebar").removeClass('sticky');
+                    }
+                });
 
-        //스크롤시 위치 지정
-        $(window).scroll(function() {
-            nav_category_area_height = $('.nav_category_area').offset().top+50;
-            layout_footer_height = $('.layout_footer').offset().top-40;
-            decide_wing_position();
-            var timer = setTimeout(function(){
-                // 꽃청 추가 START 윤상희 2023.04.21 - 윙배너 위치 수정
-                if($('.catalog_title.flying').length > 0){
-                    scroll = scroll + 10;
-                }
-                // 꽃청 추가 END
-                $('.wing_area').animate({'top':scroll+'px'});
-                $('.wing_area').clearQueue();
-                clearTimeout(timer);
-            }, 100);
-        })
-
-
-    <?php }?>
-
-    //화면 리사이즈 위치 지정
-    $( window ).resize(function() {
-        var timer = setTimeout(function(){
+                <?php if( is_home() || is_front_page() ){ ?>
+                    nav_category_area_height = $('.nav_category_area').offset().top+50;
+                    layout_footer_height = $('.layout_footer').offset().top-40;
+                    //최초 로드시 위치 지정
+                                            main_slide_height = $('.custom_slider').height()+453;
                                         decide_wing_position();
-            // 꽃청 추가 START 윤상희 2023.04.21 - 윙배너 위치 수정
-            if($('.catalog_title.flying').length > 0){
-                scroll = scroll + 60;
-            }
-            // 꽃청 추가 END
-            $('.wing_area').animate({'top':scroll+'px'});
-            $('.wing_area').clearQueue();
-            clearTimeout(timer);
-        }, 100);
-    });
+                    $('.wing_area').css('top',wing_up+'px').css('visibility','visible');
 
-    // 꽃청 추가 START 윤상희 2023.04.21 - 윙배너 위치 수정
-    $(window).load(function(){
-        if($('.catalog_title.flying').length > 0){
-            $(window).resize();
-        }
-    });
-    // 꽃청 추가 END
-    });
+                    //스크롤시 위치 지정
+                    
+                    $(window).scroll(function() {
+                        nav_category_area_height = $('.nav_category_area').offset().top+50;
+                        layout_footer_height = $('.layout_footer').offset().top-40;
+                        decide_wing_position();
+                        var timer = setTimeout(function(){
+                            // 꽃청 추가 START 윤상희 2023.04.21 - 윙배너 위치 수정
+                            if($('.catalog_title.flying').length > 0){
+                                scroll = scroll + 10;
+                            }
+                            // 꽃청 추가 END
+                            $('.wing_area').animate({'top':scroll+'px'});
+                            $('.wing_area').clearQueue();
+                            clearTimeout(timer);
+                        }, 100);
+                    })
+                <?php } else{ ?>
+                    //스크롤시 위치 지정
+                    nav_category_area_height = $('.nav_category_area').offset().top+50;
+                    layout_footer_height = $('.layout_footer').offset().top-40;
+                    //최초 로드시 위치 지정
+                                        decide_wing_position();
+                    $('.wing_area').css('top',wing_up+'px').css('visibility','visible');
+
+                    //스크롤시 위치 지정
+                    $(window).scroll(function() {
+                        nav_category_area_height = $('.nav_category_area').offset().top+50;
+                        layout_footer_height = $('.layout_footer').offset().top-40;
+                        decide_wing_position();
+                        var timer = setTimeout(function(){
+                            // 꽃청 추가 START 윤상희 2023.04.21 - 윙배너 위치 수정
+                            if($('.catalog_title.flying').length > 0){
+                                scroll = scroll + 10;
+                            }
+                            // 꽃청 추가 END
+                            $('.wing_area').animate({'top':scroll+'px'});
+                            $('.wing_area').clearQueue();
+                            clearTimeout(timer);
+                        }, 100);
+                    })
+
+
+                <?php }?>
+
+                //화면 리사이즈 위치 지정
+                $( window ).resize(function() {
+                    var timer = setTimeout(function(){
+                                                    decide_wing_position();
+                        // 꽃청 추가 START 윤상희 2023.04.21 - 윙배너 위치 수정
+                        if($('.catalog_title.flying').length > 0){
+                            scroll = scroll + 60;
+                        }
+                        // 꽃청 추가 END
+                        $('.wing_area').animate({'top':scroll+'px'});
+                        $('.wing_area').clearQueue();
+                        clearTimeout(timer);
+                    }, 100);
+                });
+
+                // 꽃청 추가 START 윤상희 2023.04.21 - 윙배너 위치 수정
+                $(window).load(function(){
+                    if($('.catalog_title.flying').length > 0){
+                        $(window).resize();
+                    }
+                });
+                // 꽃청 추가 END
+        });
+    }(jQuery));
     </script>
     <!--윙배너 끝-->
 
@@ -170,15 +171,18 @@ function module_search_html(){ ?>
                         </form>
                         <!-- ------- 페이지별 기본 검색 ------- -->
                         <script type="text/javascript">
-                            $("form#topSearchForm input[name='search_text']").attr('placeholder', '필요한 상품을 입력해주세요');
-                            $("form#topSearchForm").submit(function(event){
-                                if(!$("form#topSearchForm input[name='search_text']").val()){
-                                    var openNewWindow = window.open("about:blank");
-                                    openNewWindow.document.location.href="/goods/search?search_text=";
-                                    return false;
-                                }
-                            });
+                            (function($){
+                                $("form#topSearchForm input[name='search_text']").attr('placeholder', '필요한 상품을 입력해주세요');
+                                $("form#topSearchForm").submit(function(event){
+                                    if(!$("form#topSearchForm input[name='search_text']").val()){
+                                        var openNewWindow = window.open("about:blank");
+                                        openNewWindow.document.location.href="/goods/search?search_text=";
+                                        return false;
+                                    }
+                                });
+                            }(jQuery));
                         </script>
+
                         <!-- ------- //검색 입력 ------- -->
                         <div class="contetns_area" style="display:none;">
                         <!-- ------- 최근 검색어, 최근본 상품 ------- -->
