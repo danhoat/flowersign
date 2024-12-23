@@ -128,12 +128,12 @@ function box_js_enqueue(){
 
         'placeholder' =>JS_URL.'/jquery.placeholder.js',
         'validate' => JS_URL.'/jquery.validate.js',
-        'ezmark' => JS_URL.'/js/jquery.ezmark.min.js',
+        'ezmark' => JS_URL.'/jquery.ezmark.min.js',
         'select_box' =>JS_URL.'/custom-select-box.js',
         'pagination' =>JS_URL.'/custom-mobile-pagination.js',
         'slick' => JS_URL.'/slick.min.js',
         'jquery_swipe' => JS_URL.'/jquery_swipe/jquery.event.swipe.js',
-        'swiper' => JS_URL.'/touchSlider/swiper.js',
+        'swiper' => JS_URL.'/swiper.js',
 
         'tools' => JS_URL.'/dev-tools.js?v=afe0eba294279d50c840',
         'display_mobile' => JS_URL.'/goods-display_mobile.js?v=afe0eba294279d50c840',
