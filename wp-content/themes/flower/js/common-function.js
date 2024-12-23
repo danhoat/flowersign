@@ -816,9 +816,9 @@ function openDialog(title, layerId, customOptions, callback){
 		/* 해당창을 최상위로 보내기 */
 		var maxZindex	= 0;
 
-		$(".ui-widget-overlay").each(function(k){
-			if(maxZindex < $(this).css("z-index")) maxZindex = $(this).css("z-index");
-		});
+		// $(".ui-widget-overlay").each(function(k){
+		// 	if(maxZindex < $(this).css("z-index")) maxZindex = $(this).css("z-index");
+		// });
 
 		maxZindex++;
 		$(layerSelector).css("z-index",eval(maxZindex)+" !important");
@@ -905,9 +905,9 @@ function openDialogNew(title, layerId, customOptions, callback){
 		/* 해당창을 최상위로 보내기 */
 		var maxZindex	= 0;
 
-		$(".ui-widget-overlay").each(function(k){
-			if(maxZindex < eval($(this).css("z-index"))) maxZindex = eval($(this).css("z-index"));
-		});
+		// $(".ui-widget-overlay").each(function(k){
+		// 	if(maxZindex < eval($(this).css("z-index"))) maxZindex = eval($(this).css("z-index"));
+		// });
 
 		maxZindex++;
 		$(layerSelector).css("z-index",eval(maxZindex)+" !important");
