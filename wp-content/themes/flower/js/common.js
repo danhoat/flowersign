@@ -3,31 +3,32 @@
 	   document.write('<script type="text/javascript" src="/data/js/language/L10n_KR.js?v=1"></script>');
 
    // 함수부만 따로 호출
-	 document.write('<script type="text/javascript" src="/app/javascript/js/common-function.js?dummy=20240219111900"></script>');
+	 // document.write('<script type="text/javascript" src="/app/javascript/js/common-function.js?dummy=20240219111900"></script>');
 
    window.Firstmall = window.Firstmall || {};
 
    $(function(){
-	   try {
-			 var target = $(window);
-		   var target_events = [];
-		   var callback = function(e) {
-			   if(['input', 'textarea', 'select'].indexOf(e.target.tagName.toLowerCase()) === -1 && !e.target.isContentEditable) e.preventDefault();
-			   else e.stopPropagation();
-		   };
+   	// danng enable right click
+	   // try {
+		// 	var target = $(window);
+		//    var target_events = [];
+		//    var callback = function(e) {
+		// 	   if(['input', 'textarea', 'select'].indexOf(e.target.tagName.toLowerCase()) === -1 && !e.target.isContentEditable) e.preventDefault();
+		// 	   else e.stopPropagation();
+		//    };
 
-		   if(Firstmall.Config.Security.PreventDrag) target_events.push('selectstart');
-			 if(Firstmall.Config.Security.PreventContextMenu)
-			 {
-			 	console.log('enable right click');
-				 // target_events.push('contextmenu');
-				 // $('body').css('-webkit-touch-callout','none');
-			 }
-		   target.on(target_events.join(' '), callback);
-	   } catch(ex) {
-		   if(ex instanceof TypeError) 1;/* jQuery 1 related exception($(window).on is not exists) */
-		   else console.log('An exception occured while set contextmenu prevent event: ', ex);
-	   }
+		//    if(Firstmall.Config.Security.PreventDrag) target_events.push('selectstart');
+		// 	 if(Firstmall.Config.Security.PreventContextMenu)
+		// 	 {
+		// 	 	console.log('enable right click');
+		// 		 // target_events.push('contextmenu');
+		// 		 // $('body').css('-webkit-touch-callout','none');
+		// 	 }
+		//    target.on(target_events.join(' '), callback);
+	   // } catch(ex) {
+		//    if(ex instanceof TypeError) 1;/* jQuery 1 related exception($(window).on is not exists) */
+		//    else console.log('An exception occured while set contextmenu prevent event: ', ex);
+	   // }
    });
 
    $(function(){

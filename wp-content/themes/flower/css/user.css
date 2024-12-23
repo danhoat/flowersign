@@ -1042,36 +1042,6 @@ ul.displayTabType1 > li:first-child{border-left:0 #ddd solid;}
   .whiteday_theme_banner a img.eventday_mobile { display:block;}
 }
 
-/*****************************************************
-************ 화이트데이 테마메뉴 배너 끝 **********
-****************************************************/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*************************************************
-********************하단 정보 ********************
-*************************************************/
-
-
-/* 하단 배너(정기구독,배송안내) layout_footer>standard.html */
 .banner_footer { width:1260px; margin:60px auto 0; }
 .banner_footer ul {display:flex; align-items: center; vertical-align: middle;}
 .banner_footer ul li {width:50%; background-color:#f7f7f7;}
