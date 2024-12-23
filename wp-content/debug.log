@@ -6461,3 +6461,5 @@ Stack trace:
 [23-Dec-2024 10:19:01 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
 [23-Dec-2024 10:19:01 UTC] PHP Warning:  Undefined array key "HA-NOI" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
 [23-Dec-2024 10:19:01 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[23-Dec-2024 10:21:41 UTC] PHP Warning:  include(home-intro.php): Failed to open stream: No such file or directory in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[23-Dec-2024 10:21:41 UTC] PHP Warning:  include(): Failed opening 'home-intro.php' for inclusion (include_path='.;D:/laragon/etc/php/pear') in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260

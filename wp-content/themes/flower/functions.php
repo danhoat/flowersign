@@ -12,14 +12,15 @@ require_once __DIR__ .'/block/required.php';
 function testimonial_item1(){?>
 
     <div class="testimonial-item">
-        <p>Great service, delivery, price and product! Quality of flowers are amazing. Will be using you for all my flower needs.</p>
+        
         <div class="box-image">
             <img src = "<?php echo BOXTHEME_URL;?>/images/home/review1.jpg" >
         </div>
-        <div class="testimonial-author">
-            <p class="testimonial-name"> Martin Micker</p>
-            <p class="testimonial-job">Physician</p>
-        </div>
+        <p class="mkdf-testimonial-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget.</p>
+        <span class="mkdf-testimonial-author">
+            <span class="mkdf-testimonials-author-name">Jasmine White</span>
+                <span class="mkdf-testimonials-author-job">Florist</span>
+        </span>
     </div>
 
 <?php } ?>
@@ -28,14 +29,16 @@ function testimonial_item1(){?>
 function testimonial_item2(){?>
 
     <div class="testimonial-item">
-        <p>A Very special thanks. Flawless bouquet with very beautiful flowers with nice arrangement and wrapping i love it..</p>
+       
         <div class="box-image">
             <img src = "<?php echo BOXTHEME_URL;?>/images/home/review2.jpg" >
         </div>
-        <div class="testimonial-author">
-            <p class="testimonial-name"> Martin Micker</p>
-            <p class="testimonial-job">Physician</p>
-        </div>
+        <p class="mkdf-testimonial-text">A Very special thanks. Flawless bouquet with very beautiful flowers with nice arrangement and wrapping i love it..</p>
+        <span class="mkdf-testimonial-author">
+            <span class="mkdf-testimonials-author-name">Flip White</span>
+                <span class="mkdf-testimonials-author-job">Florist</span>
+        </span>
+
     </div>
 
 <?php } ?>
@@ -44,14 +47,16 @@ function testimonial_item2(){?>
 function testimonial_item3(){?>
 
     <div class="testimonial-item">
-        <p>Item received accordingly as shown. Thank you so much for timely delivery. My wife loved the beautiful flower and aroma.</p>
+       
         <div class="box-image">
             <img src = "<?php echo BOXTHEME_URL;?>/images/home/review3.jpg" >
         </div>
-        <div class="testimonial-author">
-            <p class="testimonial-name"> Martin Micker</p>
-            <p class="testimonial-job">Physician</p>
-        </div>
+        
+        <p class="mkdf-testimonial-text">A Very special thanks. Flawless bouquet with very beautiful flowers with nice arrangement and wrapping i love it..</p>
+        <span class="mkdf-testimonial-author">
+            <span class="mkdf-testimonials-author-name">Jasmine Green</span>
+            <span class="mkdf-testimonials-author-job">Florist</span>
+        </span>
     </div>
 
 <?php } 

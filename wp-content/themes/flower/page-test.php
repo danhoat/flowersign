@@ -108,23 +108,9 @@ get_header();
 </div>
 
 
-<div class="full block-testimonial">
-    <div class="container ">
-        <div class="overview">
-            <h3 class="elementor-heading-title elementor-size-default">Our Clients</h3>
-            <h2>What Clients Says</h2>
-            <p>Blandit libero volutpat sed cras ornare arcu dui vivamus.<br>Proin fermentum leo vel orci porta non</p>
-        </div>
-    
-        <div class="list-testimonial ">
-           <?php testimonial_item1();?>
-           <?php testimonial_item2();?>
-           <?php testimonial_item3();?>
-        </div>
-    </div>
-</div>
 
-<div class="full">
+
+<div class="full block-testimonial">
     <div class="container">
         <?php get_template_part('testimonial/slider');?>
 
