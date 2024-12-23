@@ -16,7 +16,8 @@ function slide_1_item($product, $pos = 0){
 
     ?>
 
-    <ul class="goods_list swiper-slide">    <li class="gl_item">
+    <ul class="goods_list swiper-slide">   
+     <li class="gl_item">
     <div class="gl_inner_item_wrap">
 
         <!--상품이미지-->

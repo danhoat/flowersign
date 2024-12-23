@@ -6431,3 +6431,33 @@ Stack trace:
 [23-Dec-2024 09:06:23 UTC] PHP Warning:  Undefined variable $woocommerce in D:\laragon\www\flower\wp-content\themes\flower\header.php on line 387
 [23-Dec-2024 09:06:23 UTC] PHP Warning:  Attempt to read property "cart" on null in D:\laragon\www\flower\wp-content\themes\flower\header.php on line 387
 [23-Dec-2024 09:06:23 UTC] PHP Warning:  Attempt to read property "cart_contents_count" on null in D:\laragon\www\flower\wp-content\themes\flower\header.php on line 387
+[23-Dec-2024 09:33:59 UTC] PHP Warning:  Undefined array key "HA-NOI" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[23-Dec-2024 09:33:59 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[23-Dec-2024 09:33:59 UTC] PHP Warning:  Undefined array key "HA-NOI" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[23-Dec-2024 09:33:59 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[23-Dec-2024 09:36:14 UTC] PHP Warning:  Undefined array key "HA-NOI" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[23-Dec-2024 09:36:14 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[23-Dec-2024 09:36:14 UTC] PHP Warning:  Undefined array key "HA-NOI" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[23-Dec-2024 09:36:14 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[23-Dec-2024 09:41:22 UTC] PHP Warning:  Undefined variable $product_id in D:\laragon\www\flower\wp-content\themes\flower\testimonial\slider.php on line 34
+[23-Dec-2024 09:41:22 UTC] PHP Warning:  Undefined variable $product_id in D:\laragon\www\flower\wp-content\themes\flower\testimonial\slider.php on line 77
+[23-Dec-2024 09:41:22 UTC] PHP Warning:  Undefined variable $product in D:\laragon\www\flower\wp-content\themes\flower\testimonial\slider.php on line 77
+[23-Dec-2024 09:41:22 UTC] PHP Fatal error:  Uncaught Error: Call to a member function get_title() on null in D:\laragon\www\flower\wp-content\themes\flower\testimonial\slider.php:77
+Stack trace:
+#0 D:\laragon\www\flower\wp-includes\template.php(812): require()
+#1 D:\laragon\www\flower\wp-includes\template.php(745): load_template('D:\\laragon\\www\\...', false, Array)
+#2 D:\laragon\www\flower\wp-includes\general-template.php(206): locate_template(Array, true, false, Array)
+#3 D:\laragon\www\flower\wp-content\themes\flower\page-test.php(129): get_template_part('testimonial/sli...')
+#4 D:\laragon\www\flower\wp-includes\template-loader.php(106): include('D:\\laragon\\www\\...')
+#5 D:\laragon\www\flower\wp-blog-header.php(19): require_once('D:\\laragon\\www\\...')
+#6 D:\laragon\www\flower\index.php(17): require('D:\\laragon\\www\\...')
+#7 {main}
+  thrown in D:\laragon\www\flower\wp-content\themes\flower\testimonial\slider.php on line 77
+[23-Dec-2024 10:03:35 UTC] PHP Warning:  include(home-intro.php): Failed to open stream: No such file or directory in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[23-Dec-2024 10:03:35 UTC] PHP Warning:  include(): Failed opening 'home-intro.php' for inclusion (include_path='.;D:/laragon/etc/php/pear') in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[23-Dec-2024 10:11:00 UTC] PHP Warning:  include(home-intro.php): Failed to open stream: No such file or directory in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[23-Dec-2024 10:11:00 UTC] PHP Warning:  include(): Failed opening 'home-intro.php' for inclusion (include_path='.;D:/laragon/etc/php/pear') in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[23-Dec-2024 10:19:01 UTC] PHP Warning:  Undefined array key "HA-NOI" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[23-Dec-2024 10:19:01 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[23-Dec-2024 10:19:01 UTC] PHP Warning:  Undefined array key "HA-NOI" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[23-Dec-2024 10:19:01 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138

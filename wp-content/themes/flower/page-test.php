@@ -122,6 +122,14 @@ get_header();
            <?php testimonial_item3();?>
         </div>
     </div>
+</div>
 
+<div class="full">
+    <div class="container">
+        <?php get_template_part('testimonial/slider');?>
+
+
+    </div>
+</div>
 
 <?php get_footer(); ?>

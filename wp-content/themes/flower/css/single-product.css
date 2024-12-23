@@ -364,6 +364,7 @@ input:checked + .choice{
     font-weight: 500;
     -webkit-appearance: none;
      -moz-appearance: textfield;
+     margin: 0;
 
 }
 .text-brand{
