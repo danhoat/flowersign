@@ -6,7 +6,10 @@
 
 remove_action('woocommerce_after_shop_loop_item','woocommerce_template_loop_add_to_cart');
 function box_change_view_rating($html, $rating, $count ){
-    if( is_singular('product') ) return $html.'<span class="rate-score">'.$rating.'</span>';
+    // if( is_singular('product') ) {
+    //     if( $rating > 0) $html.='<span class="rate-score">'.$rating.'</span>';
+    //     return $html;
+    // }
 
     global $product;
     if($product){
@@ -30,12 +33,12 @@ remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_l
 add_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_rating', 15 );
 
 function open_div_wrap(){
-    if( is_singular('product') ) return ;
+    //if( is_singular('product') ) return ;
     echo '<div class="wrap-price-rating text-xs p-rating flex  justify-between text-xs mt-1">';
 }
 add_action( 'woocommerce_after_shop_loop_item_title', 'open_div_wrap',9 );
 function close_div_wrap(){
-    if( is_singular('product') ) return ;
+    //if( is_singular('product') ) return ;
     echo '</div>';
 }
 add_action( 'woocommerce_after_shop_loop_item_title', 'close_div_wrap', 16 );
