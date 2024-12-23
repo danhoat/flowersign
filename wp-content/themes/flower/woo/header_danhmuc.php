@@ -249,13 +249,23 @@ add_action('wp_footer','box_add_js_cat');
 
 function wpdocs_modify_query_exclude_category( $query ) {
     if( !  $query->is_main_query()  ) return $query;
+
     if ( ! is_admin() && $query->is_main_query() &&  isset($_GET['limit']) )
         $query->set( 'posts_per_page', $_GET['limit'] );
 
-    if( is_front_page() || is_archive() ){
+    if( is_front_page() || is_archive() || is_cart() ){
         $query->set( 'post__not_in', LIST_BUNDLES_ITEM );
     }
     //$query->set( 'posts_per_page',6);
     
 }
 add_action( 'pre_get_posts', 'wpdocs_modify_query_exclude_category' );
+
+function box_exclude_list_ban_kem($args){
+
+    $args['post__not_in'] = LIST_BUNDLES_ITEM;
+    $args['exclude'] = LIST_BUNDLES_ITEM;
+    //var_dump($args);
+    return $args;
+}
+// add_filter('woocommerce_product_object_query_args','box_exclude_list_ban_kem', 999);

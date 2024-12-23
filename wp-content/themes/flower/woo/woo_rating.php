@@ -34,7 +34,17 @@ add_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop
 
 function open_div_wrap(){
     //if( is_singular('product') ) return ;
-    echo '<div class="wrap-price-rating text-xs p-rating flex  justify-between text-xs mt-1">';
+
+    global $product;
+    $count = 0;
+     $class = 'wrap-price-only';
+    if($product){
+        $count = $product->get_review_count();
+    }
+    if($count > 0){
+        $class = 'wrap-price-rating';
+    }
+    echo "<div class=' {$class} text-xs p-rating flex  justify-between text-xs mt-1'>";
 }
 add_action( 'woocommerce_after_shop_loop_item_title', 'open_div_wrap',9 );
 function close_div_wrap(){

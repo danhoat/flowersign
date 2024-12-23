@@ -6724,3 +6724,10 @@ Stack trace:
 [23-Dec-2024 19:33:10 UTC] PHP Warning:  Undefined array key "CAMAU" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
 [23-Dec-2024 19:33:10 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
 [23-Dec-2024 19:50:24 UTC] PHP Parse error:  syntax error, unexpected token ";" in D:\laragon\www\flower\wp-content\themes\flower\includes\bundle_items.php on line 32
+[23-Dec-2024 20:17:13 UTC] PHP Parse error:  syntax error, unexpected token "return" in D:\laragon\www\flower\wp-content\themes\flower\woo\header_danhmuc.php on line 267
+[23-Dec-2024 20:25:11 UTC] Automatic updates starting...
+[23-Dec-2024 20:25:12 UTC]   Automatic plugin updates starting...
+[23-Dec-2024 20:25:12 UTC]   Automatic plugin updates complete.
+[23-Dec-2024 20:25:13 UTC]   Automatic theme updates starting...
+[23-Dec-2024 20:25:13 UTC]   Automatic theme updates complete.
+[23-Dec-2024 20:25:13 UTC] Automatic updates complete.
