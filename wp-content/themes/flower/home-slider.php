@@ -30,7 +30,7 @@
 
 
 <!-- TVCF 영상 modal winddow : 서민혁 210805 -->
-<div id="modal_tvcf01">
+<!-- <div id="modal_tvcf01">
     <div class="tvcf_content">
         <a href="#" class="btn_modal_close">
             <span></span>
@@ -65,7 +65,7 @@
         });
 
     })
-</script>
+</script> -->
 
 <!-- TVCF 영상 modal winddow 끝 -->
 
