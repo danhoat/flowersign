@@ -7,6 +7,7 @@ wp-content/uploads/
 wp-content/upgrade/
 wp-content/themes/twentytwentyfour/
 wp-content/plugins/
+wp-content/languages/
 # ignore ALL files in ANY directory named temp
 temp/
 # ignore ALL files in plugins
