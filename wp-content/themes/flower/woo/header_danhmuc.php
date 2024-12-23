@@ -110,7 +110,32 @@ function box_add_js_cat(){ ?>
 
     <script type="text/javascript">
         (function($){
-            console.log('init cat1');
+
+            console.log('111');
+            
+
+            const paragraph = "I think Ruth's dog is cuter than your dog!";
+            var url = 'https://demo.dichvu139.com/product-category/hoa-tinh-yeu/page/2/';
+
+            console.log(paragraph.replace("Ruth's", 'my'));
+            // Expected output: "I think my dog is cuter than your dog!"
+
+            let regex = /Dog/i;
+            console.log('regex:');
+            console.log(paragraph.replace(regex, 'ferret'));
+
+            console.log('ok:');
+            
+            var reg1 = /\d+/g; //  \[\
+            var reg2 = /\page\d+\]/g;
+            let pattern = /page\/\d+/g;
+           
+            var u2 = url.replace(pattern, '111');
+            //console.log(u1);
+            console.log(u2);
+            
+
+
             $(document).ready(function(){
                 console.log('init cat2');
                 $(".btn-view-full").click(function(){
@@ -129,12 +154,20 @@ function box_add_js_cat(){ ?>
             $(".select_number_items").change(function(){
               
                 var limit= $(this).val();
-                var url = new URL(location.href);
-              
-                    url.searchParams.set('limit', limit);
+                var url = location.href;
+                     
+                let pattern = /page\/\d+/g;
+           
+                var newURL= url.replace(pattern, '');
+                console.log(newURL);
+
+                var urlOK = new URL(newURL);
+
+                urlOK.searchParams.set('limit', limit);
+                console.log(urlOK.href);
               
 
-                location.href = url.href;
+                 location.href = urlOK.href;
 
             });
             $(".select_color").change(function(){

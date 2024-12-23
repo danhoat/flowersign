@@ -698,3 +698,10 @@ color: #2E2E2E;
 .leading-relaxed {
     line-height: 1.625;
 }
+.page404{
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}

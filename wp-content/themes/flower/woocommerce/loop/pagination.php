@@ -53,10 +53,10 @@ if ( $total <= 1 ) {
 	<div class="select-number-items">
 		<span class="text-des"> Select Item Shows</span>
 		<select name="per" class="select_number_items">
-			<option value="20">&nbsp;20 &nbsp;</option>
-			<option value="40" selected="">&nbsp;40 &nbsp;</option>
-			<option value="100">&nbsp;100&nbsp;</option>
-			<option value="200">&nbsp;200&nbsp;</option>
+			<option value="20" <?php is_selected_limit(20);?> >&nbsp;20&nbsp;</option>
+			<option value="40"<?php is_selected_limit(40);?>>&nbsp;40&nbsp;</option>
+			<option value="100" <?php is_selected_limit(100);?>>&nbsp;100&nbsp;</option>
+			<option value="200" <?php is_selected_limit(200);?>>&nbsp;200&nbsp;</option>
 		</select>
 	</div>
 </div>

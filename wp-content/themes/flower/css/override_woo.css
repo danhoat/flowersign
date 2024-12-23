@@ -4,7 +4,7 @@
     }
     
 @media only screen and (min-width: 800px) {
-    
+
     .woocommerce ul.products{
         display: grid;
         
@@ -86,3 +86,12 @@
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product{
     clear: none;
 }
+.woocommerce-product-details__short-description{
+    line-height: 1.8em;
+    margin-top: 30px;
+}
+
+.related.products{
+
+}
+.related.products

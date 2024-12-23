@@ -417,3 +417,6 @@ span.rate-score{
     position: absolute;
     width: 30%;
 }
+.related.products h2{
+    margin-bottom: 20px;
+}

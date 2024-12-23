@@ -36,7 +36,7 @@
         
         //if( is_buy_now ) return true;
     
-
+        return true;
         var delivery_date = form.find("input[name='delivery_date']:checked").val();
 
         if(! delivery_date){
