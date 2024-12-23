@@ -112,7 +112,8 @@ function box_js_enqueue(){
     $js = array(
         //'jquery' => JS_URL.'/jquery.min.js',
         
-        'jquery' => 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js',
+        //'jquery' => 'ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js',
+        'jquery' => JS_URL.'/jquery.min.171.js',
 
         //'jquery' => SITE_URL.'/wp-includes/js/jquery/jquery.min.js',
         'jquery.ui' => JS_URL.'/jquery-ui.min.js',
