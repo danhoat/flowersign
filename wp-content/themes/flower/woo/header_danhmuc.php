@@ -11,9 +11,7 @@ function woocommerce_product_archive_description() {
 
         ?>
         <h1 class="woocommerce-products-header__title">
-            <?php
-                woocommerce_page_title();
-            ?>
+            <?php woocommerce_page_title(); ?>
         </h1>
 
         <?php
@@ -24,12 +22,11 @@ function woocommerce_product_archive_description() {
 
 
             $term_id  = $term->term_id;
-
             $thumbnail_id = get_term_meta( $term_id, CAT_BANNER_IMG_ID, true );
         
             if($thumbnail_id){
                 $image = wp_get_attachment_image_src( $thumbnail_id, 'full' );
-                echo '<img class="cat-thumbnail" src="' . $image[0] . '" alt="" />'; 
+                echo '<img class="cat-thumbnail" src="' . $image[0] . '" alt="'.$term->name().'" />'; 
             }
 
             /**

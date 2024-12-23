@@ -723,4 +723,5 @@ color: #2E2E2E;
 }
 .filtered_item_sorting .item_viewnum select{
     outline: none;
+    color: #999;
 }
