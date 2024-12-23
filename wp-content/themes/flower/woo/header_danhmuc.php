@@ -41,9 +41,17 @@ function woocommerce_product_archive_description() {
              * @param WP_Term $term             Term object for this taxonomy archive.
              */
             $term_description = apply_filters( 'woocommerce_taxonomy_archive_description_raw', $term->description, $term );
+            $overview = explode("[xem_them]", $term_description);
 
-            if ( ! empty( $term_description ) ) {
-                echo '<div class="term-description "> ' . wc_format_content( wp_kses_post( $term_description ) ) . '</div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+            if ( ! empty( $overview[0] ) ) {
+                $btn_xemthem = '<span class="btn-view-full"> Xem thêm ...</a>';
+                $btn_thugon = '<span class="btn-view-less">Thu gọn </a>';
+                $the_last = '';
+                if(isset($overview[1])){
+                    $the_last = '<div class="toggle">'.$overview[1].$btn_thugon.'<span>';
+                }
+
+                echo '<div class="term-description "> ' . wc_format_content( wp_kses_post( $overview[0].$btn_xemthem ) ).$the_last.'</div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
             }
         }
 
@@ -60,3 +68,27 @@ function box_move_title_to_theme($check){
 
 }
 add_filter('woocommerce_show_page_title', 'box_move_title_to_theme');
+function box_add_js_cat(){ ?>
+
+    <script type="text/javascript">
+        (function($){
+            console.log('init cat1');
+            $(document).ready(function(){
+                console.log('init cat2');
+                $(".btn-view-full").click(function(){
+                    console.log('show full');
+
+                    $('.term-description').toggleClass('full');
+                })
+            });
+            $(".btn-view-less").click(function(){
+                console.log('toggle full');
+                $('.term-description').toggleClass('full');
+            });
+
+        }(jQuery));
+
+    </script>
+<?php    
+}
+add_action('wp_footer','box_add_js_cat');

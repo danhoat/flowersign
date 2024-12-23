@@ -557,3 +557,24 @@ color: #2E2E2E;
     font-size: .75rem;
         line-height: 1.75rem;
 }
+.btn-view-full,
+.btn-view-less{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.term-description .btn-view-less{
+    display: none;
+}
+.term-description.full .btn-view-full{
+    display: none;
+
+}
+.term-description.full .btn-view-less{
+    display: initial;
+}
+.term-description .toggle{
+    display: none;
+}
+.term-description.full .toggle{
+    display: initial;
+}

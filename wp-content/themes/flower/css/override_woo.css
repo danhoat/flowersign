@@ -53,7 +53,7 @@
 
 .woocommerce:where(body:not(.woocommerce-uses-block-theme)) ul.products li.product .price,
 .woocommerce:where(body:not(.woocommerce-uses-block-theme)) div.product p.price, .woocommerce:where(body:not(.woocommerce-uses-block-theme)) div.product span.price{
-    color: #71a200 !important;
+    color: #70A100 !important;
 }
 .woocommerce ul.products li.product .price,
 .woocommerce ul.products li.product .price ins{
@@ -61,7 +61,7 @@
     line-height: 1rem;
     font-weight: 500;
     letter-spacing: -1px;
-    color: rgb(158 166 212) !important;
+    color: #70A100;
     text-decoration: none;
 }
 .woocommerce ul.products li.product .price del{
@@ -80,5 +80,5 @@
  }
  .woocommerce ul.products li.product .price del{
 
- color: rgb(156 163 175);
+ color: #70A100;
 }
