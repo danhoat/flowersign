@@ -49,6 +49,35 @@ function is_active_sort($name){
 	global $orderby;
 	if($orderby == $name) echo 'active';
 }
+function is_selected($key,$value){
+	
+	if( isset($_GET[$key]) && $_GET[$key] == $value ) echo 'selected';
+}
+$is_selected_color = false;
+$list_color = array('red','yell','white');
+
+if(isset($_GET['color']) && in_array($_GET['color'], $list_color ) ){
+	$is_selected_color = true;
+}
+if($is_selected_color){
+	$is_selected_color = 'selected';
+} else{
+	$is_selected_color = '';
+}
+
+
+$is_selected_size = false;
+$list_size = array('m','s','xl');
+
+if(isset($_GET['size']) && in_array($_GET['size'], $list_size ) ){
+	$is_selected_size = true;
+}
+if($is_selected_size){
+	$is_selected_size = 'selected';
+} else{
+	$is_selected_size = '';
+}
+
 
 ?>
 
@@ -90,17 +119,17 @@ function is_active_sort($name){
 				</li>
 
 				<li><select name="color" class="select_color">
-						<option value="">Color</option>
-						<option value="red">Red</option>
-						<option value="yellow" >&nbsp;Yellow&nbsp;</option>
-						<option value="white">&nbsp;white&nbsp;</option>
+						<option value="" <?php echo $is_selected_color;?> >Color</option>
+						<option value="red" <?php is_selected('color','red');?> >Red</option>
+						<option value="yellow" <?php is_selected('color','yellow');?>  >Yellow</option>
+						<option value="white" <?php is_selected('color','white');?>  >white;</option>
 					</select>
 				</li>
 				<li><select name="size" class="select_size">
-					<option value="">Size</option>
-					<option value="m">M</option>
-					<option value="s" selected="">&nbsp;S&nbsp;</option>
-					<option value="XL">&nbsp;XL&nbsp;</option>
+					<option value="" <?php echo $is_selected_size;?> >Size</option>
+					<option value="m" <?php is_selected('size','m');?> >M</option>
+					<option value="s"  <?php is_selected('size','s');?> >S</option>
+					<option value="xl"  <?php is_selected('size','xl');?> >XL</option>
 				</select>
 				</li>
 				<!-- <li>
@@ -172,6 +201,45 @@ if ( woocommerce_product_loop() ) {
  * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
  */
 do_action( 'woocommerce_after_main_content' );
+
+if( is_tax('product_cat') ){ ?>
+	<div class="full bg-slate-100">
+		<div class="container">
+			<div class="bg-slate-100">
+				<div class="mx-auto max-w-screen-xl py-10 px-4 md:px-6">
+					<h3 class="text-center font-title  text-2xl tracking-tight text-slate-900 sm:text-3xl">Why send flowers with&nbsp;Floom?</h3>
+					<div class="flex flex-col lg:flex-row gap-8 lg:gap-12 justify-evenly">
+						<div class="mx-auto flex flex-1 items-center flex-col gap-3 bg-slate-white lg:py-5 rounded-md max-w-[350px]">
+							<img alt="What you see is what you get" loading="lazy" width="200" height="200" decoding="async" data-nimg="1" class="w-auto h-12 rounded-md object-cover" style="color:transparent" src="https://d3c3go6eq7r80g.cloudfront.net/products/200px-Flower-eye_180126_141515.gif">
+							<div class="flex-1 md:flex-col text-center">
+
+								<h4 class="font-title text-xl ">What you see is what you&nbsp;get</h4>
+
+								<p class="text-sm leading-relaxed">Love the bouquet on your screen? That's exactly what our local florist will prepare freshly for your order... or your money back!</p>
+							</div>
+						</div>
+						<div class="mx-auto flex flex-1 items-center flex-col gap-3 bg-slate-white lg:py-5 rounded-md max-w-[350px]">
+
+							<img alt="Always unique, never generic" loading="lazy" width="200" height="200" decoding="async" data-nimg="1" class="w-auto h-12 rounded-md object-cover" style="color:transparent" src="https://d3c3go6eq7r80g.cloudfront.net/products/200px-Florist_180126_141526.gif">
+
+							<div class="flex-1 md:flex-col text-center">
+							<h4 class="font-title text-xl ">Always unique, never&nbsp;generic</h4>
+
+							<p class="text-sm leading-relaxed">We only work with the most talented and unique artisans, and we're passionate about supporting our skilled family of florists.</p></div></div>
+						<div class="mx-auto flex flex-1 items-center flex-col gap-3 bg-slate-white lg:py-5 rounded-md max-w-[350px]"><img alt="Hand-delivered with care and attention" loading="lazy" width="200" height="200" decoding="async" data-nimg="1" class="w-auto h-12 rounded-md object-cover" style="color:transparent" src="https://d3c3go6eq7r80g.cloudfront.net/products/200px-Hands_180126_141541.gif">
+							<div class="flex-1 md:flex-col text-center">
+
+							<h4 class="font-title text-xl ">Hand-delivered with care and&nbsp;attention</h4>
+							<p class="text-sm leading-relaxed">Each of our orders is professionally arranged, wrapped and safely delivered with a hand-written card… on the exact day that you need it.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<?php
+}
 
 /**
  * Hook: woocommerce_sidebar.

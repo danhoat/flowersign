@@ -6545,3 +6545,7 @@ Stack trace:
 [23-Dec-2024 13:15:58 UTC] PHP Warning:  include(): Failed opening 'home-intro.php' for inclusion (include_path='.;D:/laragon/etc/php/pear') in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
 [23-Dec-2024 13:16:10 UTC] PHP Warning:  include(home-intro.php): Failed to open stream: No such file or directory in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
 [23-Dec-2024 13:16:10 UTC] PHP Warning:  include(): Failed opening 'home-intro.php' for inclusion (include_path='.;D:/laragon/etc/php/pear') in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[23-Dec-2024 13:43:17 UTC] PHP Warning:  include(home-intro.php): Failed to open stream: No such file or directory in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[23-Dec-2024 13:43:17 UTC] PHP Warning:  include(): Failed opening 'home-intro.php' for inclusion (include_path='.;D:/laragon/etc/php/pear') in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[23-Dec-2024 13:43:17 UTC] PHP Warning:  include(home-intro.php): Failed to open stream: No such file or directory in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
+[23-Dec-2024 13:43:17 UTC] PHP Warning:  include(): Failed opening 'home-intro.php' for inclusion (include_path='.;D:/laragon/etc/php/pear') in D:\laragon\www\flower\wp-content\themes\flower\index.php on line 260
