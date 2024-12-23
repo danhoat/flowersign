@@ -17,7 +17,7 @@
  */
 
 defined( 'ABSPATH' ) || exit;
-die('333333333');
+
 ?>
 <div class="woocommerce-billing-fields">
 	<?php if ( wc_ship_to_billing_address_only() && WC()->cart->needs_shipping() ) : ?>
@@ -26,7 +26,7 @@ die('333333333');
 
 	<?php else : ?>
 
-		<h3><?php esc_html_e( 'Billing details', 'woocommerce' ); ?></h3>
+		<h3><?php esc_html_e( 'Thông tin người nhận:', 'woocommerce' ); ?></h3>
 
 	<?php endif; ?>
 

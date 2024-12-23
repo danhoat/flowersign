@@ -49,6 +49,9 @@ function box_codex_slider_init() {
     );
 
     register_post_type( 'Slider', $args );
+
+    
 }
 
-add_action( 'init', 'box_codex_slider_init' );
+add_action( 'init', 'box_codex_slider_init', 9999 );
+

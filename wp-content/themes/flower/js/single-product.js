@@ -33,7 +33,8 @@
                 is_buy_now = field.value;
             }
         });
-        if( is_buy_now ) return true;
+        
+        //if( is_buy_now ) return true;
     
 
         var delivery_date = form.find("input[name='delivery_date']:checked").val();

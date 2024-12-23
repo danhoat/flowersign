@@ -77,8 +77,18 @@ function wpdocs_theme_name_scripts() {
         wp_enqueue_style( 'single-product', BOXTHEME_URL.'/css/single-product.css',array(), rand() );
         wp_enqueue_script( 'single-product', BOXTHEME_URL. '/js/single-product.js', array('jquery'), rand(), true );
     }
+
+    if( is_post_type_archive('product') || is_tax( 'product_cat' ) ){
+        wp_enqueue_style( 'archive-product', BOXTHEME_URL.'/css/archive.css',array(), rand() );
+        
+    }
+
     if( is_singular('post') || is_page_template('page-blog.php')){
         wp_enqueue_style( 'blog-post', BOXTHEME_URL.'/css/blog.css',array(), rand() );
+    }
+
+    if( is_page_template('page-checkout.php') || is_page('checkout') ){
+        wp_enqueue_style( 'woo-checkout', BOXTHEME_URL.'/css/checkout.css',array(), rand() );
     }
     wp_enqueue_style('responsive-css', BOXTHEME_URL.'/responsive.css?ok',array(), rand() );
     if(! LOAD_STATIC_JS){

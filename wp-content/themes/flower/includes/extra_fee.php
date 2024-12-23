@@ -62,7 +62,7 @@ function box_get_item_data( $item_data, $cart_item_data ) {
 
      if ( isset( $cart_item_data['delivery_date'] ) ) {
         $item_data[] = array(
-            'key'   => __( 'Delivery Date', 'webkul' ),
+            'key'   => __( 'Giao hàng', 'webkul' ),
             'value' => wc_clean( $cart_item_data['delivery_date'] ),
         );
     }

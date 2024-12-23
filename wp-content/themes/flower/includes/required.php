@@ -14,3 +14,15 @@ require_once __DIR__ .'/bundle_items.php';
 require_once __DIR__ .'/extra_fee.php';
 
 // require_once __DIR__ .'/custom_gallery_vertical.php';
+
+function box_register_product_color_tag(){
+    $args = array(
+        'label'        => __( 'Product Color', 'textdomain' ),
+        'public'       => true,
+        'rewrite'      => false,
+        'hierarchical' => true
+    );
+    
+    register_taxonomy( 'color', array('product'), $args );
+}
+add_action('init', 'box_register_product_color_tag');

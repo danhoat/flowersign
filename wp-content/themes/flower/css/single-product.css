@@ -362,6 +362,9 @@ input:checked + .choice{
     min-width: unset;
     font-size: .98rem;
     font-weight: 500;
+    -webkit-appearance: none;
+     -moz-appearance: textfield;
+
 }
 .text-brand{
     color: rgb(158 166 212);
@@ -392,7 +395,7 @@ span.rate-score{
 
  span.rate-score {
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
     position: relative;
     top: 3px;
 }

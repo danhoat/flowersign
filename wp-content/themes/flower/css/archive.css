@@ -1,0 +1,14 @@
+.woof_sid{
+    display: block;
+}
+.woof_redraw_zone{
+    display: grid;
+   
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    gap: 20px 20px;
+    margin-bottom: 40px;
+}
+.woof_container_woof_text  input{
+    position: relative;
+    top:20px;
+}

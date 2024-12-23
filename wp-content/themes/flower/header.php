@@ -375,17 +375,23 @@ var kid_agree = "";
 <!-- 꽃청 수정 END -->
                         <!-- //카테고리 네비게이션 -->
                         <li class="custom_nav_link">
-                            <a class="categoryDepthLink" designelement="text" textindex="28"  href="/promotion/event"><em>EVENT</em></a>
+                            <a class="categoryDepthLink" designelement="text" textindex="28"  href="#"><em>EVENT</em></a>
                         </li>
                         <li class="custom_nav_link">
-                            <a class="categoryDepthLink" designelement="text" textindex="29" href="/board/?id=mz-main"><em>MAGAZINE</em></a>
+                            <a class="categoryDepthLink" designelement="text" textindex="29" href="#"><em>MAGAZINE</em></a>
                         </li><!-- 기본 카테고리 (원본) --><!-- 기본 카테고리 (원본) -->
                         <li class="categoryDepth1">
-                            <a class="top_menu_myinfo" designelement="text" textindex="30"  href="/mypage/index"></a>
+                            <a class="top_menu_myinfo hide" designelement="text" textindex="30"  href="/mypage/index"></a>
                         </li>
                         <li class="categoryDepth1">
-                            <a class="top_menu_cart" designelement="text" textindex="31"  href="<?php echo wc_get_cart_url();?>"><span class="cart_cnt2">0</span></a>
+                            <?php global $woocommerce; ?>
+                            <a class="top_menu_cart" designelement="text" textindex="31"  href="<?php echo wc_get_cart_url();?>"><span class="cart_cnt2"><?php echo $woocommerce->cart->cart_contents_count;?></span></a>
+
+                       
+
                         </li>
+
+
                         <li class="categoryDepth1">
                             <a class="top_menu_search" designelement="text" textindex="32" href="javascript:void(0);"></a>
                         </li>

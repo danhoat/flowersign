@@ -37,6 +37,9 @@ do_action( 'woocommerce_before_main_content' );
  */
 do_action( 'woocommerce_shop_loop_header' );
 
+//echo do_shortcode("[woof  sid='generator_676549921f798' autohide='0' autosubmit='-1' is_ajax='0' ajax_redraw='0' start_filtering_btn='0' btn_position='b' dynamic_recount='-1' hide_terms_count_txt='0' mobile_mode='0' ]");
+echo do_shortcode("[woof  sid='generator_67654de9ad51d' autohide='0' autosubmit='-1' is_ajax='0' ajax_redraw='0' start_filtering_btn='0' btn_position='b' dynamic_recount='-1' hide_terms_count_txt='0' mobile_mode='0' ]");
+
 if ( woocommerce_product_loop() ) {
 
 	/**
