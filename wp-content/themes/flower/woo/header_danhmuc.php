@@ -26,7 +26,7 @@ function woocommerce_product_archive_description() {
         
             if($thumbnail_id){
                 $image = wp_get_attachment_image_src( $thumbnail_id, 'full' );
-                echo '<img class="cat-thumbnail" src="' . $image[0] . '" alt="'.$term->name().'" />'; 
+                echo '<img class="cat-thumbnail" src="' . $image[0] . '" alt="'.$term->name.'" />'; 
             }
 
             /**
