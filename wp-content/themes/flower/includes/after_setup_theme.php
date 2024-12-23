@@ -110,9 +110,11 @@ add_action( 'wp_enqueue_scripts', 'wpdocs_theme_name_scripts' );
 
 function box_js_enqueue(){
     $js = array(
-        'jquery' => JS_URL.'/jquery.min.js',
-    
+        //'jquery' => JS_URL.'/jquery.min.js',
+        
+        'jquery' => 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js',
         'jquery.ui' => JS_URL.'/jquery-ui.min.js',
+
         
         'cookie' => JS_URL.'/jquery.cookie.js',
         'poshytip' => JS_URL.'/jquery.poshytip.min.js',
