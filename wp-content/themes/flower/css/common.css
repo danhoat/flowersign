@@ -3632,7 +3632,7 @@ iframe#actionFrame { width:0; height:0; position:absolute; left:0; bottom:0; vis
 .resp_top_search .search_ver2 .search_new .input_area label.search_box>input[type='text']::placeholder { font-size:14px; font-weight:400; color:#999; }
 .resp_top_search .search_ver2 .search_new .input_area label.search_box>input[type='text']:-ms-input-placeholder { font-size:14px; font-weight:400; color:#999; }
 .resp_top_search .search_ver2 .search_new .input_area button.search { width:20px; height:20px; border:none;  background: url(../images/common/btn_zoom.png) 50% 50% no-repeat;  background-size:contain;}
-.resp_top_search .search_ver2 .search_new .input_area button.close { margin-left:5px; width:20px; height:20px; border:none; background: url(../images/common/icon_close_gray2.png) 50% 50% no-repeat; }
+.resp_top_search .search_ver2 .search_new .input_area button.close { margin-left:5px; width:20px; height:20px; border:none; position: relative;top:9px; background: url(../images/common/icon_close_gray2.png) 50% 50% no-repeat; }
 .resp_top_search .search_ver2 .search_new .input_area button.close.disabled { visibility:hidden; }
 
 .resp_top_search .search_ver2 .search_new .contetns_area { margin-top:-1px; float:right; width:298px; background:#fff; border:1px #aaa solid; }
