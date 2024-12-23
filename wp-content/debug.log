@@ -6733,3 +6733,17 @@ Stack trace:
 [23-Dec-2024 20:25:13 UTC] Automatic updates complete.
 [23-Dec-2024 21:01:17 UTC] PHP Parse error:  syntax error, unexpected token "}" in D:\laragon\www\flower\wp-content\themes\flower\header.php on line 198
 [23-Dec-2024 21:01:31 UTC] PHP Parse error:  syntax error, unexpected token "}" in D:\laragon\www\flower\wp-content\themes\flower\templates\primary-menu.php on line 71
+[23-Dec-2024 21:22:42 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "WP_HOME" in D:\laragon\www\flower\wp-content\themes\flower\includes\after_setup_theme.php:117
+Stack trace:
+#0 D:\laragon\www\flower\wp-content\themes\flower\includes\after_setup_theme.php(166): box_js_enqueue()
+#1 D:\laragon\www\flower\wp-content\themes\flower\header.php(109): box_js_static()
+#2 D:\laragon\www\flower\wp-includes\template.php(810): require_once('D:\\laragon\\www\\...')
+#3 D:\laragon\www\flower\wp-includes\template.php(745): load_template('D:\\laragon\\www\\...', true, Array)
+#4 D:\laragon\www\flower\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#5 D:\laragon\www\flower\wp-content\themes\flower\page-checkout.php(8): get_header()
+#6 D:\laragon\www\flower\wp-includes\template-loader.php(106): include('D:\\laragon\\www\\...')
+#7 D:\laragon\www\flower\wp-blog-header.php(19): require_once('D:\\laragon\\www\\...')
+#8 D:\laragon\www\flower\index.php(17): require('D:\\laragon\\www\\...')
+#9 {main}
+  thrown in D:\laragon\www\flower\wp-content\themes\flower\includes\after_setup_theme.php on line 117
+[23-Dec-2024 21:23:16 UTC] PHP Parse error:  syntax error, unexpected identifier "define" in D:\laragon\www\flower\wp-content\themes\flower\functions.php on line 5

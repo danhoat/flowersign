@@ -113,6 +113,8 @@ function box_js_enqueue(){
         //'jquery' => JS_URL.'/jquery.min.js',
         
         'jquery' => 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js',
+
+        //'jquery' => SITE_URL.'/wp-includes/js/jquery/jquery.min.js',
         'jquery.ui' => JS_URL.'/jquery-ui.min.js',
 
         
@@ -162,62 +164,9 @@ function box_js_enqueue(){
 function box_js_static(){ 
 
     $jss = box_js_enqueue();
-        foreach($jss as $key=>$url){
-          ?>
-           <script src="<?php echo $url;?>"></script>
-          <?php
-        }
-
-        ?>
-        
-        <!-- <script src="https://harvesthq.github.io/chosen/chosen.jquery.js" type="text/javascript"></script> -->
-    <!-- 자바스크립트 -->
-    <!-- 꽃청 추가 START 김태섭 2023-12-18 - splide -->
-  <!--   <script type="text/javascript" src="https://f-mans.com/app/javascript/plugin/splide/splide.min.js"></script>
-
-    <script src="https://f-mans.com/app/javascript/jquery/jquery.min.js"></script>
-    <script src="https://f-mans.com/app/javascript/jquery/jquery-ui.min.js"></script>
-    <script src="https://f-mans.com/app/javascript/plugin/jquery.cookie.js"></script> 
-
-    <script src="https://f-mans.com/app/javascript/plugin/jquery.poshytip.min.js"></script>
-    <script src="https://f-mans.com/app/javascript/plugin/jquery.activity-indicator-1.0.0.min.js"></script>
-
-
-    <script src="https://f-mans.com/app/javascript/plugin/jquery.slides.min.js"></script>
-
-    <script src="https://f-mans.com/app/javascript/plugin/jquery.placeholder.js"></script>
-    <script src="https://f-mans.com/app/javascript/plugin/validate/jquery.validate.js"></script>
-    <script src="https://f-mans.com/app/javascript/plugin/ezmark/js/jquery.ezmark.min.js"></script>
-    <script src="https://f-mans.com/app/javascript/plugin/custom-select-box.js"></script>
-    <script src="https://f-mans.com/app/javascript/plugin/custom-mobile-pagination.js"></script>
-    <script src="https://f-mans.com/app/javascript/plugin/slick/slick.min.js"></script>
-    <script src="https://f-mans.com/app/javascript/plugin/jquery_swipe/jquery.event.swipe.js"></script>
-    <script src="https://f-mans.com/app/javascript/plugin/touchSlider/swiper.js"></script>
-
-    <script src="https://f-mans.com/app/javascript/js/dev-tools.js?v=afe0eba294279d50c840"></script>
-    <script src="https://f-mans.com/app/javascript/js/goods-display_mobile.js?v=afe0eba294279d50c840"></script>
-    <script src="https://f-mans.com/app/javascript/js/design.js?v=afe0eba294279d50c840"></script>
-
-    <script src="<?php echo home_url();?>/js/common.js?ver=123"></script>
-    <script type="text/javascript" src="https://f-mans.com/data/js/language/L10n_KR.js?v=1"></script>
-    <script type="text/javascript" src="https://f-mans.com/app/javascript/js/common-function.js?dummy=20240219111900"></script>
-    <script src="https://f-mans.com/app/javascript/js/common-mobile.js?v=afe0eba294279d50c840"></script>
-    <script src="https://f-mans.com/app/javascript/js/front-layout.js?v=afe0eba294279d50c840"></script>
-
-    <script src="https://f-mans.com/app/javascript/js/base64.js?v=afe0eba294279d50c840"></script>
-    <script src="https://f-mans.com/app/javascript/js/skin-responsive.js?v=afe0eba294279d50c840"></script>
-    <script src="https://f-mans.com/data/js/language/L10n_KR.js?v=afe0eba294279d50c840"></script>
-    <script src="https://f-mans.com/data/skin/responsive_ver1_default_gl/common/jquery.event.drag-1.5.min.js?v=afe0eba294279d50c840"></script>
-    <script src="https://f-mans.com/data/skin/responsive_ver1_default_gl/common/jquery.touchSlider.js?v=afe0eba294279d50c840"></script>
-    <script src="https://f-mans.com/data/skin/responsive_ver1_default_gl/common/responsive.js?v=afe0eba294279d50c840"></script>
-    <script src="https://f-mans.com/data/skin/responsive_ver1_default_gl/common/script.js?ver=2?v=afe0eba294279d50c840"></script>
-
-    <script src="https://f-mans.com/data/skin/responsive_ver1_default_gl/common/search_ver2.js?ver=1?v=afe0eba294279d50c840"></script>
-
-    <script src="https://f-mans.com/data/skin/responsive_ver1_default_gl/common/user.js?ver=5?v=afe0eba294279fffd50c840"></script>
-
-    <script src="https://f-mans.com/app/javascript/plugin/jquery.bxslider.js?v=afe0eba294279d50c840"></script> 
-    !-->
- <?php 
+    foreach($jss as $key=>$url){ ?>
+       <script src="<?php echo $url;?>"></script>
+      <?php
+    }
 
 }

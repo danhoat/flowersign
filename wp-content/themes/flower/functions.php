@@ -1,6 +1,7 @@
 <?php
 
 define('BOXTHEME_URL', get_template_directory_uri() );
+define('SITE_URL', home_url() );
 define('IMAGE_URL', BOXTHEME_URL.'/images' );
 define('JS_URL', BOXTHEME_URL.'/js');
 define('BOXTHEME_PATH', __DIR__);
