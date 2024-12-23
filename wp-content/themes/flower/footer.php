@@ -197,13 +197,13 @@ var hpt_info = {'_account':'UHPT-20592','_server':'a24'};
     <div class="footer_c">
         <div class="resp_wrap">
             <ul class="list v5">
-                <li><a href="#" >Thông tin</a></li>
+                <li><a href="/thong-tin/" >Thông tin</a></li>
                 <i></i>
-                <li><a href="#" >Giới Thiệu</a></li>
+                <li><a href="/gioi-thieu" >Giới Thiệu</a></li>
                 <i></i>
-                <li><a href="#" >Hợp Tác</a></li>
+                <li><a href="/partner/" >Hợp Tác</a></li>
                 <i></i>
-                <li><a href="/service/agreement"> Điều Khoản</a></li>
+                <li><a href="/agreement"> Điều Khoản</a></li>
                
             </ul>
             
