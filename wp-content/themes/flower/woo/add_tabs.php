@@ -25,6 +25,11 @@ function box_add_woo_tabs($tabs){
     );
   
 
+    $tabs["reviews"]=  array(
+        "title"=> "Đánh Giá - Nhận Xét Từ Khách Hàng",
+        "priority"=>  30, 
+        "callback"=> "comments_template"
+    );
 
     return $tabs;
 }
