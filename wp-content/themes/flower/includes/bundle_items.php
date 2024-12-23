@@ -1,8 +1,5 @@
 <?php 
 
-if( !defined('LIST_BUNDLES_ITEM')){
-    define( "LIST_BUNDLES_ITEM", array('630','631','632','633') );
-}
 function list_bundle_items(){
 
     $args = array();

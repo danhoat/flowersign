@@ -67,6 +67,14 @@ window.Firstmall.Config = {"Environment":{"MobileMode":true,"SetMode":null,"Lang
 <!-- 꽃청 추가 END 김태섭 2023-12-18 - splide -->
 
 
+
+
+
+<script type="text/javascript" src="<?php echo BOXTHEME_URL;?>/js/jquery.url.js"></script>
+
+
+
+
 <script type="text/javascript">
     var feeShip = {
         hcm: 0,

@@ -578,3 +578,38 @@ color: #2E2E2E;
 .term-description.full .toggle{
     display: initial;
 }
+.wrap_pagi{
+    position: relative;
+}
+.select-number-items{
+    position: absolute;
+    right: 0;
+    top:0;
+}
+.select-number-items span{
+    position: relative;
+    top:3px;
+}
+.select-number-items select{
+    width: 50px;
+    height: 33px;
+}
+.filtered_item_sorting{
+    margin-bottom: 30px;
+}
+.item_display select{
+    border:0;
+}
+.filtered_item_sorting .item_order>.list select{
+
+    top: 0;
+    margin:0;
+    border:0;
+    height: 38px;
+    color: #999;
+}
+
+.filtered_item_sorting .item_order>.list>li{
+    position: relative;
+    vertical-align: top;
+}

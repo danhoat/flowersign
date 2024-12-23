@@ -38,7 +38,82 @@ do_action( 'woocommerce_before_main_content' );
 do_action( 'woocommerce_shop_loop_header' );
 
 //echo do_shortcode("[woof  sid='generator_676549921f798' autohide='0' autosubmit='-1' is_ajax='0' ajax_redraw='0' start_filtering_btn='0' btn_position='b' dynamic_recount='-1' hide_terms_count_txt='0' mobile_mode='0' ]");
-echo do_shortcode("[woof  sid='generator_67654de9ad51d' autohide='0' autosubmit='-1' is_ajax='0' ajax_redraw='0' start_filtering_btn='0' btn_position='b' dynamic_recount='-1' hide_terms_count_txt='0' mobile_mode='0' ]");
+// echo do_shortcode("[woof  sid='generator_67654de9ad51d' autohide='0' autosubmit='-1' is_ajax='0' ajax_redraw='0' start_filtering_btn='0' btn_position='b' dynamic_recount='-1' hide_terms_count_txt='0' mobile_mode='0' ]");
+
+global $wp_query;
+$total = $wp_query->found_posts;
+global $orderby;
+$orderby = isset($_GET['orderby']) ? $_GET['orderby'] : '';
+
+function is_active_sort($name){
+	global $orderby;
+	if($orderby == $name) echo 'active';
+}
+
+?>
+
+<ul id="filteredItemSorting" class="filtered_item_sorting">
+		<li class="item_total">
+			<a href="javascript:void(0)" id="btnFilterOpen" class="total"><span class="num"><?php echo $total;?> </span> sản phẩm </a>
+		</li>
+		<li class="item_display ">
+			<div class="hide">
+				<label class="display display_lattice active"><input type="radio" name="filter_display" value="lattice" onclick="filterDisplay()" checked="">격자 반응형</label>
+				<label class="display display_list"><input type="radio" name="filter_display" value="list" onclick="filterDisplay()">리스트 반응형</label>
+			</div>
+
+			
+		
+		</li>
+		<li class="item_viewnum">
+			<select name="per" class="select_number_items">
+				<option value="20">&nbsp;20&nbsp;</option>
+				<option value="40" selected="">&nbsp;40&nbsp;</option>
+				<option value="100">&nbsp;100&nbsp;</option>
+				<option value="200">&nbsp;200&nbsp;</option>
+			</select>
+		</li>
+		<li class="item_order">
+			<p id="mobileSortingSelected">Sort</p>
+			<ul class="list">
+				<li class="orderBysale hide">
+					<label class="active"><input type="radio" name="sorting" value="sale" checked="">Bán chạy</label>
+				</li>
+				<li >
+					<label class="orderbyDate <?php is_active_sort('date');?>"><input type="radio" name="sorting" value="date">Mới về</label>
+				</li>
+				<li>
+					<label class="sort-lowprice <?php is_active_sort('price');?>"><input type="radio" name="sorting" value="price">Giá thấp</label>
+				</li>
+				<li>
+					<label  class="sort-hightprice <?php is_active_sort('price-desc');?>"><input type="radio" name="sorting" value="price-desc">Giá cao</label>
+				</li>
+
+				<li><select name="color" class="select_color">
+						<option value="">Color</option>
+						<option value="red">Red</option>
+						<option value="yellow" >&nbsp;Yellow&nbsp;</option>
+						<option value="white">&nbsp;white&nbsp;</option>
+					</select>
+				</li>
+				<li><select name="size" class="select_size">
+					<option value="">Size</option>
+					<option value="m">M</option>
+					<option value="s" selected="">&nbsp;S&nbsp;</option>
+					<option value="XL">&nbsp;XL&nbsp;</option>
+				</select>
+				</li>
+				<!-- <li>
+					<label><input type="radio" name="sorting" value="review">상품평많은순</label>
+				</li>
+				<li>
+					<label><input type="radio" name="sorting" value="sale">판매량순</label>
+				</li> -->
+			</ul>
+		</li>
+	</ul>
+
+<?php
 
 if ( woocommerce_product_loop() ) {
 
@@ -50,6 +125,14 @@ if ( woocommerce_product_loop() ) {
 	 * @hooked woocommerce_catalog_ordering - 30
 	 */
 	do_action( 'woocommerce_before_shop_loop' );
+
+
+
+	?>
+
+	
+
+	<?php
 
 	woocommerce_product_loop_start();
 

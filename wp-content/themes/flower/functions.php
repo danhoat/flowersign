@@ -5,6 +5,13 @@ define('IMAGE_URL', BOXTHEME_URL.'/images' );
 define('BOXTHEME_PATH', __DIR__);
 define('PRODUCT_PATH', __DIR__.'/products');
 define('LOAD_STATIC_JS', true);
+
+
+if( !defined('LIST_BUNDLES_ITEM')){
+    define( "LIST_BUNDLES_ITEM", array('630','631','632','633') );
+}
+
+
 require_once __DIR__ .'/includes/required.php';
 require_once __DIR__ .'/woo/inc.php';
 require_once __DIR__ .'/elementor/required.php';

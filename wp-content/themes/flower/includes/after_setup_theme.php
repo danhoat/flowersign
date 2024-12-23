@@ -161,7 +161,7 @@ function box_js_static(){
 
         ?>
         
-        <script src="https://harvesthq.github.io/chosen/chosen.jquery.js" type="text/javascript"></script>
+        <!-- <script src="https://harvesthq.github.io/chosen/chosen.jquery.js" type="text/javascript"></script> -->
     <!-- 자바스크립트 -->
     <!-- 꽃청 추가 START 김태섭 2023-12-18 - splide -->
   <!--   <script type="text/javascript" src="https://f-mans.com/app/javascript/plugin/splide/splide.min.js"></script>

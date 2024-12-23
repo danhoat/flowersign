@@ -86,9 +86,102 @@ function box_add_js_cat(){ ?>
                 $('.term-description').toggleClass('full');
             });
 
+
+    
+            $(".select_number_items").change(function(){
+              
+                var limit= $(this).val();
+                var url = new URL(location.href);
+              
+                    url.searchParams.set('limit', limit);
+              
+
+                location.href = url.href;
+
+            });
+            $(".select_color").change(function(){
+                var color= $(this).val();
+                var url = new URL(location.href);
+
+                if (!color ){
+                    console.log('reset');
+                    url.searchParams.delete('color');
+
+                } else{
+                     url.searchParams.set('color', color);
+                }
+               
+                location.href = url.href;
+
+            });
+
+            $(".select_size").change(function(){
+                var size= $(this).val();
+                var url = new URL(location.href);
+
+              if (!size ){
+                    url.searchParams.delete('size');
+                    
+                }else{
+                    url.searchParams.set('size', size);
+                }
+                location.href = url.href;
+
+            });
+
+            $(".sort-lowprice").click(function(){
+                var size= $(this).val();
+                var url = new URL(location.href);
+                url.searchParams.set('orderby', 'price');
+                location.href = url.href;
+
+            })
+
+             $(".orderbyDate").click(function(){
+                var size= $(this).val();
+                var url = new URL(location.href);
+                let exitKey = url.searchParams.get('orderby');
+                if(exitKey === 'date'){
+                    url.searchParams.delete('orderby');
+                } else {
+                    url.searchParams.set('orderby', 'date');
+                }
+                location.href = url.href;
+
+            })
+
+            $(".sort-hightprice").click(function(){
+                var size= $(this).val();
+                var url = new URL(location.href);
+                url.searchParams.set('orderby', 'price-desc');
+                location.href = url.href;
+
+            })
+            
+
         }(jQuery));
 
     </script>
 <?php    
 }
 add_action('wp_footer','box_add_js_cat');
+
+
+// function portfolio_posts_per_page( $query ) {
+//    if ! is_main_query()  $query->query_vars['posts_per_page'] = 8;
+//    return $query;
+// }
+// add_filter( 'pre_get_posts', 'portfolio_posts_per_page' );
+
+
+function wpdocs_modify_query_exclude_category( $query ) {
+    if( !  $query->is_main_query()  ) return $query;
+    if ( ! is_admin() && $query->is_main_query() &&  isset($_GET['limit']) )
+        $query->set( 'posts_per_page', $_GET['limit'] );
+
+    if( is_front_page() || is_archive() ){
+        $query->set( 'post__not_in', LIST_BUNDLES_ITEM );
+    }
+    
+}
+add_action( 'pre_get_posts', 'wpdocs_modify_query_exclude_category' );
