@@ -36,7 +36,7 @@ var hpt_info = {'_account':'UHPT-20592','_server':'a24'};
         <div class="resp_wrap">
             <ul class="menu1">
                 <li class="foot_menu_d1 cs">
-                    <h4 class="title"><a href="#" designelement="text" textindex="1">Customer Center  <span class="title_sub">(24/7)</span></a></h4>
+                    <h4 class="title"><a href="#" designelement="text" textindex="1">Hỗ trợ khách hàng<span class="title_sub">(24/7)</span></a></h4>
                     <ul class="list v4">
                         <li class="compay_phone">
                             <a href="tel:1800-7879">
@@ -81,21 +81,7 @@ var hpt_info = {'_account':'UHPT-20592','_server':'a24'};
                                 </tbody></table>
                             </span>
                         </li>
-                        <!-- 221114 고객센터 상담시간 변경 끝 -->
-
-
-                        <!-- 221114 고객센터 수정전 내용  -->
-                            <!-- <li class="footer_date footer_date_first">
-                                <span designElement="text">연중무휴 | 오전 8시 ~ 오후 10시</span>
-                            </li>
-                            <li class="order_foreign">
-                                <span designElement="text">해외주문 | +82-70-7806-7050</span>
-                            </li> -->
-                        <!-- 221114 고객센터 수정전 내용 꿑 -->
-
-
-                        <!-- <li><span designElement="text">H.P | 010-4125-7050 (문자전용)</span></li> -->
-                        <!--<li class="Pt2"><a href="mailto:admin@mencoz.com">admin@mencoz.com</a></li>-->
+                     
                         <li class="footer_kakao">
                             <a href="#">
                                 <h4 class="title">
@@ -113,7 +99,7 @@ var hpt_info = {'_account':'UHPT-20592','_server':'a24'};
                 </li>
                 <li class="foot_menu_d2 bank">
                     <h4 class="title"><span designelement="text" textindex="7" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2Zvb3Rlci9zdGFuZGFyZC5odG1s">
-                        Deposit Account Infomation
+                      Về chúng tôi
                     </span></h4>
                     <ul class="list v3 gray_03">
                         <li>
@@ -137,7 +123,7 @@ var hpt_info = {'_account':'UHPT-20592','_server':'a24'};
                 </li>
                 <li class="foot_menu_d5">
                     
-                    <h4 class="title footer_sns wide_only"><span designelement="text" textindex="10" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2Zvb3Rlci9zdGFuZGFyZC5odG1s">SNS</span></h4>
+                    <h4 class="title footer_sns wide_only"><span designelement="text" textindex="10" >Kết nối với chúng tôi</span></h4>
                     <ul class="list v6">
 
                          <li>
@@ -201,12 +187,8 @@ var hpt_info = {'_account':'UHPT-20592','_server':'a24'};
                 <li><a href="/agreement/"> Điều Khoản</a></li>
                 <i></i>
                 <li><a href="#"> Chính sách bảo mật</a></li>
-                <i></i>
-                <li><a href="#"> Chính sách đổi trả</a></li>
-                <i></i>
-                <li><a href="#">Câu hỏi thường gặp</a></li>
-                 <i></i>
-                <li><a href="#">Hướng dẫn mua hàng</a></li>
+
+               
                
             </ul>
             

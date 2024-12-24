@@ -541,3 +541,22 @@ p.comment-form-author input, p.comment-form-email input{
 .woocommerce p.stars a{
     font-size: 1.3em;
 }
+.designBanner .slick-next::before,
+.designBanner .slick-prev::before{
+    display: none;
+}
+.gnb_bnr_slide_02 .slick-slider .slick-next,
+.gnb_bnr_slide_02 .slick-slider .slick-prev{
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.gnb_bnr_slide_02:hover .slick-slider .slick-arrow,
+.gnb_bnr_slide_02 .slick-slider .slick-arrow,
+.gnb_bnr_slide_02:hover .slick-slider .slick-arrow{
+    transform: translateX( 0 ) !important;
+}
+.gnb_bnr_slide_02:hover .slick-slider .slick-arrow, 
+.gnb_bnr_slide_02:hover .slick-slider .slick-arrow{
+
+}
