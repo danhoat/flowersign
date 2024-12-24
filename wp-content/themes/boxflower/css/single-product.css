@@ -523,6 +523,7 @@ p.comment-form-author input, p.comment-form-email input{
     max-width: 600px;
     display: block;
     clear: both;
+    border-radius: 3px;
 }
 .comment-reply-title{
     font-weight: 600;
@@ -536,4 +537,7 @@ p.comment-form-author input, p.comment-form-email input{
     border-bottom: 1px solid #ccc;
     padding-top: 15px;
     padding-bottom: 36px;
+}
+.woocommerce p.stars a{
+    font-size: 1.3em;
 }

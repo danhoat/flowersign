@@ -392,7 +392,8 @@ body{
     margin-bottom: 30px;
     margin-top: 20px;
 }
-.text-yellow-400 {
+.text-yellow-400,
+.woocommerce p.stars a {
     --tw-text-opacity: 1;
     color: rgba(251, 191, 36, var(--tw-text-opacity));
 }
