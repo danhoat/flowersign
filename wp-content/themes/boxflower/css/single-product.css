@@ -444,6 +444,17 @@ span.rate-score{
     body.single-product form.cart .select-date{
         gap: 0;
     }
+    .woocommerce div.product .woocommerce-tabs ul.tabs li{
+                display: block;
+        width: 100%;
+        clear: both;
+    }
+    .woocommerce div.product .woocommerce-tabs ul.tabs li a{
+        display: block;
+    }
+    .woocommerce div.product .woocommerce-tabs ul.tabs li a{
+        text-align: center;
+    }
 }
 
 .slick-slider .slick-track, .slick-slider .slick-list{
