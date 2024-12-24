@@ -595,3 +595,18 @@ body{
    display: none;
    opacity: 0;
 }
+.payment  .icon {
+    display: inline-block;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    vertical-align: middle;
+    width: 32px;
+    height: 32px;
+}
+.payment .icon svg{
+    max-width: 32px;
+}
+.payment  .icon.vnpay > svg {
+    width: 32px;
+    height: 32px;
+}
