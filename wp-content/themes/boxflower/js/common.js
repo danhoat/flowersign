@@ -1,6 +1,6 @@
 /* fmans_mall_renew    2021/01/06 */
-   if	(typeof L10n != 'object')
-	   document.write('<script type="text/javascript" src="/data/js/language/L10n_KR.js?v=1"></script>');
+   // if	(typeof L10n != 'object')
+	//    document.write('<script type="text/javascript" src="/js/L10n_KR.js?v=1"></script>');
 
    // 함수부만 따로 호출
 	 // document.write('<script type="text/javascript" src="/app/javascript/js/common-function.js?dummy=20240219111900"></script>');

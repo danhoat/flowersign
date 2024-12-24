@@ -274,11 +274,12 @@
 
     <!-- ++++++++ 커뮤니티 ++++++++ -->
     <ul id="boardSideMenu" class="menu board" style="display:none;">
-        <li><a href="/board/?id=notice" designelement="text" textindex="18" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvX21vZHVsZXMvY29tbW9uL2xheW91dF9zaWRlLmh0bWw=">공지사항</a></li>
-        <li><a href="/board/?id=faq" designelement="text" textindex="19" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvX21vZHVsZXMvY29tbW9uL2xheW91dF9zaWRlLmh0bWw=">자주묻는질문</a></li>
-        <li><a href="/board/?id=goods_qna" designelement="text" textindex="20" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvX21vZHVsZXMvY29tbW9uL2xheW91dF9zaWRlLmh0bWw=">상품문의</a></li>
-        <li><a href="/board/?id=goods_review" designelement="text" textindex="21" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvX21vZHVsZXMvY29tbW9uL2xheW91dF9zaWRlLmh0bWw=">상품후기</a></li>
-<li><a href="/board/?id=bulkorder" designelement="text" textindex="22" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvX21vZHVsZXMvY29tbW9uL2xheW91dF9zaWRlLmh0bWw=">대량구매</a></li>        <li><a href="/board/?id=gallery_adm" designelement="text" textindex="23" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvX21vZHVsZXMvY29tbW9uL2xheW91dF9zaWRlLmh0bWw=" target="_self">실제배송사진</a></li>
+        <li><a href="/board/?id=notice" designelement="text" textindex="18" >공지사항</a></li>
+        <li><a href="/board/?id=faq" designelement="text" textindex="19" >자주묻는질문</a></li>
+        <li><a href="/board/?id=goods_qna" designelement="text" textindex="20" >상품문의</a></li>
+        <li><a href="/board/?id=goods_review" designelement="text" textindex="21" >상품후기</a></li>
+<li><a href="/board/?id=bulkorder" designelement="text" textindex="22" >대량구매</a></li>        
+<li><a href="/board/?id=gallery_adm" designelement="text" textindex="23" target="_self">실제배송사진</a></li>
     </ul>
     <!-- ++++++++ //커뮤니티 ++++++++ -->
 
@@ -291,8 +292,8 @@
 <div class="banner_paypal">
     <a href="/page/paypal">
         <picture>
-            <source media="(max-width: 750px)" srcset="/data/images/paypal/m_snb_banner_paypal.jpg">
-            <img src="/data/images/paypal/snb_banner_paypal.jpg" alt="페이팔 결제 안내">
+            <source media="(max-width: 750px)" srcset="<?php echo IMAGE_URL;?>/m_snb_banner_paypal.jpg">
+            <img src="<?php echo IMAGE_URL;?>/snb_banner_paypal.jpg" alt="페이팔 결제 안내">
         </picture>
     </a>
 </div>
@@ -302,7 +303,7 @@
 
 <!-- 최근 본 상품(SIDE) -->
 <div class="wrap_aside">
-    <h3 class="title_sub3 v2"><span designelement="text" textindex="24" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvX21vZHVsZXMvY29tbW9uL2xheW91dF9zaWRlLmh0bWw=">최근 본 상품</span> </h3>
+    <h3 class="title_sub3 v2"><span designelement="text" textindex="24">최근 본 상품</span> </h3>
 </div>
 <p class="aside_recently_nodata">
     최근 본 상품이 없습니다.
@@ -311,10 +312,10 @@
 
 <!-- CS CENTER 정보(SIDE) -->
 <div class="wrap_aside">
-    <h3 class="title_sub3 v2"><a href="/service/cs" designelement="text" textindex="25" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvX21vZHVsZXMvY29tbW9uL2xheW91dF9zaWRlLmh0bWw=">고객센터</a></h3>
+    <h3 class="title_sub3 v2"><a href="/service/cs" designelement="text" textindex="25">고객센터</a></h3>
     <a class="aside_cs_phone" href="tel:1800-7879">1800-7879</a>
     <!-- <p class="aside_cs_addinfo" designElement="text">문자수신 가능합니다.</p> -->
-    <p class="aside_cs_addinfo" designelement="text" textindex="26" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvX21vZHVsZXMvY29tbW9uL2xheW91dF9zaWRlLmh0bWw=">연중무휴<br>AM 08:00 ~ PM 08:00<br></p>
+    <p class="aside_cs_addinfo" designelement="text" textindex="26" >연중무휴<br>AM 08:00 ~ PM 08:00<br></p>
 </div>
 
 <div class="wrap_aside v2" style="display:none;">

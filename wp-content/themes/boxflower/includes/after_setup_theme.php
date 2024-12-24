@@ -134,7 +134,7 @@ function box_js_enqueue(){
 
         'pagination' =>JS_URL.'/custom-mobile-pagination.js',
         'slick' => JS_URL.'/slick.min.js',
-        'jquery_swipe' => JS_URL.'/jquery_swipe/jquery.event.swipe.js',
+        'jquery_swipe' => JS_URL.'/jquery.event.swipe.js',
         'swiper' => JS_URL.'/swiper.js',
 
         'tools' => JS_URL.'/dev-tools.js?v=afe0eba294279d50c840',

@@ -78,7 +78,7 @@ $(function() {
 	$('.searchModuleClose').on('click', function() {
 		$('#searchVer2InputBox').val('');
 		$('#searchVer2').removeClass('on');
-		$('#searchModule .contetns_area').hide();
+		//$('#searchModule .contetns_area').hide();
 		//searchAutoCompleteSlider.destroySlider(); // bx슬라이더 멈추면 좋은데 콘솔 에러뜸.
 	});
 
@@ -119,7 +119,7 @@ $(function() {
 	// 검색 입력 박스 focus
 	$('#searchVer2InputBox').on('focus', function() {
 		if ( $('#searchModule .contetns_area').is(':hidden') ) {
-			$('#searchModule .contetns_area').show();
+			//$('#searchModule .contetns_area').show();
 		}
 		if ( $(this).val() == '' ) {
 			$('#recentArea').show();

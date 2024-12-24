@@ -7,54 +7,30 @@ function woocommerce_taxonomy_archive_description(){
 
 function woocommerce_product_archive_description() {
 
+
     if ( is_product_taxonomy() && 0 === absint( get_query_var( 'paged' ) ) ) {
 
-        ?>
-        <h1 class="woocommerce-products-header__title">
-            <?php woocommerce_page_title(); ?>
-        </h1>
+        $title = woocommerce_page_title(false);
 
-        <?php
         $term = get_queried_object();
-
-
-        if ( $term ) {
-
-
-            $term_id  = $term->term_id;
-            $thumbnail_id = get_term_meta( $term_id, CAT_BANNER_IMG_ID, true );
-        
-            if($thumbnail_id){
-                $image = wp_get_attachment_image_src( $thumbnail_id, 'full' );
-                echo '<img class="cat-thumbnail" src="' . $image[0] . '" alt="'.$term->name.'" />'; 
-            }
-
-            /**
-             * Filters the archive's raw description on taxonomy archives.
-             *
-             * @since 6.7.0
-             *
-             * @param string  $term_description Raw description text.
-             * @param WP_Term $term             Term object for this taxonomy archive.
-             */
-            $term_description = apply_filters( 'woocommerce_taxonomy_archive_description_raw', $term->description, $term );
-            $overview = explode("[xem_them]", $term_description);
-
-            // if ( ! empty( $overview[0] ) ) {
-            //     $btn_xemthem = '<span class="btn-view-full"> Xem thêm ...</a>';
-            //     $btn_thugon = '<span class="btn-view-less">Thu gọn </a>';
-            //     $the_last = '';
-            //     if(isset($overview[1])){
-            //         $the_last = '<div class="toggle">'.$overview[1].$btn_thugon.'<span>';
-            //     }
-
-            //   //  echo '<div class="term-description "> ' . wc_format_content( wp_kses_post( $overview[0].$btn_xemthem ) ).$the_last.'</div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-            // }
+        $term_id = $term->term_id;
+        if($term->parent){
+            $term_id = $term->parent;
+            $term = get_term_by('term_id',$term->parent,'product_cat');
+            $title = $term->name;
+        }
+        ?>
+        <h1 class="woocommerce-products-header__title"> <?php echo $title; ?> </h1>
+        <?php
+        $thumbnail_id = get_term_meta( $term_id, CAT_BANNER_IMG_ID, true );
+        if($thumbnail_id){
+            $image = wp_get_attachment_image_src( $thumbnail_id, 'full' );
+            echo '<img class="cat-thumbnail" src="' . $image[0] . '" alt="'.$term->name.'" />'; 
         }
     }
 }
 function woocommerce_product_cat_description(){
-     if ( is_product_taxonomy() && 0 === absint( get_query_var( 'paged' ) ) ) {
+    if ( is_product_taxonomy() && 0 === absint( get_query_var( 'paged' ) ) ) {
 
         ?>
        

@@ -67,7 +67,8 @@
 }
 .woocommerce ul.products li.product .price,
 .woocommerce ul.products li.product .price ins,
-.woo-first-price .amount{
+.woo-first-price .amount,
+.addon-price .amount{
   
     color: #70A100;
     

@@ -1,7 +1,3 @@
-@charset "utf-8";
-/* **************************************************************************************
-* 반응형 스킨 사용자/제작자 CSS
-************************************************************************************** */
 
 /* 폰트 색상 */
 .font_yellow {color:#fccb18 !important}
@@ -122,7 +118,9 @@
 
 
 /* 햄버거 메뉴 오픈 - 카테고리 메뉴 배경 및 화살표 아이콘 수정 */
-.aside_navigation_wrap ul.menu li.mitem_subcontents ul.submenu li.submitem.category a.mitem_goodsview { background:#fff url('../images/common/ico_arw_direct.png') no-repeat;;  background-position: right 15px top 50%; background-size: 7px; font-weight:500; color:#333; font-size:13px;}
+.aside_navigation_wrap ul.menu li.mitem_subcontents ul.submenu li.submitem.category a.mitem_goodsview,
+.testok {
+ background:#fff url('../images/ico_arw_direct.png') no-repeat;  background-position: right 15px top 50%; background-size: 7px; font-weight:500; color:#333; font-size:13px;}
 .aside_navigation_wrap ul.menu.board>li.on a {background-color:#fff;}
 .aside_cs_phone {
     display: block;
@@ -141,7 +139,7 @@
     margin-right: 8px;
     vertical-align: middle;
     content: '';
-    background: url(../images/common/icon_call_02.png) 50% 50% no-repeat;
+    background: url(../images/icon_call_02.png) 50% 50% no-repeat;
     animation: ani_call2 4s linear infinite;
 }
 /* 햄버거 메뉴 오픈 - 카테고리 메뉴 배경 및 화살표 아이콘 수정 끝 */
@@ -279,36 +277,6 @@
 }
 /* 꽃청 추가 END 김태섭 2023-11-09 - 메인비주얼 소스정리 */
 
-
-.visual01{width:100%;height:450px;background:url(/data/images/visual/visual_appdownload.jpg) no-repeat 50% 0;background-size:cover;}
-.visual02{width:100%;height:450px;background:url(/data/images/visual/visual_open.jpg) no-repeat 50% 0;background-size:cover;}
-.visual03{width:100%;height:450px;background:url(/data/images/event/coupleday/2023/visual_coupleday2023.jpg?ver=1) no-repeat 50% 0;background-size:cover;}
-.visual04{width:100%;height:450px;background:url(/data/images/event/ageday/2023/visual_ageday2023.jpg?ver=1) no-repeat 50% 0;background-size:cover;}
-.visual05{width:100%;height:450px;background:url(/data/images/event/roseday/2023/visual_roseday2023.jpg?ver=1) no-repeat 50% 0;background-size:cover;}
-.visual06{width:100%;height:450px;background:url(/data/images/event/teachersday/2023/visual_teachersday2023.jpg?ver=1) no-repeat 50% 0;background-size:cover;}
-.visual07{width:100%;height:450px;background:url(/data/images/visual/visual_famous.jpg?a=1) no-repeat 50% 0;background-size:cover;}
-.visual08{width:100%;height:450px;background:url(/data/images/event/parentsday/2023/soldout/visual_parentsday2023.jpg?ver=1) no-repeat 50% 0;background-size:cover;}
-.visual09{width:100%;height:450px;background:url(/data/images/subscribe/common/visual_subscribe.jpg) no-repeat 50% 0;background-size:cover;}
-.visual10{width:100%;height:450px;background:url(/data/images/empathy/common/visual_subscribe_event.jpg) no-repeat 50% 0;background-size:cover;}
-.visual12{width:100%; height:450px; background:url('/data/images/visual/visual_12.jpg') no-repeat 50% 0 #f7f7f7; background-size:cover;}
-.visual12_position {
-  width: 1260px;
-  height: 100%;
-  margin: 40px auto;
-  position: relative;
-}
-.visual12_position > video {
-  position: absolute;
-  right: 0;
-  top: 0;
-  border-radius: 5px;
-  width: auto;
-  height: 370px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.12);
-}
-.m_visual_video {display: none;}
-.visual13 {width:100%; height:450px; background:url(/data/images/event/peperoday/2023/visual_peperoday2023.jpg) no-repeat 50% 0; background-size:cover; }
-.visual14 {width:100%; height:450px; background:url(/data/images/event/peperoday/2023/end/visual_peperoday2023.jpg) no-repeat 50% 0; background-size:cover; }
 
 /* 이미지 렌더링 방식 변경 (크롬에서 흐릿해 보이는 문제) */
 /* .main_visual .visual img {
@@ -736,7 +704,7 @@ ul.displayTabType1 > li:first-child{border-left:0 #ddd solid;}
 *********************************************************************************/
 /* 어버이날 커버 : 서민혁 210331 추가 */
 .theme_cover_parentsday {
-  background:url(/data/images/cover/theme/theme_cover_parentsday.jpg) no-repeat center 0;
+  background:url(../images/theme_cover_parentsday.jpg) no-repeat center 0;
   background-size:cover;
 }
 .theme_cover_parentsday h3{color:#ca0c18;}
@@ -744,7 +712,7 @@ ul.displayTabType1 > li:first-child{border-left:0 #ddd solid;}
 
 /* 스승의날 커버 : 서민혁 210508 추가 */
 .theme_cover_teachersday {
-  background:url(/data/images/cover/theme/theme_cover_teacherday.jpg) no-repeat center 0;
+  background:url(../images/theme_cover_teacherday.jpg) no-repeat center 0;
   background-size:cover;
 }
 .theme_cover_teachersday h3{color:#fff;}
@@ -752,7 +720,7 @@ ul.displayTabType1 > li:first-child{border-left:0 #ddd solid;}
 
 /* 로즈데이 커버 : 서민혁 210508 추가 */
 .theme_cover_roseday {
-  background:url(/data/images/cover/theme/theme_cover_roseday.jpg) no-repeat center 0;
+  background:url(../images/theme_cover_roseday.jpg) no-repeat center 0;
   background-size:cover;
 }
 .theme_cover_roseday h3{color:#ff7171;}
@@ -761,7 +729,7 @@ ul.displayTabType1 > li:first-child{border-left:0 #ddd solid;}
 
 /* 명화컬렉션 커버 : 서민혁 210508 추가 - (210901 디자인 변경/삭제예정) */
 .collection_cover_famous {
-  background:url(/data/images/cover/collection/img_collection_cover.jpg) no-repeat center 0;
+  background:url(../images/img_collection_cover.jpg) no-repeat center 0;
   background-size:cover;
 }
 .collection_cover_famous h3{color:#222;}
@@ -801,7 +769,7 @@ ul.displayTabType1 > li:first-child{border-left:0 #ddd solid;}
 
 /* 수국 컬렉션 커버 : 서민혁 220415 추가 */
 .collection_cover_hydrangea {
-  background:url(/data/images/cover/collection/bg_hydrangea_cover.jpg) no-repeat center 0;
+  background:url(../images/bg_hydrangea_cover.jpg) no-repeat center 0;
   background-size:cover;
 }
 .collection_cover_hydrangea h3{color:#005e80;}
@@ -820,7 +788,7 @@ ul.displayTabType1 > li:first-child{border-left:0 #ddd solid;}
 
 /* 서울 컬렉션 커버 : 서민혁 220415 추가 */
 .collection_cover_seoul {
-  background:url(/data/images/cover/collection/bg_seoul_cover.jpg) no-repeat center 0;
+  background:url(../images/bg_seoul_cover.jpg) no-repeat center 0;
   background-size:cover;
 }
 .collection_cover_seoul h3{color:#0a0a0a;}
@@ -838,7 +806,7 @@ ul.displayTabType1 > li:first-child{border-left:0 #ddd solid;}
 
 /* 작약 컬렉션 커버 : 서민혁 220418 추가 */
 .collection_cover_peony {
-  background:url(/data/images/cover/collection/bg_peony_cover.jpg) no-repeat center 0;
+  background:url(../images/bg_peony_cover.jpg) no-repeat center 0;
   background-size:cover; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 .collection_cover_peony h3{color:#fff;}
@@ -856,7 +824,7 @@ ul.displayTabType1 > li:first-child{border-left:0 #ddd solid;}
 
 /* 콜라보 커버 : 서민혁 220612 추가 */
 .collabo_cover {
-  background-image:url(/data/images/cover/collaboration/bg_collabo_cover.jpg);
+  background-image:url(../images/bg_collabo_cover.jpg);
   background-repeat:no-repeat;
   background-size:cover;
   background-position:center;
@@ -1048,8 +1016,8 @@ ul.displayTabType1 > li:first-child{border-left:0 #ddd solid;}
 .banner_footer ul li:first-child {margin:0 2% 0 0;}
 .banner_footer ul li a{display:block;}
 .banner_footer ul li h3 {padding:38px 30px; font-size:32px; font-weight:300; line-height:1.2em; color:#222;}
-.banner_footer ul li.footer_subscribe {background:url(../images/banner/bg_banner_footer_subscribex2.jpg?ver=1) center/cover no-repeat;}
-.banner_footer ul li.footer_delivery {background:url(../images/banner/bg_banner_footer_deliveryx2.jpg?ver=1) center/cover no-repeat;}
+.banner_footer ul li.footer_subscribe {background:url(../images/bg_banner_footer_subscribex2.jpg?ver=1) center/cover no-repeat;}
+.banner_footer ul li.footer_delivery {background:url(../images/bg_banner_footer_deliveryx2.jpg?ver=1) center/cover no-repeat;}
 @media only screen and (max-width:1260px) {
   .banner_footer { width:100%; margin:60px auto 0;}
 }
@@ -1118,7 +1086,7 @@ ul.displayTabType1 > li:first-child{border-left:0 #ddd solid;}
 /* 221114 업무시간 변경 TEST 끝 */
 
 
-.layout_footer .footer_a .foot_menu_d5 > section { margin:40px 0 0 0; padding:5%; text-align:left; background:url(/data/images/footer/bg_banner_partner.jpg) no-repeat center / cover; box-sizing: border-box;}
+.layout_footer .footer_a .foot_menu_d5 > section { margin:40px 0 0 0; padding:5%; text-align:left; background:url(../images/bg_banner_partner.jpg) no-repeat center / cover; box-sizing: border-box;}
 
 
 .layout_footer .menu3 > p {
@@ -3616,12 +3584,16 @@ input.size_address{width:calc(100% - 100px);}
   {display: flex; align-items: center; justify-content: center; font-weight: 400; margin: 0; padding: 0;}
 .catalog_content_subtitle > li,
 .search_filter_wrap .catalog_subtitle > li
-  {margin: 0 4px; padding: 10px 20px; color: #444444; cursor: pointer; border-radius: 999px; background-color: #eef0f2; font-size: 14px;}
+  {margin: 0 4px; padding: 10px 20px; color: #444444; cursor: pointer; border-radius: 999px; background-color: #eef0f2; font-size: 14px;  -webkit-flex-shrink: 0;}
 .catalog_content_subtitle > li.on,
-.search_filter_wrap .catalog_subtitle > li.on
+.catalog_content_subtitle > a.on,
+.search_filter_wrap .catalog_subtitle > li.on,
+.search_filter_wrap .catalog_subtitle > li.on a
   {color: #FFFFFF; background-color: #71A200;}
 .catalog_content_subtitle > li.on:hover,
-.search_filter_wrap .catalog_subtitle > li.on:hover
+.catalog_content_subtitle > a.on:hover,
+.search_filter_wrap .catalog_subtitle > li.on:hover,
+.search_filter_wrap .catalog_subtitle > a.on:hover
   {color: #FFFFFF; background-color: #71A200;}
 .catalog_content_subtitle > li:hover,
 .search_filter_wrap .catalog_subtitle > li:hover
@@ -3630,7 +3602,7 @@ input.size_address{width:calc(100% - 100px);}
 .catalog_content_subtitle .swiper-slide{ width: auto;}
 
 .catalog_subtitle_div{ overflow: hidden; display: none; padding-bottom: 20px;}
-.catalog_subtitle_div .swiper-slide{ width: auto;}
+.catalog_subtitle_div .swiper-slide{ width: auto; }
 
 /* .search_filter_wrap .catalog_subtitle{ display: flex; align-items: center; justify-content: flex-start; padding-top: 18px; font-weight: 400; font-size: 16px; line-height: 23px;}
 .search_filter_wrap .catalog_subtitle > li{ margin-right: 24px; color: #222222; cursor: pointer; border-bottom:1px solid transparent;}
@@ -4007,7 +3979,7 @@ input.size_address{width:calc(100% - 100px);}
 .detail_option_box {
   padding: 30px;
   border-radius: 16px;
-  background: url(/data/images/detail/option/detail_option_title_bg.png) no-repeat center top #FBFBFD;
+  background: url(../images/detail_option_title_bg.png) no-repeat center top #FBFBFD;
   background-size: 100%;
   text-align: center;
 }
@@ -4076,16 +4048,7 @@ input.size_address{width:calc(100% - 100px);}
 }
 /* 꽃청 신규 END 김태섭 2023-11-06 - 결제가능한 페이안내 */
 
-/* 꽃청 신규 START 김태섭 2023-12-12 - DIY */
-.diy-comming-soon {
-  background: url(/data/images/diy/commingsoon/bg-bk-web.jpg) no-repeat 0 0;
-  background-size: cover;
-  max-width: 1260px;
-  height: 980px;
-  text-align: center;
-  box-sizing: border-box;
-  padding: 30px 0;
-}
+
 .diy-cs-title {
   padding-top: 60px;
   width: 100%;
@@ -4151,15 +4114,7 @@ input.size_address{width:calc(100% - 100px);}
   letter-spacing: 0 !important;
 }
 
-.diy-comming-soon-m {
-  background: url(/data/images/diy/commingsoon/bg-bk-web.jpg) no-repeat 0 0;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  box-sizing: border-box;
-  padding: 30px 0;
-}
+
 .diy-cs-title-m {
   padding-top: 52px;
 }
@@ -4342,7 +4297,7 @@ table.tb_timetable>tbody>tr>td .dateLayTxt{ line-height: 1; font-size: 11px;}
 .hop-select-time li{ padding: 10px 0px; border: 1px solid #71a200; border-radius: 10px; flex: 0 0 27%; text-align: center; cursor: pointer;}
 .hop-select-time-detail li, .hop-select-time-event li{ padding: 10px 0px; border: 1px solid #71a200; border-radius: 10px; text-align: center; flex: 0 0 25%; scroll-snap-align: start; cursor: pointer;}
 .hop-select-time-detail li:last-of-type{ margin-bottom: 10px;}
-.hop-select-time li.on, .hop-select-time-detail li.on, .hop-select-time-event li.on{ background-color: #71A200; color: #FFFFFF;}
+.hop-select-time li.on, .hop-select-time-detail li.on, .hop-select-time-event li.on,.hop-select-time-event a.on{ background-color: #71A200; color: #FFFFFF;}
 .hop-select-time li.disabled, .hop-select-time-detail li.disabled, .hop-select-time-event li.disabled{ border: 1px solid #b6b6b6; color: #b6b6b6; cursor: initial;}
 .hop-select-time-info li>span{ font-weight: 700; font-size: 17px;}
 .str_no_time li:not(:last-child){ margin-bottom: 5px;}

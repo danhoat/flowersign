@@ -182,11 +182,7 @@ var hpt_info = {'_account':'UHPT-20592','_server':'a24'};
                         </li>
                     </ul>
 
-                    <section onclick="location.href='/page/sub/partner'" style="cursor:pointer;">
-                        <!-- <img src="https://f-mans.com/data/images/footer/bg_banner_partner.jpg" alt="제휴상담안내"> -->
-                        <h4 class="title">기업제휴상담</h4>
-                        <p class="gray_03">제안 내용은 열린 마음으로<br>적극 검토합니다.</p>
-                    </section>
+
 
                 </li>
             </ul>
@@ -214,23 +210,31 @@ var hpt_info = {'_account':'UHPT-20592','_server':'a24'};
                
             </ul>
             
-            <ul class="menu3">
+           <ul class="menu3">
                 <li>
-                    <span class="">(주)청년들</span>
-                    <span designelement="text" textindex="16" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2Zvb3Rlci9zdGFuZGFyZC5odG1s">대표이사 : <em class="">최고봉</em></span>
-                    <span designelement="text" textindex="17" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2Zvb3Rlci9zdGFuZGFyZC5odG1s">사업자등록번호 : <em class=""><a href="javascript:;" onclick="window.open('https://www.ftc.go.kr/bizCommPop.do?wrkr_no=1058800491','communicationViewPopup','width=750,height=700,scrollbars=yes')">105-88-00491</a></em></span>
-                    <span designelement="text" textindex="18" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2Zvb3Rlci9zdGFuZGFyZC5odG1s">통신판매신고번호 : <em class="">2019-서울금천-0909</em></span>
+                    <span class=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cheongnyeondeul Co., Ltd. </font></font></span>
+                    <span designelement="text" textindex="16" >
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">CEO: </font></font><em class=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Choi Go-bong</font></font></em></span>
+                    <span designelement="text" textindex="17">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;"> Business registration number: </font></font>
+                            <em class=""><a href="#" ><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">105-88-00491</font></font></a></em></span>
+                    <span designelement="text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Mail order sales report number: </font></font><em class=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2019-Seoul Geumcheon-0909</font></font></em></span>
                 </li>
                 <li>
-                    <span designelement="text" textindex="19" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2Zvb3Rlci9zdGFuZGFyZC5odG1s">전화 : <a href="tel:1800-7879" class="">1800-7879</a></span>
-                    <span designelement="text" textindex="20" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2Zvb3Rlci9zdGFuZGFyZC5odG1s">팩스 : <em class="">02-6442-0106</em></span>
-                    <span designelement="text" textindex="21" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2Zvb3Rlci9zdGFuZGFyZC5odG1s">이메일 : <a class="" href="mailto:admin@mencoz.com">admin@mencoz.com</a></span>
-                    <span designelement="text" textindex="22" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2Zvb3Rlci9zdGFuZGFyZC5odG1s">제휴 및 제안 : <a class="" href="/page/sub/partner">partners@mencoz.com</a></span>
+                    <span designelement="text" textindex="19" ><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tel: </font></font><a href="tel:1800-7879" class=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1800-7879</font></font></a></span>
+                    <span designelement="text" textindex="20" ><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Fax: </font></font><em class=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">02-6442-0106</font></font></em></span>
+                    <span designelement="text" textindex="21" ><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Email: </font></font><a class="" href="mailto:admin@flowersignt.com"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">admin@mencoz.com</font></font></a></span>
+                    <span designelement="text" textindex="22" ><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Partnership and Proposal: </font></font>
+                        <a class="" href="/page/sub/partner"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">partners@mencoz.com</font></font></a></span>
                 </li>
                 <li>
-                    <span designelement="text" textindex="23" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2Zvb3Rlci9zdGFuZGFyZC5odG1s">주소 : <em class="">서울시 금천구 디지털로 121, 에이스가산타워 301호, 302호</em></span>
+                    <span designelement="text" textindex="23" ><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Address: </font></font><em class=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">301, 302, Ace Gasan Tower, 121 Digital-ro, Geumcheon-gu, Seoul</font></font></em></span>
                 </li>
-                <p class="copyright" designelement="text" textindex="24" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2Zvb3Rlci9zdGFuZGFyZC5odG1s">© 꽃집청년들 All rights reserved.</p>
+                <li>
+                    <p class="copyright" designelement="text" textindex="24" ><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">© Florist Youth All rights reserved.</font></font></p>
+                </li>
             </ul>
 
 

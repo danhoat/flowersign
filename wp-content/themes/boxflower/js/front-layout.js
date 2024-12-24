@@ -1425,4 +1425,4 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 })
 
-$.getScript('/app/javascript/js/echo.js');
+// $.getScript('https://demo.dichvu139.com/wp-content/themes/flower/js/echo.js');

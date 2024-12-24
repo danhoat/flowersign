@@ -35,6 +35,8 @@ do_action( 'woocommerce_before_main_content' );
  *
  * @hooked woocommerce_product_taxonomy_archive_header - 10
  */
+
+
 do_action( 'woocommerce_shop_loop_header' );
 
 //echo do_shortcode("[woof  sid='generator_676549921f798' autohide='0' autosubmit='-1' is_ajax='0' ajax_redraw='0' start_filtering_btn='0' btn_position='b' dynamic_recount='-1' hide_terms_count_txt='0' mobile_mode='0' ]");
@@ -77,9 +79,45 @@ if($is_selected_size){
 } else{
 	$is_selected_size = '';
 }
+$has_childterm = false;
 
+$cur_term = false;
+if ( is_product_taxonomy() ) {
+	$cur_term = get_queried_object();
 
+	if ( $cur_term  && !$cur_term->parent ) {
+		$term_parent = $cur_term->parent;
+		$term_id  = $cur_term->term_id;
+
+	} else if($cur_term->parent) {
+		$parent_term = get_term_by('term_id',$cur_term->parent,'product_cat');
+		$term_id = $parent_term->term_id;
+
+	}
+
+	$has_childterm = get_term_children($term_id,'product_cat');
+}
+
+function is_select_subcat($term_id, $cur_term){
+	if($term_id == $cur_term->term_id){
+		echo 'class ="on"';
+	}
+}
 ?>
+
+<div class="search_filter_wrap">
+<?php if($has_childterm){?>
+	<div class="catalog_subtitle_div" style="display: block;">
+		<ul class="catalog_subtitle ">
+			<?php foreach($has_childterm as $key=>$term_id){
+
+				$term = get_term_by('term_id', $term_id,'product_cat');
+				?>
+				<li data-code="<?php echo $term_id;?>" <?php is_select_subcat($term_id, $cur_term);?> ><a <?php is_select_subcat($term_id, $cur_term);?> href="<?php echo get_term_link($term);?>"><?php echo $term->name;?> </a></li>
+			<?php  } ?>
+			
+	</div>
+<?php } ?>
 
 <ul id="filteredItemSorting" class="filtered_item_sorting">
 		<li class="item_total">
@@ -141,6 +179,7 @@ if($is_selected_size){
 			</ul>
 		</li>
 	</ul>
+</div>
 
 <?php
 

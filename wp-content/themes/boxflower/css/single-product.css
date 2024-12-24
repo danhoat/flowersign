@@ -247,7 +247,10 @@ audio, canvas, embed, iframe, img, object, svg, video {
     padding-top: 10px;
    
 }
-.addon-price, .addon-title{
+.addon-price{
+ font-size: 12px;
+}
+.addon-title{
      font-size: 12px;
     color: rgb(158 166 212);
 }

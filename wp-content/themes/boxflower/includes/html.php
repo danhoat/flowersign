@@ -25,10 +25,10 @@ function box_left_swing(){ ?>
     <div class="wing_area left_wing_area" style=""><!-- 순간배송(윙배너) 배너 -->
         <a href="/page/sub/delivery">
 
-        <img src="<?php echo BOXTHEME_URL;?>/images/banner/out_today.png" alt="전국어디든 오늘주문 오늘배송">
+        <img src="<?php echo BOXTHEME_URL;?>/images/out_today.png" alt="전국어디든 오늘주문 오늘배송">
         </a>
         <a href="/page/paypal" style="display:block;margin:10px 0 0 0;">
-        <img src="<?php echo BOXTHEME_URL;?>/images/banner/wing_banner_paypal.png" alt="페이팔 결제 가이드">
+        <img src="<?php echo BOXTHEME_URL;?>/images/wing_banner_paypal.png" alt="페이팔 결제 가이드">
         </a>
     </div>
 
@@ -160,10 +160,11 @@ function module_search_html(){ ?>
                 <div id="searchVer2" class="search_ver2">
                     <div class="search_new">
                         <!-- ------- 검색 입력 ------- -->
-                        <form name="topSearchForm" id="topSearchForm" action="/goods/search">
+                        <form name="topSearchForm" id="topSearchForm" action="<?php echo esc_url( home_url( '/' ) );?>">
                         <div class="input_area">
                             <div class="cont">
-                                <label class="search_box"><input type="text" name="search_text" id="searchVer2InputBox" class="search_ver2_input_box" placeholder="Search" autocomplete="off"></label>
+                                <label class="search_box">
+                                    <input type="text" name="s" id="searchVer2InputBox" class="search_ver2_input_box" placeholder="Từ Khóa" autocomplete="off"></label>
                                 <button type="submit" class="search"></button>
                                 <button type="button" class="close searchModuleClose"></button>
                             </div>
@@ -174,9 +175,9 @@ function module_search_html(){ ?>
                             (function($){
                                 $("form#topSearchForm input[name='search_text']").attr('placeholder', '필요한 상품을 입력해주세요');
                                 $("form#topSearchForm").submit(function(event){
-                                    if(!$("form#topSearchForm input[name='search_text']").val()){
+                                    if(!$("form#topSearchForm input[name='s']").val()){
                                         var openNewWindow = window.open("about:blank");
-                                        openNewWindow.document.location.href="/goods/search?search_text=";
+                                        openNewWindow.document.location.href="/?s=";
                                         return false;
                                     }
                                 });

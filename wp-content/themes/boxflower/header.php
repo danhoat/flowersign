@@ -34,13 +34,13 @@ if(!is_singular('product') ){?>
 
 
 <!-- // 꽃청 수정 START 홍우기 20.07.31 - 상대경로에서 절대경로로  -->
-<link rel="stylesheet" type="text/css" href="<?php echo BOXTHEME_URL;?>/css/user.css?date=20241013&amp;v=111">
-<link rel="stylesheet" type="text/css" href="<?php echo BOXTHEME_URL;?>/css/modal.css?date=20241013&amp;v=1">
-<link rel="stylesheet" type="text/css" href="<?php echo BOXTHEME_URL;?>/css/_layout.css?date=20241013&amp;v=1">
+<link rel="stylesheet" type="text/css" href="<?php echo BOXTHEME_URL;?>/css/user.css?date=20241013&v=111">
+<link rel="stylesheet" type="text/css" href="<?php echo BOXTHEME_URL;?>/css/modal.css?date=20241013&v=1">
+<link rel="stylesheet" type="text/css" href="<?php echo BOXTHEME_URL;?>/css/_layout.css?date=20241013&v=1">
 
 
 <!-- css 추가 상세페이지 및 추가 디자인 부분 -->
-<link rel="stylesheet" type="text/css" href="<?php echo BOXTHEME_URL;?>/css/detail.css?date=20241013&amp;ver=22"><!-- ++++++++++++ 상세페이지 및 공통 부분 CSS ++++++++++++ -->
+<link rel="stylesheet" type="text/css" href="<?php echo BOXTHEME_URL;?>/css/detail.css?date=20241013&ver=22"><!-- ++++++++++++ 상세페이지 및 공통 부분 CSS ++++++++++++ -->
 
 
 <!-- 꽃청 추가 START 김태섭 2023-12-18 - splide -->
