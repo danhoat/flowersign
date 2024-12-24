@@ -127,4 +127,7 @@
     .bg-slate-100 h4.font-title{
         font-weight:700;
     }
+    .main{
+        padding: 10px;
+    }
 }

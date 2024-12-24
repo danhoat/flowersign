@@ -209,8 +209,8 @@ $(function(){
 
         <div id="layout_body" class="layout_body">
 
+            <div class="main">
 
-            <div class="resp_wrap 99999" style="position:relative;">
 
                  <div data-v-ce1f2810="" class="mt-1">
                     <h1 data-v-ce1f2810="" class="text-[#2F2C6F] font-extrabold lg:text-6xl blog-title">Blog</h1>
@@ -247,7 +247,7 @@ $(function(){
                     
                     
                 } ?>
-                </div> <!-- end blog-post !-->
+        </div>
+    </div> <!-- end blog-post !-->
                 
-
-            <?php get_footer(); ?>
+<?php get_footer(); ?>
