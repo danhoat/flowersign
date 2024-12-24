@@ -1,4 +1,5 @@
-    .woocommerce ul.products li.product, .woocommerce-page ul.products li.product{
+    .woocommerce ul.products li.product, .woocommerce-page ul.products li.product,
+    .woocommerce ul.products.columns-5 li.product, .woocommerce-page ul.products.columns-5 li.product{
         width: auto;
         margin: 0;
     }
