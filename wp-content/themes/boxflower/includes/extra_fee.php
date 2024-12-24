@@ -94,7 +94,7 @@ function box_checkout_create_order_line_item( $item, $cart_item_key, $values, $o
     }
     if ( isset( $values['delivery_date'] ) ) {
         $item->add_meta_data(
-            __( 'Delivery date', 'webkul' ),
+            __( 'Giao hàng', 'webkul' ),
             $values['delivery_date'],
             true
         );
