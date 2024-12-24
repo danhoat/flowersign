@@ -147,73 +147,65 @@ var kid_agree = "";
 
            <?php box_left_swing();?>
 
-
-
-
-            <!-- language -->
-            <div class="language hide">
-                <a class="select_list" id="select_main" href="http://f-mans.com">
-                    <span class="language_country_img language_country_img_KR"></span>
-                    Korea
-                    <span class="sel_arrow"></span>
-                </a>
-                <ul class="optionSub" style="position:relative;display:none;">
-                </ul>
-            </div>
-
-            <!-- 꽃청 수정 START 윤상희 2023.04.07 - 네비게이션 수정 -->
-    
-
         </div>
     </div>
-
-
     <div class="logo_wrap">
         <div class="resp_wrap">
             <!-- logo -->
             <h1 class="logo_area">
-                <a href="<?php echo home_url();?>" target="_self"><img src="https://f-mans.com/data/skin/responsive_ver1_default_gl/images/design/resp_logo_sample.png" title="(주)청년들" alt="(주)청년들"></a>
+                <a href="<?php echo home_url();?>" target="_self">
+                    <img src="https://f-mans.com/data/skin/responsive_ver1_default_gl/images/design/resp_logo_sample.png" title="(주)청년들" alt="(주)청년들">
+                </a>
             </h1>
 
-            <!-- 햄버거 버튼 -->
+
             <div class="resp_top_hamburger">
-                <!-- 꽃청 추가 START 김태섭 2023-06-09 - 햄버거 메뉴 텍스트 추가 -->
+
                 <a href="#category"><b>aside menu</b><h2>MENU</h2></a>
-                <!-- 꽃청 추가 END 김태섭 2023-06-09 - 햄버거 메뉴 텍스트 추가 -->
+
             </div>
             <?php if(wp_is_mobile() ){ module_search_html(); } ?>
 
-            <!-- 장바구니( 1023px 이하에서 노출됨 ) -->
-            <a href="/order/cart" class="resp_top_cart"><span class="cart_cnt2">0</span></a>
+            <a href="/order/cart" class="resp_top_cart"> <span class="cart_cnt2">0</span></a>
 
-            <!-- 슬라이드 배너 영역 (light_style_1_2) :: START -->
-            <div class="gnb_bnr_slide gnb_bnr_slide_02 slider_before_loading" style="position:absolute; right:40px; top:0px; width:220px; height:148px;">
+            <div class="gnb_bnr_slide gnb_bnr_slide_02 slider_before_loading">
                 <div class="slider_gon">
-                    <!-- 슬라이드 배너 데이터 영역 :: START -->    <div class="light_style_1_2 designBanner" designelement="banner" templatepath="main/index.html" bannerseq="2"><div class="sslide"><a class="slink" href="/page/sub/famous" target="_self"><img class="simg" src="https://f-mans.com/data/skin/responsive_ver1_default_gl/images/banner/2/images_1.jpg"></a></div><div class="sslide"><a class="slink" href="/subscribe/intro" target="_self"><img class="simg" src="https://f-mans.com/data/skin/responsive_ver1_default_gl/images/banner/2/images_2.jpg"></a></div><div class="sslide"><a class="slink" href="/goods/brand?code=00020002" target="_self"><img class="simg" src="https://f-mans.com/data/skin/responsive_ver1_default_gl/images/banner/2/images_3.jpg"></a></div> </div><!-- 슬라이드 배너 데이터 영역 :: END -->
+                    <!-- 슬라이드 배너 데이터 영역 :: START -->    
+                    <div class="light_style_1_2 designBanner" >
+                        <div class="sslide">
+                            <a class="slink" href="#" target="_self">
+                            <img class="simg" src="<?php echo IMAGE_URL;?>/slider/images_1.jpg"></a>
+                        </div>
+                        <div class="sslide">
+                            <a class="slink" href="#" target="_self">
+                            <img class="simg" src="<?php echo IMAGE_URL;?>/slider/images_2.jpg"></a>
+                        </div>
+                        <div class="sslide">
+                            <a class="slink" href="#" target="_self">
+                                <img class="simg" src="<?php echo IMAGE_URL;?>/slider/images_3.jpg">
+                            </a>
+                        </div>
+                     </div>
                 </div>
             </div>
             <script type="text/javascript">
-
-           (function($){
-                $(document).ready(function(){
-                    $('.light_style_1_2').slick({
-                        autoplay: true,
-                        vertical: true,
-                        speed: 400,
-                        autoplaySpeed: 6000,
+                (function($){
+                    $(document).ready(function(){
+                        $('.light_style_1_2').slick({
+                            autoplay: true,
+                            vertical: true,
+                            speed: 400,
+                            autoplaySpeed: 6000,
+                        });
                     });
-                });
-           }(jQuery));
+                }(jQuery));
             </script>
             <!-- 슬라이드 배너 영역 (light_style_1_2) :: END -->
         </div>
     </div>
-    <!-- //로고 영역 -->
-
 
     <?php get_template_part('templates/primary','menu');?>
-    <!-- 지역 전체 네비게이션 팝업 END -->
+
 
 </div>
-<!-- 상단영역 : 끝 -->
 

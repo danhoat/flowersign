@@ -15,16 +15,16 @@ var hpt_info = {'_account':'UHPT-20592','_server':'a24'};
             <li class="footer_subscribe">
                 <a href="/subscribe/intro">
                     <h3>
-                        <b>꽃구독</b>을<br>
-                        <b>시작</b>하세요.
+                        <b>Start </b>your flower<br>
+                        <b> subscription </b>
                     </h3>
                 </a>
             </li>
             <li class="footer_delivery">
                 <a href="/page/sub/delivery">
                     <h3>
-                        <b>오늘</b>주문<br>
-                        오늘<b>도착!</b>
+                        <b>Order </b>today<br>
+                         arrive <b>today!</b>
                     </h3>
                 </a>
             </li>

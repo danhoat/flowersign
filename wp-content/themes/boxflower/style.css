@@ -279,8 +279,8 @@ body{
     text-indent: 30px;
 }
 
-.cs-box-banner .cs-heading{
-
+.gnb_bnr_slide{
+    position:absolute; right:40px; top:0px; width:220px; height:148px;
 }
 .cs-box-banner  .elementor-image-box-content {
     height: 100%;

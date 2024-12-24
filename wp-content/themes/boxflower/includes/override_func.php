@@ -96,7 +96,7 @@ function override_paginate_links( $args = '' ) {
         $link .= $args['add_fragment'];
 
         $page_links[] = sprintf(
-            '<a class="prev page-numbers " href="%s"  rel ="prev" >%s</a>',
+            '<a class="prev page-numbers" href="%s"  rel ="prev" >%s</a>',
             /**
              * Filters the paginated links for the given archive pages.
              *
@@ -152,7 +152,7 @@ function override_paginate_links( $args = '' ) {
         $link .= $args['add_fragment'];
 
         $page_links[] = sprintf(
-            '<a class="next page-numbers " href="%s" rel ="next">%s</a>',
+            '<a class="next page-numbers" href="%s" rel ="next">%s</a>',
             /** This filter is documented in wp-includes/general-template.php */
             esc_url( apply_filters( 'paginate_links', $link ) ),
             $args['next_text']
