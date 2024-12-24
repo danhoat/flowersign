@@ -12,6 +12,7 @@ require_once __DIR__ .'/disable_crop_images.php';
 require_once __DIR__ .'/html.php';
 require_once __DIR__ .'/bundle_items.php';
 require_once __DIR__ .'/extra_fee.php';
+require_once __DIR__ .'/override_func.php';
 
 // require_once __DIR__ .'/custom_gallery_vertical.php';
 

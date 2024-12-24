@@ -6910,3 +6910,8 @@ Stack trace:
 #5 D:\laragon\www\flower\index.php(17): require('D:\\laragon\\www\\...')
 #6 {main}
   thrown in D:\laragon\www\flower\wp-includes\taxonomy.php on line 1176
+[24-Dec-2024 12:09:26 UTC] Automatic updates starting...
+[24-Dec-2024 12:09:27 UTC]   Automatic plugin updates starting...
+[24-Dec-2024 12:09:27 UTC]   Automatic plugin updates complete.
+[24-Dec-2024 12:09:28 UTC] Automatic updates complete.
+[24-Dec-2024 12:23:41 UTC] PHP Parse error:  syntax error, unexpected single-quoted string " => ", expecting ")" in D:\laragon\www\flower\wp-content\themes\boxflower\woocommerce\loop\pagination.php on line 48

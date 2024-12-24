@@ -508,43 +508,8 @@ color: #2E2E2E;
     max-width: 1260px;
     margin: 0 auto;
 }
-.fixed_bg::after{
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: url(images/home/bg_main_fixed.jpg) no-repeat 0 0 fixed;
-    background-size: 100%;
-    width: 100%;
-    height: 100%;
-    opacity: 1;
-    z-index: -1;
-}
-.fixed_bg{
-    width: 100%;
-    position: relative;
-    clear: both;
-    height: 620px;
-    align-items: center;
-}
-.fixed_bg .desc{
-    height: 130px;
-    display: block;
-    align-items: center;
-    padding-top: 15%;
-}
-.fixed_bg h2{
-       font-size: 1.8em;
-    font-weight: 700;
-    color: #3c3c3c;
-    line-height: 2em;
-    font-family: "Lato", serif;
-}
-.theme_box_1220 {
-    max-height: 163px;
-    overflow: hidden;
-}
+
+
 .h2heading{
     border-bottom: 2px solid ;
 }

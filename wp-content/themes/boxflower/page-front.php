@@ -32,6 +32,7 @@ get_header();
             'orderby'    => 'count',
             'hide_empty' => 0,
             'order' => 'DESC',
+            'number' => 8
         ) );
         ?>
         <div class="theme_content block-categories arow">

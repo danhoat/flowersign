@@ -31,7 +31,7 @@ if ( $total <= 1 ) {
 <div class="wrap_pagi">
 	<nav class="woocommerce-pagination" aria-label="<?php esc_attr_e( 'Product Pagination', 'woocommerce' ); ?>">
 		<?php
-		echo paginate_links(
+		echo override_paginate_links(
 			apply_filters(
 				'woocommerce_pagination_args',
 				array( // WPCS: XSS ok.
@@ -42,10 +42,10 @@ if ( $total <= 1 ) {
 					'total'     => $total,
 					// 'prev_text' => is_rtl() ? '&rarr;' : '&larr;',
 					// 'next_text' => is_rtl() ? '&larr;' : '&rarr;',
-					 'type'      => 'list',
+					'type'      => 'list',
 					'end_size'  => 3,
 					'mid_size'  => 3,
-					 'prev_text' => '<i class="fa-solid fa-angle-left"></i>',
+					'prev_text' => '<i class="fa-solid fa-angle-left"></i>',
         			'next_text' => '<i class="fa-solid fa-angle-right"></i>',
 				)
 			)
