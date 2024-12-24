@@ -167,10 +167,10 @@ var hpt_info = {'_account':'UHPT-20592','_server':'a24'};
                             </a>
                         </li>
                     </ul>
-                    <h4 class="title footer_sns wide_only"><span designelement="text" textindex="10" >Phương thức thanh toán</span></h4>
-                    <p class="list v6">
-                        <?php html_icon_payment();?>
-                    </p>
+                    <h4 class="title payments "><span designelement="text" textindex="10" >Phương thức thanh toán</span></h4>
+
+                    <?php html_icon_payment();?>
+
 
 
 
