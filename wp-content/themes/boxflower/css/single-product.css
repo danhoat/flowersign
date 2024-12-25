@@ -516,15 +516,16 @@ span.rate-score{
 
 .woocommerce div.product .woocommerce-tabs ul.tabs::before {
     border-bottom: 2px solid #cfc8d8;
-    .slick-slider .slick-track, .slick-slider .slick-list{
-        max-height: 729px;
-    }
+
 }
 @media only screen and (min-width: 1000px){
 
     p.comment-form-author , p.comment-form-email{
         width: 18%;
         display: inline-block;
+    }
+    .slick-slider .slick-track, .slick-slider .slick-list{
+        max-height: 673px;
     }
 }
 p.comment-form-author label, p.comment-form-email label{

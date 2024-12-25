@@ -6919,3 +6919,20 @@ Stack trace:
 [25-Dec-2024 05:53:22 UTC]   Automatic plugin updates starting...
 [25-Dec-2024 05:53:22 UTC]   Automatic plugin updates complete.
 [25-Dec-2024 05:53:23 UTC] Automatic updates complete.
+[25-Dec-2024 06:12:11 UTC] PHP Warning:  Undefined array key "url" in D:\laragon\www\flower\wp-content\themes\boxflower\includes\comment_form_fields.php on line 8
+[25-Dec-2024 06:12:55 UTC] PHP Warning:  Undefined array key "url" in D:\laragon\www\flower\wp-content\themes\boxflower\includes\comment_form_fields.php on line 8
+[25-Dec-2024 06:13:08 UTC] PHP Warning:  Undefined array key "url" in D:\laragon\www\flower\wp-content\themes\boxflower\includes\comment_form_fields.php on line 8
+[25-Dec-2024 06:13:10 UTC] PHP Warning:  Undefined array key "url" in D:\laragon\www\flower\wp-content\themes\boxflower\includes\comment_form_fields.php on line 8
+[25-Dec-2024 06:13:51 UTC] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in D:\laragon\www\flower\wp-content\themes\boxflower\header.php on line 20
+[25-Dec-2024 06:14:00 UTC] PHP Warning:  Undefined array key "url" in D:\laragon\www\flower\wp-content\themes\boxflower\includes\comment_form_fields.php on line 8
+[25-Dec-2024 06:14:13 UTC] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in D:\laragon\www\flower\wp-content\themes\boxflower\header.php on line 20
+[25-Dec-2024 06:14:17 UTC] PHP Warning:  Undefined array key "url" in D:\laragon\www\flower\wp-content\themes\boxflower\includes\comment_form_fields.php on line 8
+[25-Dec-2024 06:14:20 UTC] PHP Warning:  Undefined array key "url" in D:\laragon\www\flower\wp-content\themes\boxflower\includes\comment_form_fields.php on line 8
+[25-Dec-2024 06:14:29 UTC] PHP Warning:  Undefined array key "url" in D:\laragon\www\flower\wp-content\themes\boxflower\includes\comment_form_fields.php on line 8
+[25-Dec-2024 06:14:31 UTC] PHP Warning:  Undefined array key "url" in D:\laragon\www\flower\wp-content\themes\boxflower\includes\comment_form_fields.php on line 8
+[25-Dec-2024 06:14:32 UTC] PHP Warning:  Undefined array key "url" in D:\laragon\www\flower\wp-content\themes\boxflower\includes\comment_form_fields.php on line 8
+[25-Dec-2024 06:15:15 UTC] PHP Warning:  Undefined array key "url" in D:\laragon\www\flower\wp-content\themes\boxflower\includes\comment_form_fields.php on line 8
+[25-Dec-2024 06:15:18 UTC] PHP Warning:  Undefined array key "url" in D:\laragon\www\flower\wp-content\themes\boxflower\includes\comment_form_fields.php on line 8
+[25-Dec-2024 06:15:19 UTC] PHP Warning:  Undefined array key "url" in D:\laragon\www\flower\wp-content\themes\boxflower\includes\comment_form_fields.php on line 8
+[25-Dec-2024 06:15:54 UTC] PHP Warning:  Undefined array key "url" in D:\laragon\www\flower\wp-content\themes\boxflower\includes\comment_form_fields.php on line 8
+[25-Dec-2024 06:16:15 UTC] PHP Warning:  Undefined array key "url" in D:\laragon\www\flower\wp-content\themes\boxflower\includes\comment_form_fields.php on line 8
