@@ -3580,23 +3580,26 @@ input.size_address{width:calc(100% - 100px);}
 
 /* 23-05-18 dennis */
 .catalog_content_subtitle,
-.search_filter_wrap .catalog_subtitle
+ .catalog_subtitle
   {display: flex; align-items: center; justify-content: center; font-weight: 400; margin: 0; padding: 0;}
 .catalog_content_subtitle > li,
-.search_filter_wrap .catalog_subtitle > li
+ .catalog_subtitle > li
   {margin: 0 4px; padding: 10px 20px; color: #444444; cursor: pointer; border-radius: 999px; background-color: #eef0f2; font-size: 14px;  -webkit-flex-shrink: 0;}
 .catalog_content_subtitle > li.on,
 .catalog_content_subtitle > a.on,
-.search_filter_wrap .catalog_subtitle > li.on,
-.search_filter_wrap .catalog_subtitle > li.on a
+ .catalog_subtitle > li.on,
+  .catalog_subtitle > li:hover,
+ .catalog_subtitle > li.on a,
+.catalog_subtitle  li:hover a
   {color: #FFFFFF; background-color: #71A200;}
+
 .catalog_content_subtitle > li.on:hover,
 .catalog_content_subtitle > a.on:hover,
-.search_filter_wrap .catalog_subtitle > li.on:hover,
-.search_filter_wrap .catalog_subtitle > a.on:hover
+.catalog_subtitle > li.on:hover,
+ .catalog_subtitle > a.on:hover
   {color: #FFFFFF; background-color: #71A200;}
 .catalog_content_subtitle > li:hover,
-.search_filter_wrap .catalog_subtitle > li:hover
+ .catalog_subtitle > li:hover
   {color: #71A200;}
 
 .catalog_content_subtitle .swiper-slide{ width: auto;}

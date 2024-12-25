@@ -150,4 +150,8 @@
     .search_filter_wrap {
         margin-bottom: 15px;
     }
+   
+    .wrap_pagi{
+        gap: 10px 0;
+    }
 }

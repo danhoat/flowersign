@@ -119,6 +119,24 @@ $termdesc = explode("[xem_them]", $term_description);
 
 ?>
 
+<?php if($has_childterm){ ?>
+<div class="full">
+	<div class="catalog_subtitle_div" style="display: block;">
+		<ul class="catalog_subtitle ">
+			<?php foreach($has_childterm as $key=>$term_id){
+
+				$term = get_term_by('term_id', $term_id,'product_cat');
+				?>
+				<li data-code="<?php echo $term_id;?>" <?php is_select_subcat($term_id, $cur_term);?> ><a <?php is_select_subcat($term_id, $cur_term);?> href="<?php echo get_term_link($term);?>"><?php echo $term->name;?> </a></li>
+			<?php  } ?>
+		</ul>
+			
+	</div>
+</div>
+<?php } ?>
+
+
+
 <div class="term-short-desc">
 	<?php echo $termdesc[0];?>
 	<?php if( isset($termdesc[1])  && !empty($termdesc[1])){?>
@@ -130,18 +148,7 @@ $termdesc = explode("[xem_them]", $term_description);
 
 
 <div class="search_filter_wrap">
-<?php if($has_childterm){ ?>
-	<div class="catalog_subtitle_div" style="display: block;">
-		<ul class="catalog_subtitle ">
-			<?php foreach($has_childterm as $key=>$term_id){
 
-				$term = get_term_by('term_id', $term_id,'product_cat');
-				?>
-				<li data-code="<?php echo $term_id;?>" <?php is_select_subcat($term_id, $cur_term);?> ><a <?php is_select_subcat($term_id, $cur_term);?> href="<?php echo get_term_link($term);?>"><?php echo $term->name;?> </a></li>
-			<?php  } ?>
-			
-	</div>
-<?php } ?>
 
 
 
@@ -274,41 +281,35 @@ do_action( 'woocommerce_after_main_content' );
 if( is_tax('product_cat') ){ ?>
 
 
-	<?php 
-	if( isset($termdesc[1]) && !empty($termdesc[1])){
-		echo '<div class "full term-description">';
-		echo '<div class ="container"> <div class ="term-description ">';
-		echo $termdesc[1];
-		echo '</div></div></div>';
-	}
- ?>
 
- 
-	<div class="full bg-slate-100">
-		<div class="container">
-			<div class="bg-slate-100">
-				<div class="mx-auto max-w-screen-xl py-10 px-4 md:px-6">
-					<h3 class="text-center font-title  text-2xl tracking-tight text-slate-900 sm:text-3xl">Why send flowers with&nbsp;Floom?</h3>
-					<div class="flex flex-col lg:flex-row gap-8 lg:gap-12 justify-evenly">
-						<div class="mx-auto flex flex-1 items-center flex-col gap-3 bg-slate-white lg:py-5 rounded-md max-w-[350px]">
-							<img alt="What you see is what you get" loading="lazy" width="200" height="200" decoding="async" data-nimg="1" class="w-auto h-12 rounded-md object-cover" style="color:transparent" src="https://d3c3go6eq7r80g.cloudfront.net/products/200px-Flower-eye_180126_141515.gif">
-							<div class="flex-1 md:flex-col text-center">
 
-								<h4 class="font-title text-xl ">What you see is what you&nbsp;get</h4>
 
-								<p class="text-sm leading-relaxed">Love the bouquet on your screen? That's exactly what our local florist will prepare freshly for your order... or your money back!</p>
-							</div>
+<div class="full bg-slate-100">
+	<div class="container">
+		<div class="bg-slate-100">
+			<div class="mx-auto max-w-screen-xl py-10 px-4 md:px-6">
+				<h3 class="text-center font-title  text-2xl tracking-tight text-slate-900 sm:text-3xl">Why send flowers with&nbsp;Floom?</h3>
+				<div class="flex flex-col lg:flex-row gap-8 lg:gap-12 justify-evenly">
+					<div class="mx-auto flex flex-1 items-center flex-col gap-3 bg-slate-white lg:py-5 rounded-md max-w-[350px]">
+						<img alt="What you see is what you get" loading="lazy" width="200" height="200" decoding="async" data-nimg="1" class="w-auto h-12 rounded-md object-cover" style="color:transparent" src="https://d3c3go6eq7r80g.cloudfront.net/products/200px-Flower-eye_180126_141515.gif">
+						<div class="flex-1 md:flex-col text-center">
+
+							<h4 class="font-title text-xl ">What you see is what you&nbsp;get</h4>
+
+							<p class="text-sm leading-relaxed">Love the bouquet on your screen? That's exactly what our local florist will prepare freshly for your order... or your money back!</p>
 						</div>
-						<div class="mx-auto flex flex-1 items-center flex-col gap-3 bg-slate-white lg:py-5 rounded-md max-w-[350px]">
+					</div>
+					<div class="mx-auto flex flex-1 items-center flex-col gap-3 bg-slate-white lg:py-5 rounded-md max-w-[350px]">
 
-							<img alt="Always unique, never generic" loading="lazy" width="200" height="200" decoding="async" data-nimg="1" class="w-auto h-12 rounded-md object-cover" style="color:transparent" src="https://d3c3go6eq7r80g.cloudfront.net/products/200px-Florist_180126_141526.gif">
+						<img alt="Always unique, never generic" loading="lazy" width="200" height="200" decoding="async" data-nimg="1" class="w-auto h-12 rounded-md object-cover" style="color:transparent" src="https://d3c3go6eq7r80g.cloudfront.net/products/200px-Florist_180126_141526.gif">
 
-							<div class="flex-1 md:flex-col text-center">
-							<h4 class="font-title text-xl ">Always unique, never&nbsp;generic</h4>
+						<div class="flex-1 md:flex-col text-center">
+						<h4 class="font-title text-xl ">Always unique, never&nbsp;generic</h4>
 
-							<p class="text-sm leading-relaxed">We only work with the most talented and unique artisans, and we're passionate about supporting our skilled family of florists.</p></div></div>
-						<div class="mx-auto flex flex-1 items-center flex-col gap-3 bg-slate-white lg:py-5 rounded-md max-w-[350px]"><img alt="Hand-delivered with care and attention" loading="lazy" width="200" height="200" decoding="async" data-nimg="1" class="w-auto h-12 rounded-md object-cover" style="color:transparent" src="https://d3c3go6eq7r80g.cloudfront.net/products/200px-Hands_180126_141541.gif">
-							<div class="flex-1 md:flex-col text-center">
+						<p class="text-sm leading-relaxed">We only work with the most talented and unique artisans, and we're passionate about supporting our skilled family of florists.</p></div></div>
+					<div class="mx-auto flex flex-1 items-center flex-col gap-3 bg-slate-white lg:py-5 rounded-md max-w-[350px]">
+						<img alt="Hand-delivered with care and attention" loading="lazy" width="200" height="200" decoding="async" data-nimg="1" class="w-auto h-12 rounded-md object-cover" style="color:transparent" src="https://d3c3go6eq7r80g.cloudfront.net/products/200px-Hands_180126_141541.gif">
+						<div class="flex-1 md:flex-col text-center">
 
 							<h4 class="font-title text-xl ">Hand-delivered with care and&nbsp;attention</h4>
 							<p class="text-sm leading-relaxed">Each of our orders is professionally arranged, wrapped and safely delivered with a hand-written card… on the exact day that you need it.</p>
@@ -319,6 +320,14 @@ if( is_tax('product_cat') ){ ?>
 		</div>
 	</div>
 </div>
+	<?php 
+	if( isset($termdesc[1]) && !empty($termdesc[1])){
+		echo '<div class "full term-description">';
+		echo '<div class ="container"> <div class ="term-description ">';
+		echo $termdesc[1];
+		echo '</div></div></div>';
+	}
+ 	?>
 
 <?php
 }
