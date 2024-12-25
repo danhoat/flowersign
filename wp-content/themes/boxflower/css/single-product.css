@@ -455,11 +455,12 @@ span.rate-score{
     .woocommerce div.product .woocommerce-tabs ul.tabs li a{
         text-align: center;
     }
+    .slick-list{
+        max-height: 450px;
+    }
 }
 
-.slick-slider .slick-track, .slick-slider .slick-list{
-    max-height: 729px;
-}
+
 .woocommerce div.product .woocommerce-tabs ul.tabs li{
     background-color: #fff;
     border: 0;
@@ -515,6 +516,9 @@ span.rate-score{
 
 .woocommerce div.product .woocommerce-tabs ul.tabs::before {
     border-bottom: 2px solid #cfc8d8;
+    .slick-slider .slick-track, .slick-slider .slick-list{
+        max-height: 729px;
+    }
 }
 @media only screen and (min-width: 1000px){
 

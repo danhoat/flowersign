@@ -80,10 +80,7 @@
             $("#subtotal").html(new_price);
         });
 
-        // $(".hidden_choice").change(function(){
-        //     console.log('changed date');
-        //     $("#datepicker").val('');
-        // })
+
     });
 
     $(".btn-minus-quantity").click(function(){

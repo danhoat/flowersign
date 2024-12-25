@@ -188,7 +188,7 @@ if ( $product->is_in_stock() ) : ?>
 
 		<div class="full">
 			<p>
-				<h3 class=" text-lg">Tổng: <span class="text-brand font-bold self-center whitespace-nowrap" id="subtotal">  <?php echo wc_price($product->get_price());?></span></h3>
+				<h3 class=" text-lg">Tổng: <span class="text-brand font-bold self-center whitespace-nowrap subtotal-price" id="subtotal">  <?php echo wc_price($product->get_price());?></span></h3>
 			</p>
 		</div>
 		<div class="grid full grid-cols-2 form-btn">

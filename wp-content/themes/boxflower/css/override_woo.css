@@ -69,7 +69,9 @@
 .woocommerce ul.products li.product .price,
 .woocommerce ul.products li.product .price ins,
 .woo-first-price .amount,
-.addon-price .amount{
+.addon-price .amount,
+.subtotal-price,
+.subtotal-price .amount {
   
     color: #70A100;
     
