@@ -82,6 +82,7 @@ if($is_selected_size){
 $has_childterm = false;
 
 $cur_term = false;
+$main_id = 0;
 if ( is_product_taxonomy() ) {
 	$cur_term = get_queried_object();
 
@@ -96,17 +97,40 @@ if ( is_product_taxonomy() ) {
 	}
 
 	$has_childterm = get_term_children($term_id,'product_cat');
+	$main_id= $term_id;
 }
+
+
 
 function is_select_subcat($term_id, $cur_term){
 	if($term_id == $cur_term->term_id){
 		echo 'class ="on"';
 	}
 }
+
+
 ?>
 
+<?php
+
+$main_term 			= get_term_by('term_id', $main_id,'product_cat');
+$term_description 	= apply_filters( 'woocommerce_taxonomy_archive_description_raw', $main_term->description, $main_term );
+$termdesc = explode("[xem_them]", $term_description);
+
+?>
+
+<div class="term-short-desc">
+	<?php echo $termdesc[0];?>
+	<?php if( isset($termdesc[1])  && !empty($termdesc[1])){?>
+		<a class="description-show-more show-more-top">
+			<span><i class="fa fa-plus" aria-hidden="true"></i> Xem thêm</span>
+		</a>
+	<?php } ?>
+</div>
+
+
 <div class="search_filter_wrap">
-<?php if($has_childterm){?>
+<?php if($has_childterm){ ?>
 	<div class="catalog_subtitle_div" style="display: block;">
 		<ul class="catalog_subtitle ">
 			<?php foreach($has_childterm as $key=>$term_id){
@@ -118,6 +142,8 @@ function is_select_subcat($term_id, $cur_term){
 			
 	</div>
 <?php } ?>
+
+
 
 <ul id="filteredItemSorting" class="filtered_item_sorting">
 		<li class="item_total">
@@ -181,6 +207,8 @@ function is_select_subcat($term_id, $cur_term){
 	</ul>
 </div>
 
+
+
 <?php
 
 if ( woocommerce_product_loop() ) {
@@ -241,9 +269,21 @@ if ( woocommerce_product_loop() ) {
  * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
  */
 do_action( 'woocommerce_after_main_content' );
-woocommerce_product_cat_description();
+// woocommerce_product_cat_description();
 
 if( is_tax('product_cat') ){ ?>
+
+
+	<?php 
+	if( isset($termdesc[1]) && !empty($termdesc[1])){
+		echo '<div class "full term-description">';
+		echo '<div class ="container"> <div class ="term-description ">';
+		echo $termdesc[1];
+		echo '</div></div></div>';
+	}
+ ?>
+
+ 
 	<div class="full bg-slate-100">
 		<div class="container">
 			<div class="bg-slate-100">
@@ -279,6 +319,7 @@ if( is_tax('product_cat') ){ ?>
 		</div>
 	</div>
 </div>
+
 <?php
 }
 

@@ -8,6 +8,19 @@ $(document).ready(function(){
             $(this).html('Thu gọn');
         }
     });
+    $(".show-more-top").click(function() {
+        let p = $(".term-description").offset().top;
+        let pos = Number(p) - 130; 
+        console.log(pos);
+
+
+        $('html,body').animate({
+            scrollTop: pos},
+            'slow');
+
+
+
+    });
 })
 
 
