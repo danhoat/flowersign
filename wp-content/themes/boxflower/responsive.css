@@ -135,4 +135,7 @@
         margin-top: 13px;
         display: block;
     }
+    .filtered_item_sorting .item_total>a .num{
+        font-size: 16px;
+    }
 }

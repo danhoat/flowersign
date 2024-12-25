@@ -179,5 +179,17 @@ color: rgb(153 153 153);
     padding: 0 7px;
     font-weight: 400;
     margin: 0;
+    top:-10px;
 
+}
+body.archive.woocommerce ul.products li.product a img{
+    margin: 0;
+}
+body.archive.woocommerce .woocommerce ul.products{
+    gap: 20px 15px;
+}
+.woocommerce ul.products li.product:hover{
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -2px rgba(0, 0, 0, .05);
+    --tw-shadow: 0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -2px rgba(0,0,0,.05);
 }
