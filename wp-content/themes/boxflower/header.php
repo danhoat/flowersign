@@ -12,11 +12,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
 
+
+
+
 <?php 
-if(!is_singular('product') ){?>
-<link rel="stylesheet" type="text/css" href="<?php echo BOXTHEME_URL;?>/css/slick.css"><!-- 반응형 슬라이드 -->
-<link rel="stylesheet" type="text/css" href="<?php echo BOXTHEME_URL;?>/css/goods_info_style.css?v=2"><!-- 상품디스플레이 CSS -->
-<?php } ?>
+if( !is_singular('product')  ){?>
+    
+    <link rel="stylesheet" type="text/css" href="<?php echo BOXTHEME_URL;?>/css/slick.css"><!-- 반응형 슬라이드 -->
+    <link rel="stylesheet" type="text/css" href="<?php echo BOXTHEME_URL;?>/css/goods_info_style.css?v=2"><!-- 상품디스플레이 CSS -->
+<?php } else{ ?>
+    <link rel="stylesheet" type="text/css" href="<?php echo BOXTHEME_URL;?>/css/jquery-ui-1.8.16.custom.css"> <!-- css calendar !-->
+<?php }?>
 <link rel="stylesheet" type="text/css" href="<?php echo BOXTHEME_URL;?>/css/goods_info_user.css"><!-- ++++++++++++ 상품디스플레이 사용자/제작자 CSS ++++++++++++ -->
 <link rel="stylesheet" type="text/css" href="<?php echo BOXTHEME_URL;?>/css/lib.css">
 <link rel="stylesheet" type="text/css" href="<?php echo BOXTHEME_URL;?>/css/common.css?date=20241013&amp;v=11">
