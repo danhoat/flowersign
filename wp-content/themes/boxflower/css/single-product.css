@@ -525,7 +525,7 @@ span.rate-score{
         display: inline-block;
     }
     .slick-slider .slick-track, .slick-slider .slick-list{
-        max-height: 673px;
+        max-height: 675px;
     }
 }
 p.comment-form-author label, p.comment-form-email label{
