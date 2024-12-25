@@ -333,7 +333,7 @@ $(function() {
 	// 최근 검색어
 	searchRecentList();
 	// 최근 검색어 자동저장
-	setRecentAuto('now');
+	//setRecentAuto('now');
 	// 자동완성 사용
-	setUseAuto('now');
+	//setUseAuto('now');
 });

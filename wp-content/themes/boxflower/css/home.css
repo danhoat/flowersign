@@ -249,7 +249,13 @@ color: #2E2E2E;
     }
     .cs-box-banner .cs-heading, .box-heading{
         font-size: 19px;
-        text-indent: 5px;
+    }
+    .box-heading{
+        width: 81%;
+        font-size: 1.8em;
+        text-indent: 0;
+        padding-left: 10px;
+        line-height: 1.3em;
     }
     .block-testimonial {
         background-position: right 1px;

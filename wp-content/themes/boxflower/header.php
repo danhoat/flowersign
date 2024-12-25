@@ -2,9 +2,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <?php wp_head();?>
-<script nonce="ZfNcz9LOJRepymLBSZhf0ovlGhkSb2wNh2wbhH0qado=">window.Firstmall = window.Firstmall || {};
-window.Firstmall.Config = {"Environment":{"MobileMode":true,"SetMode":null,"Language":"KR","isAdmin":false,"isSellerAdmin":false,"isUser":false,"Currency":{"Basic":{"Id":"KRW","Symbol":"원","Position":"after"},"Skin":{"Id":"KRW","Symbol":"원","Position":"after"}},"serviceLimit":{"H_FR":false,"H_AD":false,"H_NFR":true},"OperationType":"light","Protocol":"https","CacheBreaker":"afe0eba294279d50c8408292d8af4a8f517cd1d6"},"Security":{"PreventDrag":true,"PreventContextMenu":true,"MemberLogoutLimit":"30"},"Search":{"AutoComplete":true,"Suggest":false}};
-(function(){ var aliases = {"gl_operation_type":window.Firstmall.Config.Environment.OperationType,"gl_mobile_mode":window.Firstmall.Config.Environment.MobileMode,"gl_set_mode":window.Firstmall.Config.Environment.SetMode,"gl_language":window.Firstmall.Config.Environment.Language,"gl_basic_currency":window.Firstmall.Config.Environment.Currency.Basic.Id,"gl_skin_currency":window.Firstmall.Config.Environment.Currency.Skin.Id,"gl_basic_currency_symbol":window.Firstmall.Config.Environment.Currency.Basic.Symbol,"gl_basic_currency_symbol_position":window.Firstmall.Config.Environment.Currency.Basic.Position,"gl_protocol":window.Firstmall.Config.Environment.Protocol+"://","gl_broadcast":window.Firstmall.Config.Environment.Broadcast}; for(var attr in aliases) { window[attr] = aliases[attr]; }})();</script>
+
 
 
 
@@ -73,24 +71,6 @@ if(!is_singular('product') ){?>
 
 
 
-
-
-<script type="text/javascript" src="<?php echo BOXTHEME_URL;?>/js/jquery.url.js"></script>
-
-
-
-
-<script type="text/javascript">
-    var feeShip = {
-        hcm: 0,
-        hanoi: 50000,
-        danang: 50000,
-        hue: 50000,
-        haiphong: 50000,
-        cantho: 20000
-       
-    }
-</script>
 
 
 

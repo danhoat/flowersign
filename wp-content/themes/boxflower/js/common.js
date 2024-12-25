@@ -7,135 +7,7 @@
 
    window.Firstmall = window.Firstmall || {};
 
-   $(function(){
-   	// danng enable right click
-	   // try {
-		// 	var target = $(window);
-		//    var target_events = [];
-		//    var callback = function(e) {
-		// 	   if(['input', 'textarea', 'select'].indexOf(e.target.tagName.toLowerCase()) === -1 && !e.target.isContentEditable) e.preventDefault();
-		// 	   else e.stopPropagation();
-		//    };
 
-		//    if(Firstmall.Config.Security.PreventDrag) target_events.push('selectstart');
-		// 	 if(Firstmall.Config.Security.PreventContextMenu)
-		// 	 {
-		// 	 	console.log('enable right click');
-		// 		 // target_events.push('contextmenu');
-		// 		 // $('body').css('-webkit-touch-callout','none');
-		// 	 }
-		//    target.on(target_events.join(' '), callback);
-	   // } catch(ex) {
-		//    if(ex instanceof TypeError) 1;/* jQuery 1 related exception($(window).on is not exists) */
-		//    else console.log('An exception occured while set contextmenu prevent event: ', ex);
-	   // }
-   });
-
-   $(function(){
-	   var cartVersion = $('input[name=cart_version]').val(); //18-05-03 카트 스킨 버전 gcns jhs add
-	   /* 스타일적용 */
-	   apply_input_style();
-
-	   // jstree 객체를 사용하는 페이지에서는 jQuery 구버전을 사용하므로 on 함수가 없어 예외 처리
-	   if(typeof $.jstree !== "object") {
-		 //상품디스플레이의 동영상클릭시 -> 동영상자동실행설정되어있어야함
-		 $(document).on('click', ".goodsDisplayVideoWrap", function() {
-			 $(this).find("img").addClass("hide");
-			 $(this).find(".thumbnailvideo").hide();
-			 $(this).find(".mobilethumbnailvideo").hide();
-			 $(this).find("iframe").removeClass("hide");
-			 $(this).find("embed").removeClass("hide");
-
-			 var iframe = $(this).find("iframe");
-			 iframe.attr('src', iframe.attr('data-src'));
-		 });
-
-		 //동영상넣기의 동영상클릭시-> 동영상자동실행설정되어있어야함
-		 $(document).on('click', ".DisplayVideoWrap", function() {
-			 $(this).find("img").addClass("hide");
-			 $(this).find(".thumbnailvideo").hide();
-			 $(this).find(".mobilethumbnailvideo").hide();
-			 $(this).find("iframe").removeClass("hide");
-			 $(this).find("embed").removeClass("hide");
-
-			 var iframe = $(this).find("iframe");
-			 iframe.attr('src', iframe.attr('data-src'));
-		 });
-	   }
-
-	   //18-05-03 gcns jhs add 장바구니 개선
-	   if(cartVersion >= 3){
-		   if (typeof gl_operation_type != 'undefined' && gl_operation_type == 'light') { // 반응형스킨
-			   // 전체 선택
-			   $('.btn_select_all').attr('checked',true);
-			   $("form#cart_form .btn_select_all").change(function() {
-				   if($(this).is(":checked")){
-					   $("form#cart_form input[name='cart_option_seq[]']").each(function(){
-						   $(this).attr("checked",true);
-					   });
-					   cnt = $("form#cart_form input[name='cart_option_seq[]']").length;
-				   }else{
-					   $("form#cart_form input[name='cart_option_seq[]']").each(function(){
-						   $(this).removeAttr("checked");
-					   });
-				   }
-			   });
-			   $("form#cart_form .btn_select_all").change();
-
-			   $('input[name*="cart_option_seq[]"]').live('click',function(){
-				   checkBoxCheck();
-				   setPriceInfoCheck();
-			   });
-		   } else if(gl_set_mode == 'mobile'){ // 전용스킨-모바일
-			   // 전체 선택
-			   $('.btn_select_all').attr('checked',true);
-			   $("form#cart_form .btn_select_all").change(function() {
-				   if($(this).is(":checked")){
-					   $("form#cart_form input[name='cart_option_seq[]']").each(function(){
-							 	/**
-								* 20210408 : kjw
-								* 배송 가능 상품 여부에 따른 테두리 색상 변경로직 추가
-								*/
-								var ship_possible_flag = $("input[name='ship_possible["+$(this).val()+"]']").val();
-						   $(this).attr("checked",true);
-						   $(this).closest("div").addClass("ez-checkbox-on");
-							 	if(ship_possible_flag == "N") {
-									$("#cart_goods_" + $(this).val()).css('outline','2px solid #F15F5F');
-								} else {
-									$("#cart_goods_" + $(this).val()).css('outline','2px solid #769dff');
-								}
-					   });
-					   cnt = $("form#cart_form input[name='cart_option_seq[]']").length;
-				   }else{
-					   $("form#cart_form input[name='cart_option_seq[]']").each(function(){
-						   $(this).removeAttr("checked");
-						   $(this).closest("div").removeClass("ez-checkbox-on");
-					   });
-
-					   $(".cart_goods").css('outline','');
-				   }
-			   });
-			   $("form#cart_form .btn_select_all").change();
-
-			   $('input[name*="cart_option_seq[]"]').live('click',function(){
-				   checkBoxCheck();
-				   setPriceInfoCheck();
-			   });
-		   } else{ // 전용스킨-pc
-			   $('.chk_select_all').attr('checked',true);
-			   var chkSt = $('.chk_select_all').is(":checked");
-			   checked_all_order(chkSt);
-			   //setPriceInfo();
-
-			   $('input[name*="cart_option_seq[]"]').live('click',function(){
-				   checkBoxCheck();
-				   setPriceInfoCheck();
-			   });
-		   }
-	   }
-	   //18-05-03 gcns jhs add 장바구니 개선
-
-   });
 
    $(window).load(function() {
 	   /* 스타일적용 */
@@ -256,11 +128,11 @@
 	   }
 
 	   // jquery 버전이 1.7 이하 일경우 관리자에서 사용중이므로 https 강화를 제외한다.
-	   if($().jquery >= "1.7"){
-		   $.loadScript("/app/javascript/plugin/jcryption/jquery.jcryption.3.1.0_custom.js", function(){
-			   initJcryption();
-		   });
-	   }
+	   // if($().jquery >= "1.7"){
+		//    $.loadScript("https://demo.dichvu139.com/wp-content/themes/boxflower/js/jquery.jcryption.3.1.0_custom.js", function(){
+		// 	   initJcryption();
+		//    });
+	   // }
 	   // ajax 호출 후 새로 생성된 form에도 적용
 	   $(document).ajaxComplete(function() {
 		   // 모든 폼 엘리먼트에 이벤트를 바인딩 한다

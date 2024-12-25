@@ -397,62 +397,7 @@ $(function(){
 		});
 	});
 
-	// 자동 로그인 설정 시간대로 로그아웃
-	if (Firstmall.Config.Security.MemberLogoutLimit !== false && Firstmall.Config.Environment.isUser === true) {
-		var initDate = new Date();
-		var resetTime = new Array();
-		var timerchecker = null;
-	
-		resetTime.minutes = Firstmall.Config.Security.MemberLogoutLimit;	// 관리자 설정 시간
-		resetTime.seconds = resetTime.minutes * 60;							// ex) 60분 > 3600초
-		initTimer=function(){
-			//이벤트 발생 체크
-			if(window.event){
-				initDate = new Date();
-				clearTimeout(timerchecker);
-			}
-	
-			remainTime = new Date() - initDate;				// 남은 시간 (현재 시간 - 초기 시간)
-			remainTime = parseInt(remainTime/1000);			// seconds
-	
-			// 움직임 없는 시간이 resetTime.seconds 보다 큰 경우 로그아웃
-			if( remainTime < resetTime.seconds) {
-				timerchecker = setTimeout("initTimer()", 5000);
-			} else {
-				clearTimeout(timerchecker);
-				actionFrame.location.href = "/login_process/logout"; // 로그아웃 처리
-			}
-		}
-		onload = initTimer;///현재 페이지 대기시간
-		document.onclick = initTimer; /// 현재 페이지의 사용자 마우스 클릭이벤트 캡춰
-		document.onkeydown = initTimer;/// 현재 페이지의 키보트 입력이벤트 캡춰
-	}
 
-	try{
-		if((typeof gl_mobile_mode != 'undefined' && gl_mobile_mode > 0) || (typeof gl_operation_type != 'undefined' && gl_operation_type == 'light'))
-		$(".designDisplay, .designCategoryRecommendDisplay, .designBrandRecommendDisplay, .designLocationRecommendDisplay, .designGoodsRelationDisplay, .designGoodsBigdataDisplay").each(function(){
-			if($(this).attr("displayStyle")=="newswipe"){
-				setSlideSwipe(this, '.displaySwipeTabContentsContainerWrap','chgSlideNewSwipe');
-			}else{
-				setSlideSwipe(this, '.displayTabContentsContainerWrap','chgSlideSwipe');
-			}
-		});
-	}catch(e){};
-
-	/* 비교통화 마우스 오버/아웃 */
-	$(".price_cell").on("mouseover",function(){
-		$(".currency_list",this).show();
-	});
-
-	$(".price_cell").on("mouseout",function(){
-		$(".currency_list",this).hide();
-	});
-
-	// 방송 스케쥴 on
-	$(".calendar").on("click", function() {
-		dispalyBroadcastCalendar(this);
-	});
-	$(".calendar_list").find("li:eq(3) > a").trigger('click');
 });
 
 function dispalyBroadcastCalendar(el) {

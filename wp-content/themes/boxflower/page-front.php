@@ -63,7 +63,7 @@ get_header();
         </div>
 
         <!-- END list categories !-->
-        <?php $heading = 'MY Hear All best wish to you';?>
+        <?php $heading = 'MY Hear All Best wish to you';?>
 
         
         <?php box_block_best_selling();?>
