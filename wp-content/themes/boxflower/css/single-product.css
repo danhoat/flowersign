@@ -516,10 +516,12 @@ span.rate-score{
 .woocommerce div.product .woocommerce-tabs ul.tabs::before {
     border-bottom: 2px solid #cfc8d8;
 }
+@media only screen and (min-width: 1000px){
 
-p.comment-form-author , p.comment-form-email{
-    width: 18%;
-    display: inline-block;
+    p.comment-form-author , p.comment-form-email{
+        width: 18%;
+        display: inline-block;
+    }
 }
 p.comment-form-author label, p.comment-form-email label{
     display: block;

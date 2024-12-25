@@ -3095,7 +3095,7 @@ td>.goodsviewbox:first-child { border:none; }
 .ul_delivery .nation_section { color:#999; }
 
 .ship_message { margin-top:10px; position:relative; z-index:10; }
-.ship_message .ship_message_txt { box-sizing:border-box; width:100%; height:34px; border:1px solid #ccc; background:#fff url('../images/common/new_arrow.png') 100% 50% no-repeat; }
+
 
 .ship_message .add_message { display:none; position:absolute; top:33px; left:0; box-sizing:border-box; max-height:200px; overflow-y:auto; border:1px solid #999; background:#fff; width:100%; background:#f8f8f8; }
 .ship_message .add_message > li { border-top:1px dashed #ddd; height:30px; line-height:30px; padding-left:5px; color:#666; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; cursor:pointer; }
@@ -3132,33 +3132,6 @@ input.od_m_box { padding-left:5px; padding-right:5px; text-align:right; color:#c
 .payment_method_select > li > div.active > label { background-color:#434343; }
 .payment_method_select > li > div.active + p {font-weight:500; color:#333;}
 
-.payment_method_select > li > div.kakaopay2 > label { background-image:url('../images/common/pay_kakaopay.png'); }
-.payment_method_select > li > div.card > label { background-image:url('../images/common/pay_card.png'); }
-.payment_method_select > li > div.account > label { background-image:url('../images/common/pay_account.png'); }
-.payment_method_select > li > div.escrow_account > label { background-image:url('../images/common/pay_escrow_account.png'); }
-.payment_method_select > li > div.virtual > label { background-image:url('../images/common/pay_virtual.png'); }
-.payment_method_select > li > div.escrow_virtual > label { background-image:url('../images/common/pay_escrow_virtual.png'); }
-.payment_method_select > li > div.cellphonepay > label { background-image:url('../images/common/pay_cellphonepay.png'); }
-.payment_method_select > li > div.bank2 > label { background-image:url('../images/common/pay_bank.png'); }
-.payment_method_select > li > div.paypal > label { background-image:url('../images/common/pay_paypal.png'); }
-.payment_method_select > li > div.eximbay > label { background-image:url('../images/common/pay_eximbay.png'); }
-.payment_method_select > li > div.npay > label { background-image:url('../images/common/pay_npay.png'); }
-.payment_method_select > li > div.payco > label { background-image:url('../images/common/pay_payco.png'); }
-.payment_method_select > li > div.naverpayment > label { background-image:url('../images/common/pay_naverpayment.png'); }
-
-.payment_method_select > li > div.kakaopay2.active > label { background-image:url('../images/common/pay_kakaopay_on.png'); }
-.payment_method_select > li > div.card.active > label { background-image:url('../images/common/pay_card_on.png'); }
-.payment_method_select > li > div.account.active > label { background-image:url('../images/common/pay_account_on.png'); }
-.payment_method_select > li > div.escrow_account.active > label { background-image:url('../images/common/pay_escrow_account_on.png'); }
-.payment_method_select > li > div.virtual.active > label { background-image:url('../images/common/pay_virtual_on.png'); }
-.payment_method_select > li > div.escrow_virtual.active > label { background-image:url('../images/common/pay_escrow_virtual_on.png'); }
-.payment_method_select > li > div.cellphonepay.active > label { background-image:url('../images/common/pay_cellphonepay_on.png'); }
-.payment_method_select > li > div.bank2.active > label { background-image:url('../images/common/pay_bank_on.png'); }
-.payment_method_select > li > div.paypal.active > label { background-image:url('../images/common/pay_paypal_on.png'); }
-.payment_method_select > li > div.eximbay.active > label { background-image:url('../images/common/pay_eximbay_on.png'); }
-.payment_method_select > li > div.npay.active > label { background-image:url('../images/common/pay_npay_on.png'); }
-.payment_method_select > li > div.payco.active > label { background-image:url('../images/common/pay_payco_on.png'); }
-.payment_method_select > li > div.naverpayment.active > label { background-image:url('../images/common/pay_naverpayment_on.png'); }
 
 .pilsu_agree_all2 { display:inline-block; padding:5px 0; font-size:16px; font-weight:500; color:#333; }
 .pilsu_agree_all2 input[type='checkbox'] { width:24px; height:24px; }
@@ -3170,7 +3143,6 @@ input.od_m_box { padding-left:5px; padding-right:5px; text-align:right; color:#c
 .agree_list2 .desc { font-size:13px; }
 
 /* 티켓 사용 내역 */
-div.coupon_info { border:2px solid #444; padding-left:20px; padding:15px 40px 15px 15px; background-color:#fcfede; background-image:url('../images/common/coupon_rbg.png'); background-repeat:no-repeat; background-size:34px 120px; background-position: 100%; }
 div.coupon_info div.coupon_name { font-size:26px; font-weight:500; color:#333; letter-spacing:-1px; }
 div.coupon_info div.coupon_option { font-size:13px; padding-top:5px; color:#999; }
 div.coupon_info div.coupon_serial { font-size:13px; font-weight:500; padding-top:5px; }
@@ -3228,7 +3200,6 @@ iframe#actionFrame { width:0; height:0; position:absolute; left:0; bottom:0; vis
 .layout_footer .copyright { padding-top:5px; color:#999; }
 .layout_footer .escrow { position:absolute; right:50px; top:0; padding-bottom: 10px }
 .layout_footer .escrow a img {max-width: none !important;}
-.layout_footer .escrow_fix { position:absolute; right:50px; top:0; width:60px; height:60px; background:url('/data/icon/escrow_mark/kicc.png') 50% 50% no-repeat; background-size:cover; }
 
 .layout_footer .footer_a { border-top:1px #ddd solid; padding:0 0 40px; text-align:center; }
 .layout_footer .footer_b { border-top:1px #373737 solid; }
@@ -3270,28 +3241,7 @@ iframe#actionFrame { width:0; height:0; position:absolute; left:0; bottom:0; vis
 
 
 #floating_over .ico_floating_top { position:absolute; bottom:10px; right:10px; box-sizing:border-box; width:36px; height:36px; border-radius:4px; padding-top:18px; text-align:center; font-size:11px; color:#333; background:#f4f4f4 url(../images/design/btn_arw_up_w2.png) 50% 2px no-repeat; background-size:20px; opacity:0.7; }
-#floating_over .ico_floating_recently {position:absolute; bottom:52px; right:10px; font-size:11px; line-height:20px; color:#666; text-align:center; }
-#floating_over .ico_floating_recently img { width:34px; height:34px; border:1px solid #ccc; border-radius:2px; }
-#floating_over .ico_floating_zoom {position:absolute; bottom:52px; right:10px; background:url('../images/design/btn_floating_zoom.png'); width:37px; height:37px; }
-
-/* 최근 본 상품(하단 레이어)*/
-#recently_popup {display:none; position:absolute; bottom:85px; right:0; z-index:999;}
-.recently_popup {width:300px; margin:10px; position:relative; background:#fff; z-index:1001;}
-.recently_popup .btn_close {position:absolute; top:0; right:0; background:url('../images/design/btn_recently_close.png') no-repeat center; background-size:10px 10px; width:35px; height:33px; text-indent:-9999px;}
-.recently_popup h1 { background:#616775; height:35px; line-height:35px; text-indent:10px; font-size:14px; color:#fff;}
-.recently_popup .recently_thumb {position:relative; margin:5px; padding-bottom:0; overflow:hidden; text-align:center;}
-.recently_popup .recently_thumb .thumb {position:relative; text-align:center;}
-.recently_popup .recently_thumb .thumb:after {display:block; content:""; clear:both;}
-.recently_popup .recently_thumb .thumb h2 {background:#fff; height:95px; line-height:90px; font-size:13px; font-weight:normal; color:#666; z-index:99;}
-.recently_popup .recently_thumb .thumb li {position:relative; float:left; width:25%;}
-.recently_popup .recently_thumb .thumb li:first-child {margin-left:0;}
-.recently_popup .recently_thumb .thumb li a {display:inline-block; margin:5px;}
-.recently_popup .recently_thumb .thumb li img {border:1px solid #eee; width:64px; height:64px;}
-.recently_popup .recently_thumb .thumb li .btn_delete {position:absolute; top:-5px; right:-5px; background:url('../images/design/ico_recently_delete.png') no-repeat; width:15px; height:15px; border-radius:2px; }
-.recently_popup .recently_page { margin:0 auto; padding:0 0 10px; text-align:center;}
-.recently_popup .recently_page .btn_page {margin:0 3px; display:inline-block; width:14px; height:8px; background:#aaa; border-radius:4px; }
-.recently_popup .recently_page .btn_page.on {display:inline-block; width:40px; background:#616775; }
-.recently_bg {display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:#000; opacity:0.5; filter:alpha(opacity=50); z-index:1000;}
+#
 
 @media only screen and (max-width:1023px) {
 	.layout_footer .menu1>li,
