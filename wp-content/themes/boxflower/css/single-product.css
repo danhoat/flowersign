@@ -578,3 +578,25 @@ p.comment-form-author input, p.comment-form-email input{
 .gnb_bnr_slide_02:hover .slick-slider .slick-arrow{
 
 }
+.ui-icon-circle-triangle-e{
+       
+}
+.ui-datepicker-next .ui-icon,
+.ui-datepicker-prev  .ui-icon{
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+     background-color: #fff;
+}
+
+.ui-datepicker-next .ui-icon{
+        --fa: "\f105";
+    font-family: "Font Awesome 6 Free";
+    background-image: url(../images/arrow-right.png) !important;
+}
+.ui-datepicker-prev  .ui-icon{
+        --fa: "\f105";
+    font-family: "Font Awesome 6 Free";
+    background-image: url(../images/arrow-left.png) !important;
+
+}
