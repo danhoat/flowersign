@@ -3166,9 +3166,7 @@ div.coupon_detail { padding:10px 0; }
 
 #layout_body,
 .resp_wrap { max-width:1260px; margin:0 auto; padding-left:10px; padding-right:10px; padding-top:0px }
-#layout_body{
-	padding-top: 25px;
-}
+
 .resp_wrap:after {display:block; content:""; clear:both;}
 .wrap_aside { padding:0 10px; }
 .wrap_aside.v2 { padding-top:30px; }

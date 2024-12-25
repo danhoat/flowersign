@@ -9,7 +9,7 @@
     .woocommerce ul.products{
         display: grid;
         
-        gap: 32px 15px;
+        gap: 15px 15px;
     }
     .woocommerce ul.products.columns-5{
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -77,8 +77,17 @@
     
 }
 
+
+
 .woocommerce ul.products li.product .price del{
     margin-right: 10px;
+}
+.woocommerce ul.products li.product .price del{
+    float: right;
+    margin-left:9px;
+}
+.woocommerce ul.products li.product .price ins{
+    float: left;
 }
 .woocommerce-products-header{
     align-items: center;
@@ -89,7 +98,7 @@
     font-size: .975rem;
     line-height: 1.25rem;
     font-family: "Nunito", serif;
-    color: #181c18;
+    color: #333333c2;
  }
  .woocommerce ul.products li.product .price del{
     color: rgb(156 163 175);
@@ -156,4 +165,19 @@ color: rgb(153 153 153);
 }
 .woocommerce nav.woocommerce-pagination ul li a:focus, .woocommerce nav.woocommerce-pagination ul li a:hover, .woocommerce nav.woocommerce-pagination ul li span.current{
     color: rgb(158 166 212);
+}
+
+.woocommerce ul.products li.product .onsale{
+    background-color: #70A100;
+    border-radius: 0;
+    color: rgb(255 255 255);
+    font-size: .75rem;
+    line-height: 1rem;
+    justify-content: center;
+    display: grid;
+    align-items: center;
+    padding: 0 7px;
+    font-weight: 400;
+    margin: 0;
+
 }

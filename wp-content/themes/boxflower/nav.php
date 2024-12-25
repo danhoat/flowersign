@@ -37,173 +37,55 @@
 </div>
 
 <div class="aside_navigation_wrap">
-    <ul class="tab">
-        <!-- 꽃청 수정 START 윤상희 2023.04.07 - 네비게이션 수정 -->
-        <li data-menuname="categorySideMenu" class="current"><span designelement="text" textindex="13" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvX21vZHVsZXMvY29tbW9uL2xheW91dF9zaWRlLmh0bWw=">카테고리</span></li>
-        <!-- 꽃청 수정 END -->
-        <li data-menuname="brandSideMenu"><span designelement="text" textindex="14" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvX21vZHVsZXMvY29tbW9uL2xheW91dF9zaWRlLmh0bWw=">라인별</span></li>
-        <li data-menuname="locationSideMenu"><span designelement="text" textindex="15" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvX21vZHVsZXMvY29tbW9uL2xheW91dF9zaWRlLmh0bWw=">컬렉션</span></li>
-        <li data-menuname="boardSideMenu"><span designelement="text" textindex="16" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvX21vZHVsZXMvY29tbW9uL2xheW91dF9zaWRlLmh0bWw=">커뮤니티</span></li>
-    </ul>
+
 
     <!-- ++++++++ 카테고리 ++++++++ -->
     <div class="designElement" designelement="category">
         <ul id="categorySideMenu" class="menu">
             
-            <!-- 꽃청 수정 START 윤상희 2023.04.07 - 네비게이션 수정 -->
-            <li class="mitem category mitem_category mitemicon3" style="background:inherit !important; display:none;"> 
-                <!--<a class="mitem_title"></a>-->
-                <a class="mitem_goodsview" href="/goods/catalog?code=0016">택배특가</a>
-            </li>
+
             <li class="mitem_subcontents" style="display:block;margin-top:1px;">
                 <ul class="submenu">
                     <li class="submitem category" style="border-bottom:solid 1px #eee;">
                         <!--a class="submitem_title"></a-->
-                        <a class="mitem_goodsview" href="/goods/catalog_list?code=0006" style="margin:0; width:100%; padding:13px 5px 11px 15px; line-height: 1.3; height:40px;">택배특가</a>
+                        <a class="mitem_goodsview" href="/goods/catalog_list?code=0006" style="margin:0; width:100%; padding:13px 5px 11px 15px; line-height: 1.3; height:40px;">Shop</a>
                     </li>
                 </ul>
             </li>
             <li class="mitem category mitem_category mitemicon3" style="background:inherit !important; display:none;"> 
                 <!--<a class="mitem_title"></a>-->
-                <a class="mitem_goodsview" href="/goods/catalog?code=0015">꽃 정기구독</a>
+                <a class="mitem_goodsview" href="/goods/catalog?code=0015">Bó Hoa Đẹp </a>
             </li>
+
             <li class="mitem_subcontents" style="display:block;margin-top:1px;">
                 <ul class="submenu">
                     <li class="submitem category" style="border-bottom:solid 1px #eee;">
                         <!--a class="submitem_title"></a-->
-                        <a class="mitem_goodsview" href="/subscribe/intro" style="margin:0; width:100%; padding:13px 5px 11px 15px; line-height: 1.3; height:40px;">꽃 정기구독</a>
+                        <a class="mitem_goodsview" href="/subscribe/intro" style="margin:0; width:100%; padding:13px 5px 11px 15px; line-height: 1.3; height:40px;">Bó Hoa Đẹp</a>
                     </li>
                 </ul>
             </li>
-            <li class="mitem category mitem_category mitemicon3" style="background:inherit !important; display:none;"> 
-                <!--<a class="mitem_title"></a>-->
-                <a class="mitem_goodsview" href="/goods/catalog?code=0013">DIY꽃시장</a>
-            </li>
-            <li class="mitem_subcontents" style="display:block;margin-top:1px;">
+             <li class="mitem_subcontents" style="display:block;margin-top:1px;">
                 <ul class="submenu">
                     <li class="submitem category" style="border-bottom:solid 1px #eee;">
                         <!--a class="submitem_title"></a-->
-                        <a class="mitem_goodsview" href="/goods/catalog_list?code=0007" style="margin:0; width:100%; padding:13px 5px 11px 15px; line-height: 1.3; height:40px;">DIY꽃시장</a>
+                        <a class="mitem_goodsview" href="/subscribe/intro" style="margin:0; width:100%; padding:13px 5px 11px 15px; line-height: 1.3; height:40px;">Bó Hoa Đẹp</a>
                     </li>
                 </ul>
             </li>
-            <li class="mitem category mitem_category mitemicon3" style="background:inherit !important; display:none;"> 
-                <!--<a class="mitem_title"></a>-->
-                <a class="mitem_goodsview" href="/goods/catalog?code=0001">꽃다발</a>
-            </li>
-            <li class="mitem_subcontents" style="display:block;margin-top:1px;">
+             <li class="mitem_subcontents" style="display:block;margin-top:1px;">
                 <ul class="submenu">
                     <li class="submitem category" style="border-bottom:solid 1px #eee;">
                         <!--a class="submitem_title"></a-->
-                        <a class="mitem_goodsview" href="/goods/catalog?code=0001" style="margin:0; width:100%; padding:13px 5px 11px 15px; line-height: 1.3; height:40px;">꽃다발</a>
+                        <a class="mitem_goodsview" href="/subscribe/intro" style="margin:0; width:100%; padding:13px 5px 11px 15px; line-height: 1.3; height:40px;">Bó Hoa Đẹp</a>
                     </li>
                 </ul>
             </li>
-            <li class="mitem category mitem_category mitemicon3" style="background:inherit !important; display:none;"> 
-                <!--<a class="mitem_title"></a>-->
-                <a class="mitem_goodsview" href="/goods/catalog?code=0002">꽃바구니</a>
-            </li>
-            <li class="mitem_subcontents" style="display:block;margin-top:1px;">
+             <li class="mitem_subcontents" style="display:block;margin-top:1px;">
                 <ul class="submenu">
                     <li class="submitem category" style="border-bottom:solid 1px #eee;">
                         <!--a class="submitem_title"></a-->
-                        <a class="mitem_goodsview" href="/goods/catalog?code=0002" style="margin:0; width:100%; padding:13px 5px 11px 15px; line-height: 1.3; height:40px;">꽃바구니</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="mitem category mitem_category mitemicon3" style="background:inherit !important; display:none;"> 
-                <!--<a class="mitem_title"></a>-->
-                <a class="mitem_goodsview" href="/goods/catalog?code=0003">꽃상자</a>
-            </li>
-            <li class="mitem_subcontents" style="display:block;margin-top:1px;">
-                <ul class="submenu">
-                    <li class="submitem category" style="border-bottom:solid 1px #eee;">
-                        <!--a class="submitem_title"></a-->
-                        <a class="mitem_goodsview" href="/goods/catalog?code=0003" style="margin:0; width:100%; padding:13px 5px 11px 15px; line-height: 1.3; height:40px;">꽃상자</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="mitem category mitem_category mitemicon3" style="background:inherit !important; display:none;"> 
-                <!--<a class="mitem_title"></a>-->
-                <a class="mitem_goodsview" href="/goods/catalog?code=0006">관엽식물</a>
-            </li>
-            <li class="mitem_subcontents" style="display:block;margin-top:1px;">
-                <ul class="submenu">
-                    <li class="submitem category" style="border-bottom:solid 1px #eee;">
-                        <!--a class="submitem_title"></a-->
-                        <a class="mitem_goodsview" href="/goods/catalog?code=0006&amp;left_navi=y" style="margin:0; width:100%; padding:13px 5px 11px 15px; line-height: 1.3; height:40px;">관엽식물</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="mitem category mitem_category mitemicon3" style="background:inherit !important; display:none;"> 
-                <!--<a class="mitem_title"></a>-->
-                <a class="mitem_goodsview" href="/goods/catalog?code=0004">동양란</a>
-            </li>
-            <li class="mitem_subcontents" style="display:block;margin-top:1px;">
-                <ul class="submenu">
-                    <li class="submitem category" style="border-bottom:solid 1px #eee;">
-                        <!--a class="submitem_title"></a-->
-                        <a class="mitem_goodsview" href="/goods/catalog?code=0004" style="margin:0; width:100%; padding:13px 5px 11px 15px; line-height: 1.3; height:40px;">동양란</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="mitem category mitem_category mitemicon3" style="background:inherit !important; display:none;"> 
-                <!--<a class="mitem_title"></a>-->
-                <a class="mitem_goodsview" href="/goods/catalog?code=0005">서양란</a>
-            </li>
-            <li class="mitem_subcontents" style="display:block;margin-top:1px;">
-                <ul class="submenu">
-                    <li class="submitem category" style="border-bottom:solid 1px #eee;">
-                        <!--a class="submitem_title"></a-->
-                        <a class="mitem_goodsview" href="/goods/catalog?code=0005" style="margin:0; width:100%; padding:13px 5px 11px 15px; line-height: 1.3; height:40px;">서양란</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="mitem category mitem_category mitemicon3" style="background:inherit !important; display:none;"> 
-                <!--<a class="mitem_title"></a>-->
-                <a class="mitem_goodsview" href="/goods/catalog?code=0007">축하화환</a>
-            </li>
-            <li class="mitem_subcontents" style="display:block;margin-top:1px;">
-                <ul class="submenu">
-                    <li class="submitem category" style="border-bottom:solid 1px #eee;">
-                        <!--a class="submitem_title"></a-->
-                        <a class="mitem_goodsview" href="/goods/brand?code=00160007" style="margin:0; width:100%; padding:13px 5px 11px 15px; line-height: 1.3; height:40px;">축하화환</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="mitem category mitem_category mitemicon3" style="background:inherit !important; display:none;"> 
-                <!--<a class="mitem_title"></a>-->
-                <a class="mitem_goodsview" href="/goods/catalog?code=0008">근조화환</a>
-            </li>
-            <li class="mitem_subcontents" style="display:block;margin-top:1px;">
-                <ul class="submenu">
-                    <li class="submitem category" style="border-bottom:solid 1px #eee;">
-                        <!--a class="submitem_title"></a-->
-                        <a class="mitem_goodsview" href="/goods/brand?code=00160008" style="margin:0; width:100%; padding:13px 5px 11px 15px; line-height: 1.3; height:40px;">근조화환</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="mitem category mitem_category mitemicon3" style="background:inherit !important; display:none;"> 
-                <!--<a class="mitem_title"></a>-->
-                <a class="mitem_goodsview" href="/goods/catalog?code=0009">분재</a>
-            </li>
-            <li class="mitem_subcontents" style="display:block;margin-top:1px;">
-                <ul class="submenu">
-                    <li class="submitem category" style="border-bottom:solid 1px #eee;">
-                        <!--a class="submitem_title"></a-->
-                        <a class="mitem_goodsview" href="/goods/catalog?code=0009&amp;left_navi=y" style="margin:0; width:100%; padding:13px 5px 11px 15px; line-height: 1.3; height:40px;">분재</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="mitem category mitem_category mitemicon3" style="background:inherit !important; display:none;"> 
-                <!--<a class="mitem_title"></a>-->
-                <a class="mitem_goodsview" href="/goods/catalog?code=0010">기타</a>
-            </li>
-            <li class="mitem_subcontents" style="display:block;margin-top:1px;">
-                <ul class="submenu">
-                    <li class="submitem category" style="border-bottom:solid 1px #eee;">
-                        <!--a class="submitem_title"></a-->
-                        <a class="mitem_goodsview" href="/goods/catalog?code=0010&amp;left_navi=y" style="margin:0; width:100%; padding:13px 5px 11px 15px; line-height: 1.3; height:40px;">기타</a>
+                        <a class="mitem_goodsview" href="/subscribe/intro" style="margin:0; width:100%; padding:13px 5px 11px 15px; line-height: 1.3; height:40px;">Bó Hoa Đẹp</a>
                     </li>
                 </ul>
             </li>

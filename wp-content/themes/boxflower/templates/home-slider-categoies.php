@@ -132,18 +132,7 @@ if( window.SwingJavascriptInterface != undefined )
     </div>
 </div>
 
-<script type="text/javascript">
-    var splide = new Splide('.splide', {
-        width: '1010px',
-        padding: '45px',
-        gap: '10px',
-        type: 'loop',
-        autoplay: 'true',
-        interval: '5000',
-    });
 
-    splide.mount();
-</script>
 <!-- //비주얼배너 -->
 
 

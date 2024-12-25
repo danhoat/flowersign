@@ -79,7 +79,7 @@ function wpdocs_theme_name_scripts() {
 
     wp_enqueue_style( 'main-style', get_stylesheet_uri(), array(), rand() );
 
-    //wp_enqueue_script( 'box-js', BOXTHEME_URL. '/js/box.js', array('jquery'), rand(), true );
+    wp_enqueue_script( 'box-js', BOXTHEME_URL. '/js/box.js', array('jquery'), rand(), true );
 
     if( is_singular('product') ){
         wp_enqueue_style( 'single-product', BOXTHEME_URL.'/css/single-product.css',array(), rand() );

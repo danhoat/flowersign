@@ -25,7 +25,7 @@ function testimonial_item1(){?>
         <div class="box-image">
             <img src = "<?php echo BOXTHEME_URL;?>/images/home/review1.jpg" >
         </div>
-        <p class="mkdf-testimonial-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget.</p>
+        <p class="mkdf-testimonial-text">Mình có đặt 1 bó hoa tốt nghiệp của shop, hoa tươi siêu đẹp, shop chu đáo nhiệt tình, hỗ trợ hết mình. Sẽ ủng hộ lại khi có nhu cầu.</p>
         <span class="mkdf-testimonial-author">
             <span class="mkdf-testimonials-author-name">Jasmine White</span>
                 <span class="mkdf-testimonials-author-job">Florist</span>
@@ -42,7 +42,7 @@ function testimonial_item2(){?>
         <div class="box-image">
             <img src = "<?php echo BOXTHEME_URL;?>/images/home/review2.jpg" >
         </div>
-        <p class="mkdf-testimonial-text">A Very special thanks. Flawless bouquet with very beautiful flowers with nice arrangement and wrapping i love it..</p>
+        <p class="mkdf-testimonial-text">Hoa xinh lam nhé, mình mua tặng sếp, cũng dc hỗ trợ nhanh lẹ lắm. Sắp tới sẽ mua tiếp.</p>
         <span class="mkdf-testimonial-author">
             <span class="mkdf-testimonials-author-name">Flip White</span>
                 <span class="mkdf-testimonials-author-job">Florist</span>
@@ -61,7 +61,7 @@ function testimonial_item3(){?>
             <img src = "<?php echo BOXTHEME_URL;?>/images/home/review3.jpg" >
         </div>
         
-        <p class="mkdf-testimonial-text">A Very special thanks. Flawless bouquet with very beautiful flowers with nice arrangement and wrapping i love it..</p>
+        <p class="mkdf-testimonial-text">Shop hỗ trợ rất nhiệt tình, tư vấn chọn hoa mình thích và giá khá hợp lý so với khu vực trung tâm. Sau này cần đặt hoa online tphcm mình sẽ quay lại đây.</p>
         <span class="mkdf-testimonial-author">
             <span class="mkdf-testimonials-author-name">Jasmine Green</span>
             <span class="mkdf-testimonials-author-job">Florist</span>

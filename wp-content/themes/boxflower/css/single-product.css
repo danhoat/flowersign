@@ -458,6 +458,13 @@ span.rate-score{
     .slick-list{
         max-height: 450px;
     }
+    .woocommerce div.product form.cart{
+        overflow: hidden;
+    }
+    .woocommerce div.product form.cart .button{
+        padding: 0;
+    }
+    
 }
 
 

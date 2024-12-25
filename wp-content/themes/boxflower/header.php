@@ -116,9 +116,9 @@ var kid_agree = "";
 
         <div class="bn_top bn_top_div">
             <a href="javascript:void(0);" designelement="text" textindex="1">
-                <p onclick="location.href='/page/join_event'">
+                <p>
                     <!-- 지금 회원가입하면 할인/적립/페이백 혜택! -->
-                    회원가입시 2,000원 바로지급!
+                    Giảm 30 nghìn cho khách hàng mới 
                     <span></span>
                     <button onclick="event.stopPropagation(); $('.bn_top_div').slideUp(); $.cookie('bn_top_cookie','1',{expire: '1',path: '/'});">닫기</button>
                 </p>

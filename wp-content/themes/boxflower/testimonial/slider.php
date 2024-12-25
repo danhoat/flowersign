@@ -38,9 +38,7 @@
                   <!-- scrollbar -->
             <div class="display-scrollbar swiper-scrollbardesignDisplay_670aa31da48d7"></div>
         </div>
-               <!-- left, right button -->
-              <!-- <div class="swiper-button-next"></div> 
-                <div class="swiper-button-prev"></div> !-->
+
               <?php btn_next_testimonial();?>
               <?php btn_pre_testimonial();?>
   </div>

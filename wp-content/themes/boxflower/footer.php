@@ -87,7 +87,7 @@ var hpt_info = {'_account':'UHPT-20592','_server':'a24'};
                                 <h4 class="title">
                                     Thông Tin Công Ty
                                 </h4>
-                                <span> 꽃집청년들 | 오전 8시 ~ 오후 8시</span>
+                                <span> Florist Boys | 8AM-8PM</span>
                             </a>
                             <!-- <span designElement="text">@꽃집청년들 | 오전 8시 ~ 오후 10시</span> -->
                         </li>
@@ -153,19 +153,7 @@ var hpt_info = {'_account':'UHPT-20592','_server':'a24'};
                                 <img src="<?php echo BOXTHEME_URL;?>/images/icon_x.jpg" alt="블로그">
                             </a>
                         </li>
-                        
-                         <li class="hide">
-                            <a href="https://blog.naver.com/ripl10" target="_blank">
-                                <img src="https://f-mans.com/data/images/icon/footer/icon_blog.png" alt="블로그">
-                            </a>
-                        </li>
-
-
-                          <li class="hide">
-                            <a href="https://story.kakao.com/07078067050" target="_blank">
-                                <img src="https://f-mans.com/data/images/icon/footer/icon_kakao.png" alt="카카오톡">
-                            </a>
-                        </li>
+                      
                     </ul>
                     <h4 class="title payments "><span designelement="text" textindex="10" >Phương thức thanh toán</span></h4>
 
@@ -186,49 +174,33 @@ var hpt_info = {'_account':'UHPT-20592','_server':'a24'};
  
                 <li><a href="/gioi-thieu/" >Về chúng tôi</a></li>
                 <i></i>
-                <li><a href="/partner/" >Hợp Tác</a></li>
+                <li><a href="/partner/" >Hướng dẫn mua hàng</a></li>
                 <i></i>
-                <li><a href="/agreement/"> Điều Khoản</a></li>
+                <li><a href="/agreement/">Hướng dẫn than toáng</a></li>
                 <i></i>
-                <li><a href="#"> Chính sách bảo mật</a></li>
+                <li><a href="#">Chính sách giao hàng</a></li>
+                <i></i>
+                <li><a href="#">Chính sách đổi trả</a></li>
 
-               
                
             </ul>
             
-           <ul class="menu3">
-                <li>
-                    <span class=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cheongnyeondeul Co., Ltd. </font></font></span>
-                    <span designelement="text" textindex="16" >
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">CEO: </font></font><em class=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Choi Go-bong</font></font></em></span>
-                    <span designelement="text" textindex="17">
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;"> Business registration number: </font></font>
-                            <em class=""><a href="#" ><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">105-88-00491</font></font></a></em></span>
-                    <span designelement="text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Mail order sales report number: </font></font><em class=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2019-Seoul Geumcheon-0909</font></font></em></span>
-                </li>
-                <li>
-                    <span designelement="text" textindex="19" ><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tel: </font></font><a href="tel:1800-7879" class=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1800-7879</font></font></a></span>
-                    <span designelement="text" textindex="20" ><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Fax: </font></font><em class=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">02-6442-0106</font></font></em></span>
-                    <span designelement="text" textindex="21" ><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Email: </font></font><a class="" href="mailto:admin@flowersignt.com"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">admin@mencoz.com</font></font></a></span>
-                    <span designelement="text" textindex="22" ><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Partnership and Proposal: </font></font>
-                        <a class="" href="/page/sub/partner"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">partners@mencoz.com</font></font></a></span>
-                </li>
-                <li>
-                    <span designelement="text" textindex="23" ><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Address: </font></font><em class=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">301, 302, Ace Gasan Tower, 121 Digital-ro, Geumcheon-gu, Seoul</font></font></em></span>
-                </li>
-                <li>
-                    <p class="copyright" designelement="text" textindex="24" ><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">© Florist Youth All rights reserved.</font></font></p>
-                </li>
-            </ul>
+           <p class="menu3">
+                 FlowerSight C0.Ld| CEO: Trương Đăng Quang | Website đã đăng ký bộ công thương     | Mail thư mới: … 
+            </p>
 
 
         </div>
     </div>
 </div>
 
-<!-- 하단영역 : 끝 -->
+
+<a href="tel:0934072575" data-wpel-link="internal" class="btnhotline">
+    <div class="hotline bg-green">
+        <span class="before-hotline">Hotline:</span>
+        <span class="hotline-number">093 407 2575</span>
+    </div>
+</a>
 
 <!-- 플로팅 - BACK/TOP(대쉬보드) -->
 <div id="floating_over">
@@ -271,10 +243,6 @@ $(function() {
 
 
 <!-- ================= #HTML_FOOTER :: START. 파일위치 : _modules/common/html_footer.html ================= -->
-
-
-
-
 
 <script>$('#topSearchForm').submit(function() { var search_string = $('#searchVer2InputBox').val(); fbq('track', 'Search', {     search_string: search_string });});</script>
 

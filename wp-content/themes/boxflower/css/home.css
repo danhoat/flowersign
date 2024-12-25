@@ -2,8 +2,7 @@
     font-size: 17px;
     line-height: 1.8em;
 }
-  .love-story  h2,
-  .block-testimonial h2{
+  .love-story  h2.block-title{
     line-height: 1em;
     font-size: 3.5em;
     margin-bottom: 30px;
@@ -257,6 +256,7 @@ color: #2E2E2E;
         padding-left: 10px;
         line-height: 1.3em;
     }
+
     .block-testimonial {
         background-position: right 1px;
         padding-top: 67px;
@@ -272,4 +272,21 @@ color: #2E2E2E;
         text-align: center;
     }
 
+}
+.box-heading::first-line{
+        color: red;
+        text-align-last: right;
+    }
+
+ #btn_gioi_thieu {
+    color: #2991d6;
+    cursor: pointer;
+    font-weight: 700;
+
+}
+.block-categories{
+    padding-bottom: 27px;
+}
+.arow{
+    padding-top: 0px;
 }

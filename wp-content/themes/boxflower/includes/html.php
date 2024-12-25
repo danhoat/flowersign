@@ -160,7 +160,7 @@ function module_search_html(){ ?>
                 <div id="searchVer2" class="search_ver2">
                     <div class="search_new">
                         <!-- ------- 검색 입력 ------- -->
-                        <form name="topSearchForm" id="topSearchForm" action="<?php echo esc_url( home_url( '/' ) );?>">
+                        <form name="topSearchForm" id="topSearchForm" action="<?php echo esc_url( home_url( '/' ) );?>/shop/">
                         <div class="input_area">
                             <div class="cont">
                                 <label class="search_box">

@@ -2,7 +2,7 @@
     <div class="resp_wrap">
         <div class="nav_category_area">
             <div class="designCategoryNavigation">
-                <ul class="respCategoryList">
+                <ul class="respCategoryList ">
                     <?php
 
                     $menu_name = 'primary_menu';
@@ -25,7 +25,7 @@
                                 if ( !$menu_item->menu_item_parent ) {
                                     $parent_id = $menu_item->ID;
                                     
-                                    $menu_list .= '<li class="categoryDepth1 item">' ."\n";
+                                    $menu_list .= '<li class="categoryDepth1 item  menu-item">' ."\n";
                                     $menu_list .= '<a href="'.$link.'" class=" categoryDepthLink title"><em>'.$title.'</em></a>' ."\n";
                                 }
 
@@ -36,7 +36,7 @@
                                         $menu_list .= '<ul class="sub-menu">' ."\n";
                                     }
 
-                                    $menu_list .= '<li class="categoryDepth1">' ."\n";
+                                    $menu_list .= '<li class="categoryDepth1 sub-item">' ."\n";
                                     $menu_list .= '<a href="'.$link.'" class="categoryDepthLink"><em>'.$title.'</em></a>' ."\n";
                                     $menu_list .= '</li>' ."\n";
                                         

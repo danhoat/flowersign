@@ -130,4 +130,9 @@
     .main{
         padding: 10px;
     }
+    .resp_top_search a.btn_search_open {
+        height: 21px;
+        margin-top: 13px;
+        display: block;
+    }
 }
