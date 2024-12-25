@@ -96,7 +96,7 @@
 .woocommerce-products-header{
     align-items: center;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
 }
  .woocommerce ul.products li.product .woocommerce-loop-product__title{
     font-size: .975rem;
