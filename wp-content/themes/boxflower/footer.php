@@ -44,14 +44,14 @@ var hpt_info = {'_account':'UHPT-20592','_server':'a24'};
                                 1800-7879<span>(Available)</span>
                             </a>
                         </li>
-                        <li><span designelement="text" textindex="2" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2Zvb3Rlci9zdGFuZGFyZC5odG1s">
+                        <li><span designelement="text" textindex="2" >
                             
                             When sending a text message, please send it to the main number<br /> excluding the area code.
                         </span></li>
 
                         <!-- 221114 고객센터 상담시간 변경  -->
                         <li class="footer_date footer_date_first">
-                            <span designelement="text" textindex="3" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2Zvb3Rlci9zdGFuZGFyZC5odG1s">
+                            <span designelement="text" textindex="3" >
                                 <table>
                                     <tbody><tr>
                                         <td>Consulation hours | </td>
@@ -62,7 +62,7 @@ var hpt_info = {'_account':'UHPT-20592','_server':'a24'};
                                                             </span>
                         </li>
                         <li class="footer_date">
-                            <span designelement="text" textindex="4" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2Zvb3Rlci9zdGFuZGFyZC5odG1s">
+                            <span designelement="text" textindex="4" >
                                 <table>
                                     <tbody><tr>
                                         <td>Lunch Time | </td>
@@ -72,7 +72,7 @@ var hpt_info = {'_account':'UHPT-20592','_server':'a24'};
                             </span>
                         </li>
                         <li class="order_foreign">
-                            <span designelement="text" textindex="5" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2Zvb3Rlci9zdGFuZGFyZC5odG1s">
+                            <span designelement="text" textindex="5" >
                                 <table>
                                     <tbody><tr>
                                         <td>Overseas Order | </td>
@@ -98,7 +98,7 @@ var hpt_info = {'_account':'UHPT-20592','_server':'a24'};
                     </ul> -->
                 </li>
                 <li class="foot_menu_d2 bank">
-                    <h4 class="title"><span designelement="text" textindex="7" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvbGF5b3V0X2Zvb3Rlci9zdGFuZGFyZC5odG1s">
+                    <h4 class="title"><span designelement="text" textindex="7" >
                       Về chúng tôi
                     </span></h4>
                     <ul class="list v3 gray_03">
@@ -232,28 +232,7 @@ var hpt_info = {'_account':'UHPT-20592','_server':'a24'};
 
 <!-- 플로팅 - BACK/TOP(대쉬보드) -->
 <div id="floating_over">
-    <a href="javascript:history.back();" class="ico_floating_back" title="뒤로 가기"></a>
-    <a href="javascript:history.forward();" class="ico_floating_foward" title="앞으로 가기"></a>
     <a href="#layout_header" class="ico_floating_top" title="위로 가기">TOP</a>
-
-    <!-- 최근 본 상품(LAYER) -->
-    <div id="recently_popup">
-        <div class="recently_popup">
-            <h1>최근 본 상품</h1>
-            <div class="recently_thumb">
-                <div id="recently_slide_bottom" style="width:285px; min-height:80px;">
-                    <div class="thumb">
-                        <h2> 최근 본 상품이 없습니다.</h2>
-                    </div>
-                </div>
-                <div class="recently_page">
-                    <a href="javascript:;" class="btn_page cover">선택</a>
-                </div>
-            </div>
-            <a href="javascript:;" class="btn_close">모두보기</a>
-        </div>
-        <div class="recently_bg"></div>
-    </div>
 </div>
 <!-- //플로팅 - BACK/TOP(대쉬보드) -->
 
@@ -286,112 +265,18 @@ $(function() {
 
 
 
-        <!-- ================= #LAYOUT_FOOTER :: END. 파일위치 : layout_footer/standard.html (default) ================= -->
-
-        <iframe name="actionFrame" id="actionFrame" src="" frameborder="0" width="100%" height="0"></iframe>
-        <div id="openDialogLayer" style="display: none">
-            <div align="center" id="openDialogLayerMsg"></div>
-        </div>
-        <div id="ajaxLoadingLayer" style="display: none"></div>
     </div>
 </div>
 <div id="mobileZipcodeLayer" style="display: none"></div>
-<!-- 결제창을 레이어 형태로 구현-->
-<div id="layer_pay" class="hide"></div>
-<div id="payprocessing" class="pay_layer hide">
-    <div style="margin:auto;"><img src="https://f-mans.com/data/skin/responsive_ver1_default_gl/images/design/img_paying.gif"></div>
-    <div style="margin:auto;padding-top:20px;"><img src="https://f-mans.com/data/skin/responsive_ver1_default_gl/images/design/progress_bar.gif"></div>
-</div>
-<div id="layout_side_background" class="layout_side_background"></div>
+
 
 <!-- ================= #HTML_FOOTER :: START. 파일위치 : _modules/common/html_footer.html ================= -->
 
 
 
-<div id="popupChangePassword" class="resp_layer_pop hide">
-    <h4 class="title">비밀번호 변경</h4>
-    <form id="passUpdateForm" method="post" action="/login_process/popup_change_pass" target="actionFrame">
-    <input type="hidden" name="password_mode" value="update">
-        <div class="y_scroll_auto2">
-            <div class="layer_pop_contents v5">
-                <h5 class="stitle">회원님의 소중한 개인정보 보호를 위해 비밀번호를 주기적으로 변경하시는 것이 좋습니다.</h5>
-                <p class="desc Pb8">※ 비밀번호는 영문 대문자, 영문 소문자, 숫자, 특수문자 중 2가지 이상을 조합한 8~20자</p>
-                <div class="resp_table_row input_form th_size3">
-                    <ul class="tr">
-                        <li class="th Pl5 Pr5">현재 비밀번호</li>
-                        <li class="td">
-                            <input type="password" name="old_password" value="" class="passwordField eng_only Wmax">
-                        </li>
-                    </ul>
-                    <ul class="tr">
-                        <li class="th Pl5 Pr5">신규 비밀번호</li>
-                        <li class="td">
-                            <input type="password" name="new_password" value="" class="passwordField eng_only Wmax class_check_password_validation">
-                        </li>
-                    </ul>
-                    <ul class="tr">
-                        <li class="th Pl5 Pr5">신규 비밀번호 <span class="Dib">확인</span></li>
-                        <li class="td">
-                            <input type="password" name="re_new_password" value="" class="passwordField eng_only Wmax">
-                        </li>
-                    </ul>
-                </div>
-                <div class="C Pt20 Fs15">
-                    <label><input type="checkbox" name="update_rate" value="Y" onclick="update_rate_checked();"> 개월 이후에 비밀번호를 변경하겠습니다.</label>
-                </div>
-            </div>
-        </div>
-        <div class="layer_bottom_btn_area2 v2">
-            <ul class="basic_btn_area2">
-                <li><button type="submit" class="btn_resp size_c color2">변경 완료</button></li>
-                <li><button type="button" class="btn_resp size_c color5" onclick="hideCenterLayer()">취소</button></li>
-            </ul>
-        </div>
-        <a href="javascript:void(0)" class="btn_pop_close" onclick="hideCenterLayer()"></a>
-    </form>
-</div>
 
 
 <script>$('#topSearchForm').submit(function() { var search_string = $('#searchVer2InputBox').val(); fbq('track', 'Search', {     search_string: search_string });});</script>
-
-<div id="tinhtp" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p>Chọn tỉnh thành phố</p>
-    <div class="full">
-        <span class="full"> <input type="text" class="full" name="" id="search_ttp" > </span>
-        <div class="item">
-            <input type="hidden" value="011">
-            <ul>
-                <li><span> Tỉnh thanh hóa</span></li>
-                <li class="sub">
-                    <ul>
-                        <li>Thành phố Thanh Hóa</li>
-                        <li> Huyện abc</li>
-                        <li> Huyện 123 </li>
-                </li>
-            </ul>
-        </div>
-        <div class="item">
-            <input type="hidden" value="011">
-            <ul>
-                <li><span> Tỉnh Đồng Nai </span></li>
-                <li class="sub">
-                    <ul>
-                        <li>Thành phố Thanh Hóa</li>
-                        <li> Huyện abc</li>
-                        <li> Huyện 123 </li>
-                </li>
-            </ul>
-        </div>
-
-
-    </div>
-  </div>
-
-</div>
 
 
 </body>

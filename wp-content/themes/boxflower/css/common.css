@@ -3267,8 +3267,8 @@ iframe#actionFrame { width:0; height:0; position:absolute; left:0; bottom:0; vis
 
 /* 플로팅 - BACK/TOP(대쉬보드)*/
 #floating_over {display:none; position:fixed; left:0; bottom:0; width:100%; z-index:600;}
-#floating_over .ico_floating_back {position:absolute; bottom:10px; right:96px; box-sizing:border-box; width:36px; height:36px; border-radius:4px; background:#f4f4f4 url(../images/design/btn_back.png) 50% 50% no-repeat; background-size:20px; opacity:0.7; display:none; }
-#floating_over .ico_floating_foward {position:absolute; bottom:10px; right:56px; box-sizing:border-box; width:36px; height:36px; border-radius:4px; background:#f4f4f4 url(../images/design/btn_foward.png) 50% 50% no-repeat; background-size:20px; opacity:0.7; display:none; }
+
+
 #floating_over .ico_floating_top { position:absolute; bottom:10px; right:10px; box-sizing:border-box; width:36px; height:36px; border-radius:4px; padding-top:18px; text-align:center; font-size:11px; color:#333; background:#f4f4f4 url(../images/design/btn_arw_up_w2.png) 50% 2px no-repeat; background-size:20px; opacity:0.7; }
 #floating_over .ico_floating_recently {position:absolute; bottom:52px; right:10px; font-size:11px; line-height:20px; color:#666; text-align:center; }
 #floating_over .ico_floating_recently img { width:34px; height:34px; border:1px solid #ccc; border-radius:2px; }
