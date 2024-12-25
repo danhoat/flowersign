@@ -4325,17 +4325,7 @@ iframe#actionFrame { width:0; height:0; position:absolute; left:0; bottom:0; vis
 .asie_main_menu>ul { font-size:0; line-height:0; }
 .asie_main_menu>ul>li { display:inline-block; width:25%; vertical-align:top; font-size:13px; line-height:1.3; text-align:center; }
 .asie_main_menu>ul>li>a { display:block; vertical-align:top; padding-top:50px; padding-bottom:5px; position:relative; background-repeat:no-repeat; background-position:50% 10px; background-size:32px; }
-.asie_main_menu>ul>li.am_home>a { background-image:url(../images/common/icon_aside_100.png); }
-.asie_main_menu>ul>li.am_cart>a { background-image:url(../images/common/icon_aside_101.png); }
-.asie_main_menu>ul>li.am_order>a { background-image:url(../images/common/icon_aside_102.png); }
-.asie_main_menu>ul>li.am_my>a { background-image:url(../images/common/icon_aside_103.png); }
-.asie_main_menu>ul>li.am_cs>a { background-image:url(../images/common/icon_aside_104.png); }
-.asie_main_menu>ul>li.am_recently>a { background-image:url(../images/common/icon_aside_105.png); }
-.asie_main_menu>ul>li.am_wish>a { background-image:url(../images/common/icon_aside_106.png); }
-.asie_main_menu>ul>li.am_coupon>a { background-image:url(../images/common/icon_aside_107.png); }
-.asie_main_menu>ul>li.am_emony>a { background-image:url(../images/common/icon_aside_108.png); }
-/* 꽃청 추가 START 김태섭 2023-07-07 - 구독조회 아이콘 추가 */
-.asie_main_menu>ul>li.am_subscribe>a { background-image:url(../images/common/icon_aside_109.png); }
+
 /* 꽃청 추가 END 김태섭 2023-07-07 - 구독조회 아이콘 추가 */
 .asie_main_menu .push_count { position:absolute; right:0; top:0; display:inline-block; vertical-align:top; text-align:center; height:20px; padding:0 5px; min-width:10px; border-radius:10px; font-size:11px; line-height:21px; font-weight:300; background:#333; color:#fff; }
 
