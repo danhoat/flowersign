@@ -63,7 +63,7 @@ function woocommerce_product_cat_description(){
                 
                 $the_last = '';
                 if( isset($overview[1]) && !empty($overview[1]) ){
-                    $btn_xemthem = '<span class="btn-view-full 111"> Xem thêm ...</a>';
+                    $btn_xemthem = '<span class="btn-view-full"> Xem thêm ...</a>';
                     $btn_thugon = '<span class="btn-view-less">Thu gọn </a>';
                     $the_last = '<div class="toggle">'.$overview[1].$btn_thugon.'</div>';
                 }

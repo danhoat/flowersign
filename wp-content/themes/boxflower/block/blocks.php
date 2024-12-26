@@ -7,23 +7,32 @@
 
 
 function box_block_best_selling() {
+    $posts_per_page = 10;
+     if(wp_is_mobile()){
+        $posts_per_page = 6;
+    }
 
     $top_selling_products = wc_get_products( array(
         'meta_key'          => 'total_sales', // our custom query meta_key
-        'posts_per_page'    => 10,
+        'posts_per_page'    => $posts_per_page,
         'post__not_in'  => LIST_BUNDLES_ITEM,
         'return'        => 'ids', // needed to pass to $post_object
         'orderby'   => array( 'meta_value_num' => 'DESC', 'title' => 'ASC' ), // order from highest to lowest of top sellers
     ) );
+   
 
     $shop_page_url = get_permalink( wc_get_page_id( 'shop' ) );
     ?>
     <div class="woocommerce bestselling arow">
 
         <div class="full flex  line-heading justify-between">
-            <a class="#" href="" class="h2heading">
+             <a  href="#" class="h2heading hide-pc btn-tab btn-tab-newp active">
+                <h2 class="home-label h-heading  btn-tab-newp">Sản phẩm mới </h2><?php start_icon();?>
+            </a>
+            <a  href="#" class="h2heading btn-tab btn-tab-bestsale">
                 <h2 class="home-label h-heading"> Bán chạy nhất</h2>
             </a>
+
             <a class="link-collection" href="<?php echo $shop_page_url;?>">Thêm nhiều lựa chọn</a>
         </div>
 
@@ -45,9 +54,15 @@ function box_block_best_selling() {
 <?php
 }
 function block_products_by_category($slug = '', $label = ''){
+
+    $posts_per_page = 10;
+    if(wp_is_mobile()){
+        $posts_per_page = 6;
+    }
+
     $args = array(
         'category' => array( $slug ),
-        'posts_per_page' => 10,
+        'posts_per_page' => $posts_per_page,
         'post__not_in'  => LIST_BUNDLES_ITEM,
         'return'   => 'ids', // needed to pass to $post_object
     );
@@ -59,6 +74,7 @@ function block_products_by_category($slug = '', $label = ''){
         <div class="full flex  line-heading justify-between">
             <a class="#" href="" class="h2heading">
                 <h2 class="home-label h-heading"><?php echo $label;?></h2>
+                <span class="pc-hide icon-heading-mb"></span>
             </a>
             <a class="link-collection" href="<?php echo $term_link;?>">Thêm nhiều lựa chọn</a>
         </div>
@@ -80,6 +96,7 @@ function block_products_by_category($slug = '', $label = ''){
         <?php } else { ?>
             <?php _e('No post found in  cat '.$slug,'box');?>
         <?php } ?>
+        <a class="pc-hide btn-term-link" href="<?php echo $term_link;?>"> Xem thêm</a>
     </div>
 <?php } ?>
 

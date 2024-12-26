@@ -20,8 +20,10 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
  .quick_sale_price {
     color: #71a200 !important;
 }
-.bg-green{
+.bg-green,
+.btn-tab.active{
     background-color: #70A100;
+    color: #fff;
 }
 .text-green{
     color: #70A100;
@@ -40,11 +42,13 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
 .btn.btn-plus-quantity,
 .addon-title,
 .price .amount1,
-.subtotal-price{
+.subtotal-price,
+{
   
     color: #70A100;
     
 }
+
 body, div{
     color: #5e5e5e;
 }
@@ -434,9 +438,6 @@ body{
 }
 
 
-.h2heading{
-    border-bottom: 2px solid ;
-}
 .line-heading{
     border-bottom: 2px solid rgb(229 231 235);;
     border-color: rgb(229 231 235);

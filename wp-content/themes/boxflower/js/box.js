@@ -17,9 +17,25 @@ $(document).ready(function(){
         $('html,body').animate({
             scrollTop: pos},
             'slow');
+    });
 
+    $(".btn-tab-bestsale").click(function(){
+        console.log('123');
 
-
+        $.ajax({
+            url : 'https://demo.dichvu139.com/wp-admin/admin-ajax.php',
+            data: {
+                action: 'box_get_best_sale',
+            },
+            beforeSend  : function(event){
+              
+            },
+            success : function(res){
+              console.log(res);
+              console.log(res.html);
+            }
+        });
+        return false;
     });
 })
 

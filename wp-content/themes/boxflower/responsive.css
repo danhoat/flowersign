@@ -35,6 +35,9 @@
 }
 
 @media only screen and (min-width: 1000px){
+    .pc-hide, .hide-pc{
+        display: none;
+    }
    .lg\:flex-row {
         flex-direction: row;
     }
@@ -153,4 +156,54 @@
     .search_filter_wrap{
         margin-top: 0;
     }
+    .line-heading{
+        flex-direction: column;
+        border: 0;
+    }
+    .icon-heading-mb{
+        background: url(https://flowersight.com/wp-content/themes/takatheme/images/img_title.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 95px;
+        height: 50px;
+        display: block;
+        display: block;
+        align-items: center;
+        vertical-align: c;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+        position: relative;
+        top:-8px;
+    }
+    .h-heading{
+        text-align: center;
+    }
+    .bestselling .btn-tab{
+      border-radius: 27px;
+        padding: 2px 20px;
+        display: flex
+;
+        justify-items: center;
+        justify-items: center;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #ccc;
+    }
+    .bestselling .btn-tab i{
+        margin-left: 10px;
+    }
+    .bestselling .btn-tab svg{
+        width: 20px;
+        height: 20px;
+    }
+    .bestselling .line-heading{
+        flex-direction: row;
+        justify-content: start;
+        gap: 25px;
+    }
+    .bestselling .btn-tab .h-heading{
+        font-size: 12px;
+    }
+    
 }
