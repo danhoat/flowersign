@@ -31,8 +31,9 @@ $(document).ready(function(){
               
             },
             success : function(res){
-              console.log(res);
-              console.log(res.html);
+                console.log(res);
+                console.log(res.html);
+                $(".top-products").html(res.html);
             }
         });
         return false;

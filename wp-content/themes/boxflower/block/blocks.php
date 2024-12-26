@@ -8,18 +8,22 @@
 
 function box_block_best_selling() {
     $posts_per_page = 10;
-     if(wp_is_mobile()){
+    if(wp_is_mobile()){
         $posts_per_page = 6;
     }
 
-    $top_selling_products = wc_get_products( array(
+    $top_products = wc_get_products( array(
         'meta_key'          => 'total_sales', // our custom query meta_key
         'posts_per_page'    => $posts_per_page,
         'post__not_in'  => LIST_BUNDLES_ITEM,
         'return'        => 'ids', // needed to pass to $post_object
         'orderby'   => array( 'meta_value_num' => 'DESC', 'title' => 'ASC' ), // order from highest to lowest of top sellers
     ) );
-   
+   if( wp_is_mobile() ){
+        $top_products = wc_get_products( array(
+        'limit' => 6
+    ) );
+   }
 
     $shop_page_url = get_permalink( wc_get_page_id( 'shop' ) );
     ?>
@@ -37,10 +41,10 @@ function box_block_best_selling() {
         </div>
 
       
-        <?php if ( $top_selling_products ) {
+        <?php if ( $top_products ) {
 
-            echo '<ul class="products cls-5">';
-            foreach ( $top_selling_products as $top_selling_product ) {
+            echo '<ul class="products cls-5 top-products">';
+            foreach ( $top_products as $top_selling_product ) {
                 $post_object = get_post( $top_selling_product );
                 setup_postdata( $GLOBALS['post'] =& $post_object );
                 wc_get_template_part( 'content', 'product' );
