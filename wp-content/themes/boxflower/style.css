@@ -45,7 +45,7 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
     color: #70A100;
     
 }
-body, p, div, label{
+body, div{
     color: #5e5e5e;
 }
 div.single-product{
@@ -302,6 +302,9 @@ body{
     align-items: center;
     text-indent: 30px;
 }
+.image-box.arow{
+    margin-bottom: 15px;
+}
 
 .gnb_bnr_slide{
     position:absolute; right:40px; top:0px; width:220px; height:148px;
@@ -365,6 +368,9 @@ body{
 .woocommerce .woocommerce-ordering{
     display: none;
 }
+.image-box{
+    margin-bottom: 10px;
+}
 .innner-box{
     height: 120px;
     display: grid;
@@ -376,9 +382,7 @@ body{
     background-position: center 90%;
     background-repeat: no-repeat;
 }
-.innner-box:hover{
-    background-size: 100%;
-}
+
 .innner-box .btn-box-detail{
     padding: 10px 20px;
     background-color: #000;
@@ -391,7 +395,9 @@ body{
     text-align: center;
     font-weight: 600;
 }
-
+.innner-box .btn-box-detail:hover{
+    text-decoration: underline;
+}
 .wrap-price-rating1{
     display: grid;
     grid-template-columns: 2fr 1fr;

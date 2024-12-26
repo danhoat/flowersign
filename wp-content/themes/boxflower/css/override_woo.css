@@ -179,6 +179,7 @@
     top:-10px;
 
 }
+.home .woocommerce ul.products li.product a img,
 body.archive.woocommerce ul.products li.product a img{
     margin: 0;
 }
