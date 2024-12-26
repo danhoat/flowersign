@@ -87,7 +87,7 @@ get_header();
 <div class=" full block-story">
     <div class="container ">
         <center>
-        <img src="<?php echo IMAGE_URL;?>/home/img-love-story.png" width="300">
+        <img src="<?php echo IMAGE_URL;?>/home/img-love-story.png" class="icon-img" width="300">
         </center>
         <div class="cl-6 love-story ">
             <h2 class="block-title">Love Story</h2>

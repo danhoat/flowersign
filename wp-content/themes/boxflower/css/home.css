@@ -222,9 +222,10 @@ color: #2E2E2E;
     .fixed_bg{
         height: 350px;
     }
-   .bestselling ul.products{
-    gap: 10px;
-   }
+    .bestselling ul.products,
+    .catproducts   ul.products {
+        gap: 10px;
+    }
     .fixed_bg::after{
         background: url(../images/home/bg_main_fixed.jpg) no-repeat 0 0;
         background-position: -61px -55px;
@@ -260,7 +261,7 @@ color: #2E2E2E;
 
     .block-testimonial {
         background-position: right 1px;
-        padding-top: 67px;
+        padding-top: 30px;
     }
      .image-box.arow{
         padding: 0;
@@ -286,6 +287,15 @@ color: #2E2E2E;
     }
     .btn-tab.active .h-heading{
         color: #fff;
+    }
+    .block-story .icon-img{
+        max-width: 190px;
+    }
+    .block-story{
+        margin-top: 30px;
+    }
+    .testimonial-item .mkdf-testimonial-text{
+        font-size: 20px;
     }
 
 }
