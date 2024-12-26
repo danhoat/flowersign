@@ -43,6 +43,8 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
 .addon-title,
 .price .amount1,
 .subtotal-price,
+.woo-first-price .amount,
+.woo-first-price .amount bdi
 {
   
     color: #70A100;
