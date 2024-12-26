@@ -23,7 +23,26 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
 .bg-green{
     background-color: #70A100;
 }
+.text-green{
+    color: #70A100;
+}
 
+.woocommerce ul.products li.product .price,
+.woocommerce ul.products li.product .price ins,
+.woo-first-price .amount,
+.addon-price .amount,
+.subtotal-price,
+.subtotal-price .amount,
+.woocommerce .product_title ,
+.text-brand,
+.btn.btn-minus-quantity,
+.woocommerce .quantity .qty,
+.btn.btn-plus-quantity,
+.addon-title{
+  
+    color: #70A100;
+    
+}
 div.single-product{
     margin-top: 30px;
 }

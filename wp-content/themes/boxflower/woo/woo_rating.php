@@ -15,8 +15,8 @@ function box_change_view_rating($html, $rating, $count ){
     if($product){
         $count = $product->get_review_count();
     }
-    if($count <1 ) return ;
-    $html = '<div class="rating"><i class="fa fa-star text-yellow-400 p-star"></i><span class="mx-1">'.number_format($rating,1).'</span><span>('.$count.')</span></div>';
+     if($count < 1 ) return ;
+    $html = '<div class="rating"><i class="fa fa-star text-yellow-400 p-star"></i><span class="mx-1">'.number_format($rating,1).'</span><span class="score">('.$count.')</span></div>';
     return $html;
 }
 add_filter('woocommerce_product_get_rating_html','box_change_view_rating',10,3);

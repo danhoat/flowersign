@@ -23,36 +23,84 @@ if ( ! $product->is_purchasable() ) {
 	return;
 }
 
-
+$rating_count = $product->get_rating_count();
+$review_count = $product->get_review_count();
+$average      = $product->get_average_rating();
 
 
 // $product->get_regular_price();
 // $product->get_sale_price();
 // $product->get_price();
 
+
+global $product;
+
+if ( ! wc_review_ratings_enabled() ) {
+	return;
+}
+function ov_wc_get_star_rating_html( $rating, $count = 0 ) {
+	$html = '<span style="width:' . ( ( $rating / 5 ) * 100 ) . '%">';
+
+	if ( 0 < $count ) {
+		/* translators: 1: rating 2: rating count */
+		$html .= sprintf( _n( 'Rated %1$s out of 5 based on %2$s customer rating', 'Rated %1$s out of 5 based on %2$s customer ratings', $count, 'woocommerce' ), '<strong class="rating">' . esc_html( $rating ) . '</strong>', '<span class="rating">' . esc_html( $count ) . '</span>' );
+	} else {
+		/* translators: %s: rating */
+		$html .= sprintf( esc_html__( 'Rated %s out of 5', 'woocommerce' ), '<strong class="rating">' . esc_html( $rating ) . '</strong>' );
+	}
+
+	$html .= '</span>';
+
+	return $html;
+}
+
+
 echo wc_get_stock_html( $product ); // WPCS: XSS ok.
 
 if ( $product->is_in_stock() ) : ?>
 
-	<?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
+	<?php // do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
 
-	<div class="full">
-		<p class="woo-price woo-first-price text-right">
-			<span id="woo_price" class=""><?php echo wc_price($product->get_price()); ?></span>
-			<input type="hidden" id="static_price"  value="<?php echo $product->get_price();?>">
-		</p>
-		<?php if($product->is_on_sale() ) {?>
-		<p class="woo-price woo-second-price text-right ">
-			<del>
-				<span id="woo_regular_price"><?php echo wc_price($product->get_regular_price());?></span>
+	<div class="full rating-price">
+		<?php if ( $rating_count > 0 ) : ?>
+
+			<div class="woocommerce-product-rating">
+				<?php 
+				if( $average>0 ) {
+
+					/* translators: %s: rating */
+					$label = sprintf( __( 'Rated %s out of 5', 'woocommerce' ), $rating_count );
+					$html  = '<div class="star-rating" role="img" aria-label="' . esc_attr( $label ) . '">' . ov_wc_get_star_rating_html( $average, $rating_count ) . '</div><span class = "count">('.$rating_count.')</span>';
+					echo $html;
+				}
 				
-			</del>
-		</p>
-		<?php } ?>
+				?>
+			
+			</div>
+
+		<?php endif; ?>
+
+		<div class="sumary-price">
+			<p class="woo-price woo-first-price text-right">
+				<span id="woo_price" class=""><?php echo wc_price($product->get_price()); ?></span>
+				<input type="hidden" id="static_price"  value="<?php echo $product->get_price();?>">
+			</p>
+			<?php if($product->is_on_sale() ) {?>
+				<p class="woo-price woo-second-price text-right ">
+					<del>
+						<span id="woo_regular_price"><?php echo wc_price($product->get_regular_price());?></span>
+					</del>
+				</p>
+			<?php } ?>
+		</div>
 
 	</div>
+
+	<?php woocommerce_template_single_excerpt();?>
+
 	<form class="cart" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data'>
+		
 		<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 
 		
@@ -81,7 +129,7 @@ if ( $product->is_in_stock() ) : ?>
 		</div>
 
 		<div class="full mt10 mb10">
-			<div class="text-xs mb-2"><p>Đơn hàng sẽ được giao bởi một trong những đối tác của chúng tôi.</p></div>
+			<div class="text-xs mb-2"><p>Đơn hàng được team shipper của shop giao và bảo hiểm.</p></div>
 		</div>
 		
 		<div class="full">

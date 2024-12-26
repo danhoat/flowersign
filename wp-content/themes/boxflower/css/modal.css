@@ -305,7 +305,7 @@ ul.modal-option-tab li.current {
 /* 구분라인 */
 .division {
     display: flex;
-    padding: 80px 0px;
+    padding:30px 0px;
     flex-direction: column;
     justify-content: center;
     align-items: center;

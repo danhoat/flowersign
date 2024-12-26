@@ -7,6 +7,7 @@ require_once __DIR__ .'/be.php';
 require_once __DIR__ .'/woo_rating.php';
 require_once __DIR__ .'/btn_mua_ngay.php';
 require_once __DIR__ .'/add_tabs.php';
+require_once __DIR__ .'/sumary.php';
 
 // require_once __DIR__ .'/payment/paypal_vnd.php';
 

@@ -70,16 +70,7 @@
     color: #70A100;
     text-decoration: none;
 }
-.woocommerce ul.products li.product .price,
-.woocommerce ul.products li.product .price ins,
-.woo-first-price .amount,
-.addon-price .amount,
-.subtotal-price,
-.subtotal-price .amount {
-  
-    color: #70A100;
-    
-}
+
 
 
 
@@ -107,8 +98,9 @@
  .woocommerce ul.products li.product .price del{
     color: rgb(156 163 175);
 }
- .woo-price del .amount {
-color: rgb(153 153 153);
+ .woo-price del .amount,
+.woo-price del{
+    color: rgb(153 153 153);
 }
 
 .woocommerce ul.products li.first, .woocommerce-page ul.products li.first,
@@ -155,7 +147,9 @@ color: rgb(153 153 153);
 .woocommerce nav.woocommerce-pagination ul li span.current{
     background-color: #fff;
 }
-
+.woocommerce div.product div.summary {
+    color: #6c6969;
+}
 .select-number-items select{
     border-radius: 5px;
     min-width: 66px;
@@ -169,7 +163,8 @@ color: rgb(153 153 153);
     color: rgb(158 166 212);
 }
 
-.woocommerce ul.products li.product .onsale{
+.woocommerce ul.products li.product .onsale,
+.woocommerce span.onsale{
     background-color: #70A100;
     border-radius: 0;
     color: rgb(255 255 255);

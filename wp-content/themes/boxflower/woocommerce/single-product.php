@@ -30,6 +30,10 @@ get_header( 'shop' ); ?>
 		 */
 		do_action( 'woocommerce_before_main_content' );
 	?>
+		<h1 class="product_title entry-title">
+	       <?php the_title();?>
+	   </h1>
+
 
 		<?php while ( have_posts() ) : ?>
 			<?php the_post(); ?>
