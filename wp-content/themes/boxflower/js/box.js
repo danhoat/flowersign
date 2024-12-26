@@ -19,13 +19,15 @@ $(document).ready(function(){
             'slow');
     });
 
-    $(".btn-tab-bestsale").click(function(){
+    $(".btn-tab").click(function(){
         console.log('123');
-
+        let key = 'newarrival';
+        if($(this).hasClass('btn-tab-bestsale')) key = 'bestsale';
         $.ajax({
             url : 'https://demo.dichvu139.com/wp-admin/admin-ajax.php',
             data: {
-                action: 'box_get_best_sale',
+                action: 'box_get_top_products',
+                key : key,
             },
             beforeSend  : function(event){
               
