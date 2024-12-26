@@ -200,10 +200,10 @@
     .bestselling .line-heading{
         flex-direction: row;
         justify-content: start;
-        gap: 25px;
+        gap: 19px;
     }
     .bestselling .btn-tab .h-heading{
         font-size: 12px;
     }
-    
+
 }

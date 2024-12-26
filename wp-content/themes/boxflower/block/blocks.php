@@ -76,7 +76,7 @@ function block_products_by_category($slug = '', $label = ''){
     if(is_wp_error($term_link)) return;
     $products = wc_get_products( $args );
     ?>
-    <div class="woocommerce bestselling arow">
+    <div class="woocommerce catproducts  arow">
         <div class="full flex  line-heading justify-between">
             <a class="#" href="" class="h2heading">
                 <h2 class="home-label h-heading"><?php echo $label;?></h2>

@@ -248,12 +248,14 @@ h1.post-title{
     border: 1px solid #ccc;
 }
 
-.woocommerce.bestselling ul.products::before {
+.woocommerce.bestselling ul.products::before,
+.woocommerce.catproducts ul.products::before { 
     content: "";
     display: none;
     width: 0;
 }
-.bestselling  ul.products {
+.bestselling  ul.products,
+.catproducts   ul.products {
     grid-column-gap: 25px;
     grid-row-gap: 50px;
     display: grid;
@@ -262,7 +264,8 @@ h1.post-title{
     list-style: none outside;
     clear: both;
 }
-.bestselling  ul.products.elementor-grid  li.product{
+.bestselling  ul.products.elementor-grid  li.product,
+.catproducts  ul.products.elementor-grid  li.product{
     float: none;margin: 0;
     padding: 0;
     width: auto;
@@ -441,7 +444,7 @@ body{
 .line-heading{
     border-bottom: 2px solid rgb(229 231 235);;
     border-color: rgb(229 231 235);
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     padding-bottom: 0px;
 }
 .link-collection{

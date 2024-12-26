@@ -20,7 +20,8 @@ $(document).ready(function(){
     });
 
     $(".btn-tab").click(function(){
-        console.log('123');
+
+        $(".btn-tab").toggleClass('active');
         let key = 'newarrival';
         if($(this).hasClass('btn-tab-bestsale')) key = 'bestsale';
         $.ajax({
