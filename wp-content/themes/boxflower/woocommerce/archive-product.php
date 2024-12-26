@@ -121,7 +121,7 @@ $termdesc = explode("[xem_them]", $term_description);
 
 <?php if($has_childterm){ ?>
 <div class="full">
-	<div class="catalog_subtitle_div" style="display: block;">
+	<div class="catalog_subtitle_div swiper-container-horizontal" style="display: block;">
 		<ul class="catalog_subtitle ">
 			<?php foreach($has_childterm as $key=>$term_id){
 
