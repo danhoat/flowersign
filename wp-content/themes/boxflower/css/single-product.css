@@ -509,7 +509,9 @@ span.rate-score{
     .wpgs-nav .slick-slide{
         border:0 !important;
     }
-   
+    .list-bundles img.addon-image{
+        max-height: 70px;
+    }
     
 }
  .woocommerce-product-details__short-description{

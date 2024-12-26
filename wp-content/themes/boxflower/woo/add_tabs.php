@@ -6,30 +6,30 @@ function box_add_woo_tabs($tabs){
 
     // review pri=30
     $key = 'cs_doi_tra';
-
-    $tabs[$key] = array(
-        "title"=> "Chính sách đổi trả",
-        "priority"=> 31,
-        "callback"=> "woocommerce_product_{$key}_tab",
-    );
-    $tabs['cs_baomat'] = array(
-        "title"=> "Chính sách Bảo Mật ",
-        "priority"=> 35,
-        "callback"=> "woocommerce_product_cs_baomat_tab",
-    );
-
-    $tabs['qa'] = array(
-        "title"=> "Câu hỏi thường gặp",
-        "priority"=> 50,
-        "callback"=> "woocommerce_product_qa_tab",
-    );
-  
-
     $tabs["reviews"]=  array(
         "title"=> "Đánh Giá - Nhận Xét Từ Khách Hàng",
         "priority"=>  30, 
         "callback"=> "comments_template"
     );
+    $tabs[$key] = array(
+        "title"=> "Chính sách đổi trả",
+        "priority"=> 31,
+        "callback"=> "woocommerce_product_{$key}_tab",
+    );
+    // $tabs['cs_baomat'] = array(
+    //     "title"=> "Chính sách Bảo Mật ",
+    //     "priority"=> 35,
+    //     "callback"=> "woocommerce_product_cs_baomat_tab",
+    // );
+
+    // $tabs['qa'] = array(
+    //     "title"=> "Câu hỏi thường gặp",
+    //     "priority"=> 50,
+    //     "callback"=> "woocommerce_product_qa_tab",
+    // );
+  
+
+    
 
     return $tabs;
 }
