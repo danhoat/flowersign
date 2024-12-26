@@ -44,6 +44,9 @@
     }
 }
 @media only screen and (max-width: 750px){
+    .bn_top a p{
+        color: #fff;
+    }
     .hide-mb{
         display: none;
     }
@@ -89,17 +92,7 @@
         padding: 10px;
     }
    
-    .list-bundles{
-        width: 103%;
-        overflow: hidden;
-        gap: 19px 5px;
-        margin-left: -2%;
-        margin-right: -2%;
-    }
-    .list-bundles li{
-        width: auto !important;
-        margin-right: 0 !important;
-    }
+   
     .term-description{
         padding: 0px;
         line-height: 1.6em;
@@ -153,5 +146,8 @@
    
     .wrap_pagi{
         gap: 10px 0;
+    }
+    .p-rating .rating{
+        display: flex;
     }
 }

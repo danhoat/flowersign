@@ -251,7 +251,7 @@ color: #2E2E2E;
     }
     .box-heading{
         width: 80%;
-        font-size: 1.7em;
+        font-size: 1.6em;
         text-indent: 0;
         padding-left: 10px;
         line-height: 1.3em;
@@ -270,6 +270,15 @@ color: #2E2E2E;
         position: initial;
         width: 111px;
         text-align: center;
+    }
+    .slide-intro .splide__list{
+        height: auto;
+    }
+    .block-categories .theme_box_1220{
+        height: 95px;
+    }
+    .woocommerce ul.products li.product a img{
+        margin-bottom: 0;
     }
 
 }

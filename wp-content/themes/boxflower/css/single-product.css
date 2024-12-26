@@ -7,6 +7,7 @@ body.single-product form.cart select{
 body.single-product form.cart .select-date{
     display: flex;
     margin-top: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
 }
 body.single-product form.cart .select-date .date-item{
     width: 25%;
@@ -195,7 +196,7 @@ audio, canvas, embed, iframe, img, object, svg, video {
     gap: 10px;
 }
 .addon-box {
-    height: 200px;
+    height: 170px;
     overflow: hidden;
     position: relative;
 }
@@ -377,7 +378,6 @@ input:checked + .choice{
 }
 
 .text-brand{
-    color: rgb(158 166 212);
     align-items: center;
     font-size: 1rem;
 }
@@ -467,6 +467,44 @@ span.rate-score{
     }
     body.single-product form.cart .form-btn{
         gap: 10px;
+    }
+     .list-bundles{
+        width: 100%;
+        overflow: hidden;
+        gap: 19px 5px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .list-bundles li{
+        width: auto !important;
+        margin-right: 0 !important;
+    }
+    .list-bundles li input[type=checkbox]{
+        height: 120px;
+    }
+    .addon-box{
+        height: 120px;
+    }
+    .date-week-day {
+        font-weight: 600;
+        text-transform: uppercase;
+        padding: 00px 0px;
+        font-size: .8em;
+        text-align: center;
+    }
+    body.single-product form.cart .select-date .date-item {
+        width: 23%;
+        position: relative;
+        margin: 1%;
+    }
+    body.single-product form.cart .select-date .date-item:first-child{
+        margin-left: 0;
+    }
+    .date-item .card-form{
+        padding: .8rem 0;
+    }
+    .addon-title{
+        padding-right: 0;
     }
     
 }

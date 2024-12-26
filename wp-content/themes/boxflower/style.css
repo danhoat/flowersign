@@ -39,7 +39,8 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
 .woocommerce .quantity .qty,
 .btn.btn-plus-quantity,
 .addon-title,
-.price .amount{
+.price .amount,
+.subtotal-price{
   
     color: #70A100;
     
