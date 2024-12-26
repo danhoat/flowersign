@@ -506,9 +506,15 @@ span.rate-score{
     .addon-title{
         padding-right: 0;
     }
+    .wpgs-nav .slick-slide{
+        border:0 !important;
+    }
+   
     
 }
-
+ .woocommerce-product-details__short-description{
+        margin-bottom: 20px;
+    }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li{
     background-color: #fff;

@@ -150,4 +150,7 @@
     .p-rating .rating{
         display: flex;
     }
+    .search_filter_wrap{
+        margin-top: 0;
+    }
 }

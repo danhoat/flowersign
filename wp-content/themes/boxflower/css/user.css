@@ -597,12 +597,6 @@ ul.displayTabType1 > li:first-child{border-left:0 #ddd solid;}
     margin-top: 0px;
     margin-bottom: 0px;
 }
-@media only screen and (max-width:600px) {
-  .search_filter_wrap {
-      margin-top: 40px;
-  }
-}
-/* 카테고리 페이지의 상품 개수 및 상품 정렬 리스트 끝 */
 
 
 .search_nav + #goodsSearchForm .search_filter_wrap {

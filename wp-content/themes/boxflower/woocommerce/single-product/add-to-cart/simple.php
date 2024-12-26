@@ -105,27 +105,27 @@ if ( $product->is_in_stock() ) : ?>
 
 		
 		<div class="full">
-			<span>Số lượng: </span>
-		</div>
-		<div data-v-53b46760="" class="h-10 col-span-2 grid grid-cols-3 w-40 text-brand">
-			<div data-v-53b46760="" class="flex">
-				<span data-v-53b46760="" class="btn text-xs self-center text-brand hover:text-brand-dark btn-minus-quantity"><i data-v-53b46760="" class="fa-solid fa-minus"></i></span>
+			<span class="lable-qty">Số lượng: </span>
+			<div data-v-53b46760="" class="h-10 col-span-2 grid grid-cols-3 w-40 text-brand">
+				<div data-v-53b46760="" class="flex">
+					<span data-v-53b46760="" class="btn text-xs self-center text-brand hover:text-brand-dark btn-minus-quantity"><i data-v-53b46760="" class="fa-solid fa-minus"></i></span>
+				</div>
+
+				
+				<?php
+				do_action( 'woocommerce_before_add_to_cart_quantity' );
+				woocommerce_quantity_input(
+					array(
+						'min_value'   => apply_filters( 'woocommerce_quantity_input_min', $product->get_min_purchase_quantity(), $product ),
+						'max_value'   => apply_filters( 'woocommerce_quantity_input_max', $product->get_max_purchase_quantity(), $product ),
+						'input_value' => isset( $_POST['quantity'] ) ? wc_stock_amount( wp_unslash( $_POST['quantity'] ) ) : $product->get_min_purchase_quantity(), // WPCS: CSRF ok, input var ok.
+					)
+				);
+				do_action( 'woocommerce_after_add_to_cart_quantity' );
+				?>
+
+				<div data-v-53b46760="" class="flex"><span data-v-53b46760="" class="btn text-xs self-center text-brand hover:text-brand-dark btn-plus-quantity"><i data-v-53b46760="" class="fa-solid fa-plus"></i></span></div>
 			</div>
-
-			
-			<?php
-			do_action( 'woocommerce_before_add_to_cart_quantity' );
-			woocommerce_quantity_input(
-				array(
-					'min_value'   => apply_filters( 'woocommerce_quantity_input_min', $product->get_min_purchase_quantity(), $product ),
-					'max_value'   => apply_filters( 'woocommerce_quantity_input_max', $product->get_max_purchase_quantity(), $product ),
-					'input_value' => isset( $_POST['quantity'] ) ? wc_stock_amount( wp_unslash( $_POST['quantity'] ) ) : $product->get_min_purchase_quantity(), // WPCS: CSRF ok, input var ok.
-				)
-			);
-			do_action( 'woocommerce_after_add_to_cart_quantity' );
-			?>
-
-			<div data-v-53b46760="" class="flex"><span data-v-53b46760="" class="btn text-xs self-center text-brand hover:text-brand-dark btn-plus-quantity"><i data-v-53b46760="" class="fa-solid fa-plus"></i></span></div>
 		</div>
 
 		<div class="full mt10 mb10">
