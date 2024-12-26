@@ -472,20 +472,7 @@ $(function(){
     });
 });
 
-// 꽃청 추가 START 홍우기 2022.08.17 - GoogleAds
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-954660897/9KZmCOyCndYDEKHwm8cD',
-      'event_callback': callback
-  });
-  return false;
-}
-// 꽃청 추가 END
+
 </script>
         <!-- ================= #LAYOUT_HEADER :: END. 파일위치 : layout_header/standard.html (default) ================= -->
 

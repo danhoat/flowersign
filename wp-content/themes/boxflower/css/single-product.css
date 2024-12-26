@@ -466,8 +466,7 @@ span.rate-score{
         padding: 0;
     }
     body.single-product form.cart .form-btn{
-
-        gap: 1rem;
+        gap: 10px;
     }
     
 }

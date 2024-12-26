@@ -12,9 +12,6 @@ $customizer = get_customizer_values();
 get_header();
 ?>
 
-
-<?php // js_home();?>
-
 <?php if( wp_is_mobile() ){ ?>
 <div id="layout_body" class="layout_body page-front.php">
     <?php } else { ?>
