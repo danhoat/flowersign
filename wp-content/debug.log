@@ -6957,3 +6957,24 @@ Stack trace:
 [25-Dec-2024 07:27:52 UTC] PHP Warning:  Undefined array key "url" in D:\laragon\www\flower\wp-content\themes\boxflower\includes\comment_form_fields.php on line 8
 [25-Dec-2024 07:28:55 UTC] PHP Warning:  Undefined array key "url" in D:\laragon\www\flower\wp-content\themes\boxflower\includes\comment_form_fields.php on line 8
 [25-Dec-2024 07:30:41 UTC] PHP Warning:  Undefined array key "url" in D:\laragon\www\flower\wp-content\themes\boxflower\includes\comment_form_fields.php on line 8
+[27-Dec-2024 12:25:59 UTC] Automatic updates starting...
+[27-Dec-2024 12:26:00 UTC]   Automatic plugin updates starting...
+[27-Dec-2024 12:26:00 UTC]   Automatic plugin updates complete.
+[27-Dec-2024 12:26:01 UTC] Automatic updates complete.
+[27-Dec-2024 15:10:27 UTC] PHP Warning:  Undefined array key "HA-NOI" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[27-Dec-2024 15:10:27 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[27-Dec-2024 15:10:27 UTC] PHP Warning:  Undefined array key "HOCHIMINH" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[27-Dec-2024 15:10:27 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[27-Dec-2024 15:10:34 UTC] PHP Warning:  Undefined array key "url" in D:\laragon\www\flower\wp-content\themes\boxflower\includes\comment_form_fields.php on line 8
+[27-Dec-2024 15:11:34 UTC] PHP Warning:  Undefined array key "url" in D:\laragon\www\flower\wp-content\themes\boxflower\includes\comment_form_fields.php on line 8
+[27-Dec-2024 15:11:46 UTC] PHP Warning:  Undefined array key "url" in D:\laragon\www\flower\wp-content\themes\boxflower\includes\comment_form_fields.php on line 8
+[27-Dec-2024 15:13:43 UTC] PHP Warning:  Undefined array key "url" in D:\laragon\www\flower\wp-content\themes\boxflower\includes\comment_form_fields.php on line 8
+[27-Dec-2024 15:13:44 UTC] PHP Warning:  Undefined array key "url" in D:\laragon\www\flower\wp-content\themes\boxflower\includes\comment_form_fields.php on line 8
+[27-Dec-2024 15:17:04 UTC] PHP Warning:  Undefined array key "HA-NOI" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[27-Dec-2024 15:17:04 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[27-Dec-2024 15:17:04 UTC] PHP Warning:  Undefined array key "HOCHIMINH" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[27-Dec-2024 15:17:04 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[27-Dec-2024 15:17:05 UTC] PHP Warning:  Undefined array key "HA-NOI" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[27-Dec-2024 15:17:05 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[27-Dec-2024 15:17:05 UTC] PHP Warning:  Undefined array key "HOCHIMINH" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[27-Dec-2024 15:17:05 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138

@@ -440,6 +440,10 @@ span.rate-score{
     font-size: 20px;
     font-weight: 700;
 }
+.rating-price{
+    display: flex;
+    justify-content: space-between;
+}
 @media only screen and (max-width: 750px){
     
     body.single-product form.cart .select-date{
@@ -576,6 +580,10 @@ span.rate-score{
 
 }
 @media only screen and (min-width: 1000px){
+    .rating-price {
+        display: flex;
+        justify-content: end;
+}
 
     p.comment-form-author , p.comment-form-email{
         width: 18%;
@@ -656,10 +664,7 @@ p.comment-form-author input, p.comment-form-email input{
     background-image: url(../images/arrow-left.png) !important;
 
 }
-.rating-price{
-    display: flex;
-    justify-content: space-between;
-}
+
 .sumary-price .amount .woocommerce-Price-currencySymbol{
     position: relative;
     left: -3px;

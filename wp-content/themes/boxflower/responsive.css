@@ -160,6 +160,7 @@
     .line-heading{
         flex-direction: column;
         border: 0;
+        margin-bottom: 10px;
     }
     .icon-heading-mb{
         background: url(images/img_title.png);
@@ -205,6 +206,10 @@
     }
     .bestselling .btn-tab .h-heading{
         font-size: 12px;
+    }
+    .woocommerce ul.products li.product .wrap-price-only .price{
+        flex-direction: column;
+        display: flex;
     }
 
 }

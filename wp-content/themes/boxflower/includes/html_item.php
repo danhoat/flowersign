@@ -512,3 +512,23 @@ if( window.SwingJavascriptInterface != undefined )
 </script>
 
 <?php }
+
+
+function checkbox_step_status(){ ?>
+    <div class="menu_checkout checkout-steps">
+        <div class="container">
+            <div class="row">
+                <div class="menu_checkout_box">
+                    <ul>
+                        <li class="active">Giỏ hàng</li>
+                                                            <li>Giỏ hàng và thanh toán</li>
+                                                                                            <li class="">Hoàn tất</li>
+                        
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php
+}
