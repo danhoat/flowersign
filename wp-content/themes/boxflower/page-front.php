@@ -42,15 +42,20 @@ get_header();
                             <?php
 
                                 $term_id  = $cat->term_id;
-
+                                $img_url = BOXTHEME_URL.'/images/cat-rose.png';
                                 $thumbnail_id = get_term_meta( $term_id, 'thumbnail_id', true );
-                            
+                                $alt = $cat->name;
+
                                 if($thumbnail_id){
                                     $image = wp_get_attachment_image_src( $thumbnail_id, 'full' );
-                                    echo '<div><img src="' . $image[0] . '" > </div>'; 
-                                } else{ ?>
-                                    <div> <img src="<?php echo BOXTHEME_URL;?>/images/cat-rose.png"  /> </div>
-                                <?php } ?>
+                                    if( isset($image[0 && !empty($image)])){
+                                        $img_url = $image[0];
+                                    }
+                                   
+                                }
+                                ?>
+                                <div><img src="<?php echo $img_url;?>" alt="<?php echo $alt;?>" /> </div>
+ 
                         </a>
                     </div>
                 </div>

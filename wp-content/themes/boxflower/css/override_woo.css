@@ -53,7 +53,10 @@
         text-shadow: none;
     
     }
-    
+    .woocommerce .shop_table .product-thumbnail{
+        width: 130px;
+    }
+        
 }
 
 

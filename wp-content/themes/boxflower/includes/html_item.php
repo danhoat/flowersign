@@ -513,16 +513,20 @@ if( window.SwingJavascriptInterface != undefined )
 
 <?php }
 
-
-function checkbox_step_status(){ ?>
+function is_active_step($current, $step){
+    if($current == $step){
+        echo 'class = "active" ';
+    }
+}
+function checkbox_step_status($step){ ?>
     <div class="menu_checkout checkout-steps">
         <div class="container">
             <div class="row">
                 <div class="menu_checkout_box">
                     <ul>
-                        <li class="active">Giỏ hàng</li>
-                                                            <li>Giỏ hàng và thanh toán</li>
-                                                                                            <li class="">Hoàn tất</li>
+                        <li <?php is_active_step('step1', $step);?>>Giỏ hàng</li>
+                        <li <?php is_active_step('step2', $step);?> >Giỏ hàng và thanh toán</li>
+                        <li <?php is_active_step('step3',$step);?>class="">Hoàn tất</li>
                         
                     </ul>
 

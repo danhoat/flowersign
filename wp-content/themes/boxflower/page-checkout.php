@@ -1,6 +1,6 @@
 <?php 
 /**
- * Template Name: Cart Page
+ * Template Name: Checkout Page
  *
  */
 ?>
@@ -10,12 +10,14 @@
    the_post();
 ?>
 
-<?php checkbox_step_status() ;?>
 
 <div class="main">
-   <h1 class="page-title"><?php the_title();?> </h1>    
-   <?php 
-   echo do_shortcode('[woocommerce_checkout]');
-    ?>
+   <h1 class="page-title"><?php the_title();?> </h1>
+</div>
+
+<?php checkbox_step_status('step2') ;?>
+
+<div class="main">  
+   <?php echo do_shortcode('[woocommerce_checkout]'); ?>
 </div>
 <?php  get_footer(); ?>

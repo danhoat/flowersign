@@ -45,7 +45,8 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
 .price .amount1,
 .subtotal-price,
 .woo-first-price .amount,
-.woo-first-price .amount bdi
+.woo-first-price .amount bdi,
+.product-subtotal .amount
 {
   
     color: #70A100;
@@ -738,6 +739,7 @@ body{
 .menu_checkout_box ul{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
 
 }
 .menu_checkout_box ul li{
@@ -750,9 +752,29 @@ body{
     color: #b9b9b9;
     text-transform: uppercase;
     font-size: 17px;
-    gap: 10px;
+    font-weight: 500;
+    padding: 9px;
 }
 .menu_checkout_box ul li.active {
-    padding: 5px 0;
     color: #fff;
+}
+
+#add_payment_method table.cart img, .woocommerce-cart table.cart img, .woocommerce-checkout table.cart img{
+    width: 120px;
+}
+.product-price .amount{
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.woocommerce-cart table.cart td.product-name a{
+    font-size: 1.3em;
+    font-weight: 600;
+}
+.cart .product-subtotal .amount{
+    font-size: 1.1em;
+    font-weight: 700;
+}
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button{
+    text-transform: uppercase;
 }

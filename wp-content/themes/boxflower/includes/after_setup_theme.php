@@ -95,7 +95,7 @@ function wpdocs_theme_name_scripts() {
         wp_enqueue_style( 'blog-post', BOXTHEME_URL.'/css/blog.css',array(), rand() );
     }
 
-    if( is_page_template('page-checkout.php') || is_page('checkout') ){
+    if( is_page_template('page-checkout.php') || is_page('checkout') ||  is_page_template('page-cart.php')){
         wp_enqueue_style( 'woo-checkout', BOXTHEME_URL.'/css/checkout.css',array(), rand() );
     }
     if( is_front_page() || is_home() ){
