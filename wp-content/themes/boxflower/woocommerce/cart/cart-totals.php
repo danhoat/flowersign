@@ -94,7 +94,7 @@ defined( 'ABSPATH' ) || exit;
 
 		<?php do_action( 'woocommerce_cart_totals_before_order_total' ); ?>
 
-		<tr class="order-total">
+		<tr class="box_cart_totals_item order-total line97 tongcong ">
 			<th><?php esc_html_e( 'Tổng cộng', 'woocommerce' ); ?></th>
 			<td data-title="<?php esc_attr_e( 'Tổng', 'woocommerce' ); ?>"><?php wc_cart_totals_order_total_html(); ?></td>
 		</tr>

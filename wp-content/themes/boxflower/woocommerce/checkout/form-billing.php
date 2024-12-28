@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
 
 ?>
 <div class="woocommerce-billing-fields">
-	<?php if ( wc_ship_to_billing_address_only() && WC()->cart->needs_shipping() ) : ?>
+	<!-- <?php if ( wc_ship_to_billing_address_only() && WC()->cart->needs_shipping() ) : ?>
 
 		<h3><?php esc_html_e( 'Billing &amp; Shipping', 'woocommerce' ); ?></h3>
 
@@ -29,8 +29,8 @@ defined( 'ABSPATH' ) || exit;
 		<h3><?php esc_html_e( 'Thông tin người nhận:', 'woocommerce' ); ?></h3>
 
 	<?php endif; ?>
-
-	<?php do_action( 'woocommerce_before_checkout_billing_form', $checkout ); ?>
+ -->
+	<?php // do_action( 'woocommerce_before_checkout_billing_form', $checkout ); ?>
 
 	<div class="woocommerce-billing-fields__field-wrapper">
 		<?php
