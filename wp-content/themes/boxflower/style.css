@@ -767,10 +767,7 @@ body{
     font-size: 1.1em;
 }
 
-.woocommerce-cart table.cart td.product-name a{
-    font-size: 1.3em;
-    font-weight: 600;
-}
+
 .cart .product-subtotal .amount{
     font-size: 1.1em;
     font-weight: 700;

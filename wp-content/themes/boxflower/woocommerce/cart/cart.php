@@ -172,7 +172,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 	<div class="flower_sight_below_total">
 		<div class="below_total_box">
 			<div class="below_total_return">
-				<a class="button_flowersight" href="https://flowersight.com/san-pham/" data-wpel-link="internal">
+				<a class="button_flowersight" href="<?php echo wc_get_page_permalink('shop');?>" data-wpel-link="internal">
 					<span>Tiếp tục mua hàng <i class="zmdi zmdi-long-arrow-right"></i></span>
 				</a>
 			</div>
