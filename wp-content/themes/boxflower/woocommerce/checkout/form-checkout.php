@@ -10,21 +10,23 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see https://woocommerce.com/document/template-structure/
- * @package WooCommerce\Templates
- * @version 3.5.0
+ * @see 	    https://docs.woocommerce.com/document/template-structure/
+ * @author 		WooThemes
+ * @package 	WooCommerce/Templates
+ * @version     2.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-//die('1111111');
+
+wc_print_notices();
 
 do_action( 'woocommerce_before_checkout_form', $checkout );
 
-// If checkout registration is disabled and not logged in, the user cannot checkout.
+// If checkout registration is disabled and not logged in, the user cannot checkout
 if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_required() && ! is_user_logged_in() ) {
-	echo esc_html( apply_filters( 'woocommerce_checkout_must_be_logged_in_message', __( 'You must be logged in to checkout.', 'woocommerce' ) ) );
+	echo apply_filters( 'woocommerce_checkout_must_be_logged_in_message', __( 'You must be logged in to checkout.', 'woocommerce' ) );
 	return;
 }
 
@@ -36,37 +38,111 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 
 		<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
 
-		<div class="col-6 frm-left-checkout" id="customer_details">
-			<div class="title_checkout"><h3><span>1</span>Tài khoản và chi tiết thanh toán</h3></div>
-			<div class="col-12">
+		<div class="col2-set" id="customer_details">
+			<div class="col-1">
 				<?php do_action( 'woocommerce_checkout_billing' ); ?>
 			</div>
 
-			<div class="col-12">
-				<?php do_action( 'woocommerce_checkout_shipping' ); ?>
+			<div class="col-2">
+				<?php //do_action( 'woocommerce_checkout_shipping' ); ?>
+				<div class="title_checkout"><h3><span>2</span>Giỏ hàng</h3></div>
+
+<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents check_out_cart" cellspacing="0">
+	<thead>
+		<tr>
+			<th class="product-thumbnail">Sản phẩm</th>
+			<th class="product-name">Tên</th>
+			<th class="product-price">Đơn giá</th>
+			<th class="product-quantity">Số lượng</th>
+			<th class="product-subtotal">Thành tiền</th>
+		</tr>
+	</thead>
+	<tbody>
+		<?php
+		foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
+			$_product   = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
+			$product_id = apply_filters( 'woocommerce_cart_item_product_id', $cart_item['product_id'], $cart_item, $cart_item_key );
+
+			if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
+				$product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key );
+				?>
+				<tr class="woocommerce-cart-form__cart-item <?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
+
+
+					<td class="product-thumbnail">
+						<?php
+							$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
+
+							if ( ! $product_permalink ) {
+								echo $thumbnail;
+							} else {
+								printf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $thumbnail );
+							}
+						?>
+					</td>
+
+					<td class="product-name" data-title="<?php esc_attr_e( 'Product', 'woocommerce' ); ?>">
+						<?php
+							if ( ! $product_permalink ) {
+								echo apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key ) . '&nbsp;';
+							} else {
+								echo apply_filters( 'woocommerce_cart_item_name', sprintf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $_product->get_name() ), $cart_item, $cart_item_key );
+							}
+
+							// Meta data
+							echo wc_get_formatted_cart_item_data ( $cart_item );
+
+							// Backorder notification
+							if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $cart_item['quantity'] ) ) {
+								echo '<p class="backorder_notification">' . esc_html__( 'Available on backorder', 'woocommerce' ) . '</p>';
+							}
+						?>
+					</td>
+
+					<td class="product-price" data-title="<?php esc_attr_e( 'Price', 'woocommerce' ); ?>">
+						<?php
+							echo apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key );
+						?>
+					</td>
+
+					<td class="product-quantity" data-title="<?php esc_attr_e( 'Quantity', 'woocommerce' ); ?>">
+						<?php
+							echo apply_filters( 'woocommerce_checkout_cart_item_quantity', ' <strong class="product-quantity">' . sprintf( '&times; %s', $cart_item['quantity'] ) . '</strong>', $cart_item, $cart_item_key );
+						?>
+					</td>
+
+					<td class="product-subtotal" data-title="<?php esc_attr_e( 'Total', 'woocommerce' ); ?>">
+						<?php
+							echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key );
+						?>
+					</td>
+				</tr>
+				<?php
+			}
+		}
+		?>
+	</tbody>
+</table>
+
+
+				<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
+
+				<div id="order_review" class="woocommerce-checkout-review-order">
+
+					<?php do_action( 'woocommerce_checkout_order_review' ); ?>
+				</div>
+				
 			</div>
 		</div>
 
 		<?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
 
 	<?php endif; ?>
-	
-	<?php do_action( 'woocommerce_checkout_before_order_review_heading' ); ?>
-	
-	
-	
-	<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
 
-	<div id="order_review" class="col-6 woocommerce-checkout-review-order">
+	
 
-		<!-- <h3 id="order_review_heading"><?php esc_html_e( 'Your order', 'woocommerce' ); ?></h3> -->
-		<div class="title_checkout"><h3><span>2</span>Giỏ hàng</h3></div>
-
-		<?php do_action( 'woocommerce_checkout_order_review' ); ?>
-	</div>
-
-	<?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
+	
 
 </form>
 
-<?php do_action( 'woocommerce_after_checkout_form', $checkout ); ?>
+<?php //do_action( 'woocommerce_after_checkout_form', $checkout ); ?>

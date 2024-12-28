@@ -9,23 +9,6 @@ require_once __DIR__ .'/btn_mua_ngay.php';
 require_once __DIR__ .'/add_tabs.php';
 require_once __DIR__ .'/sumary.php';
 
-// require_once __DIR__ .'/payment/paypal_vnd.php';
-
-
-// require_once __DIR__ .'/custom_checkout_form.php';
-
-
-
-function box_reorder_fields($fields){
-
-    // echo '<pre>';
-    // var_dump($fields);
-    // echo '</pre>';
-
-    return $fields;
-
-}
-add_filter('woocommerce_checkout_fields','box_reorder_fields');
 
 
 
@@ -46,3 +29,8 @@ add_filter( 'woocommerce_output_related_products_args', 'jk_related_products_arg
     }
     return $args;
 }
+
+// require_once __DIR__ .'/payment/paypal_vnd.php';
+ require_once __DIR__ .'/clone_checkout_fields.php';
+// require_once __DIR__ .'/custom_checkout_form.php';
+

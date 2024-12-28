@@ -1,6 +1,9 @@
 .woocommerce-form-coupon-toggle{
     margin-top: 50px;
 }
+.woocommerce-cart-form{
+    position: relative;
+}
 form.woocommerce-checkout{
     display: block;
     justify-content: space-between;
@@ -156,15 +159,15 @@ div.coupon input[type="text"]:hover{
 
 
 @media only screen and (min-width: 1000px){
-    form .woocommerce-checkout-review-order{
-        width: ;
+    .woocommerce-checkout  form .woocommerce-checkout-review-order{
+        width: 100%;
     }
     form .frm-left-checkout{
         float: left;
         width: 48%;
     }
 
-    form .woocommerce-checkout-review-order{
+    .woocommerce-cart form .woocommerce-checkout-review-order{
         float: right;
         width: 48%;
     }
@@ -317,4 +320,46 @@ a:hover .fa-caret-right:before{
     line-height: 35px;
     text-align: center;
     margin-right: 15px;
+}
+.the_content_wrapper p {
+    font-weight: 300;
+    line-height: 30px;
+}
+
+.woocommerce .woocommerce-billing-fields__field-wrapper .form-row {
+    margin-bottom: 20px;
+    display: block;
+}
+
+.woocommerce .woocommerce-billing-fields__field-wrapper input, .woocommerce .woocommerce-billing-fields__field-wrapper textarea {
+    background-image: none;
+    border: 1px solid #dddddd;
+}
+span.optional{
+    display: none;
+}
+.woocommerce-cart  #order_review table.shop_table {
+    max-width: 350px;
+    float: right;
+}
+.woocommerce-checkout-payment {
+    float: left;
+    width: 100%;
+}
+#add_payment_method #payment div.payment_box, .woocommerce-cart #payment div.payment_box, .woocommerce-checkout #payment div.payment_box {
+    background-color: #fdf8f6;
+    color: #333333;
+}
+
+#add_payment_method #payment div.payment_box, .woocommerce-cart #payment div.payment_box, .woocommerce-checkout #payment div.payment_box {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1em;
+    margin: 1em 0;
+    font-size: .92em;
+    border-radius: 2px;
+    line-height: 1.5;
+    background-color: #dcd7e3;
+    color: #515151;
 }

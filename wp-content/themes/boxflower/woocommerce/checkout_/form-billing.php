@@ -10,42 +10,35 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see     https://docs.woocommerce.com/document/template-structure/
- * @author  WooThemes
- * @package WooCommerce/Templates
- * @version 3.0.9
+ * @see     https://woocommerce.com/document/template-structure/
+ * @package WooCommerce\Templates
+ * @version 3.6.0
+ * @global WC_Checkout $checkout
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
-}
-
-/** @global WC_Checkout $checkout */
+defined( 'ABSPATH' ) || exit;
 
 ?>
 <div class="woocommerce-billing-fields">
-	<?php if ( wc_ship_to_billing_address_only() && WC()->cart->needs_shipping() ) : ?>
+	<!-- <?php if ( wc_ship_to_billing_address_only() && WC()->cart->needs_shipping() ) : ?>
 
-		<div class="title_checkout"><h3><span>1</span>Tài khoản và chi tiết thanh toán</h3></div>
+		<h3><?php esc_html_e( 'Billing &amp; Shipping', 'woocommerce' ); ?></h3>
 
 	<?php else : ?>
 
-		<div class="title_checkout"><h3><span>1</span>Tài khoản và chi tiết thanh toán</h3></div>
+		<h3><?php esc_html_e( 'Thông tin người nhận:', 'woocommerce' ); ?></h3>
 
 	<?php endif; ?>
-
-	<?php do_action( 'woocommerce_before_checkout_billing_form', $checkout ); ?>
+ -->
+	<?php // do_action( 'woocommerce_before_checkout_billing_form', $checkout ); ?>
 
 	<div class="woocommerce-billing-fields__field-wrapper">
 		<?php
-			$fields = $checkout->get_checkout_fields( 'billing' );
+		$fields = $checkout->get_checkout_fields( 'billing' );
 
-			foreach ( $fields as $key => $field ) {
-				if ( isset( $field['country_field'], $fields[ $field['country_field'] ] ) ) {
-					$field['country'] = $checkout->get_value( $field['country_field'] );
-				}
-				woocommerce_form_field( $key, $field, $checkout->get_value( $key ) );
-			}
+		foreach ( $fields as $key => $field ) {
+			woocommerce_form_field( $key, $field, $checkout->get_value( $key ) );
+		}
 		?>
 	</div>
 
@@ -58,7 +51,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<p class="form-row form-row-wide create-account">
 				<label class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">
-					<input class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox" id="createaccount" <?php checked( ( true === $checkout->get_value( 'createaccount' ) || ( true === apply_filters( 'woocommerce_create_account_default_checked', false ) ) ), true ) ?> type="checkbox" name="createaccount" value="1" /> <span><?php _e( 'Create an account?', 'woocommerce' ); ?></span>
+					<input class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox" id="createaccount" <?php checked( ( true === $checkout->get_value( 'createaccount' ) || ( true === apply_filters( 'woocommerce_create_account_default_checked', false ) ) ), true ); ?> type="checkbox" name="createaccount" value="1" /> <span><?php esc_html_e( 'Create an account?', 'woocommerce' ); ?></span>
 				</label>
 			</p>
 
