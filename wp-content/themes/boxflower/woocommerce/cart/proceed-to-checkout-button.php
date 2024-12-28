@@ -23,5 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <a href="<?php echo esc_url( wc_get_checkout_url() ); ?>" class="button_flowersight">
-	<?php esc_html_e( 'Giao hàng và thanh toán', 'woocommerce' ); ?> <i class="zmdi zmdi-caret-right-circle"></i>
+	<span>
+	<?php esc_html_e( 'Giao hàng và thanh toán', 'woocommerce' ); ?> <i class="fa fa-caret-right"></i>
+	</span>
 </a>

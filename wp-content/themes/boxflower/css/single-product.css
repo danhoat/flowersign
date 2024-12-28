@@ -582,7 +582,7 @@ span.rate-score{
 @media only screen and (min-width: 1000px){
     .rating-price {
         display: flex;
-        justify-content: end;
+        1justify-content: end;
 }
 
     p.comment-form-author , p.comment-form-email{

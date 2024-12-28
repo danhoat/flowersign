@@ -112,39 +112,40 @@ function is_select_subcat($term_id, $cur_term){
 ?>
 
 <?php
+if(is_tax('product_cat') ){
+	$main_term 			= get_term_by('term_id', $main_id,'product_cat');
+	$term_description 	= apply_filters( 'woocommerce_taxonomy_archive_description_raw', $main_term->description, $main_term );
+	$termdesc = explode("[xem_them]", $term_description);
 
-$main_term 			= get_term_by('term_id', $main_id,'product_cat');
-$term_description 	= apply_filters( 'woocommerce_taxonomy_archive_description_raw', $main_term->description, $main_term );
-$termdesc = explode("[xem_them]", $term_description);
+	?>
 
-?>
+	<?php if($has_childterm){ ?>
+	<div class="full">
+		<div class="catalog_subtitle_div swiper-container-horizontal" style="display: block;">
+			<ul class="catalog_subtitle ">
+				<?php foreach($has_childterm as $key=>$term_id){
 
-<?php if($has_childterm){ ?>
-<div class="full">
-	<div class="catalog_subtitle_div swiper-container-horizontal" style="display: block;">
-		<ul class="catalog_subtitle ">
-			<?php foreach($has_childterm as $key=>$term_id){
-
-				$term = get_term_by('term_id', $term_id,'product_cat');
-				?>
-				<li data-code="<?php echo $term_id;?>" <?php is_select_subcat($term_id, $cur_term);?> ><a <?php is_select_subcat($term_id, $cur_term);?> href="<?php echo get_term_link($term);?>"><?php echo $term->name;?> </a></li>
-			<?php  } ?>
-		</ul>
-			
+					$term = get_term_by('term_id', $term_id,'product_cat');
+					?>
+					<li data-code="<?php echo $term_id;?>" <?php is_select_subcat($term_id, $cur_term);?> ><a <?php is_select_subcat($term_id, $cur_term);?> href="<?php echo get_term_link($term);?>"><?php echo $term->name;?> </a></li>
+				<?php  } ?>
+			</ul>
+				
+		</div>
 	</div>
-</div>
-<?php } ?>
-
-
-
-<div class="term-short-desc">
-	<?php echo $termdesc[0];?>
-	<?php if( isset($termdesc[1])  && !empty($termdesc[1])){?>
-		<a class="description-show-more show-more-top">
-			<span><i class="fa fa-plus" aria-hidden="true"></i> Xem thêm</span>
-		</a>
 	<?php } ?>
-</div>
+
+
+
+	<div class="term-short-desc">
+		<?php echo $termdesc[0];?>
+		<?php if( isset($termdesc[1])  && !empty($termdesc[1])){?>
+			<a class="description-show-more show-more-top">
+				<span><i class="fa fa-plus" aria-hidden="true"></i> Xem thêm</span>
+			</a>
+		<?php } ?>
+	</div>
+<?php }?>
 
 
 <div class="search_filter_wrap">

@@ -211,5 +211,9 @@
         flex-direction: column;
         display: flex;
     }
+    .woocommerce ul.products li.product .wrap-price-rating .price{
+        display: flex;
+        flex-direction: column;
+    }
 
 }
