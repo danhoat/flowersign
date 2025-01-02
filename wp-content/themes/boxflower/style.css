@@ -47,7 +47,8 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
 .woo-first-price .amount,
 .woo-first-price .amount bdi,
 .product-subtotal .amount,
-.archive.woocommerce  .term-description a
+.archive.woocommerce  .term-description a,
+body.single-product form.cart  .btn-add-to-cart:hover
 {
   
     color: #70A100;

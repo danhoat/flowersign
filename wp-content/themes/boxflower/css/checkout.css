@@ -165,6 +165,9 @@ div.coupon input[type="text"]:hover{
     height: 100%;
     background: #0682d2;
 }
+form .select2-container--default .select2-selection--single{
+    padding-top: 3px;
+}
 
 
 @media only screen and (min-width: 1000px){
@@ -467,7 +470,9 @@ span.optional{
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-
+.select2-container--default .select2-selection--single .select2-selection__placeholder{
+    color: unset;
+}
 @media only screen and (max-width: 750px){
     .flower_sight_below_total{
         position: relative;
@@ -540,6 +545,16 @@ span.optional{
     }
     .woocommerce-checkout ul#shipping_method li label{
         display: flex;
+    }
+    .woocommerce-checkout form.woocommerce-checkout{
+        padding: 0;
+    
+    }
+    .woocommerce table.cart .product-price, .woocommerce table.cart .product-thumbnail{
+        display: none;
+    }
+    .woocommerce table.shop_table_responsive tr, .woocommerce-page table.shop_table_responsive tr{
+        margin-bottom: 5px;
     }
 
 }

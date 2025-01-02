@@ -154,14 +154,11 @@ if ( $product->is_in_stock() ) : ?>
 		
 		$next_2days_show = str_replace("/", ' Thg ', $next_2days);
 
-
-
 		?>
-	
 
 		<div class="full">
 
-			<div class="text-xs" id="delivery-date" product_price="719000" style="">
+			<div class="delivery-date text-xs" id="delivery-date" product_price="719000" style="">
 				<span class="label">Chọn ngày giao hàng:</span>
 				<input type="hidden" name="delivery_date" value="">
 
@@ -236,13 +233,12 @@ if ( $product->is_in_stock() ) : ?>
 
 		<div class="full">
 			<p>
-				<h3 class=" text-lg">Tổng: <span class="text-brand font-bold self-center whitespace-nowrap subtotal-price" id="subtotal">  <?php echo wc_price($product->get_price());?></span></h3>
+				<h3 class=" text-lg"> <span class="label-tong">Tổng: </span> <span class="text-brand font-bold self-center whitespace-nowrap subtotal-price" id="subtotal">  <?php echo wc_price($product->get_price());?></span></h3>
 			</p>
 		</div>
 		<div class="grid full grid-cols-2 form-btn">
 
 			<button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="single_add_to_cart_button button  btn-add-to-cart"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
-
 			
 			<?php btn_mua_ngay();?>
 		</div>

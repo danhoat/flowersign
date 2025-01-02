@@ -8,6 +8,7 @@ require_once __DIR__ .'/woo_rating.php';
 require_once __DIR__ .'/btn_mua_ngay.php';
 require_once __DIR__ .'/add_tabs.php';
 require_once __DIR__ .'/sumary.php';
+require_once __DIR__ .'/remove_hook.php';
 
 
 
@@ -34,13 +35,13 @@ add_filter( 'woocommerce_output_related_products_args', 'jk_related_products_arg
  require_once __DIR__ .'/clone_checkout_fields.php';
 // require_once __DIR__ .'/custom_checkout_form.php';
 
-function check_add_cart(){
+// function check_add_cart(){
 
-    $is_remove = isset($_REQUEST['remove_item']) ? $_REQUEST['remove_item'] : 0;
-    if($is_remove){
-      var_dump($is_remove);
-    }
+//     $is_remove = isset($_REQUEST['remove_item']) ? $_REQUEST['remove_item'] : 0;
+//     if($is_remove){
+//       var_dump($is_remove);
+//     }
   
-}
+// }
 
-add_action('wp_loaded','check_add_cart');
+// add_action('wp_loaded','check_add_cart');

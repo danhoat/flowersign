@@ -14,7 +14,7 @@
  * @package     WooCommerce\Templates
  * @version     1.6.4
  */
-
+remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
@@ -33,7 +33,7 @@ get_header( 'shop' ); ?>
 		<h1 class="product_title entry-title">
 	       <?php the_title();?>
 	   </h1>
-
+	   <?php woocommerce_breadcrumb();?>
 
 		<?php while ( have_posts() ) : ?>
 			<?php the_post(); ?>

@@ -5,16 +5,17 @@ function box_add_woo_tabs($tabs){
     //var_dump($tabs);
 
     // review pri=30
-    $key = 'cs_doi_tra';
+    
     $tabs["reviews"]=  array(
-        "title"=> "Đánh Giá - Nhận Xét Từ Khách Hàng",
+        "title"=> "Đánh Giá",
         "priority"=>  30, 
         "callback"=> "comments_template"
     );
-    $tabs[$key] = array(
-        "title"=> "Chính sách đổi trả",
+
+    $tabs['hdbq'] = array(
+        "title"=> "Hướng dẫn bảo quản hoa",
         "priority"=> 31,
-        "callback"=> "woocommerce_product_{$key}_tab",
+        "callback"=> "woocommerce_product_hdbq_tab",
     );
     // $tabs['cs_baomat'] = array(
     //     "title"=> "Chính sách Bảo Mật ",
@@ -43,8 +44,8 @@ function woocommerce_product_cs_doi_tra_tab(){
     echo do_shortcode($html);
 
 }
-function woocommerce_product_cs_baomat_tab(){
-    $html = '[sc name="cs_baomat"][/sc]';
+function woocommerce_product_hdbq_tab(){
+    $html = '[sc name="hdbq"][/sc]';
     echo do_shortcode($html);
 }
 function woocommerce_product_qa_tab(){
