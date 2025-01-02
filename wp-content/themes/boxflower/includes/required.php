@@ -15,6 +15,7 @@ require_once __DIR__ .'/extra_fee.php';
 require_once __DIR__ .'/override_func.php';
 require_once __DIR__ .'/comment_form_fields.php';
 require_once __DIR__ .'/ajax.php';
+require_once __DIR__ .'/shortcode.php';
 
 // require_once __DIR__ .'/custom_gallery_vertical.php';
 

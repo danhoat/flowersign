@@ -115,7 +115,16 @@ function is_select_subcat($term_id, $cur_term){
 if(is_tax('product_cat') ){
 	$main_term 			= get_term_by('term_id', $main_id,'product_cat');
 	$term_description 	= apply_filters( 'woocommerce_taxonomy_archive_description_raw', $main_term->description, $main_term );
-	$termdesc = explode("[xem_them]", $term_description);
+	
+	//$term_description = apply_filters( 'woocommerce_taxonomy_archive_description_raw', $main_term->description, $main_term );
+	$short_desc = get_term_meta( $main_id, 'short_desc', true ) ;
+
+	// if ( ! empty( $short_desc ) ) {
+	// 	echo '<div class="term-description">' . wc_format_content( wp_kses_post( $short_desc ) ) . '</div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	// }
+	$term_description = term_description($main_term);
+
+
 
 	?>
 
@@ -137,9 +146,10 @@ if(is_tax('product_cat') ){
 
 
 
-	<div class="term-short-desc">
-		<?php echo $termdesc[0];?>
-		<?php if( isset($termdesc[1])  && !empty($termdesc[1])){?>
+	<div class="term-short-desc">	
+		<?php echo $short_desc;?>
+
+		<?php if( !empty($term_description) ){?>
 			<a class="description-show-more show-more-top">
 				<span><i class="fa fa-plus" aria-hidden="true"></i> Xem thêm</span>
 			</a>
@@ -322,10 +332,10 @@ if( is_tax('product_cat') ){ ?>
 	</div>
 </div>
 	<?php 
-	if( isset($termdesc[1]) && !empty($termdesc[1])){
+	if( !empty($term_description) ){
 		echo '<div class "full term-description">';
 		echo '<div class ="container"> <div class ="term-description ">';
-		echo $termdesc[1];
+		echo $term_description;
 		echo '</div></div></div>';
 	}
  	?>

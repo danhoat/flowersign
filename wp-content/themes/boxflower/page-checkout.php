@@ -6,6 +6,10 @@
 ?>
 
 <?php
+if ( wp_doing_ajax() ) {
+   return ;
+}
+
    get_header();
    the_post();
 ?>
@@ -20,4 +24,5 @@
 <div class="main">  
    <?php echo do_shortcode('[woocommerce_checkout]'); ?>
 </div>
+
 <?php  get_footer(); ?>

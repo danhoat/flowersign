@@ -519,6 +519,7 @@ function is_active_step($current, $step){
     }
 }
 function checkbox_step_status($step){ ?>
+    <?php if( $step == 'step2' && isset($_GET['key'] )) $step = 'step3'; ?>
     <div class="menu_checkout checkout-steps">
         <div class="container">
             <div class="row">

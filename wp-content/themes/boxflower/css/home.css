@@ -224,7 +224,7 @@ color: #2E2E2E;
     }
     .bestselling ul.products,
     .catproducts   ul.products {
-        gap: 10px;
+        gap: 15px 10px;
     }
     .fixed_bg::after{
         background: url(../images/home/bg_main_fixed.jpg) no-repeat 0 0;
@@ -272,6 +272,7 @@ color: #2E2E2E;
         position: initial;
         width: 111px;
         text-align: center;
+        margin-right: 10px;
     }
     .slide-intro .splide__list{
         height: auto;

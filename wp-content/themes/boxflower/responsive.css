@@ -160,7 +160,7 @@
     .line-heading{
         flex-direction: column;
         border: 0;
-        margin-bottom: 10px;
+        margin-bottom: 13px;
     }
     .icon-heading-mb{
         background: url(images/img_title.png);
@@ -201,7 +201,7 @@
     }
     .bestselling .line-heading{
         flex-direction: row;
-        justify-content: start;
+        justify-content: center;
         gap: 19px;
     }
     .bestselling .btn-tab .h-heading{

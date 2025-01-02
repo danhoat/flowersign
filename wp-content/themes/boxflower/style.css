@@ -46,7 +46,8 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
 .subtotal-price,
 .woo-first-price .amount,
 .woo-first-price .amount bdi,
-.product-subtotal .amount
+.product-subtotal .amount,
+.archive.woocommerce  .term-description a
 {
   
     color: #70A100;
@@ -314,7 +315,7 @@ body{
     text-indent: 30px;
 }
 .image-box.arow{
-    margin-bottom: 15px;
+    margin-bottom: 22px;
 }
 
 .gnb_bnr_slide{
@@ -448,8 +449,8 @@ body{
 .line-heading{
     border-bottom: 2px solid rgb(229 231 235);;
     border-color: rgb(229 231 235);
-    margin-bottom: 20px;
-    padding-bottom: 0px;
+    margin-bottom: 25px;
+    padding-bottom: 5px;
 }
 .link-collection{
     color: rgb(158 166 212);
@@ -655,6 +656,11 @@ body{
     padding: 8px 12px;
     border-radius: 99px;
 }
+.hotline .hotline-number {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 700;
+}
 .menu-item{
     position: relative;
 }
@@ -774,4 +780,16 @@ body{
 }
 .woocommerce-cart .wc-proceed-to-checkout a.checkout-button{
     text-transform: uppercase;
+}
+.wp-caption.aligncenter{
+    display: block;
+    align-items: center;
+    width: initial !important;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.archive.woocommerce ul.products li.product .price{
+    font-size: 0.99rem;
+
 }

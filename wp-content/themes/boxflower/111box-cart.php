@@ -1,17 +1,14 @@
-<?php 
-/**
- * Template Name: Cart Page
- *
- */
-?>
-
 <?php
-   get_header();
-   the_post();
-?>
+/**
+ *  Template Name: Cart page
+ *
+ * @package Taka
+ * @author Taka Team
+ */
+get_header(); ?>
 
 <div class="main">
-   <h1 class="page-title"><?php the_title();?> </h1>
+   <h1 class="page-title"><?php the_post(); the_title();?> </h1>
 </div>
 
 <?php checkbox_step_status('step1') ;?>

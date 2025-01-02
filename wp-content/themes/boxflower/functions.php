@@ -23,7 +23,7 @@ function testimonial_item1(){?>
     <div class="testimonial-item">
         
         <div class="box-image">
-            <img src = "<?php echo BOXTHEME_URL;?>/images/home/review1.jpg" >
+            <img src = "<?php echo BOXTHEME_URL;?>/images/home/review1.jpg" alt="Jasmine White Review"  >
         </div>
         <p class="mkdf-testimonial-text">Mình có đặt 1 bó hoa tốt nghiệp của shop, hoa tươi siêu đẹp, shop chu đáo nhiệt tình, hỗ trợ hết mình. Sẽ ủng hộ lại khi có nhu cầu.</p>
         <span class="mkdf-testimonial-author">
@@ -40,7 +40,7 @@ function testimonial_item2(){?>
     <div class="testimonial-item">
        
         <div class="box-image">
-            <img src = "<?php echo BOXTHEME_URL;?>/images/home/review2.jpg" >
+            <img src = "<?php echo BOXTHEME_URL;?>/images/home/review2.jpg" alt="Flip White Review" >
         </div>
         <p class="mkdf-testimonial-text">Hoa xinh lam nhé, mình mua tặng sếp, cũng dc hỗ trợ nhanh lẹ lắm. Sắp tới sẽ mua tiếp.</p>
         <span class="mkdf-testimonial-author">
@@ -58,7 +58,7 @@ function testimonial_item3(){?>
     <div class="testimonial-item">
        
         <div class="box-image">
-            <img src = "<?php echo BOXTHEME_URL;?>/images/home/review3.jpg" >
+            <img src = "<?php echo BOXTHEME_URL;?>/images/home/review3.jpg" alt="Jasmine Green Review" >
         </div>
         
         <p class="mkdf-testimonial-text">Shop hỗ trợ rất nhiệt tình, tư vấn chọn hoa mình thích và giá khá hợp lý so với khu vực trung tâm. Sau này cần đặt hoa online tphcm mình sẽ quay lại đây.</p>

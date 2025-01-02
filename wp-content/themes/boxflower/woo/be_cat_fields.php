@@ -4,10 +4,71 @@ define('CAT_BANNER_IMG_ID','banner_thumbnail_id');
 
 
 
+function add_category_short_des_field(){ ?>
+      <tr class="form-field term-thumbnail-wrap">
+            <th scope="row" valign="top"><label><?php esc_html_e( 'Mô tả ngắn', 'woocommerce' ); ?></label></th>
+            <td>
+                <?php 
+
+                $content = "";
+                $custom_editor_id = "short_desc";
+                $custom_editor_name = "short_desc";
+                $args = array(
+                        'media_buttons' => false, // This setting removes the media button.
+                        'textarea_name' => $custom_editor_name, // Set custom name.
+                        'textarea_rows' => 5, //Determine the number of rows.
+                        'quicktags' => false, // Remove view as HTML button.
+                    );
+
+                ?>
+                <?php wp_editor('',$custom_editor_id, $args);?>
+            </td>
+        </tr>
+
+
+        <?php
+
+}
+add_action( 'product_cat_add_form_fields',  'add_category_short_des_field', 1 ) ;
+
+
+function box_edit_category_short_desc_field( $term ) { 
+
+
+        $short_desc = get_term_meta( $term->term_id, 'short_desc', true ) ;
+        $content = "";
+        $custom_editor_id = "short_desc";
+        $custom_editor_name = "short_desc";
+        $args = array(
+                'media_buttons' => false, // This setting removes the media button.
+                'textarea_name' => $custom_editor_name, // Set custom name.
+                'textarea_rows' => 5, //Determine the number of rows.
+                'quicktags' => false, // Remove view as HTML button.
+            );
+
+        ?>
+                
+       
+    
+      
+        <tr class="form-field term-thumbnail-wrap">
+            <th scope="row" valign="top"><label><?php esc_html_e( 'Mô tả ngắn', 'woocommerce' ); ?></label></th>
+            <td>
+              <?php wp_editor($short_desc,$custom_editor_id, $args);?>
+            </td>
+        </tr>
+        <?php
+    }
+add_action( 'product_cat_edit_form_fields',  'box_edit_category_short_desc_field', 1 );
+
+
+
+
 /**
  * Category thumbnail fields.
  */
  function add_category_fields() {
+
     ?>
   
     <div class="form-field box-thumbnail-wrap">
@@ -182,6 +243,9 @@ function box_save_category_fields( $term_id, $tt_id = '', $taxonomy = '' ) {
 
     if ( isset( $_POST[CAT_BANNER_IMG_ID] ) && 'product_cat' === $taxonomy ) { // WPCS: CSRF ok, input var ok.
         update_term_meta( $term_id, CAT_BANNER_IMG_ID, absint( $_POST[CAT_BANNER_IMG_ID] ) ); // WPCS: CSRF ok, input var ok.
+    }
+    if ( isset( $_POST['short_desc'] ) && 'product_cat' === $taxonomy ) { // WPCS: CSRF ok, input var ok.
+        update_term_meta( $term_id, 'short_desc', $_POST['short_desc']  ); // WPCS: CSRF ok, input var ok.
     }
 }
 
