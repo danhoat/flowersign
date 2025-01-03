@@ -138,7 +138,7 @@ var kid_agree = "";
 
             <div class="resp_top_hamburger">
 
-                <a href="#category"><b>aside menu</b><h2>MENU</h2></a>
+                <a href="#category" class="hamberger_menu"><b>aside menu</b><h2>MENU</h2></a>
 
             </div>
             <?php if(wp_is_mobile() ){ module_search_html(); } ?>
@@ -177,7 +177,6 @@ var kid_agree = "";
                     });
                 }(jQuery));
             </script>
-            <!-- 슬라이드 배너 영역 (light_style_1_2) :: END -->
         </div>
     </div>
 
