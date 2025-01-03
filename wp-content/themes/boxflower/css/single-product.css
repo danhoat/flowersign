@@ -354,6 +354,9 @@ input:checked + .choice{
 .date-item .fa-calendar-days{
     max-height: 24px;
 }
+body .ui-datepicker .ui-datepicker-title{
+    color: #fff;
+}
 #datepicker {
     z-index: 9999;
     opacity: 0;
