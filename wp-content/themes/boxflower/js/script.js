@@ -64,32 +64,32 @@
 		});
 
 		// 서브 영역 열기/닫기
-		jQuery(".sub_division_title").live('click',function(){
-			var contentsObj = jQuery(this).closest('.sub_division_title').next('.sub_division_contents'),
-				 summaryObj = jQuery(this).parent().find('.sub_division_title_summary');
-			if(!contentsObj.is(":hidden")){
-				jQuery(this).children(".sub_division_arw").addClass('closed');
-				contentsObj.hide();
-				summaryObj.show();
-			}else{
-				jQuery(this).children(".sub_division_arw").removeClass('closed');
-				contentsObj.show();
-				summaryObj.hide();
-			}
-			typeof area_close_chk == 'function' && area_close_chk(); // 각 레이어별 닫힘 체크 :: 2017-05-29 lwh
-		});
+		// jQuery(".sub_division_title").live('click',function(){
+		// 	var contentsObj = jQuery(this).closest('.sub_division_title').next('.sub_division_contents'),
+		// 		 summaryObj = jQuery(this).parent().find('.sub_division_title_summary');
+		// 	if(!contentsObj.is(":hidden")){
+		// 		jQuery(this).children(".sub_division_arw").addClass('closed');
+		// 		contentsObj.hide();
+		// 		summaryObj.show();
+		// 	}else{
+		// 		jQuery(this).children(".sub_division_arw").removeClass('closed');
+		// 		contentsObj.show();
+		// 		summaryObj.hide();
+		// 	}
+		// 	typeof area_close_chk == 'function' && area_close_chk(); // 각 레이어별 닫힘 체크 :: 2017-05-29 lwh
+		// });
 
-		//결제페이지의 사은품영역 서브 영역 열기/닫기
-		jQuery(".sub_division_title_gift").live('click',function(){
-			var contentsObj = jQuery(this).parent().closest('.sub_division_title').next('.sub_division_contents');
-			if(!contentsObj.is(":hidden")){
-				jQuery(this).children("sub_division_arw_gift").addClass('closed');
-				contentsObj.hide();
-			}else{
-				jQuery(this).children("sub_division_arw_gift").removeClass('closed');
-				contentsObj.show();
-			}
-		});
+		// //결제페이지의 사은품영역 서브 영역 열기/닫기
+		// jQuery(".sub_division_title_gift").live('click',function(){
+		// 	var contentsObj = jQuery(this).parent().closest('.sub_division_title').next('.sub_division_contents');
+		// 	if(!contentsObj.is(":hidden")){
+		// 		jQuery(this).children("sub_division_arw_gift").addClass('closed');
+		// 		contentsObj.hide();
+		// 	}else{
+		// 		jQuery(this).children("sub_division_arw_gift").removeClass('closed');
+		// 		contentsObj.show();
+		// 	}
+		// });
 
 		/* 상품디스플레이 탭 스크립트 */
 		jQuery('.displayTabContainer>li').on('click', function() {

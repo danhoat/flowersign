@@ -166,3 +166,4 @@ Stack trace:
 [02-Jan-2025 21:06:46 UTC]   Automatic plugin updates starting...
 [02-Jan-2025 21:06:46 UTC]   Automatic plugin updates complete.
 [02-Jan-2025 21:06:47 UTC] Automatic updates complete.
+[03-Jan-2025 03:37:12 UTC] PHP Parse error:  syntax error, unexpected token "}" in D:\laragon\www\flower\wp-content\themes\boxflower\includes\after_setup_theme.php on line 112

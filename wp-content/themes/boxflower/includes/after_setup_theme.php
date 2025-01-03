@@ -106,7 +106,13 @@ function wpdocs_theme_name_scripts() {
     if(! LOAD_STATIC_JS){
         $jss = box_js_enqueue();
         foreach($jss as $key=>$url){
-            wp_enqueue_script('abc-'.$key, trim($url) ,array() ,rand() ,true  );
+            $args = array();
+            if($key == 'slider'){
+                array_push($args, 'jquery');
+            } else{
+                $args = array();
+            }
+            wp_enqueue_script('abc-'.$key, trim($url) ,$args,rand() ,true  );
         }
     }
     wp_enqueue_style('woo-css', BOXTHEME_URL.'/css/override_woo.css',array(), rand() );

@@ -6,7 +6,7 @@ define('IMAGE_URL', BOXTHEME_URL.'/images' );
 define('JS_URL', BOXTHEME_URL.'/js');
 define('BOXTHEME_PATH', __DIR__);
 define('PRODUCT_PATH', __DIR__.'/products');
-define('LOAD_STATIC_JS', true);
+define('LOAD_STATIC_JS', TRUE);
 
 
 if( !defined('LIST_BUNDLES_ITEM')){

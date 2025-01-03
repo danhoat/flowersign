@@ -245,11 +245,6 @@ var hpt_info = {'_account':'UHPT-20592','_server':'a24'};
 <div id="mobileZipcodeLayer" style="display: none"></div>
 
 
-<!-- ================= #HTML_FOOTER :: START. 파일위치 : _modules/common/html_footer.html ================= -->
-
-<script>$('#topSearchForm').submit(function() { var search_string = $('#searchVer2InputBox').val(); fbq('track', 'Search', {     search_string: search_string });});</script>
-
-
 </body>
 
 

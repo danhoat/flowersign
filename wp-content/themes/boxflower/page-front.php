@@ -139,70 +139,73 @@ get_header();
     var uniquekey_dsp = 'designDisplay_670aa31da48d7'+t.getTime();
     var display_swiper = [];
 
-    $(function(){
-        /* 상품디스플레이 스와이프형 탭 스크립트 */
-        $("#designDisplay_670aa31da48d7 .displaySwipeTabContainer").each(function(){
-            var tabContainerObj = $(this);
-            tabContainerObj.children('li').css('width',(100/tabContainerObj.children('li').length)+'%');
-            tabContainerObj.children('li').bind('mouseover click',function(){
-                tabContainerObj.children('li.current').removeClass('current');
-                $(this).addClass('current');
-                var tabIdx = tabContainerObj.children('li').index(this);
-                tabContainerObj.closest('.designDisplay, .designCategoryRecommendDisplay').find('.displayTabContentsContainer').hide().eq(tabIdx).show();
-            }).eq(0).trigger('mouseover');
-        });
+    ( function( $ ) {
+        $(document).ready(function(){
+            /* 상품디스플레이 스와이프형 탭 스크립트 */
+            $("#designDisplay_670aa31da48d7 .displaySwipeTabContainer").each(function(){
+                var tabContainerObj = $(this);
+                tabContainerObj.children('li').css('width',(100/tabContainerObj.children('li').length)+'%');
+                tabContainerObj.children('li').bind('mouseover click',function(){
+                    tabContainerObj.children('li.current').removeClass('current');
+                    $(this).addClass('current');
+                    var tabIdx = tabContainerObj.children('li').index(this);
+                    tabContainerObj.closest('.designDisplay, .designCategoryRecommendDisplay').find('.displayTabContentsContainer').hide().eq(tabIdx).show();
+                }).eq(0).trigger('mouseover');
+            });
 
 
-        $('.display_slide_class').each(function(){
-            if(!$(this).hasClass('set_slide_clear')){
-                display_swiper[uniquekey_dsp] = new Swiper($(this).find('.goods_display_slide_wrap'), {
-                   // slidesPerView: 'auto',
-                    grabCursor: true,
-                    loop: true,
-                    nextButton: $(this).find('.mkdf-next-icon'),
-                    prevButton: $(this).find('.mkdf-prev-icon')
-                });
-                $(this).addClass('set_slide_clear').bind('mousedown touchstart touchmove',function(){
-                    $('.active_swipe_slide').removeClass('active_swipe_slide');
-                    $(this).addClass('active_swipe_slide');
-                });
-            }
-        });
-       
-    });
-
-     $( window ).resize(function() {
-        if ( window.innerWidth != WINDOWWIDTH ) {
-            if ( window.innerWidth < 1280 && $('#cateSwiper .designCategoryNavigation').length > 0 && slideshowSwiper == undefined ) {
-                $('#cateSwiper .designCategoryNavigation ul.respCategoryList>li').addClass('swiper-slide');
-                $('#layout_header .respCategoryList .categoryDepth1').off('hover');
-                slideshowSwiper = new Swiper('#cateSwiper .designCategoryNavigation', {
-                    wrapperClass: 'respCategoryList',
-                    slidesPerView: 'auto'
-                });
-                slideshowSwiper.slideTo( (cateIndex-1), 800, false );
-            } else if ( window.innerWidth > 1279 && slideshowSwiper != undefined ) {
-                slideshowSwiper.slideTo( 0, 800, false );
-                $('#cateSwiper .designCategoryNavigation ul.respCategoryList>li').removeClass('swiper-slide');
-                slideshowSwiper.destroy();
-                slideshowSwiper = undefined;
-                $('#layout_header .respCategoryList .categoryDepth1').hover(
-                    function() { $(this).find('.categorySub').show(); },
-                    function() { $(this).find('.categorySub').hide(); }
-                );
-            }
-
-            // 꽃청 수정 START 윤상희 2023.04.07 - 네비게이션 수정
-            if($('#searchModule').length!=0){
-                if( window.innerWidth < 1024 && $('.logo_wrap .resp_wrap #searchModule').length == 0){
-                    $('#searchModule').insertAfter($('.logo_wrap .resp_wrap .resp_top_hamburger'));
-                }else if( window.innerWidth >= 1024 && $('.top_menu_search #searchModule').length == 0){
-                    $('#searchModule').insertAfter($('.top_menu_search'));
+            $('.display_slide_class').each(function(){
+                if(!$(this).hasClass('set_slide_clear')){
+                    display_swiper[uniquekey_dsp] = new Swiper($(this).find('.goods_display_slide_wrap'), {
+                       // slidesPerView: 'auto',
+                        grabCursor: true,
+                        loop: true,
+                        nextButton: $(this).find('.mkdf-next-icon'),
+                        prevButton: $(this).find('.mkdf-prev-icon')
+                    });
+                    $(this).addClass('set_slide_clear').bind('mousedown touchstart touchmove',function(){
+                        $('.active_swipe_slide').removeClass('active_swipe_slide');
+                        $(this).addClass('active_swipe_slide');
+                    });
                 }
+            });
+           
+        });
+
+        $( window ).resize(function() {
+            // "TOUCH PRIMARY MENU IN MOBILE"
+            if ( window.innerWidth != WINDOWWIDTH ) {
+                if ( window.innerWidth < 1280 && $('#cateSwiper .designCategoryNavigation').length > 0 && slideshowSwiper == undefined ) {
+                    $('#cateSwiper .designCategoryNavigation ul.respCategoryList>li').addClass('swiper-slide');
+                    $('#layout_header .respCategoryList .categoryDepth1').off('hover');
+                    slideshowSwiper = new Swiper('#cateSwiper .designCategoryNavigation', {
+                        wrapperClass: 'respCategoryList',
+                        slidesPerView: 'auto'
+                    });
+                    slideshowSwiper.slideTo( (cateIndex-1), 800, false );
+                } else if ( window.innerWidth > 1279 && slideshowSwiper != undefined ) {
+                    slideshowSwiper.slideTo( 0, 800, false );
+                    $('#cateSwiper .designCategoryNavigation ul.respCategoryList>li').removeClass('swiper-slide');
+                    slideshowSwiper.destroy();
+                    slideshowSwiper = undefined;
+                    $('#layout_header .respCategoryList .categoryDepth1').hover(
+                        function() { $(this).find('.categorySub').show(); },
+                        function() { $(this).find('.categorySub').hide(); }
+                    );
+                }
+
+                // 꽃청 수정 START 윤상희 2023.04.07 - 네비게이션 수정
+                if($('#searchModule').length!=0){
+                    if( window.innerWidth < 1024 && $('.logo_wrap .resp_wrap #searchModule').length == 0){
+                        $('#searchModule').insertAfter($('.logo_wrap .resp_wrap .resp_top_hamburger'));
+                    }else if( window.innerWidth >= 1024 && $('.top_menu_search #searchModule').length == 0){
+                        $('#searchModule').insertAfter($('.top_menu_search'));
+                    }
+                }
+                // 꽃청 수정 END
             }
-            // 꽃청 수정 END
-        }
-    });
+        })
+    })( jQuery);
      
 </script>
 
