@@ -312,7 +312,7 @@ function flyingTitleBar() {
 ( function( $ ) {
 
     $(document).ready(function(){
-        
+
     // 텍스트 수정기능을 통해 소스에 박혀있는 카테고리 삭제시 --> 항목 삭제
     $('#cateSwiper .custom_nav_link').each(function(e) {
         if ( $(this).find('a').text() == '' ) {
@@ -480,17 +480,7 @@ function flyingTitleBar() {
 
 
 </script>
-        <!-- ================= #LAYOUT_HEADER :: END. 파일위치 : layout_header/standard.html (default) ================= -->
 
-       
-        <!-- ================= 파트 페이지들 :: START. ================= -->
-
-
-
-<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++
-@@ index @@
-- 파일위치 : [스킨폴더]/main/index.html
-++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 
 
 

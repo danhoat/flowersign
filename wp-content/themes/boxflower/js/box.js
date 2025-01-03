@@ -1,6 +1,6 @@
 ( function( $ ) {
-
     $(document).ready(function(){
+
         console.log('ok');
         $("#btn_gioi_thieu").click(function(){
             $(".view-full").toggleClass('hide');

@@ -62,7 +62,8 @@ function resp_search_ui() {
 }
 
 
-$(function() {
+( function( $ ) {
+    $(document).ready(function(){
 
 /* +++++++++++++++++++++++ 검색 입력창 ++++++++++++++++++++++++ */
 	// 꽃청 수정 START 윤상희 2023.04.07 - 네비게이션 수정
@@ -336,4 +337,6 @@ $(function() {
 	//setRecentAuto('now');
 	// 자동완성 사용
 	//setUseAuto('now');
-});
+    })
+
+})( jQuery);

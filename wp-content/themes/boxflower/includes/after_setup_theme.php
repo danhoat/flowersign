@@ -136,7 +136,7 @@ function box_js_enqueue(){
         // 'ezmark' => JS_URL.'/jquery.ezmark.min.js',
         // 'select_box' =>JS_URL.'/custom-select-box.js',
 
-        'pagination' =>JS_URL.'/custom-mobile-pagination.js',
+        //'pagination' =>JS_URL.'/custom-mobile-pagination.js',
         'slick' => JS_URL.'/slick.min.js',
         'jquery_swipe' => JS_URL.'/jquery.event.swipe.js',
         'swiper' => JS_URL.'/swiper.js',
@@ -163,7 +163,7 @@ function box_js_enqueue(){
         // 'user' => JS_URL.'/user.js', //'https://f-mans.com/data/skin/responsive_ver1_default_gl/common/user.js?ver=5?v=afe0eba294279fffd50c840',
 
         // 'bxslider' => JS_URL.'/jquery.bxslider.js', // https://f-mans.com/app/javascript/plugin/jquery.bxslider.js?v=afe0eba294279d50c840',
-        // 'searchJS' => JS_URL.'/search_ver2_ready.js', // https://f-mans.com/data/skin/responsive_ver1_default_gl/common/search_ver2_ready.js?v=1',
+        'searchJS' => JS_URL.'/search_ver2_ready.js', // https://f-mans.com/data/skin/responsive_ver1_default_gl/common/search_ver2_ready.js?v=1',
     ); 
     if( !wp_is_mobile() ){
         unset($js['pagination']);

@@ -143,7 +143,8 @@ var kid_agree = "";
             </div>
             <?php if(wp_is_mobile() ){ module_search_html(); } ?>
 
-            <a href="/order/cart" class="resp_top_cart"> <span class="cart_cnt2">0</span></a>
+            <a href="<?php echo wc_get_cart_url();?>" class="resp_top_cart"> <span class="cart_cnt2">
+                <?php global $woocommerce; echo $woocommerce->cart->cart_contents_count;?></span></a>
 
             <div class="gnb_bnr_slide gnb_bnr_slide_02 slider_before_loading">
                 <div class="slider_gon">
