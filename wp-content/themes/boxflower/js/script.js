@@ -182,23 +182,23 @@
 		});
 
 		/* 상품댓글 - SNS 공유(레이어) */
-		jQuery("#cmt_sns_btn").live('click',function(){
-			jQuery(".cmt_sns_pop").fadeIn();
-			jQuery(".sns_bg").fadeIn();
-			jQuery("html").attr("class","overflow").bind('touchmove', function(e){e.preventDefault()});
-		});
+		// jQuery("#cmt_sns_btn").live('click',function(){
+		// 	jQuery(".cmt_sns_pop").fadeIn();
+		// 	jQuery(".sns_bg").fadeIn();
+		// 	jQuery("html").attr("class","overflow").bind('touchmove', function(e){e.preventDefault()});
+		// });
 		/* 상품상세 - SNS 공유(레이어) */
 		jQuery("#sns_btn").click(function(){
 			jQuery(".sns_pop").fadeIn();
 			jQuery(".sns_bg").fadeIn();
 			jQuery("html").attr("class","overflow").bind('touchmove', function(e){e.preventDefault()});
 		});
-		jQuery(".sns_close, .sns_bg").live('click', function(){
-			jQuery(".sns_pop").fadeOut();
-			jQuery(".cmt_sns_pop").fadeOut();
-			jQuery(".sns_bg").fadeOut();
-			jQuery("html").attr("class","auto").unbind('touchmove');
-		});
+		// jQuery(".sns_close, .sns_bg").live('click', function(){
+		// 	jQuery(".sns_pop").fadeOut();
+		// 	jQuery(".cmt_sns_pop").fadeOut();
+		// 	jQuery(".sns_bg").fadeOut();
+		// 	jQuery("html").attr("class","auto").unbind('touchmove');
+		// });
 
 		/* 플로팅 - BACK/TOP(대쉬보드) */
 		jQuery(document).bind("scroll resize", function(){

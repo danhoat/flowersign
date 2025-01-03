@@ -43,41 +43,4 @@
               <?php btn_pre_testimonial();?>
   </div>
 
-<script>
-    var t = new Date();
-    var uniquekey_dsp = 'designDisplay_670aa31da48d7'+t.getTime();
-    var display_swiper = [];
-
-    $(function(){
-        /* 상품디스플레이 스와이프형 탭 스크립트 */
-        $("#designDisplay_670aa31da48d7 .displaySwipeTabContainer").each(function(){
-            var tabContainerObj = $(this);
-            tabContainerObj.children('li').css('width',(100/tabContainerObj.children('li').length)+'%');
-            tabContainerObj.children('li').bind('mouseover click',function(){
-                tabContainerObj.children('li.current').removeClass('current');
-                $(this).addClass('current');
-                var tabIdx = tabContainerObj.children('li').index(this);
-                tabContainerObj.closest('.designDisplay, .designCategoryRecommendDisplay').find('.displayTabContentsContainer').hide().eq(tabIdx).show();
-            }).eq(0).trigger('mouseover');
-        });
-
-
-        $('.display_slide_class').each(function(){
-            if(!$(this).hasClass('set_slide_clear')){
-                display_swiper[uniquekey_dsp] = new Swiper($(this).find('.goods_display_slide_wrap'), {
-                   // slidesPerView: 'auto',
-                    grabCursor: true,
-                    loop: true,
-                    nextButton: $(this).find('.mkdf-next-icon'),
-                    prevButton: $(this).find('.mkdf-prev-icon')
-                });
-                $(this).addClass('set_slide_clear').bind('mousedown touchstart touchmove',function(){
-                    $('.active_swipe_slide').removeClass('active_swipe_slide');
-                    $(this).addClass('active_swipe_slide');
-                });
-            }
-        });
-       
-    });
-</script>
 </div>

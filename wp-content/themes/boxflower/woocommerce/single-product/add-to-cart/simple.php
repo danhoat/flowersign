@@ -192,38 +192,46 @@ if ( $product->is_in_stock() ) : ?>
 							<span class="font-bold sm:block date-week-day" >LỊCH</span></div>
 							<input id="datepicker" onkeydown="return false;"  />
 						    <script>
-						    	$("#datepicker").attr("readonly", true);
-						        $('#datepicker').datepicker({
-						            uiLibrary: 'bootstrap5',
-						            //dateFormat:'dd/mm/yy',
-						            // startDate: '+1d',
-						            // setStartDate: "22-12-2024",
-						            minDate: 3,
-						            maxDate: 30,
+						    	( function( $ ) {
+    								$(document).ready(function(){
+    									console.log('datepicker ok');
 
-						            onSelect: function(dateText) {
-										        console.log("Selected date: " + dateText + "; input's current value: " + this.value);
-										        $(this).val(this.value);
-										        let item = $(this).closest('.date-item');
-										        item.find(".hidden_choice").prop('checked', true);
-										        const weekday = ["Chủ Nhật","Thứ Hai","Thứ Ba","Thứ Tư","Thứ Năm","Thứ sáu","Thứ Bảy"];
-										        const months = ['1','2','3','4','5','6','7','8','9','10','11','12'];
+								    	$("#datepicker").attr("readonly", true);
+								        $('#datepicker').datepicker({
+								            uiLibrary: 'bootstrap5',
+								            //dateFormat:'dd/mm/yy',
+								            // startDate: '+1d',
+								            // setStartDate: "22-12-2024",
+								            minDate: 3,
+								            maxDate: 30,
+
+								            onSelect: function(dateText) {
+												        console.log("Selected date: " + dateText + "; input's current value: " + this.value);
+												        $(this).val(this.value);
+												        let item = $(this).closest('.date-item');
+												        item.find(".hidden_choice").prop('checked', true);
+												        const weekday = ["Chủ Nhật","Thứ Hai","Thứ Ba","Thứ Tư","Thứ Năm","Thứ sáu","Thứ Bảy"];
+												        const months = ['1','2','3','4','5','6','7','8','9','10','11','12'];
 
 
-										        const d = new Date(this.value);
-										        let month = months[d.getMonth()] ;
-										        let day = weekday[d.getDay()];
-										    
-										       	let date = d.getDate() + ' Thg '+ month;
-										       	let deliverydate = d.getDate()+'/'+month+'/'+ d.getYear();
+												        const d = new Date(this.value);
+												        let month = months[d.getMonth()] ;
+												        let day = weekday[d.getDay()];
+												    
+												       	let date = d.getDate() + ' Thg '+ month;
+												       	let deliverydate = d.getDate()+'/'+month+'/'+ d.getYear();
 
-										       	let html = '<p class="block sm:hidden xl:hidden date-month">'+date+'</p>';
-										       	 html+='<span class="font-bold text-black text-xxs xs:text-xs sm:text-sm lg:text-xs xl:text-sm relative date-week-day">'+day+'</span>';
-										      
-										       	item.find(".choice").html(html);
-										       	item.find(".hidden_choice").val(deliverydate);
-										}
-									});
+												       	let html = '<p class="block sm:hidden xl:hidden date-month">'+date+'</p>';
+												       	 html+='<span class="font-bold text-black text-xxs xs:text-xs sm:text-sm lg:text-xs xl:text-sm relative date-week-day">'+day+'</span>';
+												      
+												       	item.find(".choice").html(html);
+												       	item.find(".hidden_choice").val(deliverydate);
+												}
+											});
+								         })
+								})( jQuery);
+
+
 						    </script>
 						</div>
 					</div>

@@ -126,12 +126,16 @@ function box_js_enqueue(){
         //'jquery' => 'ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js',
         //'jquery' => JS_URL.'/jquery.min.171.js',
         // 'jquery' => 'https://code.jquery.com/jquery-3.2.1.min.js',
-        'jquery' => SITE_URL.'/wp-includes/js/jquery/jquery.min.js',
-        'jquery.ui' => JS_URL.'/jquery-ui.min.js',
+        //'jquery' => SITE_URL.'/wp-includes/js/jquery/jquery.min.js',
+        'jquery' => 'https://code.jquery.com/jquery-3.7.1.js',
+        'jquery.ui' => 'https://code.jquery.com/ui/1.14.1/jquery-ui.js',
+        
+
+        //'jquery.ui' => JS_URL.'/jquery-ui.min.js',
 
         
-        'cookie' => JS_URL.'/jquery.cookie.js',
-        'poshytip' => JS_URL.'/jquery.poshytip.min.js',
+        // 'cookie' => JS_URL.'/jquery.cookie.js',
+        // 'poshytip' => JS_URL.'/jquery.poshytip.min.js',
         'indicator' => JS_URL.'/jquery.activity-indicator-1.0.0.min.js',
         'spider' => JS_URL.'/splide.min.js',
 

@@ -567,11 +567,18 @@ span.rate-score{
     font-size: 1rem;
     font-weight: 400;
 }
+
 @media only screen and (min-width: 1000px){
+    .woocommerce div.product .woocommerce-product-rating{
+        float: left;
+    }
     .rating-price {
-        display: flex;
-        1justify-content: end;
-}
+        display: inline-block;
+        justify-content: end;
+    }
+    .sumary-price{
+        float: right;
+    }
 
     p.comment-form-author , p.comment-form-email{
         width: 25%;

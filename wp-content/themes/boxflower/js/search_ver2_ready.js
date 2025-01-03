@@ -330,9 +330,9 @@ function resp_search_ui() {
 /* +++++++++++++++++++++++ 검색 결과 필터 ++++++++++++++++++++++++ */
 
 	// 최근 본 상품
-	todayViewList();
+	//todayViewList();
 	// 최근 검색어
-	searchRecentList();
+	//searchRecentList();
 	// 최근 검색어 자동저장
 	//setRecentAuto('now');
 	// 자동완성 사용
