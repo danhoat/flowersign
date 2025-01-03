@@ -124,22 +124,22 @@ function box_js_enqueue(){
         'jquery.ui' => JS_URL.'/jquery-ui.min.js',
 
         
-        // 'cookie' => JS_URL.'/jquery.cookie.js',
-        // 'poshytip' => JS_URL.'/jquery.poshytip.min.js',
-        // 'indicator' => JS_URL.'/jquery.activity-indicator-1.0.0.min.js',
-        // 'spider' => JS_URL.'/splide.min.js',
+        'cookie' => JS_URL.'/jquery.cookie.js',
+        'poshytip' => JS_URL.'/jquery.poshytip.min.js',
+        'indicator' => JS_URL.'/jquery.activity-indicator-1.0.0.min.js',
+        'spider' => JS_URL.'/splide.min.js',
 
-        // 'slides' => JS_URL.'/jquery.slides.min.js',
+         'slides' => JS_URL.'/jquery.slides.min.js',
 
         // 'placeholder' =>JS_URL.'/jquery.placeholder.js',
         // 'validate' => JS_URL.'/jquery.validate.js',
         // 'ezmark' => JS_URL.'/jquery.ezmark.min.js',
         // 'select_box' =>JS_URL.'/custom-select-box.js',
 
-        // 'pagination' =>JS_URL.'/custom-mobile-pagination.js',
-        // 'slick' => JS_URL.'/slick.min.js',
-        // 'jquery_swipe' => JS_URL.'/jquery.event.swipe.js',
-        // 'swiper' => JS_URL.'/swiper.js',
+        'pagination' =>JS_URL.'/custom-mobile-pagination.js',
+        'slick' => JS_URL.'/slick.min.js',
+        'jquery_swipe' => JS_URL.'/jquery.event.swipe.js',
+        'swiper' => JS_URL.'/swiper.js',
 
         // 'tools' => JS_URL.'/dev-tools.js?v=afe0eba294279d50c840',
         // 'display_mobile' => JS_URL.'/goods-display_mobile.js?v=afe0eba294279d50c840',

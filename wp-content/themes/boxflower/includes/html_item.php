@@ -308,7 +308,11 @@ function flyingTitleBar() {
     });
 }
 
-$(function(){
+
+( function( $ ) {
+
+    $(document).ready(function(){
+        
     // 텍스트 수정기능을 통해 소스에 박혀있는 카테고리 삭제시 --> 항목 삭제
     $('#cateSwiper .custom_nav_link').each(function(e) {
         if ( $(this).find('a').text() == '' ) {
@@ -470,7 +474,9 @@ $(function(){
     $('.designPopupBand .designPopupClose').on('click', function() {
         // 띠배너 닫기 클릭시
     });
-});
+    })
+})( jQuery);
+
 
 
 </script>

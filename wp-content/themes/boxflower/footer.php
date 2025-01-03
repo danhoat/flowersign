@@ -214,23 +214,26 @@ var hpt_info = {'_account':'UHPT-20592','_server':'a24'};
 
 <script type="text/javascript">
     
-$(function() {
-    /* 반응형 슬라이드 배너 관련( 절대 삭제 금지 ) */
-        $('.slider_before_loading').removeClass('slider_before_loading');
+( function( $ ) {
+    $(document).ready(function(){
 
-    // 상품 색상 코드값 디자인( new 상품정보 )
-    if ( $('.displaY_color_option').length > 0 ) {
-        $('.displaY_color_option .areA').filter(function() {
-            return ( $(this).css('background-color') == 'rgb(255, 255, 255)' );
-        }).addClass('border');
-    }
+        /* 반응형 슬라이드 배너 관련( 절대 삭제 금지 ) */
+            $('.slider_before_loading').removeClass('slider_before_loading');
 
-    $( window ).on('resize', function() {
-        if ( window.innerWidth != WINDOWWIDTH ) {
-            setTimeout(function(){ WINDOWWIDTH = window.innerWidth; }, 10);
+        // 상품 색상 코드값 디자인( new 상품정보 )
+        if ( $('.displaY_color_option').length > 0 ) {
+            $('.displaY_color_option .areA').filter(function() {
+                return ( $(this).css('background-color') == 'rgb(255, 255, 255)' );
+            }).addClass('border');
         }
-    });
-});
+
+        $( window ).on('resize', function() {
+            if ( window.innerWidth != WINDOWWIDTH ) {
+                setTimeout(function(){ WINDOWWIDTH = window.innerWidth; }, 10);
+            }
+        });
+    })
+})( jQuery);
 
 
 </script>
