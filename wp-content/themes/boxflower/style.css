@@ -48,7 +48,10 @@ Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, feature
 .woo-first-price .amount bdi,
 .product-subtotal .amount,
 .archive.woocommerce  .term-description a,
-body.single-product form.cart  .btn-add-to-cart:hover
+body.single-product form.cart  .btn-add-to-cart:hover,
+.full-description a,
+.short-description  a,
+.description-show-more
 {
   
     color: #70A100;
@@ -718,11 +721,11 @@ body{
 
 .description-show-more {
    cursor: pointer;
-    color: #2991d6;
     display: block;
     clear: both;
     font-weight: 600;
     line-height: 18px;
+    margin-top:18px;
 }
 .description-show-more i {
     font-size: 13px;
@@ -793,4 +796,26 @@ body{
 .archive.woocommerce ul.products li.product .price{
     font-size: 0.99rem;
 
+}
+.short-description  {
+    position: relative;
+    margin-top: 50px;
+}
+.full-description,
+.short-description {
+    line-height: 29px;
+}
+.short-description::after {
+    content: '';
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffffb8 90%);
+    display: block;
+    height: 6rem;
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    left: 0;
+}
+.term-description.active .short-description::after,
+.term-description.active .description-show-more {
+    display: none;
 }

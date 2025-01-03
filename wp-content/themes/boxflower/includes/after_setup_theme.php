@@ -148,7 +148,8 @@ function box_js_enqueue(){
 
         //'pagination' =>JS_URL.'/custom-mobile-pagination.js',
         'slick' => JS_URL.'/slick.min.js',
-        'jquery_swipe' => JS_URL.'/jquery.event.swipe.js',
+        //'jquery_swipe' => JS_URL.'/jquery.event.swipe.js', // v1.3.1
+        'jquery_swipe' =>'https://cdnjs.cloudflare.com/ajax/libs/jquery.event.swipe/0.5.4/jquery.event.swipe.js', //
         'swiper' => JS_URL.'/swiper.js',
 
         // 'tools' => JS_URL.'/dev-tools.js?v=afe0eba294279d50c840',
@@ -168,7 +169,7 @@ function box_js_enqueue(){
         // 'responsive' => JS_URL.'/responsive.js',// 'https://f-mans.com/data/skin/responsive_ver1_default_gl/common/responsive.js?v=afe0eba294279d50c840',
          'cscript' => JS_URL.'/script.js' , //'https://f-mans.com/data/skin/responsive_ver1_default_gl/common/script.js?ver=2?v=afe0eba294279d50c840',
 
-        // 'search_ver2' => JS_URL.'/search_ver2.js?ver=1?v=afe0eba294279d50c840',
+         'search_ver2' => JS_URL.'/search_ver2.js?ver=1?v=afe0eba294279d50c840',
 
         // 'user' => JS_URL.'/user.js', //'https://f-mans.com/data/skin/responsive_ver1_default_gl/common/user.js?ver=5?v=afe0eba294279fffd50c840',
 

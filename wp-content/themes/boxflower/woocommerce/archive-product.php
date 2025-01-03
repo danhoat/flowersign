@@ -146,15 +146,7 @@ if(is_tax('product_cat') ){
 
 
 
-	<div class="term-short-desc">	
-		<?php echo $short_desc;?>
-
-		<?php if( !empty($term_description) ){?>
-			<a class="description-show-more show-more-top">
-				<span><i class="fa fa-plus" aria-hidden="true"></i> Xem thêm</span>
-			</a>
-		<?php } ?>
-	</div>
+	
 <?php }?>
 
 
@@ -331,18 +323,33 @@ if( is_tax('product_cat') ){ ?>
 		</div>
 	</div>
 </div>
+
+
+
 	<?php 
-	if( !empty($term_description) ){
-		echo '<div class "full term-description">';
-		echo '<div class ="container"> <div class ="term-description ">';
-		echo $term_description;
-		echo '</div></div></div>';
-	}
- 	?>
 
-<?php
+
+	
+		echo '<div class = "full term-description">';
+		echo '<div class ="container">';
+			echo '<div class ="short-description ">';
+			echo $short_desc;
+			echo '</div>';
+		
+		if( !empty($term_description) ){  ?>
+			<a class="description-show-more show-more-top">
+				<span><i class="fa fa-plus" aria-hidden="true"></i> Xem thêm</span>
+			</a>
+
+			<?php
+			echo '<div class="full-description hide">'.$term_description.'</div>';
+		}
+		
+		echo '</div>';
+		echo '</div>';
+	
+
 }
-
 /**
  * Hook: woocommerce_sidebar.
  *

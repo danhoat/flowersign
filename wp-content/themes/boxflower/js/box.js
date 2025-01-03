@@ -11,14 +11,16 @@
             }
         });
         $(".show-more-top").click(function() {
-            let p = $(".term-description").offset().top;
-            let pos = Number(p) - 130; 
-            console.log(pos);
+            // let p = jQuery(".term-description").offset().top;
+            // let pos = Number(p) - 130; 
+            // console.log(pos);
+            jQuery(".full-description").toggleClass('hide');
+            $(this).closest(".term-description").toggleClass('active');
 
-
-            $('html,body').animate({
-                scrollTop: pos},
-                'slow');
+            // $('html,body').animate({
+            //     scrollTop: pos},
+            //     'slow'
+            // );
         });
 
         $(".btn-tab").click(function(){

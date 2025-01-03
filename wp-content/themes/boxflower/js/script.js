@@ -298,7 +298,7 @@ function side_menu_onoff(){
 			jQuery('html, body').css({'overflow' : 'visible'});
 		});
 		jQuery('#side_close').removeClass('on');
-		setTimeout(function(){ jQuery('a[href=#category]').removeClass('on'); }, 800);
+		setTimeout(function(){ jQuery('a.hamberger_menu').removeClass('on'); }, 800);
 		//jQuery(".designPopupBandMobile").show();
 	}
 }
