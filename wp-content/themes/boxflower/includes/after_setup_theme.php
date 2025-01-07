@@ -61,7 +61,7 @@ function theme_setup(){
     add_theme_support('caption');
     register_nav_menus( array(
         'primary_menu' => __( 'Primary Menu', 'text_domain' ),
-        'footer_menu'  => __( 'Footer Menu', 'text_domain' ),
+        'mobile_menu'  => __( 'Mobile Menu', 'text_domain' ),
     ) );
     
 

@@ -16,80 +16,33 @@
     </ul>
 </div>
 
-<div class="asie_main_menu">
-    <ul>
-        <!-- 꽃청 수정 START 윤상희 2023.06.29 - 구독조회 추가 및 순서 변경 -->
-        <!--li class="am_home"><a href="/" designElement="text">홈</a></li-->
-        <li class="am_order"><a href="/mypage/order_catalog"><span designelement="text" textindex="5" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvX21vZHVsZXMvY29tbW9uL2xheW91dF9zaWRlLmh0bWw=">주문조회</span> </a></li>
-        <li class="am_subscribe"><a href="/mypage/custom_subscr?tab=2"><span designelement="text" textindex="6" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvX21vZHVsZXMvY29tbW9uL2xheW91dF9zaWRlLmh0bWw=">구독조회</span></a></li>
-        <!-- 꽃청 수정 END -->
-        <li class="am_my">
-<a href="/member/login?return_url=/mypage/index"><span designelement="text" textindex="7" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvX21vZHVsZXMvY29tbW9uL2xheW91dF9zaWRlLmh0bWw=">MY쇼핑</span></a>
-        </li>
-        <li class="am_cs"><a href="/mypage/myqna_catalog" designelement="text" textindex="8" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvX21vZHVsZXMvY29tbW9uL2xheW91dF9zaWRlLmh0bWw=">1:1문의</a></li>
-        <li class="am_cart"><a href="/order/cart"><span designelement="text" textindex="9" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvX21vZHVsZXMvY29tbW9uL2xheW91dF9zaWRlLmh0bWw=">장바구니</span> </a></li>
-        <li class="am_wish">
-<a href="/member/login?return_url=/mypage/wish"><span designelement="text" textindex="10" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvX21vZHVsZXMvY29tbW9uL2xheW91dF9zaWRlLmh0bWw=">위시리스트</span> </a>
-        </li>
-        <li class="am_coupon"><a href="/mypage/coupon" designelement="text" textindex="11" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvX21vZHVsZXMvY29tbW9uL2xheW91dF9zaWRlLmh0bWw=">쿠폰</a></li>
-        <li class="am_emony"><a href="/mypage/emoney" designelement="text" textindex="12" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvX21vZHVsZXMvY29tbW9uL2xheW91dF9zaWRlLmh0bWw=">적립금</a></li>
-    </ul>
-</div>
+
 
 <div class="aside_navigation_wrap">
 
 
     <!-- ++++++++ 카테고리 ++++++++ -->
     <div class="designElement" designelement="category">
-        <ul id="categorySideMenu" class="menu">
+        <ul id="categorySideMenu" class="menu mobilemenu">
             
 
-            <li class="mitem_subcontents" style="display:block;margin-top:1px;">
-                <ul class="submenu">
-                    <li class="submitem category" style="border-bottom:solid 1px #eee;">
-                        <!--a class="submitem_title"></a-->
-                        <a class="mitem_goodsview" href="/goods/catalog_list?code=0006" style="margin:0; width:100%; padding:13px 5px 11px 15px; line-height: 1.3; height:40px;">Shop</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="mitem category mitem_category mitemicon3" style="background:inherit !important; display:none;"> 
-                <!--<a class="mitem_title"></a>-->
-                <a class="mitem_goodsview" href="/goods/catalog?code=0015">Bó Hoa Đẹp </a>
-            </li>
+          
+           
+            <?php 
 
-            <li class="mitem_subcontents" style="display:block;margin-top:1px;">
-                <ul class="submenu">
-                    <li class="submitem category" style="border-bottom:solid 1px #eee;">
-                        <!--a class="submitem_title"></a-->
-                        <a class="mitem_goodsview" href="/subscribe/intro" style="margin:0; width:100%; padding:13px 5px 11px 15px; line-height: 1.3; height:40px;">Bó Hoa Đẹp</a>
-                    </li>
-                </ul>
-            </li>
-             <li class="mitem_subcontents" style="display:block;margin-top:1px;">
-                <ul class="submenu">
-                    <li class="submitem category" style="border-bottom:solid 1px #eee;">
-                        <!--a class="submitem_title"></a-->
-                        <a class="mitem_goodsview" href="/subscribe/intro" style="margin:0; width:100%; padding:13px 5px 11px 15px; line-height: 1.3; height:40px;">Bó Hoa Đẹp</a>
-                    </li>
-                </ul>
-            </li>
-             <li class="mitem_subcontents" style="display:block;margin-top:1px;">
-                <ul class="submenu">
-                    <li class="submitem category" style="border-bottom:solid 1px #eee;">
-                        <!--a class="submitem_title"></a-->
-                        <a class="mitem_goodsview" href="/subscribe/intro" style="margin:0; width:100%; padding:13px 5px 11px 15px; line-height: 1.3; height:40px;">Bó Hoa Đẹp</a>
-                    </li>
-                </ul>
-            </li>
-             <li class="mitem_subcontents" style="display:block;margin-top:1px;">
-                <ul class="submenu">
-                    <li class="submitem category" style="border-bottom:solid 1px #eee;">
-                        <!--a class="submitem_title"></a-->
-                        <a class="mitem_goodsview" href="/subscribe/intro" style="margin:0; width:100%; padding:13px 5px 11px 15px; line-height: 1.3; height:40px;">Bó Hoa Đẹp</a>
-                    </li>
-                </ul>
-            </li>
-            <!-- 꽃청 수정 END -->
+             wp_nav_menu( array(
+                'theme_location' => 'mobile_menu',
+                'items_wrap' =>'%3$s',
+               'container' => '',
+            ) ); 
+
+           
+
+
+            ?>
+           
+
+           
             
 
         </ul>
@@ -100,11 +53,16 @@
     <ul id="brandSideMenu" class="menu" style="display:none;">
 
 
-            <li class="mitem category mitem_brand mitemicon3" style="background:inherit !important; display:none;" title_eng="" title="라인별">
+            <li class="mitem category mitem_brand mitemicon3 hide" style="background:inherit !important; display:none;" title_eng="" title="라인별">
                 <a class="mitem_title" style="width:0%;"></a>
                 <a class="mitem_goodsview" href="/goods/brand?code=0004">라인별</a>
-                            </li>
+            </li>
+
+           
+            ?>
             <li class="mitem_subcontents" style="display:block;margin-top:1px;">
+
+
                 <ul class="submenu">
                     <li class="submitem category" style="border-bottom:solid 1px #eee;">
                         <!--<a class="submitem_title"></a>-->
@@ -132,6 +90,7 @@
                                             </li>
                 </ul>
             </li>
+
     </ul>
     <!-- ++++++++ //브랜드 ++++++++ -->
 

@@ -665,14 +665,14 @@ body{
     color: #fff;
     font-weight: 700;
 }
-.menu-item{
+.primary-menu .menu-item{
     position: relative;
 }
-.sub-menu {
+.primary-menu .sub-menu {
     position: absolute;
     display: none;
 }
-.menu-item .sub-menu {
+.primary-menu .menu-item .sub-menu {
     position: absolute;
     top: 51px;
     left: 0;
@@ -680,21 +680,21 @@ body{
     border: 1px solid #f0f0f0 ;
     background: #fff;
 }
-.menu-item:hover .sub-menu{
+.primary-menu .menu-item:hover .sub-menu{
     display: block;
 }
-.sub-menu  li {
+.primary-menu .sub-menu  li {
     padding: 0;
     margin:0;
     border-bottom: 1px solid #f0f0f0 ;
 
 }
-.menu-item .sub-menu li a {
+.primary-menu .menu-item .sub-menu li a {
     text-align: left;
     display: block;
     width: 100%;
 }
-.sub-menu  li:last-child{
+.primary-menu .sub-menu  li:last-child{
     border-bottom: 0;
 }
 .layout_header .nav_wrap .respCategoryList .sub-menu .categoryDepthLink>em:after{
@@ -818,4 +818,58 @@ body{
 .term-description.active .short-description::after,
 .term-description.active .description-show-more {
     display: none;
+}
+.aside_navigation_wrap ul.menu li.mitem.category a.mitem_goodsview{
+    width: 100% !important;
+    border-left:0 !important;
+
+}
+
+.aside_navigation_wrap ul.menu li.mitem .submenu .toggle{
+    content: ' ';
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 17px;
+    top: 9px;
+    background: url(images/ico_arw_open3.png) no-repeat center;
+    background-size: 10px;
+    cursor: pointer;
+    z-index: 9999999;
+}
+.mobilemenu .menu-item-has-children::after{
+    content: ' ';
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 17px;
+    top: 9px;
+    cursor: pointer;
+    z-index: 9999999;
+}
+
+.mobilemenu .menu-item-has-children::after{
+    background: url(images/ico_arw_close3.png) no-repeat center;
+    background-size: 10px;
+}
+.mobilemenu .menu-item-has-children.inactive::after{
+    background: url(images/ico_arw_open3.png) no-repeat center;
+    background-size: 10px;
+}
+.mobilemenu li{
+    display: block;
+    position: relative;
+}
+.mobilemenu li a{
+    display: block;
+    padding: 10px;
+    text-align: left;
+    padding-left: 59px;
+    color: #555;
+    font-size: 13px;
+    font-weight: 400;
+    position: relative;
+}
+.mobilemenu li ul.sub-menu{
+    padding-left: 15px;
 }

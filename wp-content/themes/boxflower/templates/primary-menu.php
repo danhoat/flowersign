@@ -1,4 +1,4 @@
-<div id="cateSwiper" class="nav_wrap">
+<div id="cateSwiper" class="nav_wrap primary-menu">
     <div class="resp_wrap">
         <div class="nav_category_area">
             <div class="designCategoryNavigation">

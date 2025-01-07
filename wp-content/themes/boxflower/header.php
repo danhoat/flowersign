@@ -181,7 +181,7 @@ var kid_agree = "";
         </div>
     </div>
 
-    <?php get_template_part('templates/primary','menu');?>
+    <?php get_template_part('templates/primary','menu'); // primary-menu.php?>
 
 
 </div>

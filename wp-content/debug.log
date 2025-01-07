@@ -167,3 +167,45 @@ Stack trace:
 [02-Jan-2025 21:06:46 UTC]   Automatic plugin updates complete.
 [02-Jan-2025 21:06:47 UTC] Automatic updates complete.
 [03-Jan-2025 03:37:12 UTC] PHP Parse error:  syntax error, unexpected token "}" in D:\laragon\www\flower\wp-content\themes\boxflower\includes\after_setup_theme.php on line 112
+[07-Jan-2025 03:09:46 UTC] Automatic updates starting...
+[07-Jan-2025 03:09:47 UTC]   Automatic plugin updates starting...
+[07-Jan-2025 03:09:47 UTC]   Automatic plugin updates complete.
+[07-Jan-2025 03:09:48 UTC] Automatic updates complete.
+[07-Jan-2025 03:17:38 UTC] PHP Warning:  Undefined array key "HA-NOI" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[07-Jan-2025 03:17:38 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[07-Jan-2025 03:17:43 UTC] PHP Warning:  Undefined array key "HA-NOI" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[07-Jan-2025 03:17:43 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[07-Jan-2025 03:18:27 UTC] PHP Warning:  Undefined array key "HA-NOI" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[07-Jan-2025 03:18:27 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[07-Jan-2025 03:19:06 UTC] PHP Warning:  Undefined array key "HA-NOI" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[07-Jan-2025 03:19:06 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[07-Jan-2025 03:19:10 UTC] PHP Warning:  Undefined array key "HA-NOI" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[07-Jan-2025 03:19:10 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[07-Jan-2025 03:22:58 UTC] PHP Parse error:  syntax error, unexpected identifier "Menu", expecting ")" in D:\laragon\www\flower\wp-content\themes\boxflower\nav.php on line 111
+[07-Jan-2025 03:25:15 UTC] PHP Warning:  Undefined array key "HA-NOI" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[07-Jan-2025 03:25:15 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[07-Jan-2025 05:40:21 UTC] PHP Warning:  Undefined array key "HA-NOI" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[07-Jan-2025 05:40:21 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[07-Jan-2025 05:40:37 UTC] PHP Warning:  Undefined array key "HA-NOI" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[07-Jan-2025 05:40:37 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[07-Jan-2025 05:40:42 UTC] PHP Warning:  Undefined array key "HA-NOI" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[07-Jan-2025 05:40:42 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[07-Jan-2025 05:40:46 UTC] PHP Warning:  Undefined array key "HA-NOI" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[07-Jan-2025 05:40:46 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[07-Jan-2025 05:40:51 UTC] PHP Warning:  Undefined array key "HA-NOI" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[07-Jan-2025 05:40:51 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[07-Jan-2025 05:40:54 UTC] PHP Warning:  Undefined array key "HA-NOI" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[07-Jan-2025 05:40:54 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[07-Jan-2025 05:41:08 UTC] PHP Warning:  Undefined array key "HA-NOI" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[07-Jan-2025 05:41:08 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[07-Jan-2025 05:41:11 UTC] PHP Warning:  Undefined array key "HA-NOI" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[07-Jan-2025 05:41:11 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[07-Jan-2025 05:41:33 UTC] PHP Warning:  Undefined array key "HA-NOI" in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 130
+[07-Jan-2025 05:41:33 UTC] PHP Deprecated:  html_entity_decode(): Passing null to parameter #1 ($string) of type string is deprecated in D:\laragon\www\flower\wp-content\plugins\woocommerce\includes\class-wc-shipping-zone.php on line 138
+[07-Jan-2025 14:26:01 UTC] PHP Warning:  wp_version_check(): Đã xảy ra lỗi không mong muốn. Có thể có sự cố với WordPress.org hoặc cấu hình của máy chủ. Nếu bạn tiếp tục gặp sự cố, vui lòng thử hỏi trong <a href="https://wordpress.org/support/forums/">diễn đàn hỗ trợ</a>. (WordPress không thể thiết lập kết nối an toàn tới WordPress.org. Vui lòng liên hệ quản trị máy chủ của bạn.) in D:\laragon\www\flower\wp-includes\functions.php on line 6114
+[07-Jan-2025 14:26:01 UTC] PHP Warning:  wp_update_plugins(): Đã xảy ra lỗi không mong muốn. Có thể có sự cố với WordPress.org hoặc cấu hình của máy chủ. Nếu bạn tiếp tục gặp sự cố, vui lòng thử hỏi trong <a href="https://wordpress.org/support/forums/">diễn đàn hỗ trợ</a>. (WordPress không thể thiết lập kết nối an toàn tới WordPress.org. Vui lòng liên hệ quản trị máy chủ của bạn.) in D:\laragon\www\flower\wp-includes\functions.php on line 6114
+[07-Jan-2025 14:26:01 UTC] PHP Warning:  wp_update_themes(): Đã xảy ra lỗi không mong muốn. Có thể có sự cố với WordPress.org hoặc cấu hình của máy chủ. Nếu bạn tiếp tục gặp sự cố, vui lòng thử hỏi trong <a href="https://wordpress.org/support/forums/">diễn đàn hỗ trợ</a>. (WordPress không thể thiết lập kết nối an toàn tới WordPress.org. Vui lòng liên hệ quản trị máy chủ của bạn.) in D:\laragon\www\flower\wp-includes\functions.php on line 6114
+[07-Jan-2025 22:13:13 UTC] Automatic updates starting...
+[07-Jan-2025 22:13:15 UTC]   Automatic plugin updates starting...
+[07-Jan-2025 22:13:15 UTC]   Automatic plugin updates complete.
+[07-Jan-2025 22:13:16 UTC] Automatic updates complete.
