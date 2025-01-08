@@ -45,17 +45,13 @@
             });
             return false;
         });
-        $(".submenu .toggle").click(function(){
-            console.log('toggle menu 123');
-            $(this).closest(".submenu").toggleClass('active');
-        });
-        $(".menu-item-has-children::after").click(function(){
-            console.log('toggle menu after');
-        });
+
+
         $(".menu-item-has-children").after().click(function(){
             console.log('toggle menu after');
-            $(this).toggleClass('inactive');
+           
             $(this).find(".sub-menu").toggle("slow");
+             $(this).toggleClass('inactive');
         });
       
     })
