@@ -7,11 +7,11 @@
 <div class="aside_userinformation">
     <ul>
         <li class="left_area">
-            <span class="gray_06" designelement="text" textindex="2" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvX21vZHVsZXMvY29tbW9uL2xheW91dF9zaWRlLmh0bWw=">로그인하세요.</span>
+            <span class="gray_06" designelement="text" textindex="2" >FlowerSight.</span>
         </li>
         <li class="right_area">
-            <a href="../member/login" class="btn_resp color4" designelement="text" textindex="3" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvX21vZHVsZXMvY29tbW9uL2xheW91dF9zaWRlLmh0bWw=">로그인</a>
-            <a href="../member/agreement" class="btn_resp" designelement="text" textindex="4" texttemplatepath="cmVzcG9uc2l2ZV92ZXIxX2RlZmF1bHRfZ2wvX21vZHVsZXMvY29tbW9uL2xheW91dF9zaWRlLmh0bWw=">회원가입</a>
+            <a href="../member/login" class="btn_resp color4" designelement="text" textindex="3" > Đăng Nhập</a>
+            <a href="../member/agreement" class="btn_resp" designelement="text" textindex="4" >Đăng Ký</a>
         </li>
     </ul>
 </div>
@@ -24,10 +24,6 @@
     <!-- ++++++++ 카테고리 ++++++++ -->
     <div class="designElement" designelement="category">
         <ul id="categorySideMenu" class="menu mobilemenu">
-            
-
-          
-           
             <?php 
 
              wp_nav_menu( array(
@@ -35,16 +31,7 @@
                 'items_wrap' =>'%3$s',
                'container' => '',
             ) ); 
-
-           
-
-
             ?>
-           
-
-           
-            
-
         </ul>
     </div>
     <!-- ++++++++ //카테고리 ++++++++ -->
@@ -141,35 +128,12 @@
 <!-- 페이팔 배너 끝 -->
 
 
-
-<!-- 최근 본 상품(SIDE) -->
-<div class="wrap_aside">
-    <h3 class="title_sub3 v2"><span designelement="text" textindex="24">최근 본 상품</span> </h3>
-</div>
-<p class="aside_recently_nodata">
-    최근 본 상품이 없습니다.
-</p>
-
-
 <!-- CS CENTER 정보(SIDE) -->
 <div class="wrap_aside">
-    <h3 class="title_sub3 v2"><a href="/service/cs" designelement="text" textindex="25">고객센터</a></h3>
-    <a class="aside_cs_phone" href="tel:1800-7879">1800-7879</a>
+    <h3 class="title_sub3 v2"><a href="/service/cs" designelement="text" textindex="25">Hotline</a></h3>
+    <a class="aside_cs_phone" href="tel:1800-7879">093 407 2575</a>
     <!-- <p class="aside_cs_addinfo" designElement="text">문자수신 가능합니다.</p> -->
-    <p class="aside_cs_addinfo" designelement="text" textindex="26" >연중무휴<br>AM 08:00 ~ PM 08:00<br></p>
-</div>
-
-<div class="wrap_aside v2" style="display:none;">
-    <select class="Wmax" onchange="location.href=this.value;">
-        <option value="http://f-mans.com" selected="">KR</option>
-    </select>
-</div>
-
-<!-- 얼럿창 -->
-<div id="category_favorite_alert" class="category_favorite_alert">
-    <div class="cfa_on"></div>
-    <div class="cfa_off"></div>
-    <div class="cfa_msg"></div>
+    <p class="aside_cs_addinfo" designelement="text" textindex="26" >Thời gian<br>AM 08:00 ~ PM 08:00<br></p>
 </div>
 
 
