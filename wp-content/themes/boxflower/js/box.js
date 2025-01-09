@@ -57,15 +57,12 @@
     });
 
 
-    //$( "#priceSlider" ).slider();
-   // var max = $( "#priceSlider" ).slider( "option", "max" );
- 
-    var min_price = 100000, max_price = boxGlobal.max_price;    
-    max_price = 2000000;
 
-    var current_min_price ,current_max_price ;
+ 
+    var min_price = 100000,    max_price = 10000000;
+
+    var current_min_price = 100000, current_max_price = 10000000;
     current_min_price = $("#price-from").val();
-    current_max_price = $("#price-to").val();
     jQuery('#slider-price').slider({
         range   : true,
         min     : min_price,
