@@ -60,13 +60,14 @@
     //$( "#priceSlider" ).slider();
    // var max = $( "#priceSlider" ).slider( "option", "max" );
  
-    var min_price = 100,max_price = 5000000;    
+    var min_price = 100000,max_price = 5000000;    
 
     var current_min_price = 500000, current_max_price = 2000000;
     jQuery('#slider-price').slider({
         range   : true,
         min     : min_price,
         max     : max_price,
+        step    : 100000,
         values  : [ current_min_price, current_max_price ],
         slide   : function (event, ui) {
 
@@ -80,8 +81,7 @@
             filter_url = '?price=' + current_min_price + '-' + current_max_price;
             console.log('filter_url: ', filter_url);
             window.history.pushState("", "", filter_url);
-            console.log('line 426_load detail: max: ',current_max_price );
-
+            location.reload();
         }
     });
 
