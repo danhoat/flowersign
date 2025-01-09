@@ -63,6 +63,7 @@
 
     var current_min_price = 100000, current_max_price = 10000000;
     current_min_price = $("#price-from").val();
+    current_max_price = $("#price-to").val();
     jQuery('#slider-price').slider({
         range   : true,
         min     : min_price,

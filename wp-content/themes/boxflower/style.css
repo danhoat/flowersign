@@ -880,7 +880,23 @@ body{
     margin-left: 25px;
     position: relative;
 }
+.filter_price_box .filter-label{
 
+    display: block;
+    height: 40px;
+    font-size: 13px;
+    line-height: 41px;
+    padding: 0 10px;
+    margin: 0;
+    vertical-align: top;
+    color: #999;
+    position: relative;
+    top: -5px;
+
+}
+.filter_price_box i{
+    font-size: 10px;
+}
 
 .filter-attribute-container {
     visibility: hidden;
