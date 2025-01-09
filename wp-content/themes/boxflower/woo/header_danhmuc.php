@@ -211,6 +211,35 @@ function wpdocs_modify_query_exclude_category( $query ) {
     }
     if( is_product_taxonomy() || is_shop() ){
         $query->set( 'posts_per_page',40);
+        $price = isset($_GET['price']) ? $_GET['price'] : '';
+        if( !empty($price)){
+            $range = explode("-", $price);
+            if( is_array($range) ){
+                $min_price = $range[0];
+                $max_price = $range[1];
+
+                $meta_query = array(
+                    'relation' => 'AND',
+                    array(
+                        'key'       => '_price',
+                        'value'     => $min_price,
+                        'compare'   => '>=',
+                        'type'      => 'NUMERIC'
+                    ),
+                    array(
+                        'key'       => '_price',
+                        'value'     => $max_price,
+                        'compare'   => '<=',
+                        'type'      => 'NUMERIC'
+                    )
+                );
+
+                
+                $query->set( 'meta_query', $meta_query );
+            }
+
+
+        }
     }
     
 }
