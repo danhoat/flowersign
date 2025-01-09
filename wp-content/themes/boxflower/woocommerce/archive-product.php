@@ -244,7 +244,7 @@ if(is_tax('product_cat') ){
 
 		<li style="width: 500px;">
 			<div class="filter_price_box">
-				<label class="filter-label">Lọc Giá <i class="zmdi zmdi-chevron-down"></i></label>
+				<label class="filter-label">Lọc Giá <i class="fa-solid fa-chevron-down"></i></label>
 				<div class="filter-attribute-container filter-price">
 					<div class="list-group-item">
 						<div class="filter-price">
