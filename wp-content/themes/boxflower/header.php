@@ -81,6 +81,29 @@ var REQURL = '/';
 var WINDOWWIDTH = window.innerWidth;
 // sns 만14세 동의 체크 변수
 var kid_agree = "";
+<?php 
+
+if( is_product_taxonomy() || is_shop() ){
+
+    $max_price = 2000000;
+    global $wpdb;
+    $sql = "SELECT MAX(meta_value) as price, post_id from {$wpdb->prefix}postmeta where meta_key = '_price'";
+
+    $result = $wpdb->get_results($sql);
+
+    if($result){
+       // $max_price = $result[0]->price;
+    }
+    ?>
+
+
+
+    var boxGlobal = {
+        max_price: '<?php echo $max_price;?>',
+    }
+    <?php 
+}
+?>
 </script>
 
 <?php 

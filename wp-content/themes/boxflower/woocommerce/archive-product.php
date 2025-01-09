@@ -220,6 +220,26 @@ if(is_tax('product_cat') ){
 
 		$min_price = 500000;
 		$max_price = 2000000;
+
+		global $wpdb;
+		$sql = "SELECT MAX(meta_value) as price, post_id from {$wpdb->prefix}postmeta where meta_key = '_price'";
+
+		$result = $wpdb->get_results($sql);
+
+		if($result){
+			$max_price = $result[0]->price;
+		}
+
+		$price = isset($_GET['price']) ? $_GET['price'] : '';
+        if( !empty($price)){
+            $range = explode("-", $price);
+            if( is_array($range) ){
+                $min_price = $range[0];
+                $max_price = $range[1];
+
+            }
+        }
+
 		?>
 
 		<li style="width: 500px;">
