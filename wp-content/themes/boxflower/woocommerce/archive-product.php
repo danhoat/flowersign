@@ -192,7 +192,9 @@ if(is_tax('product_cat') ){
 					<label  class="sort-hightprice <?php is_active_sort('price-desc');?>"><input type="radio" name="sorting" value="price-desc">Giá cao</label>
 				</li>
 
-				<li><select name="color" class="select_color">
+				<li>
+
+					<select name="color" class="select_color">
 						<option value="" <?php echo $is_selected_color;?> >Color</option>
 						<option value="red" <?php is_selected('color','red');?> >Red</option>
 						<option value="yellow" <?php is_selected('color','yellow');?>  >Yellow</option>
@@ -214,7 +216,32 @@ if(is_tax('product_cat') ){
 				</li> -->
 			</ul>
 		</li>
+		<?php
+
+		$min_price = 500000;
+		$max_price = 2000000;
+		?>
+
+		<li style="width: 500px;">
+			<div class="filter_price_box">
+				<label class="filter-label">Lọc Giá <i class="zmdi zmdi-chevron-down"></i></label>
+				<div class="filter-attribute-container filter-price">
+					<div class="list-group-item">
+						<div class="filter-price">
+							<div id="slider-price"></div>
+							<div class="slider-values ">
+								<input id="price-from" disabled="disabled" class="input-price" type="text" value="<?php echo $min_price; ?>" placeholder="Min" name="price-from"/>
+								<span>VND</span> -
+								<input id="price-to" disabled="disabled" class="input-price" type="text" value="<?php echo $max_price; ?>" placeholder="Max" name="price-to" />
+								<span>VND</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>
 	</ul>
+
 </div>
 
 

@@ -67,6 +67,7 @@ function theme_setup(){
 
 
 
+
 }
 add_action('after_setup_theme','theme_setup');
 
@@ -116,6 +117,7 @@ function wpdocs_theme_name_scripts() {
         }
     }
     wp_enqueue_style('woo-css', BOXTHEME_URL.'/css/override_woo.css',array(), rand() );
+    wp_enqueue_style('jquery-ui','https://flowersight.com/wp-content/themes/takatheme/css/jquery-ui.min.css', array(), rand() );
 }
 add_action( 'wp_enqueue_scripts', 'wpdocs_theme_name_scripts' );
 

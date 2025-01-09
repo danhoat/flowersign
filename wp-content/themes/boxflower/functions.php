@@ -90,7 +90,7 @@ function btn_pre_testimonial(){?>
 
 
 function is_selected_limit($value){
-    $limit = isset($_GET['limit']) ? $_GET['limit'] :0;
+    $limit = isset($_GET['limit']) ? $_GET['limit'] :40;
     if($limit == $value){
         echo 'selected';
     }

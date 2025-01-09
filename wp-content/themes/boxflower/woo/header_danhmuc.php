@@ -209,7 +209,9 @@ function wpdocs_modify_query_exclude_category( $query ) {
     if( is_front_page() || is_archive() || is_cart() ){
         $query->set( 'post__not_in', LIST_BUNDLES_ITEM );
     }
-    //$query->set( 'posts_per_page',6);
+    if( is_product_taxonomy() || is_shop() ){
+        $query->set( 'posts_per_page',40);
+    }
     
 }
 add_action( 'pre_get_posts', 'wpdocs_modify_query_exclude_category' );

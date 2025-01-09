@@ -7,7 +7,7 @@
 <div class="aside_userinformation">
     <ul>
         <li class="left_area">
-            <span class="gray_06" designelement="text" textindex="2" >FlowerSight.</span>
+            <span class="gray_06" designelement="text" textindex="2" >FlowerSight</span>
         </li>
         <li class="right_area">
             <a href="../member/login" class="btn_resp color4" designelement="text" textindex="3" > Đăng Nhập</a>

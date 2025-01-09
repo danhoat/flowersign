@@ -54,6 +54,39 @@
              $(this).toggleClass('inactive');
         });
       
-    })
+    });
+
+
+    //$( "#priceSlider" ).slider();
+   // var max = $( "#priceSlider" ).slider( "option", "max" );
+ 
+    var min_price = 100,max_price = 5000000;    
+
+    var current_min_price = 500000, current_max_price = 2000000;
+    jQuery('#slider-price').slider({
+        range   : true,
+        min     : min_price,
+        max     : max_price,
+        values  : [ current_min_price, current_max_price ],
+        slide   : function (event, ui) {
+
+            jQuery('#price-from').val(ui.values[0]);
+            jQuery('#price-to').val(ui.values[1]);
+            current_min_price = ui.values[0];
+            current_max_price = ui.values[1];
+        },
+        stop    : function (event, ui) {
+
+            filter_url = '?price=' + current_min_price + '-' + current_max_price;
+            console.log('filter_url: ', filter_url);
+            window.history.pushState("", "", filter_url);
+            console.log('line 426_load detail: max: ',current_max_price );
+
+        }
+    });
+
+
+
+
 })( jQuery);
 
