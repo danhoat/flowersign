@@ -166,7 +166,7 @@ function module_search_html(){ ?>
                                 <label class="search_box">
                                     <input type="text" name="s" id="searchVer2InputBox" class="search_ver2_input_box" placeholder="Từ Khóa" autocomplete="off"></label>
                                 <button type="submit" class="search"></button>
-                                <button type="button" class="close searchModuleClose"></button>
+                                <button type="button" class="close searchModuleClose" ></button>
                             </div>
                         </div>
                         </form>

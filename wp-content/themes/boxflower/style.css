@@ -877,7 +877,7 @@ body{
 
 .filter_price_box {
     display: inline-block;
-    margin-left: 25px;
+    margin-left: 20px;
     position: relative;
 }
 .filter_price_box .filter-label{
@@ -891,7 +891,7 @@ body{
     vertical-align: top;
     color: #999;
     position: relative;
-    top: -5px;
+    top: -7px;
 
 }
 .filter_price_box i{
@@ -949,4 +949,13 @@ body{
     max-width: 100px;
     border: 1px solid #ccc;
     padding: 0;
+}
+
+.filtered_item_sorting .item_viewnum select{
+    height: 39px !important;
+    border-bottom: 0;
+}
+.filtered_item_sorting>li{
+    height: 28px !important;
+    paddinga: 0;
 }

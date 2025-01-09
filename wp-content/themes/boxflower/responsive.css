@@ -216,7 +216,12 @@
     
     .filter-attribute-container{
         left: -135px;
-        max-width: 369px;
+        max-width: 367px;
     }
+    .filtered_item_sorting select.select_color,
+    .filtered_item_sorting select.select_size{
+        margin-left: 3px !important;
+    }
+    
 
 }
